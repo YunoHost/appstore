@@ -19,7 +19,7 @@ def get_locale():
 
 
 def get_catalog():
-    path = "../builds/default/v3/apps.json"
+    path = ".cache/apps.json"
     mtime = os.path.getmtime(path)
     if get_catalog.mtime_catalog != mtime:
         get_catalog.mtime_catalog = mtime

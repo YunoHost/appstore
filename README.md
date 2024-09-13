@@ -14,8 +14,7 @@ cp config.toml.example config.toml
 nano config.toml
 
 # You'll need to have a built version of the catalog
-mkdir -p ../builds/default/v3/
-curl https://app.yunohost.org/default/v3/apps.json > ../builds/default/v3/apps.json
+curl https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
 
 # you need to manually download the assets to have access to the css and the javascript files
 (cd assets && bash fetch_assets)
