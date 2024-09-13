@@ -31,6 +31,8 @@ fetch_catalog_and_level_history() {
         git clone https://github.com/YunoHost/apps.git .cache/apps
     fi
 
+    venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
+
     venv/bin/python3 fetch_level_history.py
 }
 
