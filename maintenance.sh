@@ -44,6 +44,13 @@ fetch_catalog_and_level_history() {
     venv/bin/python3 fetch_level_history.py
 }
 
+set_cron() {
+    cat <<EOF > /etc/cron.d/appstore
+# Every 2 hours
+0 */2 * * * root $SCRIPT_DIR/maintenance.sh
+EOF
+}
+
 main() {
     cd "$SCRIPT_DIR"
 
@@ -53,6 +60,8 @@ main() {
         sendxmpppy "[apps repo] Couldn't pull, maybe local changes are present?"
         exit 1
     fi
+
+    set_cron
 
     fetch_catalog_and_level_history
 
