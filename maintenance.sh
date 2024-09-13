@@ -44,6 +44,8 @@ main() {
         exit 1
     fi
 
+    fetch_catalog_and_level_history
+
     if [[ "$(git rev-parse HEAD)" != "$commit" ]]; then
         if ! restart_store; then
             sendxmpppy "[appstore] Uhoh, failed to (re)start the appstore service?"
