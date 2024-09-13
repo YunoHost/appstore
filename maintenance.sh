@@ -63,7 +63,7 @@ main() {
 
     set_cron
 
-    sudo -u appstore fetch_catalog_and_level_history
+    sudo -u appstore bash -c "$(declare -f fetch_catalog_and_level_history); fetch_catalog_and_level_history"
 
     if [[ "$(git rev-parse HEAD)" != "$commit" ]]; then
         if ! restart_store; then
