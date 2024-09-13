@@ -58,7 +58,7 @@ get_catalog()
 
 
 def get_wishlist():
-    path = "../wishlist.toml"
+    path = ".cache/apps/wishlist.toml"
     mtime = os.path.getmtime(path)
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime

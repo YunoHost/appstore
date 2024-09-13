@@ -22,6 +22,18 @@ restart_store() {
     systemctl --quiet is-active appstore
 }
 
+fetch_catalog_and_level_history() {
+    curl https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
+
+    if [ -d ".cache/apps" ]; then
+        git -C .cache/apps pull
+    else
+        git clone https://github.com/YunoHost/apps.git .cache/apps
+    fi
+
+    venv/bin/python3 fetch_level_history.py
+}
+
 main() {
     cd "$SCRIPT_DIR"
 
@@ -32,13 +44,11 @@ main() {
         exit 1
     fi
 
-    if [[ "$(git rev-parse HEAD)" == "$commit" ]]; then
-        return
-    fi
-
-    if ! restart_store; then
-        sendxmpppy "[appstore] Uhoh, failed to (re)start the appstore service?"
-        exit 1
+    if [[ "$(git rev-parse HEAD)" != "$commit" ]]; then
+        if ! restart_store; then
+            sendxmpppy "[appstore] Uhoh, failed to (re)start the appstore service?"
+            exit 1
+        fi
     fi
 }
 
