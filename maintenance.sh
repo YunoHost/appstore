@@ -57,13 +57,13 @@ main() {
     commit="$(git rev-parse HEAD)"
 
     if ! git pull &>/dev/null; then
-        sendxmpppy "[apps repo] Couldn't pull, maybe local changes are present?"
+        sendxmpppy "[appstore] Couldn't pull, maybe local changes are present?"
         exit 1
     fi
 
     set_cron
 
-    fetch_catalog_and_level_history
+    sudo -u appstore fetch_catalog_and_level_history
 
     if [[ "$(git rev-parse HEAD)" != "$commit" ]]; then
         if ! restart_store; then
