@@ -3,6 +3,10 @@ set -Eeuo pipefail
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+_git() {
+    sudo -u appstore git "$@"
+}
+
 update_venv() {
     if [ -d "venv" ]; then
         venv/bin/pip install -r requirements.txt >/dev/null
@@ -26,15 +30,15 @@ fetch_catalog_and_level_history() {
     curl https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
 
     if [ -d ".cache/apps" ]; then
-        git -C .cache/apps pull
+        _git -C .cache/apps pull
     else
-        git clone https://github.com/YunoHost/apps.git .cache/apps
+        _git clone https://github.com/YunoHost/apps.git .cache/apps
     fi
 
     if [ -d ".cache/tools" ]; then
-        git -C .cache/tools pull
+        _git -C .cache/tools pull
     else
-        git clone https://github.com/YunoHost/apps-tools.git .cache/tools
+        _git clone https://github.com/YunoHost/apps-tools.git .cache/tools
     fi
 
     .cache/tools/app_caches.py -l .cache/apps/ -c .apps_cache -d -j20
@@ -54,9 +58,9 @@ EOF
 main() {
     cd "$SCRIPT_DIR"
 
-    commit="$(git rev-parse HEAD)"
+    commit="$(_git rev-parse HEAD)"
 
-    if ! git pull &>/dev/null; then
+    if ! _git pull &>/dev/null; then
         sendxmpppy "[appstore] Couldn't pull, maybe local changes are present?"
         exit 1
     fi
@@ -65,7 +69,7 @@ main() {
 
     sudo -u appstore bash -c "$(declare -f fetch_catalog_and_level_history); fetch_catalog_and_level_history"
 
-    if [[ "$(git rev-parse HEAD)" != "$commit" ]]; then
+    if [[ "$(_git rev-parse HEAD)" != "$commit" ]]; then
         if ! restart_store; then
             sendxmpppy "[appstore] Uhoh, failed to (re)start the appstore service?"
             exit 1
