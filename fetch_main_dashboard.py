@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 
+import json
 import os
 import sys
-import requests
-import json
-import toml
-from pathlib import Path
 from functools import cache
-from typing import Any
+from pathlib import Path
+from typing import Any, Tuple, Optional
+import multiprocessing
+
+import requests
+import toml
+import tqdm
 from github import Github
+from tqdm.contrib.logging import logging_redirect_tqdm
 
 sys.path = [os.path.dirname(__file__)] + sys.path
 from utils import get_catalog
@@ -43,15 +47,26 @@ def catalog() -> dict:
 
 @cache
 def ci_apps_main_results() -> dict:
-    return requests.get("https://ci-apps.yunohost.org/ci/api/results").json()
+    return requests.get("https://ci-apps.yunohost.org/ci/api/results", timeout=10).json()
 
 
 @cache
 def ci_apps_nextdebian_results() -> dict:
-    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results").json()
+    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=10).json()
 
 
-def get_github_infos(github_orga_and_repo):
+def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
+    app_results = results.get(name)
+    if app_results:
+        return {
+            "level": app_results["level"],
+            "timestamp": app_results["timestamp"],
+        }
+    else:
+        return None
+
+
+def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
 
     repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
@@ -95,17 +110,15 @@ def get_github_infos(github_orga_and_repo):
             ],
         }
 
-    return infos
+    return repo.name, infos
 
 
-def main():
-    consolidated_infos = {}
-    for app, infos in catalog["apps"].items():
+def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]:
+    name, infos = name_and_infos
+    if infos["state"] != "working":
+        return None
 
-        if infos["state"] != "working":
-            continue
-
-    consolidated_infos[app] = {
+    data = {
         "public_level": infos["level"],
         "url": infos["git"]["url"],
         "timestamp_latest_commit": infos["lastUpdate"],
@@ -113,33 +126,36 @@ def main():
         "antifeatures": infos["antifeatures"],
         "packaging_format": infos["manifest"]["packaging_format"],
         "ci_results": {
-            "main": (
-                {
-                    "level": ci_apps_main_results()[app]["level"],
-                    "timestamp": ci_apps_main_results()[app]["timestamp"],
-                }
-                if app in main_ci_apps_results
-                else {}
-            ),
-            "nextdebian": (
-                {
-                    "level": ci_apps_nextdebian_results()[app]["level"],
-                    "timestamp": ci_apps_nextdebian_results()[app]["timestamp"],
-                }
-                if app in nextdebian_ci_apps_results
-                else {}
-            ),
+            "main": get_app_ci_results(ci_apps_main_results(), name),
+            "nextdebian": get_app_ci_results(ci_apps_nextdebian_results(), name),
         },
     }
 
-        if infos["git"]["url"].lower().startswith("https://github.com/"):
-            consolidated_infos[app].update(
-                get_github_infos(
-                    infos["git"]["url"].lower().replace("https://github.com/", "")
-                )
-            )
+    if infos["git"]["url"].lower().startswith("https://github.com/"):
+        org_and_name = infos["git"]["url"].lower().replace("https://github.com/", "")
+        name, github_infos = get_github_infos(org_and_name)
+        data.update(github_infos)
 
-    open(".cache/dashboard.json", "w").write(json.dumps(consolidated_infos))
+    return name, data
+
+
+def main() -> None:
+    consolidated_infos = {}
+
+    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+        with logging_redirect_tqdm():
+            tasks = pool.imap(get_consolidated_infos, catalog()["apps"].items())
+
+            for result in tqdm.tqdm(tasks, total=len(catalog()["apps"].keys()), ascii=" ·#"):
+                if result is None:
+                    continue
+                name, infos = result
+                if infos is None:
+                    continue
+                consolidated_infos[name] = infos
+
+    dashboard_file = APPSTORE_PATH / ".cache" / "dashboard.json"
+    dashboard_file.write_text(json.dumps(consolidated_infos))
 
 
 if __name__ == "__main__":
