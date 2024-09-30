@@ -1,42 +1,59 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 import requests
 import json
 import toml
+from pathlib import Path
+from functools import cache
+from typing import Any
 from github import Github
 
 sys.path = [os.path.dirname(__file__)] + sys.path
 from utils import get_catalog
 
+APPSTORE_PATH = Path(__file__).resolve().parent
 
-try:
-    config = toml.loads(open("config.toml").read())
-except Exception:
-    print(
-        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
-    )
-    sys.exit(1)
+@cache
+def config() -> dict[str, Any]:
+    try:
+        config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+        return config
+    except Exception:
+        raise RuntimeError(
+            "You should create a config.toml with the appropriate key/values, cf config.toml.example"
+        )
 
-github_token = config.get("GITHUB_TOKEN")
 
-if github_token is None:
-    print("You should add a GITHUB_TOKEN to config.toml")
-    sys.exit(1)
+@cache
+def github_api() -> Github:
+    github_token = config().get("GITHUB_TOKEN")
 
-g = Github(github_token)
+    if github_token is None:
+        raise RuntimeError("You should add a GITHUB_TOKEN to config.toml")
 
-catalog = get_catalog()
-main_ci_apps_results = requests.get(
-    "https://ci-apps.yunohost.org/ci/api/results"
-).json()
-nextdebian_ci_apps_results = requests.get(
-    "https://ci-apps-bookworm.yunohost.org/ci/api/results"
-).json()
+    return Github(github_token)
+
+
+@cache
+def catalog() -> dict:
+    return get_catalog()
+
+
+@cache
+def ci_apps_main_results() -> dict:
+    return requests.get("https://ci-apps.yunohost.org/ci/api/results").json()
+
+
+@cache
+def ci_apps_nextdebian_results() -> dict:
+    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results").json()
 
 
 def get_github_infos(github_orga_and_repo):
 
-    repo = g.get_repo(github_orga_and_repo)
+    repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
 
     pulls = [p for p in repo.get_pulls()]
@@ -81,11 +98,12 @@ def get_github_infos(github_orga_and_repo):
     return infos
 
 
-consolidated_infos = {}
-for app, infos in catalog["apps"].items():
+def main():
+    consolidated_infos = {}
+    for app, infos in catalog["apps"].items():
 
-    if infos["state"] != "working":
-        continue
+        if infos["state"] != "working":
+            continue
 
     consolidated_infos[app] = {
         "public_level": infos["level"],
@@ -97,16 +115,16 @@ for app, infos in catalog["apps"].items():
         "ci_results": {
             "main": (
                 {
-                    "level": main_ci_apps_results[app]["level"],
-                    "timestamp": main_ci_apps_results[app]["timestamp"],
+                    "level": ci_apps_main_results()[app]["level"],
+                    "timestamp": ci_apps_main_results()[app]["timestamp"],
                 }
                 if app in main_ci_apps_results
                 else {}
             ),
             "nextdebian": (
                 {
-                    "level": nextdebian_ci_apps_results[app]["level"],
-                    "timestamp": nextdebian_ci_apps_results[app]["timestamp"],
+                    "level": ci_apps_nextdebian_results()[app]["level"],
+                    "timestamp": ci_apps_nextdebian_results()[app]["timestamp"],
                 }
                 if app in nextdebian_ci_apps_results
                 else {}
@@ -114,11 +132,15 @@ for app, infos in catalog["apps"].items():
         },
     }
 
-    if infos["git"]["url"].lower().startswith("https://github.com/"):
-        consolidated_infos[app].update(
-            get_github_infos(
-                infos["git"]["url"].lower().replace("https://github.com/", "")
+        if infos["git"]["url"].lower().startswith("https://github.com/"):
+            consolidated_infos[app].update(
+                get_github_infos(
+                    infos["git"]["url"].lower().replace("https://github.com/", "")
+                )
             )
-        )
 
-open(".cache/dashboard.json", "w").write(json.dumps(consolidated_infos))
+    open(".cache/dashboard.json", "w").write(json.dumps(consolidated_infos))
+
+
+if __name__ == "__main__":
+    main()
