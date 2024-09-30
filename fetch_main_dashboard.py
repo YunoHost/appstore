@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import json
-import os
 import sys
 from functools import cache
 from pathlib import Path
@@ -14,7 +13,8 @@ import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
 
-sys.path = [os.path.dirname(__file__)] + sys.path
+sys.path.append(Path(__file__).resolve.parent)
+
 from utils import get_catalog
 
 APPSTORE_PATH = Path(__file__).resolve().parent
