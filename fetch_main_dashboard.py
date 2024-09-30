@@ -101,7 +101,7 @@ for app, infos in catalog["apps"].items():
                     "timestamp": main_ci_apps_results[app]["timestamp"],
                 }
                 if app in main_ci_apps_results
-                else None
+                else {}
             ),
             "nextdebian": (
                 {
@@ -109,7 +109,7 @@ for app, infos in catalog["apps"].items():
                     "timestamp": nextdebian_ci_apps_results[app]["timestamp"],
                 }
                 if app in nextdebian_ci_apps_results
-                else None
+                else {}
             ),
         },
     }
