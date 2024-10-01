@@ -144,7 +144,7 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
 def main() -> None:
     consolidated_infos = {}
 
-    with multiprocessing.Pool(processes=multiprocessing.cpu_count()) as pool:
+    with multiprocessing.Pool(processes=10) as pool:
         with logging_redirect_tqdm():
             tasks = pool.imap(get_consolidated_infos, catalog()["apps"].items())
 
