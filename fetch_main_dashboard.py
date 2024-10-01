@@ -65,7 +65,7 @@ def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
             "timestamp": app_results["timestamp"],
         }
     else:
-        return None
+        return {}
 
 
 def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
