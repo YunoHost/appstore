@@ -13,7 +13,7 @@ import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
 
-sys.path.append(Path(__file__).resolve.parent)
+sys.path.append(Path(__file__).resolve().parent)
 
 from utils import get_catalog
 
