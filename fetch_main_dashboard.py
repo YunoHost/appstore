@@ -135,7 +135,7 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
 
     if infos["git"]["url"].lower().startswith("https://github.com/"):
         org_and_name = infos["git"]["url"].lower().replace("https://github.com/", "")
-        name, github_infos = get_github_infos(org_and_name)
+        _, github_infos = get_github_infos(org_and_name)
         data.update(github_infos)
 
     return name, data
