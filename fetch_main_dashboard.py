@@ -45,14 +45,16 @@ def catalog() -> dict:
     return get_catalog()
 
 
-@cache
-def ci_apps_main_results() -> dict:
-    return requests.get("https://ci-apps.yunohost.org/ci/api/results", timeout=10).json()
+def _ci_apps_main_results() -> dict:
+    return requests.get("https://ci-apps.yunohost.org/ci/api/results", timeout=30).json()
 
 
-@cache
-def ci_apps_nextdebian_results() -> dict:
-    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=10).json()
+def _ci_apps_nextdebian_results() -> dict:
+    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=30).json()
+
+
+ci_apps_main_results = _ci_apps_main_results()
+ci_apps_nextdebian_results = _ci_apps_nextdebian_results()
 
 
 def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
@@ -126,8 +128,8 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
         "antifeatures": infos["antifeatures"],
         "packaging_format": infos["manifest"]["packaging_format"],
         "ci_results": {
-            "main": get_app_ci_results(ci_apps_main_results(), name),
-            "nextdebian": get_app_ci_results(ci_apps_nextdebian_results(), name),
+            "main": get_app_ci_results(ci_apps_main_results, name),
+            "nextdebian": get_app_ci_results(ci_apps_nextdebian_results, name),
         },
     }
 
