@@ -203,11 +203,11 @@ def make_news() -> None:
                 [app, time_data[app]["url"]]
                 for app in set(apps_previous_broken & apps_current_good)
             ],
-            "removed": [
+            "added": [
                 [app, time_data[app]["url"]]
                 for app in set(apps_current - apps_previous)
             ],
-            "added": [
+            "removed": [
                 [app, previous_time_data[app]["url"]]
                 for app in set(apps_previous - apps_current)
             ],
