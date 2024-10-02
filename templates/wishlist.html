@@ -18,6 +18,7 @@
             <input
                 type="text"
                 id="search"
+                autofocus
                 {% if request.args.get("search") %}value="{{ request.args.get("search") }}"{% endif %}
                 placeholder="{{ _('Search for…') }}"
                 class="w-full sm:text-sm py-2 pe-10"
