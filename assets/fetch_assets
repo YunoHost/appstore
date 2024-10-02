@@ -1,11 +1,11 @@
+#!/usr/bin/env bash
 
 # Production -> download standalone tailwind to compile only what we need
-wget https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
-chmod +x tailwindcss-linux-x64 
-./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify
+curl --location -o tailwindcss-linux-x64 https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
+chmod +x tailwindcss-linux-x64
 
 # Development -> we use the JS magic thingy
-#curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
+# curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
 
 # Dark theme stuff
 git clone https://github.com/jjranalli/nightwind
@@ -23,3 +23,7 @@ curl https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/fonts/forkawesome-webfont.t
 # Logos
 curl https://raw.githubusercontent.com/YunoHost/doc/master/images/logo_roundcorner.png > ynh_logo_roundcorner.png
 curl https://raw.githubusercontent.com/YunoHost/doc/master/images/ynh_logo_black.svg > ynh_logo_black.svg
+
+
+# Generate the whole
+./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --minify

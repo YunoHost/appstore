@@ -1,42 +1,76 @@
-import os
-import sys
-import requests
-import json
-import toml
-from github import Github
+#!/usr/bin/env python3
 
-sys.path = [os.path.dirname(__file__)] + sys.path
+import json
+import sys
+from functools import cache
+from pathlib import Path
+from typing import Any, Tuple, Optional
+import multiprocessing
+
+import requests
+import toml
+import tqdm
+from github import Github
+from tqdm.contrib.logging import logging_redirect_tqdm
+
+sys.path.append(Path(__file__).resolve().parent)
+
 from utils import get_catalog
 
+APPSTORE_PATH = Path(__file__).resolve().parent
 
-try:
-    config = toml.loads(open("config.toml").read())
-except Exception:
-    print(
-        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
-    )
-    sys.exit(1)
-
-github_token = config.get("GITHUB_TOKEN")
-
-if github_token is None:
-    print("You should add a GITHUB_TOKEN to config.toml")
-    sys.exit(1)
-
-g = Github(github_token)
-
-catalog = get_catalog()
-main_ci_apps_results = requests.get(
-    "https://ci-apps.yunohost.org/ci/api/results"
-).json()
-nextdebian_ci_apps_results = requests.get(
-    "https://ci-apps-bookworm.yunohost.org/ci/api/results"
-).json()
+@cache
+def config() -> dict[str, Any]:
+    try:
+        config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+        return config
+    except Exception:
+        raise RuntimeError(
+            "You should create a config.toml with the appropriate key/values, cf config.toml.example"
+        )
 
 
-def get_github_infos(github_orga_and_repo):
+@cache
+def github_api() -> Github:
+    github_token = config().get("GITHUB_TOKEN")
 
-    repo = g.get_repo(github_orga_and_repo)
+    if github_token is None:
+        raise RuntimeError("You should add a GITHUB_TOKEN to config.toml")
+
+    return Github(github_token)
+
+
+@cache
+def catalog() -> dict:
+    return get_catalog()
+
+
+def _ci_apps_main_results() -> dict:
+    return requests.get("https://ci-apps.yunohost.org/ci/api/results", timeout=30).json()
+
+
+def _ci_apps_nextdebian_results() -> dict:
+    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=30).json()
+
+
+ci_apps_main_results = _ci_apps_main_results()
+ci_apps_nextdebian_results = _ci_apps_nextdebian_results()
+
+
+def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
+    app_results = results.get(name)
+    if app_results:
+        return {
+            "level": app_results["level"],
+            "timestamp": app_results["timestamp"],
+        }
+    else:
+        return {}
+
+
+def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
+
+    repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
 
     pulls = [p for p in repo.get_pulls()]
@@ -78,16 +112,15 @@ def get_github_infos(github_orga_and_repo):
             ],
         }
 
-    return infos
+    return repo.name, infos
 
 
-consolidated_infos = {}
-for app, infos in catalog["apps"].items():
-
+def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]:
+    name, infos = name_and_infos
     if infos["state"] != "working":
-        continue
+        return None
 
-    consolidated_infos[app] = {
+    data = {
         "public_level": infos["level"],
         "url": infos["git"]["url"],
         "timestamp_latest_commit": infos["lastUpdate"],
@@ -95,30 +128,37 @@ for app, infos in catalog["apps"].items():
         "antifeatures": infos["antifeatures"],
         "packaging_format": infos["manifest"]["packaging_format"],
         "ci_results": {
-            "main": (
-                {
-                    "level": main_ci_apps_results[app]["level"],
-                    "timestamp": main_ci_apps_results[app]["timestamp"],
-                }
-                if app in main_ci_apps_results
-                else None
-            ),
-            "nextdebian": (
-                {
-                    "level": nextdebian_ci_apps_results[app]["level"],
-                    "timestamp": nextdebian_ci_apps_results[app]["timestamp"],
-                }
-                if app in nextdebian_ci_apps_results
-                else None
-            ),
+            "main": get_app_ci_results(ci_apps_main_results, name),
+            "nextdebian": get_app_ci_results(ci_apps_nextdebian_results, name),
         },
     }
 
     if infos["git"]["url"].lower().startswith("https://github.com/"):
-        consolidated_infos[app].update(
-            get_github_infos(
-                infos["git"]["url"].lower().replace("https://github.com/", "")
-            )
-        )
+        org_and_name = infos["git"]["url"].lower().replace("https://github.com/", "")
+        _, github_infos = get_github_infos(org_and_name)
+        data.update(github_infos)
 
-open(".cache/dashboard.json", "w").write(json.dumps(consolidated_infos))
+    return name, data
+
+
+def main() -> None:
+    consolidated_infos = {}
+
+    with multiprocessing.Pool(processes=10) as pool:
+        with logging_redirect_tqdm():
+            tasks = pool.imap(get_consolidated_infos, catalog()["apps"].items())
+
+            for result in tqdm.tqdm(tasks, total=len(catalog()["apps"].keys()), ascii=" ·#"):
+                if result is None:
+                    continue
+                name, infos = result
+                if infos is None:
+                    continue
+                consolidated_infos[name] = infos
+
+    dashboard_file = APPSTORE_PATH / ".cache" / "dashboard.json"
+    dashboard_file.write_text(json.dumps(consolidated_infos))
+
+
+if __name__ == "__main__":
+    main()

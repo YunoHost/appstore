@@ -4,3 +4,6 @@ config.toml
 .cache
 .tmp
 assets/*
+
+__pycache__
+venv

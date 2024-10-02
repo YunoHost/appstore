@@ -1,19 +1,32 @@
-import toml
+#!/usr/bin/env python3
+
+import tqdm
+import shutil
+from functools import cache
+from pathlib import Path
 import json
-import os
+from git import Repo, IndexObject
+import io
 from datetime import datetime
 
+import toml
 
-def _time_points_until_today():
+CACHE_DIR = Path(__file__).resolve().parent / ".cache"
+TMP_DIR = Path(__file__).resolve().parent / ".tmp"
 
+
+@cache
+def time_points_until_today() -> list[datetime]:
     year = 2017
     month = 1
     day = 1
     today = datetime.today()
     date = datetime(year, month, day)
 
+    dates = []
+
     while date < today:
-        yield date
+        dates.append(date)
 
         day += 14
         if day > 15:
@@ -26,79 +39,84 @@ def _time_points_until_today():
 
         date = datetime(year, month, day)
 
+    return dates
 
-time_points_until_today = list(_time_points_until_today())
+
+def read_git_file(file: IndexObject) -> str:
+    with io.BytesIO(file.data_stream.read()) as file:
+        return file.read().decode("utf-8")
 
 
 def get_lists_history():
+    print("Fetching the apps repository...")
+    apps = Repo.clone_from("https://github.com/YunoHost/apps", TMP_DIR / "apps")
 
-    os.system("rm -rf ./.tmp")
-    os.system("git clone https://github.com/YunoHost/apps ./.tmp/apps")
-
-    for t in time_points_until_today:
-        print(t.strftime("%b %d %Y"))
+    print("Constructing level history...")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    for t in progressbar:
+        time_str = t.strftime("%Y-%m-%d")
+        d_label = t.strftime("%d %b %Y")
+        progressbar.set_description_str(d_label)
 
         # Fetch repo at this date
-        cmd = 'cd ./.tmp/apps; git checkout `git rev-list -1 --before="%s" master`'
-        os.system(cmd % t.strftime("%b %d %Y"))
+        commit_sha = apps.git.rev_list("-1", f"--before={time_str}", apps.active_branch)
+        commit = apps.commit(commit_sha)
 
-        if t < datetime(2019, 4, 4):
-            # Merge community and official
-            community = json.loads(open("./.tmp/apps/community.json").read())
-            official = json.loads(open("./.tmp/apps/official.json").read())
-            for key in official:
-                official[key]["state"] = "official"
+        try:
+            if t < datetime(2019, 4, 4):
+                # Merge community and official
+                community = json.loads(read_git_file(commit.tree / "community.json"))
+                official = json.loads(read_git_file(commit.tree / "official.json"))
+                for key in official:
+                    official[key]["state"] = "official"
+                merged = {}
+                merged.update(community)
+                merged.update(official)
+
+            else:
+                if "apps.toml" in commit.tree:
+                    merged = toml.loads(read_git_file(commit.tree / "apps.toml"))
+                else:
+                    merged = json.loads(read_git_file(commit.tree / "apps.json"))
+        except (toml.TomlDecodeError, json.JSONDecodeError):
             merged = {}
-            merged.update(community)
-            merged.update(official)
-        else:
-            try:
-                merged = toml.loads(open("./.tmp/apps/apps.toml").read())
-            except Exception:
-                try:
-                    merged = json.loads(open("./.tmp/apps/apps.json").read())
-                except Exception:
-                    pass
 
         # Save it
-        json.dump(
-            merged, open("./.tmp/merged_lists.json.%s" % t.strftime("%y-%m-%d"), "w")
-        )
+        merged_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        merged_file.write_text(json.dumps(merged))
 
 
-def make_count_summary():
-
+def make_count_summary() -> None:
     history = []
 
-    last_time_point = time_points_until_today[-1]
-    json_at_last_time_point = json.loads(
-        open(
-            "./.tmp/merged_lists.json.%s" % last_time_point.strftime("%y-%m-%d")
-        ).read()
-    )
+    last_time_point_str = time_points_until_today()[-1].strftime("%Y-%m-%d")
+    last_time_point_file = TMP_DIR / f"merged_lists.json.{last_time_point_str}"
+    json_at_last_time_point = json.loads(last_time_point_file.read_text())
+
     relevant_apps_to_track = [
         app
         for app, infos in json_at_last_time_point.items()
         if infos.get("state") in ["working", "official"]
     ]
 
-    for d in time_points_until_today:
-
-        print("Analyzing %s ..." % d.strftime("%y-%m-%d"))
+    print("Constructing count summary...")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    for t in progressbar:
+        time_str = t.strftime("%Y-%m-%d")
+        d_label = t.strftime("%d %b %Y")
+        progressbar.set_description_str(d_label)
 
         # Load corresponding json
-        j = json.loads(
-            open("./.tmp/merged_lists.json.%s" % d.strftime("%y-%m-%d")).read()
-        )
-        d_label = d.strftime("%b %d %Y")
+        time_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        time_data = json.loads(time_file.read_text())
 
         summary = {}
         summary["date"] = d_label
         for level in range(0, 10):
-            summary["level-%s" % level] = len(
+            summary[f"level-{level}"] = len(
                 [
                     k
-                    for k, infos in j.items()
+                    for k, infos in time_data.items()
                     if infos.get("state") in ["working", "official"]
                     and infos.get("level", None) == level
                 ]
@@ -108,7 +126,7 @@ def make_count_summary():
 
         for app in relevant_apps_to_track:
 
-            infos = j.get(app, {})
+            infos = time_data.get(app, {})
 
             if not infos or infos.get("state") not in ["working", "official"]:
                 level = -1
@@ -119,21 +137,12 @@ def make_count_summary():
                 except Exception:
                     level = -1
 
-    json.dump(history, open(".cache/history.json", "w"))
+    (CACHE_DIR / "history.json").write_text(json.dumps(history))
 
 
-def make_news():
-
-    news_per_date = {
-        d.strftime("%b %d %Y"): {
-            "broke": [],
-            "repaired": [],
-            "removed": [],
-            "added": [],
-        }
-        for d in time_points_until_today
-    }
-    previous_j = {}
+def make_news() -> None:
+    news_per_date = {}
+    previous_time_data = {}
 
     def level(infos):
         lev = infos.get("level")
@@ -142,59 +151,82 @@ def make_news():
         else:
             return int(lev)
 
-    for d in time_points_until_today:
-        d_label = d.strftime("%b %d %Y")
-
-        print("Analyzing %s ..." % d.strftime("%y-%m-%d"))
+    print("Constructing news...")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    for t in progressbar:
+        time_str = t.strftime("%Y-%m-%d")
+        d_label = t.strftime("%d %b %Y")
+        progressbar.set_description_str(d_label)
 
         # Load corresponding json
-        j = json.loads(
-            open("./.tmp/merged_lists.json.%s" % d.strftime("%y-%m-%d")).read()
-        )
+        time_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        time_data = json.loads(time_file.read_text())
 
         apps_current = set(
             k
-            for k, infos in j.items()
+            for k, infos in time_data.items()
             if infos.get("state") in ["working", "official"] and level(infos) != -1
         )
         apps_current_good = set(
-            k for k, infos in j.items() if k in apps_current and level(infos) > 4
+            k
+            for k, infos in time_data.items()
+            if k in apps_current and level(infos) > 4
         )
         apps_current_broken = set(
-            k for k, infos in j.items() if k in apps_current and level(infos) <= 4
+            k
+            for k, infos in time_data.items()
+            if k in apps_current and level(infos) <= 4
         )
 
         apps_previous = set(
             k
-            for k, infos in previous_j.items()
+            for k, infos in previous_time_data.items()
             if infos.get("state") in ["working", "official"] and level(infos) != -1
         )
         apps_previous_good = set(
             k
-            for k, infos in previous_j.items()
+            for k, infos in previous_time_data.items()
             if k in apps_previous and level(infos) > 4
         )
         apps_previous_broken = set(
             k
-            for k, infos in previous_j.items()
+            for k, infos in previous_time_data.items()
             if k in apps_previous and level(infos) <= 4
         )
 
-        news = news_per_date[d_label]
-        for app in set(apps_previous_good & apps_current_broken):
-            news["broke"].append((app, j[app]["url"]))
-        for app in set(apps_previous_broken & apps_current_good):
-            news["repaired"].append((app, j[app]["url"]))
-        for app in set(apps_current - apps_previous):
-            news["added"].append((app, j[app]["url"]))
-        for app in set(apps_previous - apps_current):
-            news["removed"].append((app, previous_j[app]["url"]))
+        news_per_date[d_label] = {
+            "broke": [
+                [app, time_data[app]["url"]]
+                for app in set(apps_previous_good & apps_current_broken)
+            ],
+            "repaired": [
+                [app, time_data[app]["url"]]
+                for app in set(apps_previous_broken & apps_current_good)
+            ],
+            "added": [
+                [app, time_data[app]["url"]]
+                for app in set(apps_current - apps_previous)
+            ],
+            "removed": [
+                [app, previous_time_data[app]["url"]]
+                for app in set(apps_previous - apps_current)
+            ],
+        }
 
-        previous_j = j
+        previous_time_data = time_data
 
-    json.dump(news_per_date, open(".cache/news.json", "w"))
+    (CACHE_DIR / "news.json").write_text(json.dumps(news_per_date))
 
 
-get_lists_history()
-make_count_summary()
-make_news()
+def main() -> None:
+    if TMP_DIR.exists():
+        shutil.rmtree(TMP_DIR)
+
+    get_lists_history()
+
+    make_count_summary()
+    make_news()
+
+
+if __name__ == "__main__":
+    main()

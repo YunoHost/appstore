@@ -8,9 +8,10 @@ _git() {
 }
 
 update_venv() {
-    if [ -d "venv" ]; then
-        venv/bin/pip install -r requirements.txt >/dev/null
+    if [ ! -d "venv" ]; then
+        python3 -m venv venv
     fi
+    venv/bin/pip install -r requirements.txt >/dev/null
 }
 
 restart_store() {
@@ -30,18 +31,23 @@ fetch_catalog_and_level_history() {
     curl https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
 
     if [ -d ".cache/apps" ]; then
-        _git -C .cache/apps pull
+        git -C .cache/apps pull
     else
-        _git clone https://github.com/YunoHost/apps.git .cache/apps
+        git clone https://github.com/YunoHost/apps.git .cache/apps
     fi
 
     if [ -d ".cache/tools" ]; then
-        _git -C .cache/tools pull
+        git -C .cache/tools pull
     else
-        _git clone https://github.com/YunoHost/apps-tools.git .cache/tools
+        git clone https://github.com/YunoHost/apps-tools.git .cache/tools
     fi
 
-    .cache/tools/app_caches.py -l .cache/apps/ -c .apps_cache -d -j20
+    if [ ! -d ".cache/tools/venv" ]; then
+        python3 -m venv .cache/tools/venv
+    fi
+    .cache/tools/venv/bin/pip install -r requirements.txt >/dev/null
+
+    .cache/tools/venv/bin/python3 .cache/tools/app_caches.py -l .cache/apps/ -c .apps_cache -d -j20
 
     venv/bin/python3 fetch_main_dashboard.py 2>&1 | grep -v 'Following Github server redirection'
 
