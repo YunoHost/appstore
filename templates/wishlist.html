@@ -279,6 +279,16 @@
     liveSearch();
     liveSort("wishlist");
 
+    document.addEventListener('keydown', function(event) {
+        // focus search bar when either <ctrl>+<k> was typed or <shift>+<7> ("/") or just the num pad "/" 
+        if ((event.key === 'k' && event.ctrlKey) || (event.key === '/' && event.shiftKey) || (event.key === '/')) {
+            event.preventDefault();
+            // focus search bar and set the cursor at the end of the already entered input
+            searchInput.focus();
+            searchInput.selectionStart = searchInput.selectionEnd = searchInput.value.length;
+        }
+    });
+
 </script>
 
 {% endblock %}
