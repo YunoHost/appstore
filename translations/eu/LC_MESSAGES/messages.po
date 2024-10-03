@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-12 00:34+0200\n"
-"PO-Revision-Date: 2024-09-13 04:54+0000\n"
+"PO-Revision-Date: 2024-10-04 17:59+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
-"Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/apps/"
-"eu/>\n"
+"Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
+"store/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -191,8 +191,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Behin-behineko egoera izan ohi da hau, arduradunak aplikazioko zerbait "
-"zuzendu arte."
+"Behin-behineko egoera izan ohi da, arduradunak aplikazioko zerbait zuzendu "
+"bitartean."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -412,7 +412,7 @@ msgstr "Begiratu desira-zerrenda!"
 
 #: templates/catalog.html:168
 msgid "Applications currently flagged as broken"
-msgstr "Aplikazioa hondatuta gisa ageri da"
+msgstr "Hondatutako aplikazioak"
 
 #: templates/catalog.html:171
 msgid "These are apps which failed our automatic tests."
@@ -424,14 +424,14 @@ msgstr "Utzitako aplikazioak"
 
 #: templates/catalog.html:189
 msgid "These are apps who are not maintained anymore."
-msgstr "Aplikazio hauek ez dute mantenduko dituenik."
+msgstr "Mantenduko dituenik ez duten aplikazioak dira hauek."
 
 #: templates/catalog.html:190
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
 msgstr ""
-"Honek esan nahi du garatzaileek ez dituztela aurrerantzean eguneratuko. Gure "
+"Garatzaileek aurrerantzean eguneratuko ez dituztela esan nahi du. Gure "
 "gomendioa ez instalatzea eta beraien ordez alternatibak bilatzea da."
 
 #: templates/charts.html:5
