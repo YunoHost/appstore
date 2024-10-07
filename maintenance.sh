@@ -28,7 +28,7 @@ restart_store() {
 }
 
 fetch_catalog_and_level_history() {
-    curl https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
+    curl -L https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
 
     if [ -d ".cache/apps" ]; then
         git -C .cache/apps pull
