@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-09-12 00:34+0200\n"
-"PO-Revision-Date: 2024-10-09 22:54+0000\n"
+"PO-Revision-Date: 2024-10-21 07:54+0000\n"
 "Last-Translator: cjdw <cjdw@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Indonesian <https://translate.yunohost.org/projects/yunohost/"
 "store/id/>\n"
@@ -132,7 +132,7 @@ msgid ""
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
 "Mohon maaf, aplikasi ini sudah dalam daftar aplikasi yang ditolak. Rincian "
-"alasasan:<br />%(reason)s</q>"
+"alasasan:<br /><q>%(reason)s</q>"
 
 #: app.py:393
 #, python-format
