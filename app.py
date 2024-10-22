@@ -103,7 +103,7 @@ def hours_ago(timestamp):
 def format_datetime(value, format="%d %b %Y %I:%M %p"):
     if value is None:
         return ""
-    return datetime.strptime(value, "%b %d %Y").strftime(format)
+    return datetime.strptime(value, "%d %b %Y").strftime(format)
 
 
 @app.context_processor
