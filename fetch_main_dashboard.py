@@ -19,6 +19,7 @@ from utils import get_catalog
 
 APPSTORE_PATH = Path(__file__).resolve().parent
 
+
 @cache
 def config() -> dict[str, Any]:
     try:
@@ -46,11 +47,15 @@ def catalog() -> dict:
 
 
 def _ci_apps_main_results() -> dict:
-    return requests.get("https://ci-apps.yunohost.org/ci/api/results", timeout=30).json()
+    return requests.get(
+        "https://ci-apps.yunohost.org/ci/api/results", timeout=30
+    ).json()
 
 
 def _ci_apps_nextdebian_results() -> dict:
-    return requests.get("https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=30).json()
+    return requests.get(
+        "https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=30
+    ).json()
 
 
 ci_apps_main_results = _ci_apps_main_results()
@@ -148,7 +153,9 @@ def main() -> None:
         with logging_redirect_tqdm():
             tasks = pool.imap(get_consolidated_infos, catalog()["apps"].items())
 
-            for result in tqdm.tqdm(tasks, total=len(catalog()["apps"].keys()), ascii=" ·#"):
+            for result in tqdm.tqdm(
+                tasks, total=len(catalog()["apps"].keys()), ascii=" ·#"
+            ):
                 if result is None:
                     continue
                 name, infos = result
