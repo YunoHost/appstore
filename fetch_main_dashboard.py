@@ -48,13 +48,13 @@ def catalog() -> dict:
 
 def _ci_apps_main_results() -> dict:
     return requests.get(
-        "https://ci-apps.yunohost.org/ci/api/results", timeout=30
+        "https://ci-apps.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
 def _ci_apps_nextdebian_results() -> dict:
     return requests.get(
-        "https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=30
+        "https://ci-apps-bookworm.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
