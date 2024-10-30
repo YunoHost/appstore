@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-30 22:39+0100\n"
+"POT-Creation-Date: 2024-10-30 22:41+0100\n"
 "PO-Revision-Date: 2024-06-27 16:54+0000\n"
 "Last-Translator: Zwiebel <zwiebel@users.noreply.translate.yunohost.org>\n"
 "Language: de\n"
@@ -312,7 +312,7 @@ msgstr "YunoHost App-Store"
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
 msgstr "Katalog"
 
@@ -390,7 +390,7 @@ msgstr "Suchen nach…"
 msgid "All apps"
 msgstr "Alle Apps"
 
-#: templates/catalog.html:120 templates/dash.html:36 templates/wishlist.html:41
+#: templates/catalog.html:120 templates/dash.html:37 templates/wishlist.html:41
 msgid "Sort by"
 msgstr "Sortieren nach"
 
@@ -403,16 +403,16 @@ msgstr "Popularität"
 msgid "Newest"
 msgstr "Neueste"
 
-#: templates/catalog.html:128 templates/dash.html:42 templates/wishlist.html:48
+#: templates/catalog.html:128 templates/dash.html:43 templates/wishlist.html:48
 msgid "Alphabetical"
 msgstr "Alphabetisch"
 
-#: templates/catalog.html:131 templates/dash.html:64 templates/wishlist.html:51
+#: templates/catalog.html:131 templates/dash.html:65 templates/wishlist.html:51
 msgid "Requires to be logged-in"
 msgstr "Erfordert eingeloggt zu sein"
 
-#: templates/catalog.html:133 templates/catalog.html:142 templates/dash.html:66
-#: templates/dash.html:75 templates/wishlist.html:53 templates/wishlist.html:62
+#: templates/catalog.html:133 templates/catalog.html:142 templates/dash.html:67
+#: templates/dash.html:76 templates/wishlist.html:53 templates/wishlist.html:62
 msgid "Show only apps you starred"
 msgstr "Zeige nur meine Favoriten"
 
@@ -570,104 +570,114 @@ msgid "Outdated tests on main CI"
 msgstr ""
 
 #: templates/dash.html:28
-msgid "Major regressions on Bookworm CI"
+msgid "Regressions since Bullseye"
 msgstr ""
 
 #: templates/dash.html:29
-msgid "Apps with testings PRs"
+msgid "Regressions on Trixie"
 msgstr ""
 
 #: templates/dash.html:30
-msgid "Apps with autoupdate PRs"
+msgid "Apps with testings PRs"
 msgstr ""
 
 #: templates/dash.html:31
+msgid "Apps with autoupdate PRs"
+msgstr ""
+
+#: templates/dash.html:32
 msgid "Apps with issues"
 msgstr "Apps mit Fehlern"
 
-#: templates/dash.html:32
+#: templates/dash.html:33
 msgid "Packaging v1 apps"
 msgstr ""
 
-#: templates/dash.html:43
+#: templates/dash.html:44
 msgid "Quality level"
 msgstr "Qualitätslevel"
 
-#: templates/dash.html:44 templates/dash.html:226
+#: templates/dash.html:45 templates/dash.html:256
 msgid "Popularity stars"
 msgstr "Popularität"
 
-#: templates/dash.html:45
+#: templates/dash.html:46
 msgid "Last update on main/master branch"
 msgstr ""
 
-#: templates/dash.html:46
+#: templates/dash.html:47
 msgid "Last update on testing branch"
 msgstr ""
 
-#: templates/dash.html:47
+#: templates/dash.html:48
 msgid "Number of opened issues"
 msgstr ""
 
-#: templates/dash.html:53 templates/dash.html:62
+#: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
 msgstr ""
 
-#: templates/dash.html:82
+#: templates/dash.html:83
 msgid "App"
 msgstr ""
 
-#: templates/dash.html:84
+#: templates/dash.html:85
 msgid "Main CI"
 msgstr ""
 
-#: templates/dash.html:85
-msgid "Bookworm CI"
-msgstr ""
-
 #: templates/dash.html:86
-msgid "Testing PR"
+msgid "Bullseye CI"
 msgstr ""
 
 #: templates/dash.html:87
-msgid "Autoupdate PR"
+msgid "Trixie CI"
 msgstr ""
 
 #: templates/dash.html:88
+msgid "Testing PR"
+msgstr ""
+
+#: templates/dash.html:89
+msgid "Autoupdate PR"
+msgstr ""
+
+#: templates/dash.html:90
 msgid "Issues"
 msgstr "Fehler"
 
-#: templates/dash.html:140 templates/dash.html:158 templates/dash.html:177
+#: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
+#: templates/dash.html:207
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
+#: templates/dash.html:150 templates/dash.html:168 templates/dash.html:187
+#: templates/dash.html:209
 msgid "Low quality"
 msgstr "Geringe Qualität"
 
-#: templates/dash.html:154 templates/dash.html:173
+#: templates/dash.html:162 templates/dash.html:181 templates/dash.html:203
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:196 templates/dash.html:211
+#: templates/dash.html:226 templates/dash.html:241
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr "Inaktiv seit (%(days)s Tagen"
 
-#: templates/dash.html:230
+#: templates/dash.html:260
 msgid "Packaging v1"
 msgstr ""
 
-#: templates/dash.html:233
+#: templates/dash.html:263
 msgid "Deprecated"
 msgstr "Veraltete Applikationen"
 
-#: templates/dash.html:236
+#: templates/dash.html:266
 msgid "Not maintained"
 msgstr "Nicht betreut"
 
-#: templates/dash.html:250
+#: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr ""
@@ -810,4 +820,3 @@ msgstr "Dieser App einen Stern geben"
 
 #~ msgid "Issues number"
 #~ msgstr "Anzahl der Fehler"
-
