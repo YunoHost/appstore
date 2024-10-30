@@ -789,3 +789,4 @@ msgstr "Repositori de codi"
 #: templates/wishlist.html:131 templates/wishlist.html:132
 msgid "Star this app"
 msgstr "Destaca aquesta aplicació"
+

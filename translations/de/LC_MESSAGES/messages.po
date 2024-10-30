@@ -810,3 +810,4 @@ msgstr "Dieser App einen Stern geben"
 
 #~ msgid "Issues number"
 #~ msgstr "Anzahl der Fehler"
+
