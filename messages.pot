@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-12 00:34+0200\n"
+"POT-Creation-Date: 2024-10-30 22:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: app.py:179
 #, python-format
@@ -155,7 +155,7 @@ msgid ""
 msgstr ""
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:172
+#: templates/catalog.html:42 templates/catalog.html:173
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -324,69 +324,69 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: templates/catalog.html:93 templates/wishlist.html:21
+#: templates/catalog.html:94 templates/wishlist.html:23
 msgid "Search for…"
 msgstr ""
 
-#: templates/catalog.html:109
+#: templates/catalog.html:110
 msgid "All apps"
 msgstr ""
 
-#: templates/catalog.html:119 templates/dash.html:36 templates/wishlist.html:39
+#: templates/catalog.html:120 templates/dash.html:36 templates/wishlist.html:41
 msgid "Sort by"
 msgstr ""
 
-#: templates/catalog.html:125 templates/wishlist.html:45
-#: templates/wishlist.html:78
+#: templates/catalog.html:126 templates/wishlist.html:47
+#: templates/wishlist.html:80
 msgid "Popularity"
 msgstr ""
 
-#: templates/catalog.html:126
+#: templates/catalog.html:127
 msgid "Newest"
 msgstr ""
 
-#: templates/catalog.html:127 templates/dash.html:42 templates/wishlist.html:46
+#: templates/catalog.html:128 templates/dash.html:42 templates/wishlist.html:48
 msgid "Alphabetical"
 msgstr ""
 
-#: templates/catalog.html:130 templates/dash.html:64 templates/wishlist.html:49
+#: templates/catalog.html:131 templates/dash.html:64 templates/wishlist.html:51
 msgid "Requires to be logged-in"
 msgstr ""
 
-#: templates/catalog.html:132 templates/catalog.html:141 templates/dash.html:66
-#: templates/dash.html:75 templates/wishlist.html:51 templates/wishlist.html:60
+#: templates/catalog.html:133 templates/catalog.html:142 templates/dash.html:66
+#: templates/dash.html:75 templates/wishlist.html:53 templates/wishlist.html:62
 msgid "Show only apps you starred"
 msgstr ""
 
-#: templates/catalog.html:157 templates/wishlist.html:154
+#: templates/catalog.html:158 templates/wishlist.html:156
 msgid "No results found."
 msgstr ""
 
-#: templates/catalog.html:160
+#: templates/catalog.html:161
 msgid "Not finding what you are looking for?"
 msgstr ""
 
-#: templates/catalog.html:161
+#: templates/catalog.html:162
 msgid "Checkout the wishlist!"
 msgstr ""
 
-#: templates/catalog.html:168
+#: templates/catalog.html:169
 msgid "Applications currently flagged as broken"
 msgstr ""
 
-#: templates/catalog.html:171
+#: templates/catalog.html:172
 msgid "These are apps which failed our automatic tests."
 msgstr ""
 
-#: templates/catalog.html:186
+#: templates/catalog.html:187
 msgid "Deprecated applications"
 msgstr ""
 
-#: templates/catalog.html:189
+#: templates/catalog.html:190
 msgid "These are apps who are not maintained anymore."
 msgstr ""
 
-#: templates/catalog.html:190
+#: templates/catalog.html:191
 msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
@@ -532,7 +532,7 @@ msgstr ""
 msgid "Quality level"
 msgstr ""
 
-#: templates/dash.html:44 templates/dash.html:214
+#: templates/dash.html:44 templates/dash.html:226
 msgid "Popularity stars"
 msgstr ""
 
@@ -576,37 +576,37 @@ msgstr ""
 msgid "Issues"
 msgstr ""
 
-#: templates/dash.html:128 templates/dash.html:146 templates/dash.html:165
+#: templates/dash.html:140 templates/dash.html:158 templates/dash.html:177
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:130 templates/dash.html:148 templates/dash.html:167
+#: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
 msgid "Low quality"
 msgstr ""
 
-#: templates/dash.html:142 templates/dash.html:161
+#: templates/dash.html:154 templates/dash.html:173
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:184 templates/dash.html:199
+#: templates/dash.html:196 templates/dash.html:211
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:218
+#: templates/dash.html:230
 msgid "Packaging v1"
 msgstr ""
 
-#: templates/dash.html:221
+#: templates/dash.html:233
 msgid "Deprecated"
 msgstr ""
 
-#: templates/dash.html:224
+#: templates/dash.html:236
 msgid "Not maintained"
 msgstr ""
 
-#: templates/dash.html:238
+#: templates/dash.html:250
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr ""
@@ -619,7 +619,7 @@ msgstr ""
 msgid "Browse all applications"
 msgstr ""
 
-#: templates/wishlist.html:33 templates/wishlist_add.html:3
+#: templates/wishlist.html:35 templates/wishlist_add.html:3
 msgid "Suggest an app"
 msgstr ""
 
@@ -641,7 +641,7 @@ msgid ""
 "send every random nerdy stuff you find on the Internet."
 msgstr ""
 
-#: templates/wishlist.html:71 templates/wishlist_add.html:61
+#: templates/wishlist.html:73 templates/wishlist_add.html:61
 msgid "Name"
 msgstr ""
 
@@ -703,19 +703,19 @@ msgid ""
 "packaging volunteers."
 msgstr ""
 
-#: templates/wishlist.html:74
+#: templates/wishlist.html:76
 msgid "Description"
 msgstr ""
 
-#: templates/wishlist.html:102 templates/wishlist.html:103
+#: templates/wishlist.html:104 templates/wishlist.html:105
 msgid "Official website"
 msgstr ""
 
-#: templates/wishlist.html:115 templates/wishlist.html:116
+#: templates/wishlist.html:117 templates/wishlist.html:118
 msgid "Code repository"
 msgstr ""
 
-#: templates/wishlist.html:129 templates/wishlist.html:130
+#: templates/wishlist.html:131 templates/wishlist.html:132
 msgid "Star this app"
 msgstr ""
 
