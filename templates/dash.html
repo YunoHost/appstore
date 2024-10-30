@@ -25,7 +25,8 @@
         <option {% if request.args.get("filter") == "regressions_main_ci" %}selected{% endif %} value="regressions_main_ci">{{ _("Regressions on main CI") }}</option>
         <option {% if request.args.get("filter") == "broken_low_quality" %}selected{% endif %} value="broken_low_quality">{{ _("Broken / low quality apps") }}</option>
         <option {% if request.args.get("filter") == "outdated" %}selected{% endif %} value="outdated">{{ _("Outdated tests on main CI") }}</option>
-        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Major regressions on Bookworm CI") }}</option>
+        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Regressions since Bullseye") }}</option>
+        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_trixie">{{ _("Regressions on Trixie") }}</option>
         <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
         <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
         <option {% if request.args.get("filter") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Apps with issues") }}</option>
@@ -82,7 +83,8 @@
         <th class="max-w-24 md:max-w-32">{{ _("App") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Catalog") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Main CI") }}</th>
-        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bookworm CI") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bullseye CI") }}</th>
+        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Trixie CI") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Testing PR") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Autoupdate PR") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Issues") }}</th>
@@ -97,14 +99,20 @@
             {% set user_starred_this_app = False %}
         {% endif %}
 
-        {% if infos["ci_results"]["main"] %}
-            {% set ci_results_main = infos["ci_results"]["main"] %}
+        {% if infos["ci_results"]["bullseye"] %}
+            {% set ci_results_prev = infos["ci_results"]["bullseye"] %}
+        {% else %}
+            {% set ci_results_prev = {"level": -1, "timestamp": -9999, } %}
+        {% endif %}
+
+        {% if infos["ci_results"]["bookworm"] %}
+            {% set ci_results_main = infos["ci_results"]["bookworm"] %}
         {% else %}
             {% set ci_results_main = {"level": -1, "timestamp": -9999, } %}
         {% endif %}
 
-        {% if infos["ci_results"]["nextdebian"] %}
-            {% set ci_results_next = infos["ci_results"]["nextdebian"] %}
+        {% if infos["ci_results"]["trixie"] %}
+            {% set ci_results_next = infos["ci_results"]["trixie"] %}
         {% else %}
             {% set ci_results_next = {"level": -1, "timestamp": -9999, } %}
         {% endif %}
@@ -120,6 +128,7 @@
         data-public-level="{{ infos["public_level"] if infos["public_level"] != "?" else -1 }}"
         data-main-ci-level="{{ ci_results_main["level"] }}"
         data-main-ci-daysago="{{ ci_results_main["timestamp"] | days_ago }}"
+        data-prevdebian-ci-level="{{ ci_results_prev["level"] }}"
         data-nextdebian-ci-level="{{ ci_results_next["level"] }}"
         data-last-update-master="{{ ci_results_main["timestamp"] }}"
         data-last-update-testing="{% if infos["testing"] %}{{ infos["testing"]["timestamp_updated"] }}{% else %}-1{% endif %}"
@@ -127,8 +136,7 @@
         data-packaging-format="{{ infos["packaging_format"] }}"
         data-deprecated="{% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}True{% else %}False{% endif %}"
         data-nb-issues="{{ infos["nb_issues"] }}"
-
-     >
+    >
         <td class="truncate max-w-24 md:max-w-64 text-center text-blue-600 font-medium">
             <a href="{{ infos["url"] }}">{{ app }}</a>
         </td>
@@ -162,7 +170,29 @@
             </a>
         </td>
         <td class="text-center">
-            <a class="{% if ci_results_next and ((infos["public_level"] == ci_results_next["level"]) or (ci_results_next["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-bookworm.yunohost.org/ci/apps/{{ app }}/">
+            <a class="{% if ci_results_prev and ((infos["public_level"] == ci_results_prev["level"]) or (ci_results_prev["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-bullseye.yunohost.org/ci/apps/{{ app }}/">
+                {% if ci_results_prev %}
+                    {% if infos["public_level"] == ci_results_prev["level"] %}
+                        =
+                    {% else %}
+                        {{ ci_results_prev["level"] }}
+                    {% endif %}
+                    {% if ci_results_prev["timestamp"] | days_ago > 30 %}
+                    <i class="fa fa-hourglass-o" title="{{ _("Outdated test (%(days)s days ago)", days=ci_results_prev["timestamp"] | days_ago) }}"></i>
+                    {% endif %}
+                    {% if infos["public_level"] == "?" %}
+                    {% elif ci_results_prev["level"] < infos["public_level"] and ci_results_prev["level"] == 0 %}
+                        <i class="fa fa-exclamation-circle text-red-500" title="{{ _("Broken") }}"></i>
+                    {% elif ci_results_prev["level"] < infos["public_level"] and ci_results_prev["level"] <= 4 %}
+                        <i class="fa fa-exclamation-triangle text-amber-500" title="{{ _("Low quality") }}"></i>
+                    {% endif %}
+                {% else %}
+                ?
+                {% endif %}
+            </a>
+        </td>
+        <td class="text-center">
+            <a class="{% if ci_results_next and ((infos["public_level"] == ci_results_next["level"]) or (ci_results_next["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-trixie.yunohost.org/ci/apps/{{ app }}/">
                 {% if ci_results_next %}
                     {% if infos["public_level"] == ci_results_next["level"] %}
                         =
@@ -315,6 +345,18 @@
                 }
             }
             else if (filterName == "regressions_bookworm")
+            {
+                if ((entries[i].dataset.mainCiLevel < 6) && (entries[i].dataset.mainCiLevel < entries[i].dataset.prevdebianCiLevel ))
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++;
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "regressions_trixie")
             {
                 if ((entries[i].dataset.publicLevel >= 6) && (entries[i].dataset.nextdebianCiLevel < 6) && (entries[i].dataset.nextdebianCiLevel != entries[i].dataset.mainCiLevel))
                 {
