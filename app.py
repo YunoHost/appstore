@@ -41,6 +41,8 @@ from utils import (
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
 
+MAIN_CI = "bookworm"
+
 try:
     config = toml.loads(open("config.toml").read())
 except Exception as e:
@@ -516,14 +518,14 @@ def charts():
             [
                 infos
                 for infos in dashboard_data.values()
-                if infos.get("ci_results", {}).get("main").get("level") == i
+                if infos.get("ci_results", {}).get(MAIN_CI).get("level") == i
             ]
         )
     level_summary["unknown"] = len(
         [
             infos
             for infos in dashboard_data.values()
-            if infos.get("ci_results", {}).get("main").get("level") in [None, "?"]
+            if infos.get("ci_results", {}).get(MAIN_CI).get("level") in [None, "?"]
         ]
     )
 
@@ -566,7 +568,7 @@ def badge(app, type="integration"):
 
     catalog_level = catalog.get(app, {}).get("level")
     main_ci_level = (
-        data.get(app, {}).get("ci_results", {}).get("main", {}).get("level", "?")
+        data.get(app, {}).get("ci_results", {}).get(MAIN_CI, {}).get("level", "?")
     )
 
     if type == "integration":
