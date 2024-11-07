@@ -66,7 +66,7 @@ def _ci_apps_trixie_results() -> dict:
 
 ci_apps_bullseye_results = _ci_apps_bullseye_results()
 ci_apps_bookworm_results = _ci_apps_bookworm_results()
-# ci_apps_trixie_results = _ci_apps_trixie_results()
+ci_apps_trixie_results = _ci_apps_trixie_results()
 
 
 def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
@@ -142,7 +142,7 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
         "ci_results": {
             "bullseye": get_app_ci_results(ci_apps_bullseye_results, name),
             "bookworm": get_app_ci_results(ci_apps_bookworm_results, name),
-            # "trixie": get_app_ci_results(ci_apps_trixie_results, name),
+            "trixie": get_app_ci_results(ci_apps_trixie_results, name),
         },
     }
 
