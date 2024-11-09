@@ -46,27 +46,25 @@ def catalog() -> dict:
     return get_catalog()
 
 
+@cache
 def _ci_apps_bullseye_results() -> dict:
     return requests.get(
         "https://ci-apps-bullseye.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
+@cache
 def _ci_apps_bookworm_results() -> dict:
     return requests.get(
         "https://ci-apps.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
+@cache
 def _ci_apps_trixie_results() -> dict:
     return requests.get(
         "https://ci-apps-trixie.yunohost.org/ci/api/results", timeout=60
     ).json()
-
-
-ci_apps_bullseye_results = _ci_apps_bullseye_results()
-ci_apps_bookworm_results = _ci_apps_bookworm_results()
-ci_apps_trixie_results = _ci_apps_trixie_results()
 
 
 def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
@@ -140,9 +138,9 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
         "antifeatures": infos["antifeatures"],
         "packaging_format": infos["manifest"]["packaging_format"],
         "ci_results": {
-            "bullseye": get_app_ci_results(ci_apps_bullseye_results, name),
-            "bookworm": get_app_ci_results(ci_apps_bookworm_results, name),
-            "trixie": get_app_ci_results(ci_apps_trixie_results, name),
+            "bullseye": get_app_ci_results(ci_apps_bullseye_results(), name),
+            "bookworm": get_app_ci_results(ci_apps_bookworm_results(), name),
+            "trixie": get_app_ci_results(ci_apps_trixie_results(), name),
         },
     }
 
