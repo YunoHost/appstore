@@ -47,21 +47,21 @@ def catalog() -> dict:
 
 
 @cache
-def _ci_apps_bullseye_results() -> dict:
+def ci_apps_bullseye_results() -> dict:
     return requests.get(
         "https://ci-apps-bullseye.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
 @cache
-def _ci_apps_bookworm_results() -> dict:
+def ci_apps_bookworm_results() -> dict:
     return requests.get(
         "https://ci-apps.yunohost.org/ci/api/results", timeout=60
     ).json()
 
 
 @cache
-def _ci_apps_trixie_results() -> dict:
+def ci_apps_trixie_results() -> dict:
     return requests.get(
         "https://ci-apps-trixie.yunohost.org/ci/api/results", timeout=60
     ).json()
