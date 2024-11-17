@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2025-01-28 10:20+0000\n"
+"PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Tommi <surfing@tommi.space>\n"
+"Language-Team: Italian <https://translate.yunohost.org/projects/yunohost/"
+"store/it/>\n"
 "Language: it\n"
-"Language-Team: Italian "
-"<https://translate.yunohost.org/projects/yunohost/store/it/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:181
@@ -36,17 +37,17 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
-"Nota che, per diversi abusi, abbiamo ristretto l’accesso all’app store "
-"alle persone che hanno ‘trust level 1’<br/><br/>Il ‘trust level 1’ si "
-"ottiene dopo aver interagito un minimo nel forum, specificamente: "
-"visitando almeno 5 argomenti, leggendo almeno 30 post, e spendendo almeno"
-" 10 minuti a leggere post."
+"Nota che, per diversi abusi, abbiamo ristretto l’accesso all’app store alle "
+"persone che hanno ‘trust level 1’<br/><br/>Il ‘trust level 1’ si ottiene "
+"dopo aver interagito un minimo nel forum, specificamente: visitando almeno 5 "
+"argomenti, leggendo almeno 30 post, e spendendo almeno 10 minuti a leggere "
+"post."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
-"Devi aver effettuato l’accesso per proporre un’applicazione nella lista "
-"dei desideri"
+"Devi aver effettuato l’accesso per proporre un’applicazione nella lista dei "
+"desideri"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -57,8 +58,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"La proposta di aggiunta alla lista dei desideri è limitata a una volta "
-"ogni 15 giorni per ciascuna persona. Riprova fra qualche giorno."
+"La proposta di aggiunta alla lista dei desideri è limitata a una volta ogni "
+"15 giorni per ciascuna persona. Riprova fra qualche giorno."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -79,8 +80,8 @@ msgstr "La descrizione dell’app deve contenere meno di 100 caratteri"
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
-"L’URL della repository contenente il codice upstream deve contenere "
-"almeno 10 caratteri"
+"L’URL della repository contenente il codice upstream deve contenere almeno "
+"10 caratteri"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
@@ -110,13 +111,14 @@ msgid ""
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
-"Concentrati su ciò che l’applicazione fa, senza usare termini di "
-"marketing poco chiari e senza ripetere che l’app è “libera” e “self-"
-"hostabile”. È preferibile usare l’inglese."
+"Concentrati su ciò che l’applicazione fa, senza usare termini di marketing "
+"poco chiari e senza ripetere che l’app è “libera” e “self-hostabile”. È "
+"preferibile usare l’inglese."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
-msgstr "Non c’è bisogno di ripetere il nome dell’app. Concentrati su ciò che fa."
+msgstr ""
+"Non c’è bisogno di ripetere il nome dell’app. Concentrati su ciò che fa."
 
 #: app.py:362
 #, python-format
@@ -125,9 +127,8 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
-"Nella lista dei desideri esiste già una voce con il nome %(slug)s, puoi "
-"però <a href='%(url)s'>votare l’app relativa per manifestare il tuo "
-"interesse</a>."
+"Nella lista dei desideri esiste già una voce con il nome %(slug)s, puoi però "
+"<a href='%(url)s'>votare l’app relativa per manifestare il tuo interesse</a>."
 
 #: app.py:381
 #, python-format
@@ -144,8 +145,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Un’app con il nome %(slug)s esiste già nel catalogo, <a "
-"href='%(url)s'>puoi visualizzare la sua pagina qui</a>."
+"Un’app con il nome %(slug)s esiste già nel catalogo, <a href='%(url)s'>puoi "
+"visualizzare la sua pagina qui</a>."
 
 #: app.py:420
 #, python-format
@@ -156,8 +157,8 @@ msgid ""
 msgstr ""
 "La creazione della pull request per richiedere l’aggiunta dell’app alla "
 "lista dei desideri è fallita… Forse perché per quest’app c’è già <a "
-"href='%(url)s'>una PR in attesa</a>? Se non è così, segnala questo "
-"problema alla squadra di YunoHost."
+"href='%(url)s'>una PR in attesa</a>? Se non è così, segnala questo problema "
+"alla squadra di YunoHost."
 
 #: app.py:470
 #, python-format
@@ -166,9 +167,9 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
-"La proposta per l’app che hai appena compilato è stata inviata con "
-"successo. Ora dev’essere convalidata dalla squadra di YunoHost. Puoi "
-"tenere traccia del progresso qui: <a href='%(url)s'>%(url)s</a>"
+"La proposta per l’app che hai appena compilato è stata inviata con successo. "
+"Ora dev’essere convalidata dalla squadra di YunoHost. Puoi tenere traccia "
+"del progresso qui: <a href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -185,8 +186,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Quest’app è momentaneamente segnalata come rotta perché ha fallito i "
-"nostri test automatici."
+"Quest’app è momentaneamente segnalata come rotta perché ha fallito i nostri "
+"test automatici."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -203,8 +204,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Quest’app è stata segnalata dai nostri test automatici come di buona "
-"qualità per almeno un anno."
+"Quest’app è stata segnalata dai nostri test automatici come di buona qualità "
+"per almeno un anno."
 
 #: templates/app.html:81
 msgid "Try the demo"
@@ -350,9 +351,8 @@ msgid ""
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Creato con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"usando <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> e <a class='text-"
-"blue-800 dark:text-blue-400' "
+"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
@@ -681,8 +681,8 @@ msgstr "Suggerisci un’applicazione da aggiungere al catalogo di YunoHost"
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
-"Devi prima effettuare l’accesso perché ti sia permesso di aggiungere "
-"un’app alla lista dei desideri"
+"Devi prima effettuare l’accesso perché ti sia permesso di aggiungere un’app "
+"alla lista dei desideri"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
@@ -771,4 +771,3 @@ msgstr ""
 #: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr ""
-
