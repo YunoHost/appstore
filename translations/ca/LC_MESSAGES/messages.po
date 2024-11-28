@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-03-23 19:04+0000\n"
-"Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
+"PO-Revision-Date: 2024-11-29 03:50+0000\n"
+"Last-Translator: Francescc <francesc@mateu.cat>\n"
+"Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
+"store/ca/>\n"
 "Language: ca\n"
-"Language-Team: Catalan "
-"<https://translate.yunohost.org/projects/yunohost/apps/ca/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: app.py:179
@@ -104,7 +105,6 @@ msgstr "El nom de l'aplicació conté caràcters especials"
 # "
 # | "or repeating that the app is 'free' and 'self-hostable'."
 #: app.py:320
-#, fuzzy
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, "
 "or repeating that the app is 'free' and 'self-hostable'. English language"
@@ -135,6 +135,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"Ho sentim, però aquesta aplicació apareix entre les aplicacions ja "
+"rebutjades. El motiu especificat és:<br /><q>%(reason)s</q>"
 
 #: app.py:393
 #, python-format
@@ -309,11 +311,11 @@ msgstr "Llista de desitjos"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Tauler d'empaquetat"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Gràfiques i història"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
@@ -321,7 +323,7 @@ msgstr "Documentació de YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Canvia el mode clar/fosc"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
@@ -330,7 +332,7 @@ msgstr "Inicieu sessió mitjançant el fòrum de YunoHost"
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Taulers d'empaquetat"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
@@ -341,7 +343,6 @@ msgid "Toggle menu"
 msgstr "Canvia el menú"
 
 #: templates/base.html:264
-#, fuzzy
 msgid ""
 "Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
 "using <a class='text-blue-800 dark:text-blue-400' "
@@ -349,10 +350,10 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Fet amb <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> fent"
-" servir <a class='text-blue-800' "
-"href='https://flask.palletsprojects.com'>Flask</a> i <a class='text-"
-"blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Fet amb <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> fent "
+"servir <a class='text-blue-800' href='https://flask.palletsprojects."
+"com'>Flask</a> i <a class='text-blue-800' href='https://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -445,89 +446,89 @@ msgstr ""
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Nivell de qualitat de les aplicacions a partir de proves automàtiques"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Historial del nivell de qualitat de les aplicacions"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Historial"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Afegit"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Reparat"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Trencat"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Eliminat"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Desconegut"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Nivell 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Nivell 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Nivell 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Nivell 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Nivell 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Nivell 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Nivell 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Nivell 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Nivell 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Nivell %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Total:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Nivell %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "Tauler d'empaquetat d'aplicacions"
 
 #: templates/dash.html:11
 msgid ""
@@ -538,54 +539,61 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Aquí és on els empaquetadors poden controlar l'estat de les proves "
+"automàtiques (CI) i les sol·licituds importants en curs a totes les "
+"aplicacions. Si voleu començar amb l'empaquetat d'aplicacions a YunoHost, "
+"consulteu la <a class='text-blue-500' href='https://yunohost.org/"
+"packaging_apps'>documentació d'empaquetat</a> i digueu hola a la <a class"
+"='text-blue-500' href='https://yunohost.org/chat_rooms'>sala de xat "
+"d'empaquetat d'aplicacions</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(Cap)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Regressions sobre CI principal"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Aplicacions trencades / de baixa qualitat"
 
 #: templates/dash.html:27
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Proves obsoletes sobre CI principal"
 
 #: templates/dash.html:28
 msgid "Regressions since Bullseye"
-msgstr ""
+msgstr "Regressions des de Bullseye"
 
 #: templates/dash.html:29
 msgid "Regressions on Trixie"
-msgstr ""
+msgstr "Regressions sobre Trixie"
 
 #: templates/dash.html:30
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Aplicacions amb PR de proves"
 
 #: templates/dash.html:31
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Aplicacions amb PR d'actualització automàtica"
 
 #: templates/dash.html:32
 msgid "Apps with issues"
-msgstr ""
+msgstr "Aplicacions amb problemes"
 
 #: templates/dash.html:33
 msgid "Packaging v1 apps"
-msgstr ""
+msgstr "Empaquetat d'aplicacions v1"
 
 #: templates/dash.html:44
 msgid "Quality level"
-msgstr ""
+msgstr "Nivell de qualitat"
 
 #: templates/dash.html:45 templates/dash.html:256
 msgid "Popularity stars"
@@ -593,71 +601,71 @@ msgstr "Popularitat"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Última actualització a la branca principal/mestra"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Última actualització de la branca de proves"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Nombre de problemes oberts"
 
 #: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Amaga les aplicacions obsoletes/no mantingudes"
 
 #: templates/dash.html:83
 msgid "App"
-msgstr ""
+msgstr "Aplicació"
 
 #: templates/dash.html:85
 msgid "Main CI"
-msgstr ""
+msgstr "CI principal"
 
 #: templates/dash.html:86
 msgid "Bullseye CI"
-msgstr ""
+msgstr "CI Bullseye"
 
 #: templates/dash.html:87
 msgid "Trixie CI"
-msgstr ""
+msgstr "CI Trixie"
 
 #: templates/dash.html:88
 msgid "Testing PR"
-msgstr ""
+msgstr "Prova de PR"
 
 #: templates/dash.html:89
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Actualització automàtica de PR"
 
 #: templates/dash.html:90
 msgid "Issues"
-msgstr ""
+msgstr "Problemes"
 
 #: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
 #: templates/dash.html:207
 msgid "Broken"
-msgstr ""
+msgstr "Trencat"
 
 #: templates/dash.html:150 templates/dash.html:168 templates/dash.html:187
 #: templates/dash.html:209
 msgid "Low quality"
-msgstr ""
+msgstr "Baixa qualitat"
 
 #: templates/dash.html:162 templates/dash.html:181 templates/dash.html:203
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Prova obsoleta (fa %(days)s dies)"
 
 #: templates/dash.html:226 templates/dash.html:241
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Inactiu (fa %(days)s dies)"
 
 #: templates/dash.html:260
 msgid "Packaging v1"
-msgstr ""
+msgstr "Empaquetat v1"
 
 #: templates/dash.html:263
 msgid "Deprecated"
@@ -665,12 +673,12 @@ msgstr "Aplicacions obsoletes"
 
 #: templates/dash.html:266
 msgid "Not maintained"
-msgstr ""
+msgstr "No es manté"
 
 #: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Última actualització de dades fa %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
