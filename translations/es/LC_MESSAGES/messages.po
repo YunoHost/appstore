@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-12-22 17:10+0000\n"
+"PO-Revision-Date: 2024-12-23 00:31+0000\n"
 "Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "store/es/>\n"
@@ -554,9 +554,8 @@ msgid "(None)"
 msgstr "(ninguno)"
 
 #: templates/dash.html:25
-#, fuzzy
 msgid "Regressions on main CI"
-msgstr "Error en CI main"
+msgstr "Regresión en CI main"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
@@ -584,7 +583,7 @@ msgstr "Aplicaciones con solicitudes de modificaciones automaticas"
 
 #: templates/dash.html:32
 msgid "Apps with issues"
-msgstr ""
+msgstr "Aplicaciones con errores"
 
 #: templates/dash.html:33
 msgid "Packaging v1 apps"
@@ -608,11 +607,11 @@ msgstr "Ultima actualización el la rama testing"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Numero de errores abiertas"
 
 #: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Esconder las aplicaciones no mantenidas o menospreciadas"
 
 #: templates/dash.html:83
 msgid "App"
@@ -624,11 +623,11 @@ msgstr "CI main"
 
 #: templates/dash.html:86
 msgid "Bullseye CI"
-msgstr ""
+msgstr "CI bullseye"
 
 #: templates/dash.html:87
 msgid "Trixie CI"
-msgstr ""
+msgstr "CI Trixie"
 
 #: templates/dash.html:88
 msgid "Testing PR"
@@ -640,7 +639,7 @@ msgstr "PR autoupdate"
 
 #: templates/dash.html:90
 msgid "Issues"
-msgstr ""
+msgstr "Incidentes"
 
 #: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
 #: templates/dash.html:207
@@ -677,7 +676,7 @@ msgstr "Sin mantenedor"
 #: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Ultima actualisación hace %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -700,11 +699,9 @@ msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr "Conectase antes de sugerir una aplicación"
 
 #: templates/wishlist_add.html:40
-#, fuzzy
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Debido a abusos, la sugestión esta limitada a una por usuario cada 15 "
-"días."
+"Debido a abusos, la sugestión esta limitada a una por usuario cada 15 días."
 
 #: templates/wishlist_add.html:43
 msgid ""
@@ -733,33 +730,39 @@ msgid ""
 "Avoid marketing stuff like 'the most', or vague properties like 'easy', "
 "'simple', 'lightweight'."
 msgstr ""
+"No es necesario repetir «La applicación es ...» o decir que la aplicación es "
+"libre y opensource (sino no estaria disponible para YunoHost). Evita "
+"tecnicas marketing comó «La más...» o cosas abiguas como, simple, liviana."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
-msgstr ""
+msgstr "Codigo fuente"
 
 #: templates/wishlist_add.html:71
 msgid "Link to the project's LICENSE"
-msgstr ""
+msgstr "Vinculo hacia la LICENCIA del proyecto"
 
 #: templates/wishlist_add.html:73
+#, fuzzy
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"El proyecto YunoHost incluye solamente aplicaciones libre con codigo abierto "
+"( con excepciones caso a caso para aplicaciones que no son totalmente "
+"abiertas)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
 msgstr "Sitio web del proyecto"
 
 #: templates/wishlist_add.html:77
-#, fuzzy
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
-"Por favor *no* solo copiar la URL del repositorio de código. Si el "
-"proyecto no tiene sitio deje en blanco."
+"Por favor *no* copiar la URL del repositorio de código. Si el proyecto no "
+"tiene sitio, deje en blanco."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
