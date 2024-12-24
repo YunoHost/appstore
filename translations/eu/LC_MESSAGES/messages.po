@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-12-14 14:09+0000\n"
+"PO-Revision-Date: 2024-12-25 04:40+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
 "store/eu/>\n"
@@ -288,7 +288,7 @@ msgstr "YunoHost paketearen lizentzia"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr "YunoHost aplikazio denda"
+msgstr "YunoHost aplikazioen denda"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
@@ -673,7 +673,7 @@ msgstr "Datuen azken eguneraketa duela %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr "Aplikazio denda"
+msgstr "Aplikazioen denda"
 
 #: templates/index.html:21
 msgid "Browse all applications"
