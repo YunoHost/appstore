@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-11-18 15:54+0000\n"
+"PO-Revision-Date: 2025-01-28 10:20+0000\n"
 "Last-Translator: Tommi <surfing@tommi.space>\n"
 "Language-Team: Italian <https://translate.yunohost.org/projects/yunohost/"
 "store/it/>\n"
@@ -340,7 +340,7 @@ msgstr "Esci"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Apri/chiudi menu"
 
 #: templates/base.html:264
 msgid ""
@@ -350,6 +350,10 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Creato con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -423,77 +427,79 @@ msgstr "Queste sono applicazioni che hanno fallito i nostri test automatici."
 
 #: templates/catalog.html:187
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Applicazioni deprecate"
 
 #: templates/catalog.html:190
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "Queste sono applicazioni che non vengono più mantenute."
 
 #: templates/catalog.html:191
 msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
+"Questo significa che lo sviluppatore non le aggiornerà più. Suggeriamo "
+"caldamente di non installarle e invitiamo a trovare alternative."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Livello di qualità delle app secondo test automatici"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Storico del livello di qualità delle app"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Storico"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Aggiunta"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Riparata"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Rotta"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Rimossa"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Stato sconosciuto"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Livello 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Livello 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Livello 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Livello 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Livello 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Livello 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Livello 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
@@ -657,12 +663,12 @@ msgstr ""
 
 #: templates/dash.html:266
 msgid "Not maintained"
-msgstr ""
+msgstr "Non più mantenuta"
 
 #: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Ultimo aggiornamento delle informazioni %(time)s fa"
 
 #: templates/index.html:10
 msgid "Application Store"
@@ -670,19 +676,21 @@ msgstr ""
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Esplora tutte le applicazioni"
 
 #: templates/wishlist.html:35 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Suggerisci un’app"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr ""
+msgstr "Suggerisci un’applicazione da aggiungere al catalogo di YunoHost"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
+"Devi prima effettuare l’accesso perché ti sia permesso di aggiungere un’app "
+"alla lista dei desideri"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
