@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-12-25 04:40+0000\n"
+"PO-Revision-Date: 2025-02-08 19:54+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
 "store/eu/>\n"
@@ -280,7 +280,7 @@ msgstr "Jatorrizko kode-gordailu ofiziala"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
-msgstr "Yunohost paketearen-gordailua"
+msgstr "Yunohost paketearen gordailua"
 
 #: templates/app.html:145
 msgid "YunoHost package license"
