@@ -59,7 +59,7 @@
       <input name="csrf_token" type="text" class="hidden" value="{{ csrf_token }}" >
 
       <label for="name" class="mt-5 block font-bold text-gray-700">{{ _("Name") }}</label>
-      <input name="name" type="text" autofocus class="w-full mt-1" maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" >
+      <input name="name" type="text" spellcheck="false" autofocus class="w-full mt-1"  maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" >
 
       <label for="description" class="mt-5 block font-bold text-gray-700">{{ _("App's description") }}</label>
       <textarea name="description" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required rows='3' maxlength='100'></textarea>
