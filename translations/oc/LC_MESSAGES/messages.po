@@ -8,20 +8,22 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2024-02-21 06:08+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2025-03-04 01:55+0000\n"
+"Last-Translator: Quentí <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://translate.yunohost.org/projects/yunohost/"
+"store/oc/>\n"
 "Language: oc\n"
-"Language-Team: oc <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: app.py:179
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "Aplicacion%(app_id)s non trobada"
 
 #: app.py:182
 msgid "You must be logged in to be able to star an app"
@@ -146,7 +148,7 @@ msgstr ""
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logotipe de %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -171,20 +173,20 @@ msgstr ""
 
 #: templates/app.html:81
 msgid "Try the demo"
-msgstr ""
+msgstr "Ensajar la demostracion"
 
 #: templates/app.html:82
 msgid "Demo"
-msgstr ""
+msgstr "Demostracion"
 
 #: templates/app.html:85
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Installar amb YunoHost"
 
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Version actuala : %(version)s"
 
 #: templates/app.html:95
 #, python-format
@@ -194,7 +196,7 @@ msgstr ""
 #: templates/app.html:101
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Captura d’ecran de %(app)s"
 
 #: templates/app.html:106
 #, python-format
