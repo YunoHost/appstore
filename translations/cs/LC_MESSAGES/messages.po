@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2025-04-01 02:16+0000\n"
+"PO-Revision-Date: 2025-04-03 03:46+0000\n"
 "Last-Translator: demodé <walter.klosse@protonmail.com>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/store/"
 "cs/>\n"
@@ -148,7 +148,7 @@ msgstr ""
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logo pro %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -186,12 +186,12 @@ msgstr ""
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Momentální verze: %(version)s"
 
 #: templates/app.html:95
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Možná alternativa k: %(alternatives)s"
 
 #: templates/app.html:101
 #, python-format
