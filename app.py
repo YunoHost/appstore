@@ -591,6 +591,11 @@ def badge(app, type="integration"):
             badge = "unmaintained"
         else:
             badge = "empty"
+    elif type == "cilevel":
+        if app in catalog and main_ci_level:
+            badge = f"level{main_ci_level}_v2"
+        else:
+            badge = "unknown_v2"
     else:
         badge = "empty"
 

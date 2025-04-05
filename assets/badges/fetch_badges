@@ -18,3 +18,15 @@ wget -O - https://img.shields.io/badge/Status-Just%20got%20added%20to%20catalog-
 wget -O - https://img.shields.io/badge/Status-In%20progress-orange.svg     > state-inprogress.svg
 wget -O - https://img.shields.io/badge/Status-Not%20working-red.svg        > state-notworking.svg
 wget -O - https://img.shields.io/badge/Status-Broken-red.svg               > state-broken.svg
+
+wget -O - https://img.shields.io/badge/automatic_tests_level-9-blue.svg?style=for-the-badge            > level9_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-8-brightgreen.svg?style=for-the-badge     > level8_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-7-green.svg?style=for-the-badge           > level7_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-6-yellowgreen.svg?style=for-the-badge     > level6_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-5-yellowgreen.svg?style=for-the-badge     > level5_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-4-yellow.svg?style=for-the-badge          > level4_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-3-yellow.svg?style=for-the-badge          > level3_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-2-orange.svg?style=for-the-badge          > level2_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-1-orange.svg?style=for-the-badge          > level1_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-0-red.svg?style=for-the-badge             > level0_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-unknown-lightgrey.svg?style=for-the-badge > unknown_v2.svg
