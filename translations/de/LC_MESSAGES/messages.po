@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-30 22:41+0100\n"
-"PO-Revision-Date: 2025-01-17 02:11+0000\n"
-"Last-Translator: Vinzenz Vietzke <vinz+2wiua4xn@vinzv.de>\n"
+"PO-Revision-Date: 2025-04-06 06:00+0000\n"
+"Last-Translator: Apfel <apfelstrudelig@users.noreply.translate.yunohost.org>"
+"\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "store/de/>\n"
 "Language: de\n"
@@ -324,7 +325,7 @@ msgstr "Wunschliste"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr "Packetierungsoberfläche"
+msgstr "Paketierungsoberfläche"
 
 #: templates/base.html:57
 msgid "Charts & history"
@@ -345,7 +346,7 @@ msgstr "Login über YunoHost-Forum"
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Paket-Dashboards"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
@@ -526,16 +527,16 @@ msgstr "Level 8"
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Level %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Insgesamt:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Level %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
