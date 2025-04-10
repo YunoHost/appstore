@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-30 22:41+0100\n"
+"POT-Creation-Date: 2025-04-10 19:01+0200\n"
 "PO-Revision-Date: 2024-09-07 01:54+0000\n"
 "Last-Translator: Mer <git@meriam.dev>\n"
 "Language: nl\n"
@@ -17,18 +17,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: app.py:179
+#: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
 msgstr "App %(app_id)s niet gevonden"
 
-#: app.py:182
+#: app.py:184
 msgid "You must be logged in to be able to star an app"
 msgstr "Log in om een app aan favorieten toe te voegen"
 
-#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
+#: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to"
 " 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -43,15 +43,15 @@ msgstr ""
 "invoeren, minimaal 30 berichten lezen en minimaal 10 minuten besteden aan"
 " het lezen van berichten."
 
-#: app.py:227
+#: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Log in om een app voor de verlanglijst in te dienen"
 
-#: app.py:242
+#: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "Ongeldig CSRF-token; ververs de pagina en probeer opnieuw"
 
-#: app.py:280
+#: app.py:282
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -59,45 +59,45 @@ msgstr ""
 "Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen "
 "per gebruiker. Probeer het over een paar dagen opnieuw."
 
-#: app.py:284
+#: app.py:286
 msgid "App name should be at least 3 characters"
 msgstr "App-naam moet minimaal 3 tekens lang zijn"
 
-#: app.py:285
+#: app.py:287
 msgid "App name should be less than 30 characters"
 msgstr "App-naam moet minder dan 30 tekens lang zijn"
 
-#: app.py:288
+#: app.py:290
 msgid "App description should be at least 5 characters"
 msgstr "De app-beschrijving moet ten minste 5 tekens zijn"
 
-#: app.py:292
+#: app.py:294
 msgid "App description should be less than 100 characters"
 msgstr "De app-beschrijving moet minder dan 100 tekens lang zijn"
 
-#: app.py:296
+#: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr "De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
 
-#: app.py:300
+#: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
 "De upstream-URL voor de coderepository moet minder dan 150 tekens lang "
 "zijn"
 
-#: app.py:304
+#: app.py:306
 msgid "License URL should be at least 10 characters"
 msgstr "Licentie-URL moet minimaal 10 tekens lang zijn"
 
-#: app.py:308
+#: app.py:310
 msgid "License URL should be less than 250 characters"
 msgstr "Licentie-URL moet minder dan 250 tekens lang zijn"
 
-#: app.py:310
+#: app.py:312
 msgid "Website URL should be less than 150 characters"
 msgstr "Website-URL moet minder dan 150 tekens lang zijn"
 
-#: app.py:313
+#: app.py:315
 msgid "App name contains special characters"
 msgstr "App-naam bevat speciale tekens"
 
@@ -105,7 +105,7 @@ msgstr "App-naam bevat speciale tekens"
 # | "Please focus on what the app does, without using marketing, fuzzy terms,
 # "
 # | "or repeating that the app is 'free' and 'self-hostable'."
-#: app.py:320
+#: app.py:322
 #, fuzzy
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, "
@@ -115,13 +115,13 @@ msgstr ""
 "Richt op wat de app doet, zonder marketing of vage termen te gebruiken of"
 " te herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
 
-#: app.py:330
+#: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de "
 "app doet."
 
-#: app.py:360
+#: app.py:362
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, "
@@ -129,21 +129,21 @@ msgid ""
 "interest</a>."
 msgstr ""
 
-#: app.py:379
+#: app.py:381
 #, python-format
 msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
 
-#: app.py:393
+#: app.py:395
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
 
-#: app.py:418
+#: app.py:420
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -151,7 +151,7 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 
-#: app.py:468
+#: app.py:470
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be "
@@ -159,7 +159,7 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 
-#: app.py:650
+#: app.py:657
 msgid "Unfortunately, login was denied."
 msgstr "Helaas werd login geweigerd."
 
@@ -178,7 +178,7 @@ msgstr ""
 "voor onze automatische tests."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:173
+#: templates/catalog.html:42 templates/catalog.html:174
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -353,69 +353,69 @@ msgstr "Toepassingscatalogus"
 msgid "Search"
 msgstr "Zoeken"
 
-#: templates/catalog.html:94 templates/wishlist.html:23
+#: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
 msgstr "Zoeken naar…"
 
-#: templates/catalog.html:110
+#: templates/catalog.html:111
 msgid "All apps"
 msgstr "Alle apps"
 
-#: templates/catalog.html:120 templates/dash.html:37 templates/wishlist.html:41
+#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "Sorteer op"
 
-#: templates/catalog.html:126 templates/wishlist.html:47
-#: templates/wishlist.html:80
+#: templates/catalog.html:127 templates/wishlist.html:48
+#: templates/wishlist.html:81
 msgid "Popularity"
 msgstr "Populariteit"
 
-#: templates/catalog.html:127
+#: templates/catalog.html:128
 msgid "Newest"
 msgstr "Nieuwste"
 
-#: templates/catalog.html:128 templates/dash.html:43 templates/wishlist.html:48
+#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "Alfabet"
 
-#: templates/catalog.html:131 templates/dash.html:65 templates/wishlist.html:51
+#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "Vereist ingelogd te zijn"
 
-#: templates/catalog.html:133 templates/catalog.html:142 templates/dash.html:67
-#: templates/dash.html:76 templates/wishlist.html:53 templates/wishlist.html:62
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
+#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "Toon enkel favoriete apps"
 
-#: templates/catalog.html:158 templates/wishlist.html:156
+#: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
 msgstr "Geen resultaten."
 
-#: templates/catalog.html:161
+#: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
 msgstr "Vind je niet wat je zoekt?"
 
-#: templates/catalog.html:162
+#: templates/catalog.html:163
 msgid "Checkout the wishlist!"
 msgstr "Bekijk de verlanglijst!"
 
-#: templates/catalog.html:169
+#: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
 msgstr "Applicaties momenteel gemarkeerd als defect"
 
-#: templates/catalog.html:172
+#: templates/catalog.html:173
 msgid "These are apps which failed our automatic tests."
 msgstr "Dit zijn apps die niet door onze automatische tests zijn gekomen."
 
-#: templates/catalog.html:187
+#: templates/catalog.html:188
 msgid "Deprecated applications"
 msgstr "Verouderde applicaties"
 
-#: templates/catalog.html:190
+#: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
 msgstr "Dit zijn apps die niet meer worden onderhouden."
 
-#: templates/catalog.html:191
+#: templates/catalog.html:192
 msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
@@ -661,7 +661,7 @@ msgstr ""
 msgid "Browse all applications"
 msgstr ""
 
-#: templates/wishlist.html:35 templates/wishlist_add.html:3
+#: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
 msgstr ""
 
@@ -683,7 +683,7 @@ msgid ""
 "send every random nerdy stuff you find on the Internet."
 msgstr ""
 
-#: templates/wishlist.html:73 templates/wishlist_add.html:61
+#: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
 msgstr ""
 
@@ -745,18 +745,19 @@ msgid ""
 "packaging volunteers."
 msgstr ""
 
-#: templates/wishlist.html:76
+#: templates/wishlist.html:77
 msgid "Description"
 msgstr ""
 
-#: templates/wishlist.html:104 templates/wishlist.html:105
+#: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
 msgstr ""
 
-#: templates/wishlist.html:117 templates/wishlist.html:118
+#: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
 msgstr ""
 
-#: templates/wishlist.html:131 templates/wishlist.html:132
+#: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr ""
+

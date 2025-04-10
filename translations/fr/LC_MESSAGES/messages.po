@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-30 22:41+0100\n"
+"POT-Creation-Date: 2025-04-10 19:01+0200\n"
 "PO-Revision-Date: 2024-10-03 16:47+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language: fr\n"
@@ -17,18 +17,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.15.0\n"
 
-#: app.py:179
+#: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
 msgstr "L'app %(app_id)s n'a pas été trouvée"
 
-#: app.py:182
+#: app.py:184
 msgid "You must be logged in to be able to star an app"
 msgstr "Veuillez vous connecter pour mettre une app en favoris"
 
-#: app.py:184 app.py:229 app.py:652 templates/wishlist_add.html:33
+#: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
 "Note that, due to various abuses, we restricted login on the app store to"
 " 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
@@ -42,15 +42,15 @@ msgstr ""
 "ouvrir au moins 5 fils de discussion, lire au moins 30 messages, et "
 "passer au moins 10 minutes à lire des messages."
 
-#: app.py:227
+#: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr "Veuillez vous connecter pour proposer une app pour la liste de souhaits"
 
-#: app.py:242
+#: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "Jeton CSRF invalide, prière de rafraîchir la page et de réessayer"
 
-#: app.py:280
+#: app.py:282
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -58,47 +58,47 @@ msgstr ""
 "Proposer une app dans la liste de souhaits est limité à une fois tous les"
 " 15 jours et par personne. Merci de réessayer dans quelques jours."
 
-#: app.py:284
+#: app.py:286
 msgid "App name should be at least 3 characters"
 msgstr "Le nom d'app devrait contenir au moins 3 caractères"
 
-#: app.py:285
+#: app.py:287
 msgid "App name should be less than 30 characters"
 msgstr "Le nom d'app devrait contenir moins de 30 caractères"
 
-#: app.py:288
+#: app.py:290
 msgid "App description should be at least 5 characters"
 msgstr "La description de l'app devrait contenir au moins 5 caractères"
 
-#: app.py:292
+#: app.py:294
 msgid "App description should be less than 100 characters"
 msgstr "La description de l'app devrait contenir moins de 100 caractères"
 
-#: app.py:296
+#: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr "L'URL du dépôt de code devrait contenir au moins 10 caractères"
 
-#: app.py:300
+#: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr "L'URL du dépôt de code devrait contenir moins de 150 caractères"
 
-#: app.py:304
+#: app.py:306
 msgid "License URL should be at least 10 characters"
 msgstr "L'URL de la licence devrait contenir au moins de 10 caractères"
 
-#: app.py:308
+#: app.py:310
 msgid "License URL should be less than 250 characters"
 msgstr "L'URL de la licence devrait contenir moins de 250 caractères"
 
-#: app.py:310
+#: app.py:312
 msgid "Website URL should be less than 150 characters"
 msgstr "L'URL du site web devrait contenir moins de 150 caractères"
 
-#: app.py:313
+#: app.py:315
 msgid "App name contains special characters"
 msgstr "Le nom de l'app contient des caractères spéciaux"
 
-#: app.py:320
+#: app.py:322
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, "
 "or repeating that the app is 'free' and 'self-hostable'. English language"
@@ -108,13 +108,13 @@ msgstr ""
 "termes marketing nébuleux ou répéter que l'app est 'libre' ou 'auto-"
 "hébergeable'. L'anglais est préféré."
 
-#: app.py:330
+#: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
 "Pas besoin de répéter le nom de l'application. Prière de rester concis et"
 " de se concentrer sur ce que l'app fait."
 
-#: app.py:360
+#: app.py:362
 #, python-format
 msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, "
@@ -125,7 +125,7 @@ msgstr ""
 "pouvez <a href='%(url)s'>l'ajouter en favori</a> afin de montrer votre "
 "intérêt."
 
-#: app.py:379
+#: app.py:381
 #, python-format
 msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
@@ -134,7 +134,7 @@ msgstr ""
 "Désolé mais cette application est présente dans la liste de apps déjà "
 "refusées. La raison indiquée est : <br /><q>%(reason)s</q>"
 
-#: app.py:393
+#: app.py:395
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
@@ -143,7 +143,7 @@ msgstr ""
 "Une app nommée %(slug)s existe déjà dans le catalogue, <a "
 "href='%(url)s'>vous pouvez voir sa page ici</a>."
 
-#: app.py:418
+#: app.py:420
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
@@ -155,7 +155,7 @@ msgstr ""
 " pour cette app</a> ? Sinon, merci de signaler le problème à l'équipe "
 "YunoHost."
 
-#: app.py:468
+#: app.py:470
 #, python-format
 msgid ""
 "Your proposed app has succesfully been submitted. It must now be "
@@ -166,7 +166,7 @@ msgstr ""
 "cette app. Elle doit maintenant être validée par l'équipe YunoHost. Vous "
 "pouvez suivre cette demande ici : <a href='%(url)s'>%(url)s</a>"
 
-#: app.py:650
+#: app.py:657
 msgid "Unfortunately, login was denied."
 msgstr "Malheureusement, la connexion a été refusée."
 
@@ -185,7 +185,7 @@ msgstr ""
 "car elle ne passe pas nos tests automatisés."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
-#: templates/catalog.html:42 templates/catalog.html:173
+#: templates/catalog.html:42 templates/catalog.html:174
 msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
@@ -366,69 +366,69 @@ msgstr "Catalogue d'applications"
 msgid "Search"
 msgstr "Recherche"
 
-#: templates/catalog.html:94 templates/wishlist.html:23
+#: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
 msgstr "Rechercher…"
 
-#: templates/catalog.html:110
+#: templates/catalog.html:111
 msgid "All apps"
 msgstr "Toutes les apps"
 
-#: templates/catalog.html:120 templates/dash.html:37 templates/wishlist.html:41
+#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "Trier par"
 
-#: templates/catalog.html:126 templates/wishlist.html:47
-#: templates/wishlist.html:80
+#: templates/catalog.html:127 templates/wishlist.html:48
+#: templates/wishlist.html:81
 msgid "Popularity"
 msgstr "Popularité"
 
-#: templates/catalog.html:127
+#: templates/catalog.html:128
 msgid "Newest"
 msgstr "Nouveauté"
 
-#: templates/catalog.html:128 templates/dash.html:43 templates/wishlist.html:48
+#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "Alphabétique"
 
-#: templates/catalog.html:131 templates/dash.html:65 templates/wishlist.html:51
+#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "Nécessite une connexion à votre compte du forum YunoHost"
 
-#: templates/catalog.html:133 templates/catalog.html:142 templates/dash.html:67
-#: templates/dash.html:76 templates/wishlist.html:53 templates/wishlist.html:62
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
+#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "Montrer uniquement mes favoris"
 
-#: templates/catalog.html:158 templates/wishlist.html:156
+#: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
 msgstr "Aucun résultat trouvé."
 
-#: templates/catalog.html:161
+#: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
 msgstr "Vous ne trouvez pas ce que vous cherchez ?"
 
-#: templates/catalog.html:162
+#: templates/catalog.html:163
 msgid "Checkout the wishlist!"
 msgstr "Jetez un oeil à la liste de souhaits !"
 
-#: templates/catalog.html:169
+#: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
 msgstr "Applications actuellement marquées comme cassées"
 
-#: templates/catalog.html:172
+#: templates/catalog.html:173
 msgid "These are apps which failed our automatic tests."
 msgstr "Il s'agit d'apps qui n'ont pas validé nos tests automatisés."
 
-#: templates/catalog.html:187
+#: templates/catalog.html:188
 msgid "Deprecated applications"
 msgstr "Applications obsolètes"
 
-#: templates/catalog.html:190
+#: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
 msgstr "Il s'agit des applications qui ne sont plus maintenues."
 
-#: templates/catalog.html:191
+#: templates/catalog.html:192
 msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
@@ -681,7 +681,7 @@ msgstr "Store d'application"
 msgid "Browse all applications"
 msgstr "Toutes les applications"
 
-#: templates/wishlist.html:35 templates/wishlist_add.html:3
+#: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
 msgstr "Suggérer une app"
 
@@ -710,7 +710,7 @@ msgstr ""
 " de ne pas bêtement proposer n'importe quelle app un peu nerd que vous "
 "trouvez."
 
-#: templates/wishlist.html:73 templates/wishlist_add.html:61
+#: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
 msgstr "Nom"
 
@@ -788,21 +788,19 @@ msgstr ""
 "uniquement une source d'inspiration pour les bénévoles s'occupant des "
 "packages."
 
-#: templates/wishlist.html:76
+#: templates/wishlist.html:77
 msgid "Description"
 msgstr "Description"
 
-#: templates/wishlist.html:104 templates/wishlist.html:105
+#: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
 msgstr "Site officiel"
 
-#: templates/wishlist.html:117 templates/wishlist.html:118
+#: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
 msgstr "Dépôt de code officiel"
 
-#: templates/wishlist.html:131 templates/wishlist.html:132
+#: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr "Étoiler cette app"
 
-#~ msgid "Issues number"
-#~ msgstr "Nombre d'issues"
