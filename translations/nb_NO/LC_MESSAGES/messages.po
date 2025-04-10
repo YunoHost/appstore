@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-10 19:01+0200\n"
+"POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2024-02-21 06:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: nb_NO\n"
@@ -259,7 +259,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
 msgstr ""
 
@@ -333,7 +333,7 @@ msgstr ""
 msgid "All apps"
 msgstr ""
 
-#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
+#: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
 msgid "Sort by"
 msgstr ""
 
@@ -346,16 +346,16 @@ msgstr ""
 msgid "Newest"
 msgstr ""
 
-#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
+#: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr ""
 
-#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
+#: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr ""
 
-#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
-#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:66
+#: templates/dash.html:75 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr ""
 
@@ -529,95 +529,87 @@ msgstr ""
 msgid "Apps with issues"
 msgstr ""
 
-#: templates/dash.html:33
-msgid "Packaging v1 apps"
-msgstr ""
-
-#: templates/dash.html:44
+#: templates/dash.html:43
 msgid "Quality level"
 msgstr ""
 
-#: templates/dash.html:45 templates/dash.html:256
+#: templates/dash.html:44 templates/dash.html:255
 msgid "Popularity stars"
 msgstr ""
 
-#: templates/dash.html:46
+#: templates/dash.html:45
 msgid "Last update on main/master branch"
 msgstr ""
 
-#: templates/dash.html:47
+#: templates/dash.html:46
 msgid "Last update on testing branch"
 msgstr ""
 
-#: templates/dash.html:48
+#: templates/dash.html:47
 msgid "Number of opened issues"
 msgstr ""
 
-#: templates/dash.html:54 templates/dash.html:63
+#: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
 msgstr ""
 
-#: templates/dash.html:83
+#: templates/dash.html:82
 msgid "App"
 msgstr ""
 
-#: templates/dash.html:85
+#: templates/dash.html:84
 msgid "Main CI"
 msgstr ""
 
-#: templates/dash.html:86
+#: templates/dash.html:85
 msgid "Bullseye CI"
 msgstr ""
 
-#: templates/dash.html:87
+#: templates/dash.html:86
 msgid "Trixie CI"
 msgstr ""
 
-#: templates/dash.html:88
+#: templates/dash.html:87
 msgid "Testing PR"
 msgstr ""
 
-#: templates/dash.html:89
+#: templates/dash.html:88
 msgid "Autoupdate PR"
 msgstr ""
 
-#: templates/dash.html:90
+#: templates/dash.html:89
 msgid "Issues"
 msgstr ""
 
-#: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
-#: templates/dash.html:207
+#: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
+#: templates/dash.html:206
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:150 templates/dash.html:168 templates/dash.html:187
-#: templates/dash.html:209
+#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
+#: templates/dash.html:208
 msgid "Low quality"
 msgstr ""
 
-#: templates/dash.html:162 templates/dash.html:181 templates/dash.html:203
+#: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:226 templates/dash.html:241
+#: templates/dash.html:225 templates/dash.html:240
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:260
-msgid "Packaging v1"
-msgstr ""
-
-#: templates/dash.html:263
+#: templates/dash.html:259
 msgid "Deprecated"
 msgstr ""
 
-#: templates/dash.html:266
+#: templates/dash.html:262
 msgid "Not maintained"
 msgstr ""
 
-#: templates/dash.html:280
+#: templates/dash.html:276
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr ""

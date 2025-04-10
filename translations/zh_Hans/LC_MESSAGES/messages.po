@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-10 19:01+0200\n"
+"POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2025-01-21 21:03+0000\n"
 "Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
 "Language: zh_Hans\n"
@@ -266,7 +266,7 @@ msgstr "YunoHost 应用商店"
 msgid "Home"
 msgstr "首页"
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
 msgstr "目录"
 
@@ -345,7 +345,7 @@ msgstr "搜索…"
 msgid "All apps"
 msgstr "所有应用"
 
-#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
+#: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "排序方式"
 
@@ -358,16 +358,16 @@ msgstr "人气"
 msgid "Newest"
 msgstr "最新"
 
-#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
+#: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "字母顺序"
 
-#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
+#: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "需要登录"
 
-#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
-#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:66
+#: templates/dash.html:75 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "仅显示您标记的应用"
 
@@ -545,95 +545,87 @@ msgstr "有自动更新 PR 的应用"
 msgid "Apps with issues"
 msgstr "有问题的应用"
 
-#: templates/dash.html:33
-msgid "Packaging v1 apps"
-msgstr "打包 v1 应用"
-
-#: templates/dash.html:44
+#: templates/dash.html:43
 msgid "Quality level"
 msgstr "质量等级"
 
-#: templates/dash.html:45 templates/dash.html:256
+#: templates/dash.html:44 templates/dash.html:255
 msgid "Popularity stars"
 msgstr "受欢迎的星星"
 
-#: templates/dash.html:46
+#: templates/dash.html:45
 msgid "Last update on main/master branch"
 msgstr "主/主分支的最后更新"
 
-#: templates/dash.html:47
+#: templates/dash.html:46
 msgid "Last update on testing branch"
 msgstr "测试分支的最后更新"
 
-#: templates/dash.html:48
+#: templates/dash.html:47
 msgid "Number of opened issues"
 msgstr "打开的问题数量"
 
-#: templates/dash.html:54 templates/dash.html:63
+#: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
 msgstr "隐藏已弃用/不再维护的应用"
 
-#: templates/dash.html:83
+#: templates/dash.html:82
 msgid "App"
 msgstr "应用"
 
-#: templates/dash.html:85
+#: templates/dash.html:84
 msgid "Main CI"
 msgstr "主 CI"
 
-#: templates/dash.html:86
+#: templates/dash.html:85
 msgid "Bullseye CI"
 msgstr "Bullseye CI"
 
-#: templates/dash.html:87
+#: templates/dash.html:86
 msgid "Trixie CI"
 msgstr "Trixie CI"
 
-#: templates/dash.html:88
+#: templates/dash.html:87
 msgid "Testing PR"
 msgstr "测试 PR"
 
-#: templates/dash.html:89
+#: templates/dash.html:88
 msgid "Autoupdate PR"
 msgstr "自动更新 PR"
 
-#: templates/dash.html:90
+#: templates/dash.html:89
 msgid "Issues"
 msgstr "问题"
 
-#: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
-#: templates/dash.html:207
+#: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
+#: templates/dash.html:206
 msgid "Broken"
 msgstr "损坏"
 
-#: templates/dash.html:150 templates/dash.html:168 templates/dash.html:187
-#: templates/dash.html:209
+#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
+#: templates/dash.html:208
 msgid "Low quality"
 msgstr "低质量"
 
-#: templates/dash.html:162 templates/dash.html:181 templates/dash.html:203
+#: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr "过时的测试 (%(days)s 天前)"
 
-#: templates/dash.html:226 templates/dash.html:241
+#: templates/dash.html:225 templates/dash.html:240
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr "不活跃 (%(days)s 天前)"
 
-#: templates/dash.html:260
-msgid "Packaging v1"
-msgstr "打包 v1"
-
-#: templates/dash.html:263
+#: templates/dash.html:259
 msgid "Deprecated"
 msgstr "已弃用"
 
-#: templates/dash.html:266
+#: templates/dash.html:262
 msgid "Not maintained"
 msgstr "不再维护"
 
-#: templates/dash.html:280
+#: templates/dash.html:276
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr "最后数据更新 %(time)s 前"

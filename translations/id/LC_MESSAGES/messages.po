@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-10 19:01+0200\n"
+"POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2024-10-21 07:54+0000\n"
 "Last-Translator: cjdw <cjdw@users.noreply.translate.yunohost.org>\n"
 "Language: id\n"
@@ -297,7 +297,7 @@ msgstr "Toko aplikasi Yunohost"
 msgid "Home"
 msgstr "Rumah"
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
 msgstr "Katalog"
 
@@ -376,7 +376,7 @@ msgstr "Mencari…"
 msgid "All apps"
 msgstr "Semua aplikasi"
 
-#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
+#: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "Sortir dengan"
 
@@ -389,16 +389,16 @@ msgstr "Popularitas"
 msgid "Newest"
 msgstr "Terbaru"
 
-#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
+#: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "Alfabetis"
 
-#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
+#: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "Harus masuk terlebih dahulu"
 
-#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
-#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:66
+#: templates/dash.html:75 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "Hanya menampilkan aplikasi yang Anda bintangi"
 
@@ -583,95 +583,87 @@ msgstr "Aplikasi dengan pembaruan otomatis pada PR"
 msgid "Apps with issues"
 msgstr "Aplikasi disertai dengan isu"
 
-#: templates/dash.html:33
-msgid "Packaging v1 apps"
-msgstr "Mengemas aplikasi v1"
-
-#: templates/dash.html:44
+#: templates/dash.html:43
 msgid "Quality level"
 msgstr "Tingkat kualitas"
 
-#: templates/dash.html:45 templates/dash.html:256
+#: templates/dash.html:44 templates/dash.html:255
 msgid "Popularity stars"
 msgstr "Bintang popularitas"
 
-#: templates/dash.html:46
+#: templates/dash.html:45
 msgid "Last update on main/master branch"
 msgstr "Pembaruan terakhir pada cabang main/master"
 
-#: templates/dash.html:47
+#: templates/dash.html:46
 msgid "Last update on testing branch"
 msgstr "Pembaruan terakhir pada cabang testing"
 
-#: templates/dash.html:48
+#: templates/dash.html:47
 msgid "Number of opened issues"
 msgstr "Jumlah isu yang dibuka"
 
-#: templates/dash.html:54 templates/dash.html:63
+#: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
 msgstr "Sembunyikan aplikasi kedaluwarsa/tidak dirawat"
 
-#: templates/dash.html:83
+#: templates/dash.html:82
 msgid "App"
 msgstr "Aplikasi"
 
-#: templates/dash.html:85
+#: templates/dash.html:84
 msgid "Main CI"
 msgstr "CI utama"
 
-#: templates/dash.html:86
+#: templates/dash.html:85
 msgid "Bullseye CI"
 msgstr "CI Bullseye"
 
-#: templates/dash.html:87
+#: templates/dash.html:86
 msgid "Trixie CI"
 msgstr "CI Trixie"
 
-#: templates/dash.html:88
+#: templates/dash.html:87
 msgid "Testing PR"
 msgstr "PR testing"
 
-#: templates/dash.html:89
+#: templates/dash.html:88
 msgid "Autoupdate PR"
 msgstr "PR autoupdate"
 
-#: templates/dash.html:90
+#: templates/dash.html:89
 msgid "Issues"
 msgstr "Isu"
 
-#: templates/dash.html:148 templates/dash.html:166 templates/dash.html:185
-#: templates/dash.html:207
+#: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
+#: templates/dash.html:206
 msgid "Broken"
 msgstr "Rusak"
 
-#: templates/dash.html:150 templates/dash.html:168 templates/dash.html:187
-#: templates/dash.html:209
+#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
+#: templates/dash.html:208
 msgid "Low quality"
 msgstr "Kualitas rendah"
 
-#: templates/dash.html:162 templates/dash.html:181 templates/dash.html:203
+#: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr "Tes kedaluwarsa (%(days)s hari lalu)"
 
-#: templates/dash.html:226 templates/dash.html:241
+#: templates/dash.html:225 templates/dash.html:240
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr "Tidak aktif (%(days)s hari lalu)"
 
-#: templates/dash.html:260
-msgid "Packaging v1"
-msgstr "Kemasan v1"
-
-#: templates/dash.html:263
+#: templates/dash.html:259
 msgid "Deprecated"
 msgstr "Kedaluwarsa"
 
-#: templates/dash.html:266
+#: templates/dash.html:262
 msgid "Not maintained"
 msgstr "Tidak dirawat"
 
-#: templates/dash.html:280
+#: templates/dash.html:276
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr "Pembaruan data terakhir %(time)s yang lalu"
