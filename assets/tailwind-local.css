@@ -38,3 +38,9 @@
       @apply text-blue-600;
   }
 }
+
+@layer base {
+  .dark .bg-ynh {
+    background-color: #222;
+  }
+}
