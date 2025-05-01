@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+set -Eeuo pipefail
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+pushd "$PROJECT_ROOT/assets/badges"
 
 # See https://shields.io/badges/static-badge for more info about the badge generation.
 
@@ -23,7 +29,7 @@ wget -O - https://img.shields.io/badge/Status-In%20progress-orange.svg     > sta
 wget -O - https://img.shields.io/badge/Status-Not%20working-red.svg        > state-notworking.svg
 wget -O - https://img.shields.io/badge/Status-Broken-red.svg               > state-broken.svg
 
-# Hexadecimal codes of colors to be used for badges. 
+# Hexadecimal codes of colors to be used for badges.
 BLUE_LVL9=037CC2
 GREEN_LVL8=338809
 GREEN_LVL7=5D8210
