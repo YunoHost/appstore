@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2024-09-07 01:54+0000\n"
-"Last-Translator: Mer <git@meriam.dev>\n"
+"PO-Revision-Date: 2025-05-02 20:55+0000\n"
+"Last-Translator: Boudewijn <wbk_tyo@osba.nl>\n"
+"Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/store/"
+"nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch "
-"<https://translate.yunohost.org/projects/yunohost/apps/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:181
@@ -106,14 +107,13 @@ msgstr "App-naam bevat speciale tekens"
 # "
 # | "or repeating that the app is 'free' and 'self-hostable'."
 #: app.py:322
-#, fuzzy
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, "
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
-"Richt op wat de app doet, zonder marketing of vage termen te gebruiken of"
-" te herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
+"Richt op wat de app doet, zonder marketing of vage termen te gebruiken of te "
+"herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -128,6 +128,8 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
+"Er staat al een voorkomen met de naam %(slug)s op de verlanglijst. Je zou "
+"een ster kunnen zetten bij <a href='%(url)s'> om je interesse te tonen</a>."
 
 #: app.py:381
 #, python-format
@@ -135,6 +137,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"Sorry, deze app staat op de lijst met reeds afgewezen apps. Als reden is "
+"gegeven: <br /><q>%(reason)s</q>"
 
 #: app.py:395
 #, python-format
@@ -142,6 +146,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"Er staat al een app met de naam %(slug)s in de catalogus, <a href='%(url)"
+"s'>bekijk de app-pagina</a>."
 
 #: app.py:420
 #, python-format
@@ -150,6 +156,10 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"Er kon geen pull-request gemaakt worden om de app aan de verlanglijst toe te "
+"voegen... Misschien staat er al <a href='%(url)s'>een PR in de wacht </a> "
+"voor deze app? Zoniet, dan is het fijn als je een melding maakt aan het "
+"YunoHost-team."
 
 #: app.py:470
 #, python-format
@@ -158,6 +168,9 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
+"Je voorgestelde app is met succes ingediend. Hij moet door het Yunohost-team "
+"gevalideerd worden. Je kan de voortgang volgen op <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -261,7 +274,7 @@ msgstr " Officiële website"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
-msgstr "Officiele beheerdersdocumentatie"
+msgstr "Officiële beheerdersdocumentatie"
 
 #: templates/app.html:142
 msgid "Official user documentation"
@@ -269,7 +282,7 @@ msgstr "Officiële gebruikersdocumentatie"
 
 #: templates/app.html:143
 msgid "Official code repository"
-msgstr "Officiële opslagplaats van code"
+msgstr "Officiële code repository"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
@@ -318,7 +331,7 @@ msgstr "Log in met YunoHost forum account"
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Packaging dashboards"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
@@ -336,6 +349,10 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Gemaakt met <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> met "
+"ondersteuning van <a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> en <a class='text-blue-"
+"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -508,7 +525,7 @@ msgstr "Niveau %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "App-packaging dashboard"
 
 #: templates/dash.html:11
 msgid ""
@@ -519,6 +536,12 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Hier kunnen packagers de status van automatische tests (CI) en voortdurende "
+"hoofd-pull-requests over alle apps volgen. Als je aan de slag wil met app-"
+"packaging voor YunoHost, lees dan alsjeblieft <a class='text-blue-500' "
+"href='https://yunohost.org/packaging_apps'>de packaging documentatie</a> en "
+"zeg eens gedag in de <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>app-packaging chatroom</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -530,162 +553,168 @@ msgstr "(Geen)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Regressie op hoofd-CI"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Kapotte / lage-kwaliteits-apps"
 
 #: templates/dash.html:27
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Achterhaalde tests op hoofd-CI"
 
 #: templates/dash.html:28
 msgid "Regressions since Bullseye"
-msgstr ""
+msgstr "Regressie sinds Bullseye"
 
 #: templates/dash.html:29
 msgid "Regressions on Trixie"
-msgstr ""
+msgstr "Regressie op Trixie"
 
 #: templates/dash.html:30
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Apps met PR's voor testing"
 
 #: templates/dash.html:31
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Apps met autoupdate-PR's"
 
 #: templates/dash.html:32
 msgid "Apps with issues"
-msgstr ""
+msgstr "Apps met problemen"
 
 #: templates/dash.html:43
 msgid "Quality level"
-msgstr ""
+msgstr "Kwaliteitsniveau"
 
 #: templates/dash.html:44 templates/dash.html:255
 msgid "Popularity stars"
-msgstr ""
+msgstr "Populariteit"
 
 #: templates/dash.html:45
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Laatste update op main-/hoofd-branch"
 
 #: templates/dash.html:46
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Laatste update op de testing-branch"
 
 #: templates/dash.html:47
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Aantal geopende problemen"
 
 #: templates/dash.html:53 templates/dash.html:62
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Verberg vervallen/niet-onderhouden apps"
 
 #: templates/dash.html:82
 msgid "App"
-msgstr ""
+msgstr "App"
 
 #: templates/dash.html:84
 msgid "Main CI"
-msgstr ""
+msgstr "Hoofd-CI"
 
 #: templates/dash.html:85
 msgid "Bullseye CI"
-msgstr ""
+msgstr "Bullseye CI"
 
 #: templates/dash.html:86
 msgid "Trixie CI"
-msgstr ""
+msgstr "Trixie CI"
 
 #: templates/dash.html:87
 msgid "Testing PR"
-msgstr ""
+msgstr "Testing-PR"
 
 #: templates/dash.html:88
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Autoupdate-PR"
 
 #: templates/dash.html:89
 msgid "Issues"
-msgstr ""
+msgstr "Problemen"
 
 #: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
 #: templates/dash.html:206
 msgid "Broken"
-msgstr ""
+msgstr "Kapot"
 
 #: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
 #: templates/dash.html:208
 msgid "Low quality"
-msgstr ""
+msgstr "Lage kwaliteit"
 
 #: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Achterhaalde tests (%(days)s dagen geleden)"
 
 #: templates/dash.html:225 templates/dash.html:240
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Reeds (%(days)s dagen) inactief"
 
 #: templates/dash.html:259
 msgid "Deprecated"
-msgstr ""
+msgstr "Vervallen"
 
 #: templates/dash.html:262
 msgid "Not maintained"
-msgstr ""
+msgstr "Niet-onderhouden"
 
 #: templates/dash.html:276
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Laatste update %(time)s geleden"
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr ""
+msgstr "App-winkel"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Blader door de apps"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Een app voorstellen"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
 msgstr ""
+"Stel een appsicatie voor om toegevoegd te worden aan de YunoHost-catalogus"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
-msgstr ""
+msgstr "Je moet ingelogd zijn voor je een app op de verlanglijst mag zetten"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
+"Wegens misbruik, mag elke gebruiker slechts eens per 15 dagen een voorstel "
+"doen."
 
 #: templates/wishlist_add.html:43
 msgid ""
 "Reviewing those proposals is tiring for volunteers, please don't yolo-"
 "send every random nerdy stuff you find on the Internet."
 msgstr ""
+"De voorstellen worden handmatig door vrijwilligers beoordeeld. Doe "
+"alsjeblieft geen voorstel voor alle willekeurige nerdsels die je vindt op 't "
+"Net."
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
-msgstr ""
+msgstr "Naam"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
-msgstr ""
+msgstr "App-beschrijving"
 
 #: templates/wishlist_add.html:66
 msgid "Please be concise and focus on what the app does."
-msgstr ""
+msgstr "Wees alsjeblieft beknopt en concentreer op wat de app doet."
 
 #: templates/wishlist_add.html:66
 msgid ""
@@ -694,38 +723,48 @@ msgid ""
 "Avoid marketing stuff like 'the most', or vague properties like 'easy', "
 "'simple', 'lightweight'."
 msgstr ""
+"Het is niet nodig te herhalen '[App] is ...' Het is niet nodig aan te geven "
+"dat het Free/Libre Open Source is, of zelf gehost kan worden: anders zou hij "
+"zowiezo niet voor Yunohost verpakt worden. Schrijf geen marketingverhaal, "
+"\"de allerbeste\"/\"meest ...\" of vage eigenschappen zoals \"makkelijk\", "
+"\"eenvoudig\" of \"lichtgewicht\"."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
-msgstr ""
+msgstr "Officiele code repository van het project"
 
 #: templates/wishlist_add.html:71
 msgid "Link to the project's LICENSE"
-msgstr ""
+msgstr "Link naar de LICENTIE van het project"
 
 #: templates/wishlist_add.html:73
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"Het YunoHost project accepteert enkel Free/Libre Open Source software ter "
+"packaging (met mogelijk uitzonderingen per geval voor apps die niet volledig "
+"FLOSS zijn)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
-msgstr ""
+msgstr "Projectwebsite"
 
 #: templates/wishlist_add.html:77
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
+"Kopieer-en-plak hier alsjeblieft *niet* de link naar het code repository. "
+"Als het project niet echt een website heeft, laat het veld dan leeg."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
-msgstr ""
+msgstr "Inleveren"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
-msgstr ""
+msgstr "App-verlanglijst"
 
 #: templates/wishlist.html:10
 msgid ""
@@ -736,20 +775,24 @@ msgid ""
 "project plans to integrate it, and is merely a source of inspiration for "
 "packaging volunteers."
 msgstr ""
+"De verlanglijst is de plaats waar mensen collectief suggesties kunnen "
+"indienen en kunnen stemmen voor apps die ze graag gepackaged zouden zien "
+"voor de officiele YunoHost app-catalogus. Desondanks, het feit dat een app "
+"op de lijst staat betekent niet dat er een voorgedefinieerd plan is de app "
+"op te nemen, en is vooral een inspiratiebron voor packaging vrijwilligers."
 
 #: templates/wishlist.html:77
 msgid "Description"
-msgstr ""
+msgstr "Beschrijving"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
-msgstr ""
+msgstr "Officiele website"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
-msgstr ""
+msgstr "Code repository"
 
 #: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
-
+msgstr "Geef de app een ster"
