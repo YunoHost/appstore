@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
+set -Eeuo pipefail
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+pushd "$PROJECT_ROOT/assets"
 
 # Production -> download standalone tailwind to compile only what we need
-curl --location -o tailwindcss-linux-x64 https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
+curl --location -o tailwindcss-linux-x64 -z tailwindcss-linux-x64 https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.3/tailwindcss-linux-x64
 chmod +x tailwindcss-linux-x64
 
 # Development -> we use the JS magic thingy
 # curl -L https://cdn.tailwindcss.com?plugins=forms > tailwind-css.js
 
 # Dark theme stuff
-git clone https://github.com/jjranalli/nightwind
+if [[ ! -d "nightwind" ]]; then
+    git clone https://github.com/jjranalli/nightwind
+fi
 
 # Canvasjs (for the chart page only)
 curl -L https://cdn.canvasjs.com/ga/canvasjs.min.js > canvasjs.min.js
