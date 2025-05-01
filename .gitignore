@@ -1,9 +1,12 @@
-config.toml
-.stars
-.wishlist_ratelimit
-.cache
+config/config.toml
+data/stars
+data/wishlist_ratelimit
+data/cache
 .tmp
-assets/*
 
 __pycache__
 venv
+.venv
+.python-version
+
+*.log
