@@ -21,7 +21,7 @@ APPSTORE_PATH = Path(__file__).resolve().parent
 @cache
 def config() -> dict[str, Any]:
     try:
-        config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+        config = toml.loads((APPSTORE_PATH / "config" / "config.toml").read_text())
         return config
     except Exception:
         raise RuntimeError(

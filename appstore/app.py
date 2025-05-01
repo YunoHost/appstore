@@ -43,7 +43,7 @@ app = Flask(__name__, static_url_path="/assets", static_folder="assets")
 MAIN_CI = "bookworm"
 
 try:
-    config = toml.loads(open("config.toml").read())
+    config = toml.loads(open("config/config.toml").read())
 except Exception as e:
     print(
         "You should create a config.toml with the appropriate key/values, cf config.toml.example"

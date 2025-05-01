@@ -8,10 +8,10 @@ This is a Flask app interfacing with YunoHost's app catalog for a cool browsing 
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
-cp config.toml.example config.toml
+cp config/config.toml.example config/config.toml
 
 # Tweak config.toml with appropriate values... (not everyting is needed for the base features to work)
-nano config.toml
+nano config/config.toml
 
 # You'll need to have a built version of the catalog
 curl https://apps.yunohost.org/default/v3/apps.json > .cache/apps.json
@@ -45,12 +45,12 @@ It's based on Flask-Babel : <https://python-babel.github.io/flask-babel/>
 source venv/bin/activate
 
 # Extract the english sentences from the code, needed if you modified it
-pybabel extract -F babel.cfg -o messages.pot *.py templates/*.html
+pybabel extract -F config/babel.cfg -o translations/messages.pot *.py templates/*.html
 
 # If working on a new locale: initialize it (in this example: fr)
-pybabel init -i messages.pot -d translations -l fr
+pybabel init -i translations/messages.pot -d translations -l fr
 # Otherwise, update the existing .po:
-pybabel update -i messages.pot -d translations
+pybabel update -i translations/messages.pot -d translations
 
 # ... translate stuff in translations/<lang>/LC_MESSAGES/messages.po
 # re-run the 'update' command to let Babel properly format the text
