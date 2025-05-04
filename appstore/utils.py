@@ -4,16 +4,28 @@ import os
 import subprocess
 import time
 from hashlib import md5
+from pathlib import Path
 
 import pycmarkgfm
 import toml
 from emoji import emojize
 from flask import request
 
-AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+TRANSLATIONS_DIR = PROJECT_ROOT / "translations"
+DATA_DIR = PROJECT_ROOT / "data"
+
+CATALOG_PATH = DATA_DIR / "apps.json"
+WISHLIST_PATH = DATA_DIR / "apps_repo" / "wishlist.toml"
+DASHBOARD_PATH = DATA_DIR / "dashboard.json"
+
+AVAILABLE_LANGUAGES = [
+    "en",
+    *[path.name for path in Path("translations").iterdir() if path.is_dir()],
+]
 
 
-def get_locale():
+def get_locale() -> str:
     # try to guess the language from the user accept
     # The best match wins.
     return request.accept_languages.best_match(AVAILABLE_LANGUAGES) or "en"
