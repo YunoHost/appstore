@@ -27,6 +27,8 @@ from flask_babel import gettext as _
 from github import Github, InputGitAuthor
 from slugify import slugify
 
+from .config import Config
+from .stars import AppstoreStars
 from .utils import (
     check_wishlist_submit_ratelimit,
     get_app_md_and_screenshots,
@@ -38,16 +40,18 @@ from .utils import (
     save_wishlist_submit_for_ratelimit,
 )
 
-app = Flask(__name__, static_url_path="/assets", static_folder="assets")
-from .config import Config
-from .stars import AppstoreStars
-
 config = Config().config
 
 MAIN_CI = "bookworm"
 STARS = AppstoreStars()
 STARS.read()
 
+app = Flask(
+    __name__,
+    static_url_path="/assets",
+    static_folder=PROJECT_ROOT / "assets",
+    template_folder=PROJECT_ROOT / "templates",
+)
 
 if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
