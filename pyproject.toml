@@ -1,0 +1,21 @@
+[project]
+name = "appstore"
+version = "0.1.0"
+description = "Yunohost Appstore"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "babel==2.14",
+    "emoji==2.*",
+    "flask==3.*",
+    "flask-babel==4.*",
+    "gitpython>=3.1.44",
+    "gunicorn>=23.0.0",
+    "pycmarkgfm==1.*",
+    "pygithub==2.*",
+    "python-slugify==8.*",
+    "requests==2.*",
+    "toml>=0.10",
+    "tomlkit>=0.13",
+    "tqdm>=4.67.1",
+]
