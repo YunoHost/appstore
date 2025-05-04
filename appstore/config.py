@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+from typing import Any
 
 import toml
 
@@ -21,7 +22,7 @@ class Config:
         "APPS_CACHE",
     ]
 
-    def __init__(self):
+    def __init__(self) -> None:
         if not CONFIG_FILE.exists():
             print(
                 "You should create a config/config.toml with the appropriate"
@@ -29,10 +30,10 @@ class Config:
             )
             sys.exit(1)
 
-        self.config = toml.load(CONFIG_FILE.open("r"))
+        self.config: dict[str, Any] = toml.load(CONFIG_FILE.open("r"))
         self.validate()
 
-    def validate(self):
+    def validate(self) -> None:
         errors = False
         for key in self.mandatory_config_keys:
             if key not in self.config:
