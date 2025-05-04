@@ -10,6 +10,7 @@ import sys
 import time
 import urllib
 from datetime import datetime
+from pathlib import Path
 
 import toml
 import tomlkit
@@ -27,13 +28,13 @@ from flask_babel import gettext as _
 from github import Github, InputGitAuthor
 from slugify import slugify
 
+from .stars import AppstoreStars
 from .utils import (
     check_wishlist_submit_ratelimit,
     get_app_md_and_screenshots,
     get_catalog,
     get_dashboard_data,
     get_locale,
-    get_stars,
     get_wishlist,
     save_wishlist_submit_for_ratelimit,
     set_data_dir,
@@ -78,6 +79,9 @@ babel = Babel(app, locale_selector=get_locale)
 
 DATA_DIR = config["DATA_DIR"]
 set_data_dir(DATA_DIR)
+
+STARS = AppstoreStars(Path(DATA_DIR) / "stars.json")
+STARS.read()
 
 
 @app.template_filter("localize")
@@ -151,13 +155,13 @@ def browse_catalog():
         init_starsonly=request.args.get("starsonly"),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
 @app.route("/popularity.json")
 def popularity_json():
-    return {app: len(stars) for app, stars in get_stars().items()}
+    return {app: len(stars) for app, stars in STARS.stars.items()}
 
 
 @app.route("/app/<app_id>")
@@ -174,7 +178,7 @@ def app_info(app_id):
         app_id=app_id,
         infos=infos,
         catalog=get_catalog(),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
@@ -193,21 +197,13 @@ def star_app(app_id, action):
             401,
         )
 
-    app_star_folder = os.path.join(DATA_DIR, "stars", app_id)
-    app_star_for_this_user = os.path.join(
-        app_star_folder, session.get("user", {})["id"]
-    )
-
-    if not os.path.exists(app_star_folder):
-        os.mkdir(app_star_folder)
+    user = session.get("user", {})["id"]
 
     if action == "star":
-        open(app_star_for_this_user, "w").write("")
+        STARS.add(app_id, user)
+
     elif action == "unstar":
-        try:
-            os.remove(app_star_for_this_user)
-        except FileNotFoundError:
-            pass
+        STARS.remove(app_id, user)
 
     if app_id in get_catalog()["apps"]:
         return redirect(f"/app/{app_id}")
@@ -220,7 +216,7 @@ def browse_wishlist():
     return render_template(
         "wishlist.html",
         wishlist=get_wishlist(),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
@@ -499,7 +495,7 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
 @app.route("/dash")
 def dash():
     # Sort by popularity by default
-    stars = get_stars()
+    stars = STARS.stars
     data = dict(
         sorted(
             get_dashboard_data().items(),
