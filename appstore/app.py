@@ -30,21 +30,20 @@ from slugify import slugify
 from .config import Config
 from .stars import AppstoreStars
 from .utils import (
-    check_wishlist_submit_ratelimit,
+    PROJECT_ROOT,
+    WishlistRateLimit,
     get_app_md_and_screenshots,
     get_catalog,
     get_dashboard_data,
     get_locale,
-    get_stars,
     get_wishlist,
-    save_wishlist_submit_for_ratelimit,
 )
 
 config = Config().config
 
 MAIN_CI = "bookworm"
 STARS = AppstoreStars()
-STARS.read()
+WISHLIST_RATELIMIT = WishlistRateLimit()
 
 app = Flask(
     __name__,
@@ -255,8 +254,8 @@ def add_to_wishlist():
 
         checks = [
             (
-                check_wishlist_submit_ratelimit(session["user"]["username"]) is True
-                or session["user"]["bypass_ratelimit"] is True,
+                WISHLIST_RATELIMIT.check(session["user"]["username"])
+                or session["user"]["bypass_ratelimit"],
                 _(
                     "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
                 ),
@@ -452,7 +451,7 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
             url=url,
         )
 
-        save_wishlist_submit_for_ratelimit(session["user"]["username"])
+        WISHLIST_RATELIMIT.add(session["user"]["username"])
 
         return render_template(
             "wishlist_add.html",

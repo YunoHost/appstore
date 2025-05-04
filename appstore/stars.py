@@ -15,6 +15,7 @@ class AppstoreStars:
         self.stars: dict[str, set[int]] = {}
         if not STARS_FILE.exists():
             json.dump({}, STARS_FILE.open("w"))
+        self.read()
 
     def add(self, app: str, user: int) -> None:
         if not app in self.stars:
@@ -34,7 +35,6 @@ class AppstoreStars:
         self.read_legacy()
         data = json.load(STARS_FILE.open("r"))
         self.stars = {app: set(users) for app, users in data.items()}
-        return
 
     def read_legacy(self) -> None:
         legacy_stars_dir = PROJECT_ROOT / ".stars"
