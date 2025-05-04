@@ -1,10 +1,10 @@
 import base64
 import json
 import os
-import subprocess
 import time
 from hashlib import md5
 from pathlib import Path
+from typing import Any, Callable
 
 import pycmarkgfm
 import toml
@@ -31,94 +31,66 @@ def get_locale() -> str:
     return request.accept_languages.best_match(AVAILABLE_LANGUAGES) or "en"
 
 
+class FileAutoReload:
+    def __init__(self, function: Callable, file: Path) -> None:
+        self.function = function
+        self.file = file
+        self.last_mtime = 0
+        self.cache: Any = None
+
+    def __call__(self, *args, **kwargs):
+        if self.file.stat().st_mtime != self.last_mtime:
+            self.last_mtime = self.file.stat().st_mtime
+            self.cache = self.function(*args, **kwargs)
+        return self.cache
+
+
+def file_autoreload(file: Path) -> Callable[[Callable], FileAutoReload]:
+    return lambda func: FileAutoReload(func, file)
+
+
+@file_autoreload(CATALOG_PATH)
 def get_catalog():
-    path = ".cache/apps.json"
-    mtime = os.path.getmtime(path)
-    if get_catalog.mtime_catalog != mtime:
-        get_catalog.mtime_catalog = mtime
+    catalog = json.load(CATALOG_PATH.open("r"))
+    catalog["categories"] = {c["id"]: c for c in catalog["categories"]}
+    catalog["antifeatures"] = {c["id"]: c for c in catalog["antifeatures"]}
 
-        catalog = json.load(open(path))
-        catalog["categories"] = {c["id"]: c for c in catalog["categories"]}
-        catalog["antifeatures"] = {c["id"]: c for c in catalog["antifeatures"]}
+    category_color = {
+        "synchronization": "sky",
+        "publishing": "yellow",
+        "communication": "amber",
+        "office": "lime",
+        "productivity_and_management": "purple",
+        "small_utilities": "black",
+        "reading": "emerald",
+        "multimedia": "fuchsia",
+        "social_media": "rose",
+        "games": "violet",
+        "dev": "stone",
+        "system_tools": "black",
+        "iot": "orange",
+        "wat": "teal",
+    }
 
-        category_color = {
-            "synchronization": "sky",
-            "publishing": "yellow",
-            "communication": "amber",
-            "office": "lime",
-            "productivity_and_management": "purple",
-            "small_utilities": "black",
-            "reading": "emerald",
-            "multimedia": "fuchsia",
-            "social_media": "rose",
-            "games": "violet",
-            "dev": "stone",
-            "system_tools": "black",
-            "iot": "orange",
-            "wat": "teal",
-        }
+    for id_, category in catalog["categories"].items():
+        category["color"] = category_color[id_]
 
-        for id_, category in catalog["categories"].items():
-            category["color"] = category_color[id_]
-
-        get_catalog.cache_catalog = catalog
-
-    return get_catalog.cache_catalog
+    return catalog
 
 
-get_catalog.mtime_catalog = None
-get_catalog()
-
-
+@file_autoreload(WISHLIST_PATH)
 def get_wishlist():
-    path = ".cache/apps/wishlist.toml"
-    mtime = os.path.getmtime(path)
-    if get_wishlist.mtime_wishlist != mtime:
-        get_wishlist.mtime_wishlist = mtime
-        get_wishlist.cache_wishlist = toml.load(open(path))
-
-    return get_wishlist.cache_wishlist
+    return toml.load(WISHLIST_PATH.open("r"))
 
 
-get_wishlist.mtime_wishlist = None
+@file_autoreload(DASHBOARD_PATH)
+def get_dashboard_data():
+    return json.load(DASHBOARD_PATH.open("r"))
+
+
+get_catalog()
 get_wishlist()
 
-
-def get_stars():
-    checksum = (
-        subprocess.check_output("find . -type f -printf '%T@,' | md5sum", shell=True)
-        .decode()
-        .split()[0]
-    )
-    if get_stars.cache_checksum != checksum:
-        stars = {}
-        for folder, _, files in os.walk(".stars/"):
-            app_id = folder.split("/")[-1]
-            if not app_id:
-                continue
-            stars[app_id] = set(files)
-        get_stars.cache_stars = stars
-        get_stars.cache_checksum = checksum
-
-    return get_stars.cache_stars
-
-
-get_stars.cache_checksum = None
-get_stars()
-
-
-def get_dashboard_data():
-    path = ".cache/dashboard.json"
-    mtime = os.path.getmtime(path)
-    if get_dashboard_data.mtime != mtime:
-        get_dashboard_data.mtime = mtime
-        dashboard_data = json.load(open(path))
-        get_dashboard_data.cache = dashboard_data
-
-    return get_dashboard_data.cache
-
-
-get_dashboard_data.mtime = None
 # We don't load this at launch to avoid miserably crashing if it doesn't exists yet
 # get_dashboard_data()
 
