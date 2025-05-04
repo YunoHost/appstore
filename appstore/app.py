@@ -39,35 +39,15 @@ from .utils import (
 )
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
+from .config import Config
 from .stars import AppstoreStars
+
+config = Config().config
 
 MAIN_CI = "bookworm"
 STARS = AppstoreStars()
 STARS.read()
 
-try:
-    config = toml.loads(open("config/config.toml").read())
-except Exception as e:
-    print(
-        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
-    )
-    sys.exit(1)
-
-mandatory_config_keys = [
-    "DISCOURSE_SSO_SECRET",
-    "DISCOURSE_SSO_ENDPOINT",
-    "COOKIE_SECRET",
-    "CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE",
-    "GITHUB_LOGIN",
-    "GITHUB_TOKEN",
-    "GITHUB_EMAIL",
-    "APPS_CACHE",
-]
-
-for key in mandatory_config_keys:
-    if key not in config:
-        print(f"Missing key in config.toml: {key}")
-        sys.exit(1)
 
 if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
