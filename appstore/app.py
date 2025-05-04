@@ -483,7 +483,10 @@ def dash():
     )
 
     return render_template(
-        "dash.html", data=data, stars=stars, last_data_update=get_dashboard_data.mtime
+        "dash.html",
+        data=data,
+        stars=stars,
+        last_data_update=get_dashboard_data.last_mtime,
     )
 
 
