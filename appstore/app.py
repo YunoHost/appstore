@@ -39,8 +39,11 @@ from .utils import (
 )
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
+from .stars import AppstoreStars
 
 MAIN_CI = "bookworm"
+STARS = AppstoreStars()
+STARS.read()
 
 try:
     config = toml.loads(open("config/config.toml").read())
@@ -146,13 +149,13 @@ def browse_catalog():
         init_starsonly=request.args.get("starsonly"),
         catalog=get_catalog(),
         timestamp_now=int(time.time()),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
 @app.route("/popularity.json")
 def popularity_json():
-    return {app: len(stars) for app, stars in get_stars().items()}
+    return {app: len(stars) for app, stars in STARS.stars.items()}
 
 
 @app.route("/app/<app_id>")
@@ -169,7 +172,7 @@ def app_info(app_id):
         app_id=app_id,
         infos=infos,
         catalog=get_catalog(),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
@@ -188,21 +191,13 @@ def star_app(app_id, action):
             401,
         )
 
-    app_star_folder = os.path.join(".stars", app_id)
-    app_star_for_this_user = os.path.join(
-        ".stars", app_id, session.get("user", {})["id"]
-    )
-
-    if not os.path.exists(app_star_folder):
-        os.mkdir(app_star_folder)
+    user = session.get("user", {})["id"]
 
     if action == "star":
-        open(app_star_for_this_user, "w").write("")
+        STARS.add(app_id, user)
+
     elif action == "unstar":
-        try:
-            os.remove(app_star_for_this_user)
-        except FileNotFoundError:
-            pass
+        STARS.remove(app_id, user)
 
     if app_id in get_catalog()["apps"]:
         return redirect(f"/app/{app_id}")
@@ -215,7 +210,7 @@ def browse_wishlist():
     return render_template(
         "wishlist.html",
         wishlist=get_wishlist(),
-        stars=get_stars(),
+        stars=STARS.stars,
     )
 
 
@@ -494,7 +489,7 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
 @app.route("/dash")
 def dash():
     # Sort by popularity by default
-    stars = get_stars()
+    stars = STARS.stars
     data = dict(
         sorted(
             get_dashboard_data().items(),
