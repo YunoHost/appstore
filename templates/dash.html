@@ -25,8 +25,7 @@
         <option {% if request.args.get("filter") == "regressions_main_ci" %}selected{% endif %} value="regressions_main_ci">{{ _("Regressions on main CI") }}</option>
         <option {% if request.args.get("filter") == "broken_low_quality" %}selected{% endif %} value="broken_low_quality">{{ _("Broken / low quality apps") }}</option>
         <option {% if request.args.get("filter") == "outdated" %}selected{% endif %} value="outdated">{{ _("Outdated tests on main CI") }}</option>
-        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_bookworm">{{ _("Regressions since Bullseye") }}</option>
-        <option {% if request.args.get("filter") == "regressions_bookworm" %}selected{% endif %} value="regressions_trixie">{{ _("Regressions on Trixie") }}</option>
+        <option {% if request.args.get("filter") == "regressions_trixie" %}selected{% endif %} value="regressions_trixie">{{ _("Regressions on Trixie") }}</option>
         <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
         <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
         <option {% if request.args.get("filter") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Apps with issues") }}</option>
@@ -331,18 +330,6 @@
             else if (filterName == "outdated")
             {
                 if (entries[i].dataset.mainCiDaysago >= 30)
-                {
-                    entries[i].classList.remove("hidden");
-                    nb_found++;
-                }
-                else
-                {
-                    entries[i].classList.add("hidden");
-                }
-            }
-            else if (filterName == "regressions_bookworm")
-            {
-                if ((entries[i].dataset.mainCiLevel < 6) && (entries[i].dataset.mainCiLevel < entries[i].dataset.prevdebianCiLevel ))
                 {
                     entries[i].classList.remove("hidden");
                     nb_found++;
