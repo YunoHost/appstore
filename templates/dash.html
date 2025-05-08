@@ -251,15 +251,15 @@
         </td>
         <td class="px-3 truncate text-sm max-w-16 sm:max-w-full">
             {% if this_app_stars > 0 %}
-                <span class="text-xs border-purple-400 text-purple-600 px-1 py-0 border rounded">{{ this_app_stars }}
+                <span class="text-xs text-purple-600 px-1 py-0">{{ this_app_stars }}
                     <i class="fa {% if not user_starred_this_app %}fa-star-o{% else %}fa-star{% endif %}" aria-hidden="true" title="{{ _("Popularity stars") }}"></i>
                 </span>
             {% endif %}
             {% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] %}
-                <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-flag-o"></i> {{ _("Deprecated") }}</span>
+                <span class="text-xs px-1 py-0"><i class="fa fa-flag-o"></i> {{ _("Deprecated") }}</span>
             {% endif %}
             {% if "package-not-maintained" in infos["antifeatures"] %}
-                <span class="text-xs border-gray-400 px-1 py-0 border rounded"><i class="fa fa-flag-o"></i> {{ _("Not maintained") }}</span>
+                <span class="text-xs px-1 py-0"><i class="fa fa-flag-o"></i> {{ _("Not maintained") }}</span>
             {% endif %}
             <!--
                 Maintainers
