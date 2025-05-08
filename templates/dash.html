@@ -29,6 +29,8 @@
         <option {% if request.args.get("filter") == "testings" %}selected{% endif %} value="testings">{{ _("Apps with testings PRs") }}</option>
         <option {% if request.args.get("filter") == "autoupdate" %}selected{% endif %} value="autoupdate">{{ _("Apps with autoupdate PRs") }}</option>
         <option {% if request.args.get("filter") == "nb_issues" %}selected{% endif %} value="nb_issues">{{ _("Apps with issues") }}</option>
+        <option {% if request.args.get("filter") == "helpers_v2" %}selected{% endif %} value="helpers_v2">{{ _("Apps using v2 helpers") }}</option>
+        <option {% if request.args.get("filter") == "helpers_v2.1" %}selected{% endif %} value="helpers_v2.1">{{ _("Apps using v2.1 helpers") }}</option>
         </select>
     </div>
     <div>
@@ -134,6 +136,7 @@
         data-packaging-format="{{ infos["packaging_format"] }}"
         data-deprecated="{% if "deprecated-software" in infos["antifeatures"] or "replaced-by-another-app" in infos["antifeatures"] or "package-not-maintained" in infos["antifeatures"] %}True{% else %}False{% endif %}"
         data-nb-issues="{{ infos["nb_issues"] }}"
+        data-helpers-version="{{ infos["helpers_version"] }}"
     >
         <td class="truncate max-w-24 md:max-w-64 text-center text-blue-600 font-medium">
             <a href="{{ infos["url"] }}">{{ app }}</a>
@@ -378,6 +381,32 @@
             else if (filterName == "nb_issues")
             {
                 if (entries[i].dataset.nbIssues > 0)
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "helpers_v2")
+            {
+                if (entries[i].dataset.helpersVersion == "2")
+                {
+                    entries[i].classList.remove("hidden");
+                    nb_found++
+                }
+                else
+                {
+                    entries[i].classList.add("hidden");
+                }
+            }
+            else if (filterName == "helpers_v2.1")
+            {
+                console.log(entries[i].dataset)
+                console.log(entries[i].dataset.helpersVersion)
+                if (entries[i].dataset.helpersVersion == "2.1")
                 {
                     entries[i].classList.remove("hidden");
                     nb_found++

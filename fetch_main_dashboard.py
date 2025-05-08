@@ -137,6 +137,7 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
         "maintainers": infos["manifest"]["maintainers"],
         "antifeatures": infos["antifeatures"],
         "packaging_format": infos["manifest"]["packaging_format"],
+        "helpers_version": str(infos["manifest"]["integration"].get("helpers_version", "2")),
         "ci_results": {
             "bullseye": get_app_ci_results(ci_apps_bullseye_results(), name),
             "bookworm": get_app_ci_results(ci_apps_bookworm_results(), name),
