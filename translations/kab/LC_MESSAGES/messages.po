@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2024-10-09 22:54+0000\n"
-"Last-Translator: Aksel Azwaw "
-"<akselyan@users.noreply.translate.yunohost.org>\n"
+"PO-Revision-Date: 2025-05-13 04:45+0000\n"
+"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
+"Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
+"store/kab/>\n"
 "Language: kab\n"
-"Language-Team: Kabyle "
-"<https://translate.yunohost.org/projects/yunohost/store/kab/>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:181
@@ -231,7 +231,7 @@ msgstr ""
 
 #: templates/app.html:140
 msgid " Official website"
-msgstr ""
+msgstr " Asmel Web unṣib"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
@@ -259,7 +259,7 @@ msgstr ""
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Agejdan"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:83
 msgid "Catalog"
@@ -279,7 +279,7 @@ msgstr ""
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "Tisemlit n YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
@@ -296,7 +296,7 @@ msgstr ""
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Senser"
 
 #: templates/base.html:149
 msgid "Toggle menu"
@@ -313,7 +313,7 @@ msgstr ""
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Aɣbalu"
 
 #: templates/base.html:266
 msgid "Terms of Services"
@@ -325,19 +325,19 @@ msgstr ""
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Nadi"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
-msgstr ""
+msgstr "Nadi ɣef…"
 
 #: templates/catalog.html:111
 msgid "All apps"
-msgstr ""
+msgstr "Akk isnasen"
 
 #: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
 msgid "Sort by"
-msgstr ""
+msgstr "Smizzwer s"
 
 #: templates/catalog.html:127 templates/wishlist.html:48
 #: templates/wishlist.html:81
@@ -346,7 +346,7 @@ msgstr ""
 
 #: templates/catalog.html:128
 msgid "Newest"
-msgstr ""
+msgstr "Amaynut"
 
 #: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
 msgid "Alphabetical"
@@ -409,7 +409,7 @@ msgstr ""
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Yettwarna"
 
 #: templates/charts.html:33
 msgid "Repaired"
@@ -417,56 +417,56 @@ msgstr ""
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Iṛṛeẓ"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Yettwakkes"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Arussin"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Aswir wis 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Aswir wis 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Aswir wis 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Aswir wis 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Aswir wis 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Aswir wis 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Aswir wis 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Aswir wis 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Aswir wis 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Aswir wis %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
@@ -475,7 +475,7 @@ msgstr ""
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Aswir wis %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
@@ -493,11 +493,11 @@ msgstr ""
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Sizdeg"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(Ula yiwen)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
@@ -533,7 +533,7 @@ msgstr ""
 
 #: templates/dash.html:43
 msgid "Quality level"
-msgstr ""
+msgstr "Aswir n tɣara"
 
 #: templates/dash.html:44 templates/dash.html:255
 msgid "Popularity stars"
@@ -557,7 +557,7 @@ msgstr ""
 
 #: templates/dash.html:82
 msgid "App"
-msgstr ""
+msgstr "Asnas"
 
 #: templates/dash.html:84
 msgid "Main CI"
@@ -581,12 +581,12 @@ msgstr ""
 
 #: templates/dash.html:89
 msgid "Issues"
-msgstr ""
+msgstr "Uguren"
 
 #: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
 #: templates/dash.html:206
 msgid "Broken"
-msgstr ""
+msgstr "Iṛṛeẓ"
 
 #: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
 #: templates/dash.html:208
@@ -648,7 +648,7 @@ msgstr ""
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
-msgstr ""
+msgstr "Isem"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
@@ -710,7 +710,7 @@ msgstr ""
 
 #: templates/wishlist.html:77
 msgid "Description"
-msgstr ""
+msgstr "Aglam"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
@@ -723,4 +723,3 @@ msgstr ""
 #: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr ""
-
