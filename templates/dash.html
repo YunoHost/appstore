@@ -83,7 +83,7 @@
         <th class="max-w-24 md:max-w-32">{{ _("App") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Catalog") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Main CI") }}</th>
-        <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bullseye CI") }}</th>
+        <!--<th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Bullseye CI") }}</th>-->
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Trixie CI") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Testing PR") }}</th>
         <th class="-rotate-90 md:-rotate-45 max-w-10 md:max-w-16 text-left text-nowrap">{{ _("Autoupdate PR") }}</th>
@@ -170,6 +170,7 @@
                 {% endif %}
             </a>
         </td>
+        <!--
         <td class="text-center">
             <a class="{% if ci_results_prev and ((infos["public_level"] == ci_results_prev["level"]) or (ci_results_prev["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-bullseye.yunohost.org/ci/apps/{{ app }}/">
                 {% if ci_results_prev %}
@@ -192,6 +193,7 @@
                 {% endif %}
             </a>
         </td>
+        -->
         <td class="text-center">
             <a class="{% if ci_results_next and ((infos["public_level"] == ci_results_next["level"]) or (ci_results_next["timestamp"] | days_ago) > 30) %}opacity-50{% endif %}" href="https://ci-apps-trixie.yunohost.org/ci/apps/{{ app }}/">
                 {% if ci_results_next %}
