@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2024-12-23 00:31+0000\n"
+"PO-Revision-Date: 2025-05-20 14:26+0000\n"
 "Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
+"Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
+"store/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish "
-"<https://translate.yunohost.org/projects/yunohost/store/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:181
@@ -737,12 +738,11 @@ msgid "Link to the project's LICENSE"
 msgstr "Vinculo hacia la LICENCIA del proyecto"
 
 #: templates/wishlist_add.html:73
-#, fuzzy
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"El proyecto YunoHost incluye solamente aplicaciones libre con codigo "
+"El proyecto YunoHost incluye solamente aplicaciones libres con codigo "
 "abierto ( con excepciones caso a caso para aplicaciones que no son "
 "totalmente abiertas)"
 
@@ -797,4 +797,3 @@ msgstr "Repositorio de codigo"
 #: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr "Valora esta aplicación"
-
