@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2025-05-13 04:45+0000\n"
-"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
+"PO-Revision-Date: 2025-05-24 10:51+0000\n"
+"Last-Translator: ButterflyOfFire <BoFFire@users.noreply.translate.yunohost."
+"org>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
 "store/kab/>\n"
 "Language: kab\n"
@@ -27,7 +28,7 @@ msgstr "Ulac asnas %(app_id)s"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Ttxil-k·m, qqen akken ad tserseḍ asnas d amenyaf"
 
 #: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
@@ -148,7 +149,7 @@ msgstr ""
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Alugu i %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -181,12 +182,12 @@ msgstr ""
 
 #: templates/app.html:85
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Sebded s YunoHost"
 
 #: templates/app.html:93
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Lqem amiran: %(version)s"
 
 #: templates/app.html:95
 #, python-format
@@ -196,7 +197,7 @@ msgstr ""
 #: templates/app.html:101
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Tuṭṭfa n wegdil i %(app)s"
 
 #: templates/app.html:106
 #, python-format
@@ -235,15 +236,15 @@ msgstr " Asmel Web unṣib"
 
 #: templates/app.html:141
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Tisemlit tunṣibt i yinedbalen"
 
 #: templates/app.html:142
 msgid "Official user documentation"
-msgstr ""
+msgstr "Tisemlit tunṣibt i yiseqdacen"
 
 #: templates/app.html:143
 msgid "Official code repository"
-msgstr ""
+msgstr "Akufi unṣib n turagt"
 
 #: templates/app.html:144
 msgid "YunoHost package repository"
@@ -300,7 +301,7 @@ msgstr "Senser"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Sken-d umuɣ"
 
 #: templates/base.html:264
 msgid ""
@@ -350,7 +351,7 @@ msgstr "Amaynut"
 
 #: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
 msgid "Alphabetical"
-msgstr ""
+msgstr "S ugemmay"
 
 #: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
 msgid "Requires to be logged-in"
@@ -405,7 +406,7 @@ msgstr ""
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Amazray"
 
 #: templates/charts.html:27
 msgid "Added"
@@ -561,15 +562,15 @@ msgstr "Asnas"
 
 #: templates/dash.html:84
 msgid "Main CI"
-msgstr ""
+msgstr "CI tagejdant"
 
 #: templates/dash.html:85
 msgid "Bullseye CI"
-msgstr ""
+msgstr "CI Bullseye"
 
 #: templates/dash.html:86
 msgid "Trixie CI"
-msgstr ""
+msgstr "CI Trixie"
 
 #: templates/dash.html:87
 msgid "Testing PR"
@@ -591,7 +592,7 @@ msgstr "Iṛṛeẓ"
 #: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
 #: templates/dash.html:208
 msgid "Low quality"
-msgstr ""
+msgstr "Taɣara n diri"
 
 #: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
 #, python-format
@@ -622,11 +623,11 @@ msgstr ""
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Isnasen s umata"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Sumer-d asnas"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
@@ -652,7 +653,7 @@ msgstr "Isem"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
-msgstr ""
+msgstr "Aglam n wesnas"
 
 #: templates/wishlist_add.html:66
 msgid "Please be concise and focus on what the app does."
@@ -672,7 +673,7 @@ msgstr ""
 
 #: templates/wishlist_add.html:71
 msgid "Link to the project's LICENSE"
-msgstr ""
+msgstr "Aseɣwen ar ufaylu n TURAGT n usenfar"
 
 #: templates/wishlist_add.html:73
 msgid ""
@@ -682,7 +683,7 @@ msgstr ""
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
-msgstr ""
+msgstr "Asmel Web unṣib"
 
 #: templates/wishlist_add.html:77
 msgid ""
@@ -692,7 +693,7 @@ msgstr ""
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
-msgstr ""
+msgstr "Azen"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
@@ -714,7 +715,7 @@ msgstr "Aglam"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
-msgstr ""
+msgstr "Asmel Web unṣib"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
