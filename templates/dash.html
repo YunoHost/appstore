@@ -130,7 +130,7 @@
         data-main-ci-daysago="{{ ci_results_main["timestamp"] | days_ago }}"
         data-prevdebian-ci-level="{{ ci_results_prev["level"] }}"
         data-nextdebian-ci-level="{{ ci_results_next["level"] }}"
-        data-last-update-master="{{ ci_results_main["timestamp"] }}"
+        data-last-update-master="{{ infos["timestamp_latest_commit"] }}"
         data-last-update-testing="{% if infos["testing"] %}{{ infos["testing"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-last-update-autoupdate="{% if infos["ci-auto-update"] %}{{ infos["ci-auto-update"]["timestamp_updated"] }}{% else %}-1{% endif %}"
         data-packaging-format="{{ infos["packaging_format"] }}"
