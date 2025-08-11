@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+# See https://shields.io/badges/static-badge for more info about the badge generation.
+
 wget -O - https://img.shields.io/badge/Integration-Level_9-blue.svg        > level9.svg
 wget -O - https://img.shields.io/badge/Integration-Level_8-brightgreen.svg > level8.svg
 wget -O - https://img.shields.io/badge/Integration-Level_7-green.svg       > level7.svg
@@ -19,14 +23,30 @@ wget -O - https://img.shields.io/badge/Status-In%20progress-orange.svg     > sta
 wget -O - https://img.shields.io/badge/Status-Not%20working-red.svg        > state-notworking.svg
 wget -O - https://img.shields.io/badge/Status-Broken-red.svg               > state-broken.svg
 
-wget -O - https://img.shields.io/badge/automatic_tests_level-9-blue.svg?style=for-the-badge            > level9_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-8-brightgreen.svg?style=for-the-badge     > level8_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-7-green.svg?style=for-the-badge           > level7_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-6-yellowgreen.svg?style=for-the-badge     > level6_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-5-yellowgreen.svg?style=for-the-badge     > level5_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-4-yellow.svg?style=for-the-badge          > level4_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-3-yellow.svg?style=for-the-badge          > level3_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-2-orange.svg?style=for-the-badge          > level2_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-1-orange.svg?style=for-the-badge          > level1_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-0-red.svg?style=for-the-badge             > level0_v2.svg
-wget -O - https://img.shields.io/badge/automatic_tests_level-unknown-lightgrey.svg?style=for-the-badge > unknown_v2.svg
+# Hexadecimal codes of colors to be used for badges. 
+BLUE_LVL9=037CC2
+GREEN_LVL8=338809
+GREEN_LVL7=5D8210
+YELLOWGREEN_LVL6=7A7B0D
+YELLOWGREEN_LVL5=$YELLOWGREEN_LVL6
+YELLOW_LVL4=867719
+YELLOW_LVL3=$YELLOW_LVL4
+ORANGE_LVL2=D04A0A
+ORANGE_LVL1=$ORANGE_LVL2
+RED_LVL0=DF351F
+GREY_UNKNOWN=797676
+
+# Add style and fancy logo
+QUERY_PARAMS='style=for-the-badge&logo=yunohost'
+
+wget -O - https://img.shields.io/badge/automatic_tests_level-9-$BLUE_LVL9.svg?$QUERY_PARAMS            > level9_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-8-$GREEN_LVL8.svg?$QUERY_PARAMS           > level8_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-7-$GREEN_LVL7.svg?$QUERY_PARAMS           > level7_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-6-$YELLOWGREEN_LVL6.svg?$QUERY_PARAMS     > level6_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-5-$YELLOWGREEN_LVL5.svg?$QUERY_PARAMS     > level5_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-4-$YELLOW_LVL4.svg?$QUERY_PARAMS          > level4_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-3-$YELLOW_LVL3.svg?$QUERY_PARAMS          > level3_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-2-$ORANGE_LVL2.svg?$QUERY_PARAMS          > level2_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-1-$ORANGE_LVL1.svg?$QUERY_PARAMS          > level1_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-0-$RED_LVL0.svg?$QUERY_PARAMS             > level0_v2.svg
+wget -O - https://img.shields.io/badge/automatic_tests_level-unknown-$GREY_UNKNOWN.svg?$QUERY_PARAMS   > unknown_v2.svg
