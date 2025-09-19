@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-20 01:50+0200\n"
+"POT-Creation-Date: 2025-09-20 01:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,94 +168,95 @@ msgid ""
 "least one year."
 msgstr ""
 
-#: templates/app.html:60 templates/wishlist.html:132
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
+#: templates/wishlist.html:133
 msgid "Unstar this app"
 msgstr ""
 
-#: templates/app.html:60 templates/wishlist.html:132
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
 msgstr ""
 
-#: templates/app.html:82
+#: templates/app.html:83
 msgid "Try the demo"
 msgstr ""
 
-#: templates/app.html:83
+#: templates/app.html:84
 msgid "Demo"
 msgstr ""
 
-#: templates/app.html:86
+#: templates/app.html:87
 msgid "Install with YunoHost"
 msgstr ""
 
-#: templates/app.html:94
+#: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
 msgstr ""
 
-#: templates/app.html:96
+#: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
 msgstr ""
 
-#: templates/app.html:102
+#: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
 msgstr ""
 
-#: templates/app.html:107
+#: templates/app.html:108
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
 
-#: templates/app.html:113
+#: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
 
-#: templates/app.html:119
+#: templates/app.html:120
 msgid "Important infos before installing"
 msgstr ""
 
-#: templates/app.html:125
+#: templates/app.html:126
 msgid "Antifeatures"
 msgstr ""
 
-#: templates/app.html:126
+#: templates/app.html:127
 msgid "(This app has features you may not like)"
 msgstr ""
 
-#: templates/app.html:137
+#: templates/app.html:138
 msgid "Useful links"
 msgstr ""
 
-#: templates/app.html:140
+#: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
 msgstr ""
 
-#: templates/app.html:141
+#: templates/app.html:142
 msgid " Official website"
 msgstr ""
 
-#: templates/app.html:142
+#: templates/app.html:143
 msgid "Official admin documentation"
 msgstr ""
 
-#: templates/app.html:143
+#: templates/app.html:144
 msgid "Official user documentation"
 msgstr ""
 
-#: templates/app.html:144
+#: templates/app.html:145
 msgid "Official code repository"
 msgstr ""
 
-#: templates/app.html:145
+#: templates/app.html:146
 msgid "YunoHost package repository"
 msgstr ""
 
-#: templates/app.html:146
+#: templates/app.html:147
 msgid "YunoHost package license"
 msgstr ""
 
