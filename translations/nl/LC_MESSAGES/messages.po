@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Boudewijn <wbk_tyo@osba.nl>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/store/"
 "nl/>\n"
 "Language: nl\n"
@@ -37,12 +37,11 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
-"Houd er rekening mee dat we vanwege diverse misbruiken het inloggen in de"
-" app store hebben beperkt tot gebruikers met 'trust "
-"level1'.<br/><br/>'Trust level 1' wordt verkregen na een minimale "
-"interactie met het forum, en meer specifiek: minimaal 5 onderwerpen "
-"invoeren, minimaal 30 berichten lezen en minimaal 10 minuten besteden aan"
-" het lezen van berichten."
+"Houd er rekening mee dat we vanwege diverse misbruiken het inloggen in de "
+"app store hebben beperkt tot gebruikers met 'trust level1'.<br/><br/>'Trust "
+"level 1' wordt verkregen na een minimale interactie met het forum, en meer "
+"specifiek: minimaal 5 onderwerpen invoeren, minimaal 30 berichten lezen en "
+"minimaal 10 minuten besteden aan het lezen van berichten."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -57,8 +56,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen "
-"per gebruiker. Probeer het over een paar dagen opnieuw."
+"Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen per "
+"gebruiker. Probeer het over een paar dagen opnieuw."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -78,13 +77,13 @@ msgstr "De app-beschrijving moet minder dan 100 tekens lang zijn"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr "De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
+msgstr ""
+"De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
-"De upstream-URL voor de coderepository moet minder dan 150 tekens lang "
-"zijn"
+"De upstream-URL voor de coderepository moet minder dan 150 tekens lang zijn"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -118,8 +117,8 @@ msgstr ""
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de "
-"app doet."
+"Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de app "
+"doet."
 
 #: app.py:362
 #, python-format
@@ -187,8 +186,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Deze app is momenteel gemarkeerd als defect omdat deze niet is geslaagd "
-"voor onze automatische tests."
+"Deze app is momenteel gemarkeerd als defect omdat deze niet is geslaagd voor "
+"onze automatische tests."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -205,8 +204,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Deze app is volgens onze automatische tests gedurende minimaal een jaar "
-"van goede kwaliteit."
+"Deze app is volgens onze automatische tests gedurende minimaal een jaar van "
+"goede kwaliteit."
 
 #: templates/app.html:81
 msgid "Try the demo"
@@ -238,7 +237,8 @@ msgstr "Schermafbeelding voor %(app)s"
 #: templates/app.html:106
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
-msgstr "Deze app is enkel compatibel met deze specifieke architecturen: %(archs)s"
+msgstr ""
+"Deze app is enkel compatibel met deze specifieke architecturen: %(archs)s"
 
 #: templates/app.html:112
 #, python-format
@@ -437,9 +437,9 @@ msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
-"Dit betekent dat de ontwikkelaar ze niet langer zal updaten. Wij raden de"
-" installatie ervan ten zeerste af en adviseren gebruikers om "
-"alternatieven te vinden."
+"Dit betekent dat de ontwikkelaar ze niet langer zal updaten. Wij raden de "
+"installatie ervan ten zeerste af en adviseren gebruikers om alternatieven te "
+"vinden."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
