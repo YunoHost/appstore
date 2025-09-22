@@ -7,18 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-10 19:05+0200\n"
+"POT-Creation-Date: 2025-09-20 01:56+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Italian <https://translate.yunohost.org/projects/yunohost/"
-"store/it/>\n"
 "Language: it\n"
+"Language-Team: Italian "
+"<https://translate.yunohost.org/projects/yunohost/store/it/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.3\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
 #, python-format
@@ -37,17 +36,17 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
-"Nota che, per diversi abusi, abbiamo ristretto l’accesso all’app store alle "
-"persone che hanno ‘trust level 1’<br/><br/>Il ‘trust level 1’ si ottiene "
-"dopo aver interagito un minimo nel forum, specificamente: visitando almeno 5 "
-"argomenti, leggendo almeno 30 post, e spendendo almeno 10 minuti a leggere "
-"post."
+"Nota che, per diversi abusi, abbiamo ristretto l’accesso all’app store "
+"alle persone che hanno ‘trust level 1’<br/><br/>Il ‘trust level 1’ si "
+"ottiene dopo aver interagito un minimo nel forum, specificamente: "
+"visitando almeno 5 argomenti, leggendo almeno 30 post, e spendendo almeno"
+" 10 minuti a leggere post."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
-"Devi aver effettuato l’accesso per proporre un’applicazione nella lista dei "
-"desideri"
+"Devi aver effettuato l’accesso per proporre un’applicazione nella lista "
+"dei desideri"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -58,8 +57,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"La proposta di aggiunta alla lista dei desideri è limitata a una volta ogni "
-"15 giorni per ciascuna persona. Riprova fra qualche giorno."
+"La proposta di aggiunta alla lista dei desideri è limitata a una volta "
+"ogni 15 giorni per ciascuna persona. Riprova fra qualche giorno."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -80,8 +79,8 @@ msgstr "La descrizione dell’app deve contenere meno di 100 caratteri"
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
-"L’URL della repository contenente il codice upstream deve contenere almeno "
-"10 caratteri"
+"L’URL della repository contenente il codice upstream deve contenere "
+"almeno 10 caratteri"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
@@ -111,14 +110,13 @@ msgid ""
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
-"Concentrati su ciò che l’applicazione fa, senza usare termini di marketing "
-"poco chiari e senza ripetere che l’app è “libera” e “self-hostabile”. È "
-"preferibile usare l’inglese."
+"Concentrati su ciò che l’applicazione fa, senza usare termini di "
+"marketing poco chiari e senza ripetere che l’app è “libera” e “self-"
+"hostabile”. È preferibile usare l’inglese."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
-msgstr ""
-"Non c’è bisogno di ripetere il nome dell’app. Concentrati su ciò che fa."
+msgstr "Non c’è bisogno di ripetere il nome dell’app. Concentrati su ciò che fa."
 
 #: app.py:362
 #, python-format
@@ -127,8 +125,9 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
-"Nella lista dei desideri esiste già una voce con il nome %(slug)s, puoi però "
-"<a href='%(url)s'>votare l’app relativa per manifestare il tuo interesse</a>."
+"Nella lista dei desideri esiste già una voce con il nome %(slug)s, puoi "
+"però <a href='%(url)s'>votare l’app relativa per manifestare il tuo "
+"interesse</a>."
 
 #: app.py:381
 #, python-format
@@ -145,8 +144,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Un’app con il nome %(slug)s esiste già nel catalogo, <a href='%(url)s'>puoi "
-"visualizzare la sua pagina qui</a>."
+"Un’app con il nome %(slug)s esiste già nel catalogo, <a "
+"href='%(url)s'>puoi visualizzare la sua pagina qui</a>."
 
 #: app.py:420
 #, python-format
@@ -157,8 +156,8 @@ msgid ""
 msgstr ""
 "La creazione della pull request per richiedere l’aggiunta dell’app alla "
 "lista dei desideri è fallita… Forse perché per quest’app c’è già <a "
-"href='%(url)s'>una PR in attesa</a>? Se non è così, segnala questo problema "
-"alla squadra di YunoHost."
+"href='%(url)s'>una PR in attesa</a>? Se non è così, segnala questo "
+"problema alla squadra di YunoHost."
 
 #: app.py:470
 #, python-format
@@ -167,9 +166,9 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
-"La proposta per l’app che hai appena compilato è stata inviata con successo. "
-"Ora dev’essere convalidata dalla squadra di YunoHost. Puoi tenere traccia "
-"del progresso qui: <a href='%(url)s'>%(url)s</a>"
+"La proposta per l’app che hai appena compilato è stata inviata con "
+"successo. Ora dev’essere convalidata dalla squadra di YunoHost. Puoi "
+"tenere traccia del progresso qui: <a href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -186,8 +185,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Quest’app è momentaneamente segnalata come rotta perché ha fallito i nostri "
-"test automatici."
+"Quest’app è momentaneamente segnalata come rotta perché ha fallito i "
+"nostri test automatici."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -204,92 +203,102 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Quest’app è stata segnalata dai nostri test automatici come di buona qualità "
-"per almeno un anno."
+"Quest’app è stata segnalata dai nostri test automatici come di buona "
+"qualità per almeno un anno."
 
-#: templates/app.html:81
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
+#: templates/wishlist.html:133
+msgid "Unstar this app"
+msgstr ""
+
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
+#: templates/wishlist.html:133
+msgid "Star this app"
+msgstr ""
+
+#: templates/app.html:83
 msgid "Try the demo"
 msgstr "Prova la demo"
 
-#: templates/app.html:82
+#: templates/app.html:84
 msgid "Demo"
 msgstr "Provala"
 
-#: templates/app.html:85
+#: templates/app.html:87
 msgid "Install with YunoHost"
 msgstr "Installa con YunoHost"
 
-#: templates/app.html:93
+#: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
 msgstr "Versione attuale: %(version)s"
 
-#: templates/app.html:95
+#: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
 msgstr "Possibile alternativa a: %(alternatives)s"
 
-#: templates/app.html:101
+#: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
 msgstr "Schermata di %(app)s"
 
-#: templates/app.html:106
+#: templates/app.html:108
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
 "Quest’app è compatibile solamente con queste specifiche architetture: "
 "%(archs)s"
 
-#: templates/app.html:112
+#: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
 "Per essere installata, quest’app richiede una quantità di RAM inusuale: "
 "%(ram)s"
 
-#: templates/app.html:118
+#: templates/app.html:120
 msgid "Important infos before installing"
 msgstr "Informazioni importanti prima dell’installazione"
 
-#: templates/app.html:124
+#: templates/app.html:126
 msgid "Antifeatures"
 msgstr ""
 
-#: templates/app.html:125
+#: templates/app.html:127
 msgid "(This app has features you may not like)"
 msgstr "(Quest’app potrebbe avere funzionalità che non ti piacciono)"
 
-#: templates/app.html:136
+#: templates/app.html:138
 msgid "Useful links"
 msgstr "Link utili"
 
-#: templates/app.html:139
+#: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
 msgstr "Licenza dell’app: %(license)s"
 
-#: templates/app.html:140
+#: templates/app.html:142
 msgid " Official website"
 msgstr " Sito ufficiale"
 
-#: templates/app.html:141
+#: templates/app.html:143
 msgid "Official admin documentation"
 msgstr "Documentazione admin ufficiale"
 
-#: templates/app.html:142
+#: templates/app.html:144
 msgid "Official user documentation"
 msgstr "Documentazione ufficiale per le persone"
 
-#: templates/app.html:143
+#: templates/app.html:145
 msgid "Official code repository"
 msgstr "Repository ufficiale del codice"
 
-#: templates/app.html:144
+#: templates/app.html:146
 msgid "YunoHost package repository"
 msgstr "Repository del pacchetto di YunoHost"
 
-#: templates/app.html:145
+#: templates/app.html:147
 msgid "YunoHost package license"
 msgstr "Licenza del pacchetto di YunoHost"
 
@@ -301,7 +310,7 @@ msgstr "App store di YunoHost"
 msgid "Home"
 msgstr "Homepage"
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
 msgstr "Catalogo"
 
@@ -351,8 +360,9 @@ msgid ""
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Creato con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
-"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"usando <a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> e <a class='text-"
+"blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
@@ -379,7 +389,7 @@ msgstr "Cerca…"
 msgid "All apps"
 msgstr "Tutte le app"
 
-#: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
+#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "Ordina per"
 
@@ -392,16 +402,16 @@ msgstr "Popolarità"
 msgid "Newest"
 msgstr "Più recente"
 
-#: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
+#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "Alfabetico"
 
-#: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
+#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "Richiede di aver fatto l’accesso"
 
-#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:66
-#: templates/dash.html:75 templates/wishlist.html:54 templates/wishlist.html:63
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
+#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "Mostra solo le app che hai votato"
 
@@ -558,106 +568,110 @@ msgid "Outdated tests on main CI"
 msgstr ""
 
 #: templates/dash.html:28
-msgid "Regressions since Bullseye"
-msgstr ""
-
-#: templates/dash.html:29
 msgid "Regressions on Trixie"
 msgstr ""
 
-#: templates/dash.html:30
+#: templates/dash.html:29
 msgid "Apps with testings PRs"
 msgstr ""
 
-#: templates/dash.html:31
+#: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
 msgstr ""
 
-#: templates/dash.html:32
+#: templates/dash.html:31
 msgid "Apps with issues"
 msgstr ""
 
-#: templates/dash.html:43
+#: templates/dash.html:32
+msgid "Apps using v2 helpers"
+msgstr ""
+
+#: templates/dash.html:33
+msgid "Apps using v2.1 helpers"
+msgstr ""
+
+#: templates/dash.html:44
 msgid "Quality level"
 msgstr ""
 
-#: templates/dash.html:44 templates/dash.html:255
+#: templates/dash.html:45 templates/dash.html:259
 msgid "Popularity stars"
 msgstr ""
 
-#: templates/dash.html:45
+#: templates/dash.html:46
 msgid "Last update on main/master branch"
 msgstr ""
 
-#: templates/dash.html:46
+#: templates/dash.html:47
 msgid "Last update on testing branch"
 msgstr ""
 
-#: templates/dash.html:47
+#: templates/dash.html:48
 msgid "Number of opened issues"
 msgstr ""
 
-#: templates/dash.html:53 templates/dash.html:62
+#: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
 msgstr ""
 
-#: templates/dash.html:82
+#: templates/dash.html:83
 msgid "App"
 msgstr ""
 
-#: templates/dash.html:84
+#: templates/dash.html:85
 msgid "Main CI"
 msgstr ""
 
-#: templates/dash.html:85
+#: templates/dash.html:86
 msgid "Bullseye CI"
 msgstr ""
 
-#: templates/dash.html:86
+#: templates/dash.html:87
 msgid "Trixie CI"
 msgstr ""
 
-#: templates/dash.html:87
+#: templates/dash.html:88
 msgid "Testing PR"
 msgstr ""
 
-#: templates/dash.html:88
+#: templates/dash.html:89
 msgid "Autoupdate PR"
 msgstr ""
 
-#: templates/dash.html:89
+#: templates/dash.html:90
 msgid "Issues"
 msgstr ""
 
-#: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
-#: templates/dash.html:206
+#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:187
+#: templates/dash.html:210
 msgid "Broken"
 msgstr ""
 
-#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
-#: templates/dash.html:208
+#: templates/dash.html:151 templates/dash.html:169 templates/dash.html:189
+#: templates/dash.html:212
 msgid "Low quality"
 msgstr ""
 
-#: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
+#: templates/dash.html:163 templates/dash.html:183 templates/dash.html:206
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:225 templates/dash.html:240
+#: templates/dash.html:229 templates/dash.html:244
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr ""
 
-#: templates/dash.html:259
+#: templates/dash.html:263
 msgid "Deprecated"
 msgstr ""
 
-#: templates/dash.html:262
+#: templates/dash.html:266
 msgid "Not maintained"
 msgstr "Non più mantenuta"
 
-#: templates/dash.html:276
+#: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr "Ultimo aggiornamento delle informazioni %(time)s fa"
@@ -681,8 +695,8 @@ msgstr "Suggerisci un’applicazione da aggiungere al catalogo di YunoHost"
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
-"Devi prima effettuare l’accesso perché ti sia permesso di aggiungere un’app "
-"alla lista dei desideri"
+"Devi prima effettuare l’accesso perché ti sia permesso di aggiungere "
+"un’app alla lista dei desideri"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
@@ -768,6 +782,6 @@ msgstr ""
 msgid "Code repository"
 msgstr ""
 
-#: templates/wishlist.html:132 templates/wishlist.html:133
-msgid "Star this app"
-msgstr ""
+#~ msgid "Regressions since Bullseye"
+#~ msgstr ""
+

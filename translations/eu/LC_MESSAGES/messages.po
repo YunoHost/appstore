@@ -7,18 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-10 19:05+0200\n"
+"POT-Creation-Date: 2025-09-20 01:56+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
-"store/eu/>\n"
 "Language: eu\n"
+"Language-Team: Basque "
+"<https://translate.yunohost.org/projects/yunohost/store/eu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.3\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
 #, python-format
@@ -37,11 +36,12 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
-"Izan kontuan, gehiegikeriak ekiditeko, saioa hasteko aukera desgaitu diegula "
-"'fidagarritasun 1 maila' duten erabiltzaileei.<br/><br/>'Fidagarritasun 1 "
-"maila' lortzeko foroan gutxieneko partehartzea izan behar da, zehazki: bost "
-"gai sartu; gutxienez 30 publikazio irakurri; eta publikazioak irakurtzen "
-"gutxienez 10 minutu eman."
+"Izan kontuan, gehiegikeriak ekiditeko, saioa hasteko aukera desgaitu "
+"diegula 'fidagarritasun 1 maila' duten "
+"erabiltzaileei.<br/><br/>'Fidagarritasun 1 maila' lortzeko foroan "
+"gutxieneko partehartzea izan behar da, zehazki: bost gai sartu; gutxienez"
+" 30 publikazio irakurri; eta publikazioak irakurtzen gutxienez 10 minutu "
+"eman."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -57,8 +57,8 @@ msgid ""
 "Please try again in a few days."
 msgstr ""
 "Desira-zerrendan gehitzeko proposamenak mugatuta daude eta erabiltzaile "
-"bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun batzuk "
-"barru."
+"bakoitzak aplikazio bat proposa dezake hamabostean behin. Saiatu egun "
+"batzuk barru."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -78,8 +78,7 @@ msgstr "Aplikazioaren deskribapenak 100 karaktere izan ditzazke gehienez"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr ""
-"Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
+msgstr "Jatorrizko kode-gordailuaren URLak 10 karaktere izan behar ditu gutxienez"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
@@ -107,15 +106,15 @@ msgid ""
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
-"Azpimarratu aplikazioak zer egiten duen, marketin edo hitz lausoak erabili "
-"gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak ostatatzekoa\" "
-"dela. Idatzi ingelesez, ahal bada."
+"Azpimarratu aplikazioak zer egiten duen, marketin edo hitz lausoak "
+"erabili gabe, eta ez errepikatu aplikazioa \"librea\" eta \"norberak "
+"ostatatzekoa\" dela. Idatzi ingelesez, ahal bada."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak zer "
-"egiten duen."
+"Ez dago aplikazioaren izena errepikatu beharrik. Azpimarratu aplikazioak "
+"zer egiten duen."
 
 #: app.py:362
 #, python-format
@@ -124,9 +123,9 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
-"Lehendik ere dago %(slug)s izena duen sarrera bat desira-zerrendan. Berriro "
-"gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure interesa "
-"erakusteko</a>."
+"Lehendik ere dago %(slug)s izena duen sarrera bat desira-zerrendan. "
+"Berriro gehitu ordez, <a href='%(url)s'>jarri izar bat aplikazioari zure "
+"interesa erakusteko</a>."
 
 #: app.py:381
 #, python-format
@@ -143,8 +142,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a href='%(url)"
-"s'>hemen ikus dezakezu</a>."
+"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a "
+"href='%(url)s'>hemen ikus dezakezu</a>."
 
 #: app.py:420
 #, python-format
@@ -153,9 +152,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Aplikazioa desira-zerrendan gehitzeko eskariak huts egin du… Agian eskaera "
-"lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? Bestela "
-"jakinarazi arazoa YunoHost taldeari."
+"Aplikazioa desira-zerrendan gehitzeko eskariak huts egin du… Agian "
+"eskaera lehendik ere <a href='%(url)s'>egina dago onespenaren zain</a>? "
+"Bestela jakinarazi arazoa YunoHost taldeari."
 
 #: app.py:470
 #, python-format
@@ -183,7 +182,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Aplikazioa ez dabilela ageri da ez dituelako gure test automatikoak gainditu."
+"Aplikazioa ez dabilela ageri da ez dituelako gure test automatikoak "
+"gainditu."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -191,8 +191,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Behin-behineko egoera izan ohi da, arduradunak aplikazioko zerbait zuzendu "
-"bitartean."
+"Behin-behineko egoera izan ohi da, arduradunak aplikazioko zerbait "
+"zuzendu bitartean."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -200,89 +200,100 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Aplikazio hau kalitate onekoa dela ageri da gure test automatikoak gutxienez "
-"urtebetez gainditu dituelako."
+"Aplikazio hau kalitate onekoa dela ageri da gure test automatikoak "
+"gutxienez urtebetez gainditu dituelako."
 
-#: templates/app.html:81
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
+#: templates/wishlist.html:133
+#, fuzzy
+msgid "Unstar this app"
+msgstr "Jarri izarra aplikazioari"
+
+#: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
+#: templates/wishlist.html:133
+msgid "Star this app"
+msgstr "Jarri izarra aplikazioari"
+
+#: templates/app.html:83
 msgid "Try the demo"
 msgstr "Probatu demoa"
 
-#: templates/app.html:82
+#: templates/app.html:84
 msgid "Demo"
 msgstr "Demoa"
 
-#: templates/app.html:85
+#: templates/app.html:87
 msgid "Install with YunoHost"
 msgstr "Instalatu YunoHostekin"
 
-#: templates/app.html:93
+#: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
 msgstr "Uneko bertsioa: %(version)s"
 
-#: templates/app.html:95
+#: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
 msgstr "Hauen ordezko izan liteke: %(alternatives)s"
 
-#: templates/app.html:101
+#: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
 msgstr "%(app)s(r)en pantaila-argazkia"
 
-#: templates/app.html:106
+#: templates/app.html:108
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr "Aplikazio hau honako akitekturekin soilik da bateragarria: %(archs)s"
 
-#: templates/app.html:112
+#: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr "Aplikazio honek ezohiko RAM kopurua behar du instalatzeko: %(ram)s"
 
-#: templates/app.html:118
+#: templates/app.html:120
 msgid "Important infos before installing"
 msgstr "Informazio garrantzitsua instalatu baino lehen"
 
 # | msgid "Anti-features"
-#: templates/app.html:124
+#: templates/app.html:126
 msgid "Antifeatures"
 msgstr "Ezaugarri zalantzagarriak"
 
-#: templates/app.html:125
+#: templates/app.html:127
 msgid "(This app has features you may not like)"
 msgstr "(Aplikazio honek nahi ez zenituzkeen ezaugarriak ditu)"
 
-#: templates/app.html:136
+#: templates/app.html:138
 msgid "Useful links"
 msgstr "Esteka erabilgarriak"
 
-#: templates/app.html:139
+#: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
 msgstr "Aplikazioaren lizentzia: %(license)s"
 
-#: templates/app.html:140
+#: templates/app.html:142
 msgid " Official website"
 msgstr " Webgune ofiziala"
 
-#: templates/app.html:141
+#: templates/app.html:143
 msgid "Official admin documentation"
 msgstr "Administratzailearen dokumentazio ofiziala"
 
-#: templates/app.html:142
+#: templates/app.html:144
 msgid "Official user documentation"
 msgstr "Erabiltzailearen dokumentazio ofiziala"
 
-#: templates/app.html:143
+#: templates/app.html:145
 msgid "Official code repository"
 msgstr "Jatorrizko kode-gordailu ofiziala"
 
-#: templates/app.html:144
+#: templates/app.html:146
 msgid "YunoHost package repository"
 msgstr "Yunohost paketearen gordailua"
 
-#: templates/app.html:145
+#: templates/app.html:147
 msgid "YunoHost package license"
 msgstr "YunoHost paketearen lizentzia"
 
@@ -294,7 +305,7 @@ msgstr "YunoHost aplikazioen denda"
 msgid "Home"
 msgstr "Hasiera"
 
-#: templates/base.html:40 templates/base.html:172 templates/dash.html:83
+#: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
 msgstr "Katalogoa"
 
@@ -343,9 +354,10 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i>ez egina <a class"
-"='text-blue-800 dark:text-blue-400' href='https://flask.palletsprojects."
-"com'>Flask</a> eta <a class='text-blue-800 dark:text-blue-400' "
+"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i>ez egina <a "
+"class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> eta <a class='text-"
+"blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a> erabiliz"
 
 #: templates/base.html:265
@@ -372,7 +384,7 @@ msgstr "Bilatu…"
 msgid "All apps"
 msgstr "Aplikazio guztiak"
 
-#: templates/catalog.html:121 templates/dash.html:36 templates/wishlist.html:42
+#: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
 msgstr "Ordenatu"
 
@@ -385,16 +397,16 @@ msgstr "Izar kopuruaren arabera"
 msgid "Newest"
 msgstr "Berritasunaren arabera"
 
-#: templates/catalog.html:129 templates/dash.html:42 templates/wishlist.html:49
+#: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
 msgstr "Alfabetoaren arabera"
 
-#: templates/catalog.html:132 templates/dash.html:64 templates/wishlist.html:52
+#: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
 msgstr "Saioa hasita izan behar da"
 
-#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:66
-#: templates/dash.html:75 templates/wishlist.html:54 templates/wishlist.html:63
+#: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
+#: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
 msgstr "Erakutsi izarra jarritako aplikazioak soilik"
 
@@ -532,9 +544,10 @@ msgstr ""
 "Paketatzaileek test automatikoen (CI) egoera eta aplikazio guztien PR "
 "nagusien egoera monitorizatu dezakete hemen. YunoHosten aplikazioak "
 "paketatzen hasi nahi baduzu, aztertu <a class='text-blue-500' "
-"href='https://yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> eta "
-"zatoz agur esatera <a class='text-blue-500' href='https://yunohost.org/"
-"chat_rooms'>aplikazioen paketatze-txat-gelan</a>!"
+"href='https://yunohost.org/packaging_apps'>paketatze-dokumentazioa</a> "
+"eta zatoz agur esatera <a class='text-blue-500' "
+"href='https://yunohost.org/chat_rooms'>aplikazioen paketatze-txat-"
+"gelan</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -557,106 +570,111 @@ msgid "Outdated tests on main CI"
 msgstr "Zaharkitutako testak CI nagusian"
 
 #: templates/dash.html:28
-msgid "Regressions since Bullseye"
-msgstr "Erregresioak Bullseye geroztik"
-
-#: templates/dash.html:29
 msgid "Regressions on Trixie"
 msgstr "Erregresio handia Trixie CI-n"
 
-#: templates/dash.html:30
+#: templates/dash.html:29
 msgid "Apps with testings PRs"
 msgstr "Probako PRak dituzten aplikazioak"
 
-#: templates/dash.html:31
+#: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
 msgstr "Automatikoki eguneratzeko PRak dituzten aplikazioak"
 
-#: templates/dash.html:32
+#: templates/dash.html:31
 msgid "Apps with issues"
 msgstr "Arazoak dituzten aplikazioak"
 
-#: templates/dash.html:43
+#: templates/dash.html:32
+#, fuzzy
+msgid "Apps using v2 helpers"
+msgstr "Probako PRak dituzten aplikazioak"
+
+#: templates/dash.html:33
+msgid "Apps using v2.1 helpers"
+msgstr ""
+
+#: templates/dash.html:44
 msgid "Quality level"
 msgstr "Kalitate-maila"
 
-#: templates/dash.html:44 templates/dash.html:255
+#: templates/dash.html:45 templates/dash.html:259
 msgid "Popularity stars"
 msgstr "Izar kopurua"
 
-#: templates/dash.html:45
+#: templates/dash.html:46
 msgid "Last update on main/master branch"
 msgstr "main/master adabakiko azken eguneraketa"
 
-#: templates/dash.html:46
+#: templates/dash.html:47
 msgid "Last update on testing branch"
 msgstr "testing adabakiko azken eguneraketa"
 
-#: templates/dash.html:47
+#: templates/dash.html:48
 msgid "Number of opened issues"
 msgstr "Irekitako arazoen kopurua"
 
-#: templates/dash.html:53 templates/dash.html:62
+#: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
 msgstr "Ezkutatu utzitako / mantentzen ez diren aplikazioak"
 
-#: templates/dash.html:82
+#: templates/dash.html:83
 msgid "App"
 msgstr "Aplikazioa"
 
-#: templates/dash.html:84
+#: templates/dash.html:85
 msgid "Main CI"
 msgstr "CI nagusia"
 
-#: templates/dash.html:85
+#: templates/dash.html:86
 msgid "Bullseye CI"
 msgstr "Bullseye CI-a"
 
-#: templates/dash.html:86
+#: templates/dash.html:87
 msgid "Trixie CI"
 msgstr "Trixie CI-a"
 
-#: templates/dash.html:87
+#: templates/dash.html:88
 msgid "Testing PR"
 msgstr "Probako PRa"
 
-#: templates/dash.html:88
+#: templates/dash.html:89
 msgid "Autoupdate PR"
 msgstr "Autoeguneratzeko PRa"
 
-#: templates/dash.html:89
+#: templates/dash.html:90
 msgid "Issues"
 msgstr "Arazoak"
 
-#: templates/dash.html:147 templates/dash.html:165 templates/dash.html:184
-#: templates/dash.html:206
+#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:187
+#: templates/dash.html:210
 msgid "Broken"
 msgstr "Hondatuta"
 
-#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:186
-#: templates/dash.html:208
+#: templates/dash.html:151 templates/dash.html:169 templates/dash.html:189
+#: templates/dash.html:212
 msgid "Low quality"
 msgstr "Kalitate txikia"
 
-#: templates/dash.html:161 templates/dash.html:180 templates/dash.html:202
+#: templates/dash.html:163 templates/dash.html:183 templates/dash.html:206
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr "Zaharkitutako testa (duela %(days)s egun)"
 
-#: templates/dash.html:225 templates/dash.html:240
+#: templates/dash.html:229 templates/dash.html:244
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr "Aktibitaterik gabe (duela %(days)s egun)"
 
-#: templates/dash.html:259
+#: templates/dash.html:263
 msgid "Deprecated"
 msgstr "Utzita"
 
-#: templates/dash.html:262
+#: templates/dash.html:266
 msgid "Not maintained"
 msgstr "Utzitako aplikazioa"
 
-#: templates/dash.html:276
+#: templates/dash.html:280
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr "Datuen azken eguneraketa duela %(time)s"
@@ -684,16 +702,16 @@ msgstr "Desira-zerrendan aplikazio bat gehitzeko saioa hasi behar duzu"
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Gehiegikeriak ekiditeko, erabiltzaile bakoitzak proposamen bat egin dezake "
-"15 egunean behin."
+"Gehiegikeriak ekiditeko, erabiltzaile bakoitzak proposamen bat egin "
+"dezake 15 egunean behin."
 
 #: templates/wishlist_add.html:43
 msgid ""
 "Reviewing those proposals is tiring for volunteers, please don't yolo-"
 "send every random nerdy stuff you find on the Internet."
 msgstr ""
-"Proposamenak aztertzea nekagarria da boluntarioentzat; ez bidali interneten "
-"ikusten duzun nerd software bakoitza."
+"Proposamenak aztertzea nekagarria da boluntarioentzat; ez bidali "
+"interneten ikusten duzun nerd software bakoitza."
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
@@ -715,9 +733,9 @@ msgid ""
 "'simple', 'lightweight'."
 msgstr ""
 "Ez dago zertan '[Aplikazioa]… da'- Ez dago zertan aipatu librea/kode "
-"irekikoa edo norberak ostatzekoa dela (bestela ez litzateke YunoHostentzat "
-"paketatuko). Ekidin marketin terminoak eta 'erraz', 'xume', 'arin', 'onena' "
-"bezalako orokortasunak."
+"irekikoa edo norberak ostatzekoa dela (bestela ez litzateke "
+"YunoHostentzat paketatuko). Ekidin marketin terminoak eta 'erraz', "
+"'xume', 'arin', 'onena' bezalako orokortasunak."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -732,8 +750,9 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"YunoHost proiektuak aplikazio libre/kode-irekiko softwarea soilik paketatuko "
-"du (salbuespenak egon litezke erabat libre ez diren aplikazioekin)"
+"YunoHost proiektuak aplikazio libre/kode-irekiko softwarea soilik "
+"paketatuko du (salbuespenak egon litezke erabat libre ez diren "
+"aplikazioekin)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -744,8 +763,8 @@ msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
-"*Ez* kopiatu-itsatsi kode-gordailuaren URLa. Proiektuak benetako webgunerik "
-"ez badu, utzi eremua hutsik."
+"*Ez* kopiatu-itsatsi kode-gordailuaren URLa. Proiektuak benetako "
+"webgunerik ez badu, utzi eremua hutsik."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -766,8 +785,8 @@ msgid ""
 msgstr ""
 "Desira-zerrenda jendeak, kolektiboki, aplikazioak iradoki eta bozkatu "
 "ditzakeen tokia da, YunoHosten aplikazioen catalogo ofizialean ikustea "
-"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da pentsatu "
-"behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
+"gustatuko litzaizkiekeenak. Hala ere, zerrendan ageri arren, ez da "
+"pentsatu behar YunoHostek barneratzeko asmorik duenik; pakete-arduradun "
 "boluntarioentzako inspirazio iturri gisa ulertu behar da."
 
 #: templates/wishlist.html:77
@@ -782,6 +801,6 @@ msgstr "Webgune ofiziala"
 msgid "Code repository"
 msgstr "Kode-gordailua"
 
-#: templates/wishlist.html:132 templates/wishlist.html:133
-msgid "Star this app"
-msgstr "Jarri izarra aplikazioari"
+#~ msgid "Regressions since Bullseye"
+#~ msgstr "Erregresioak Bullseye geroztik"
+
