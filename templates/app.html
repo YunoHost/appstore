@@ -57,6 +57,8 @@
 
            <a
               href="{{ url_for('star_app', app_id=app_id, action="unstar" if user_starred_this_app else "star") }}"
+              title="{{ _('Unstar this app') if user_starred_this_app else _('Star this app') }}"
+              aria-label="{{ _('Unstar this app') if user_starred_this_app else _('Star this app') }}"
               role="button"
               class="mr-1 inline-block group btn border text-violet-600 border-violet-500 {% if user %}hover:bg-violet-500 hover:text-white{% endif %}"
            >
