@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Apfel <apfelstrudelig@users.noreply.translate.yunohost.org>"
-"\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "store/de/>\n"
 "Language: de\n"
@@ -38,12 +37,12 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
-"Beachten Sie, dass wir aufgrund verschiedener Missbräuche die Anmeldung "
-"im App-Store auf Benutzer der „Vertrauensstufe 1“ beschränkt "
-"haben.<br/><br/>„Vertrauensstufe 1“ wird erreicht, wenn man mindestens "
-"mit dem Forum interagiert hat, spezifisch: Mindestens 5 Themen geöffnet, "
-"mindestens 30 Beiträge gelesen und mindestens 10 Minuten damit verbracht "
-"haben, Beiträge zu lesen."
+"Beachten Sie, dass wir aufgrund verschiedener Missbräuche die Anmeldung im "
+"App-Store auf Benutzer der „Vertrauensstufe 1“ beschränkt haben.<br/><br/>„"
+"Vertrauensstufe 1“ wird erreicht, wenn man mindestens mit dem Forum "
+"interagiert hat, spezifisch: Mindestens 5 Themen geöffnet, mindestens 30 "
+"Beiträge gelesen und mindestens 10 Minuten damit verbracht haben, Beiträge "
+"zu lesen."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -52,16 +51,16 @@ msgstr "Sie müssen angemeldet sein, um eine App auf die Wunschliste zu setzen"
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
-"Ungültiges CSRF-Token. Bitte aktualisieren Sie die Seite und versuchen "
-"Sie es erneut"
+"Ungültiges CSRF-Token. Bitte aktualisieren Sie die Seite und versuchen Sie "
+"es erneut"
 
 #: app.py:282
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Das Vorschlagen von Einträgen zur Wunschliste ist auf einmal alle 15 Tage"
-" pro Benutzer beschränkt. Bitte versuchen Sie es in ein paar Tagen noch "
+"Das Vorschlagen von Einträgen zur Wunschliste ist auf einmal alle 15 Tage "
+"pro Benutzer beschränkt. Bitte versuchen Sie es in ein paar Tagen noch "
 "einmal."
 
 #: app.py:286
@@ -86,7 +85,8 @@ msgstr "Die Upstream-Code-Repository-URL sollte mindestens 10 Zeichen lang sein"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr "Die Upstream-Code-Repository-URL sollte weniger als 150 Zeichen lang sein"
+msgstr ""
+"Die Upstream-Code-Repository-URL sollte weniger als 150 Zeichen lang sein"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -122,8 +122,8 @@ msgstr ""
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"Bitte wiederholen Sie den Namen der Anwendung nicht. Es geht darum, was "
-"die App tut."
+"Bitte wiederholen Sie den Namen der Anwendung nicht. Es geht darum, was die "
+"App tut."
 
 #: app.py:362
 #, python-format
@@ -132,9 +132,9 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
-"In der Wunschliste ist bereits ein Eintrag mit dem Namen %(slug)s "
-"vorhanden. Sie können stattdessen der App <a href='%(url)s'>einen Stern "
-"hinzufügen</a>, um Ihr Interesse zu zeigen."
+"In der Wunschliste ist bereits ein Eintrag mit dem Namen %(slug)s vorhanden. "
+"Sie können stattdessen der App <a href='%(url)s'>einen Stern hinzufügen</a>, "
+"um Ihr Interesse zu zeigen."
 
 #: app.py:381
 #, python-format
@@ -166,10 +166,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Pull-Request zum Hinzufügen der App zur Wunschliste konnte nicht erstellt"
-" werden… Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR "
-"für diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-"
-"Team."
+"Pull-Request zum Hinzufügen der App zur Wunschliste konnte nicht erstellt "
+"werden… Vielleicht gibt es bereits <a href='%(url)s'>einen wartenden PR für "
+"diese App</a>? Andernfalls melden Sie das Problem bitte dem YunoHost-Team."
 
 #: app.py:470
 #, python-format
@@ -179,8 +178,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Ihre vorgeschlagene App wurde erfolgreich eingereicht. Sie muss nun vom "
-"YunoHost-Team validiert werden. Sie können den Fortschritt hier "
-"verfolgen: <a href='%(url)s'>%(url)s</a>"
+"YunoHost-Team validiert werden. Sie können den Fortschritt hier verfolgen: "
+"<a href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -197,8 +196,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Diese App ist derzeit als defekt gekennzeichnet, da sie unsere "
-"automatischen Tests nicht bestanden hat."
+"Diese App ist derzeit als defekt gekennzeichnet, da sie unsere automatischen "
+"Tests nicht bestanden hat."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -206,8 +205,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Dies ist in der Regel eine vorübergehende Situation, die von den "
-"Paketierer:innen erfordert, etwas in der App zu reparieren."
+"Dies ist in der Regel eine vorübergehende Situation, die von den Paketierer:"
+"innen erfordert, etwas in der App zu reparieren."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -215,8 +214,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Diese App weist laut unseren automatischen Tests seit mindestens einem "
-"Jahr eine gute Qualität auf."
+"Diese App weist laut unseren automatischen Tests seit mindestens einem Jahr "
+"eine gute Qualität auf."
 
 #: templates/app.html:81
 msgid "Try the demo"
@@ -271,8 +270,7 @@ msgstr "Anti-Funktionen"
 #: templates/app.html:125
 msgid "(This app has features you may not like)"
 msgstr ""
-"(Diese App verfügt über Funktionen, die Ihnen möglicherweise nicht "
-"gefallen)"
+"(Diese App verfügt über Funktionen, die Ihnen möglicherweise nicht gefallen)"
 
 #: templates/app.html:136
 msgid "Useful links"
@@ -364,10 +362,10 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Bereitgestellt mit <i class='text-red-500 fa fa-heart-o' aria-"
-"label='love'></i> mit Hilfe von <a class='text-blue-800' "
-"href='https://flask.palletsprojects.com'>Flask</a> und <a class='text-"
-"blue-800' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Bereitgestellt mit <i class='text-red-500 fa fa-heart-o' aria-label='love'></"
+"i> mit Hilfe von <a class='text-blue-800' href='https://flask.palletsprojects"
+".com'>Flask</a> und <a class='text-blue-800' href='https://tailwindcss.com/"
+"'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -452,9 +450,9 @@ msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
-"Das bedeutet, dass der/die Entwickler:in sie nicht mehr aktualisieren "
-"wird. Wir raten dringend von deren Installation ab und empfehlen "
-"Benutzer:innen, nach Alternativen zu suchen."
+"Das bedeutet, dass der/die Entwickler:in sie nicht mehr aktualisieren wird. "
+"Wir raten dringend von deren Installation ab und empfehlen Benutzer:innen, "
+"nach Alternativen zu suchen."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -712,8 +710,8 @@ msgstr ""
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Aufgrund von Missbräuchen ist nur ein Vorschlag alle 15 Tage pro Benutzer"
-" zulässig."
+"Aufgrund von Missbräuchen ist nur ein Vorschlag alle 15 Tage pro Benutzer "
+"zulässig."
 
 #: templates/wishlist_add.html:43
 msgid ""
@@ -735,8 +733,7 @@ msgstr "App Beschreibung"
 #: templates/wishlist_add.html:66
 msgid "Please be concise and focus on what the app does."
 msgstr ""
-"Seien Sie bitte prägnant und konzentrieren Sie sich auf die Funktion der "
-"App."
+"Seien Sie bitte prägnant und konzentrieren Sie sich auf die Funktion der App."
 
 #: templates/wishlist_add.html:66
 msgid ""
@@ -746,10 +743,9 @@ msgid ""
 "'simple', 'lightweight'."
 msgstr ""
 "Es ist nicht nötig, '[App] ist…' zu wiederholen. Es muss nicht angegeben "
-"werden, dass sie kostenlos/Open-Source oder selbst gehostet ist "
-"(andernfalls wäre es nicht für YunoHost paketiert). Vermeiden Sie es, "
-"Dinge zu vermarkten mit 'am meisten' oder vage Eigenschaften wie "
-"'einfach', 'simpel', 'leicht'."
+"werden, dass sie kostenlos/Open-Source oder selbst gehostet ist (andernfalls "
+"wäre es nicht für YunoHost paketiert). Vermeiden Sie es, Dinge zu vermarkten "
+"mit 'am meisten' oder vage Eigenschaften wie 'einfach', 'simpel', 'leicht'."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -765,8 +761,7 @@ msgid ""
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
 "Das YunoHost-Projekt paketiert nur kostenlose/Open-Source-Software (mit "
-"möglichen Ausnahmen von Fall zu Fall für Apps, die nicht völlig frei "
-"sind)"
+"möglichen Ausnahmen von Fall zu Fall für Apps, die nicht völlig frei sind)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -777,8 +772,8 @@ msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
-"Bitte *nicht* einfach die Code-Repository-URL kopieren und einfügen. Wenn"
-" das Projekt keine richtige Website hat, lassen Sie das Feld leer."
+"Bitte *nicht* einfach die Code-Repository-URL kopieren und einfügen. Wenn "
+"das Projekt keine richtige Website hat, lassen Sie das Feld leer."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -798,12 +793,11 @@ msgid ""
 "packaging volunteers."
 msgstr ""
 "Die Wunschliste ist der Ort, an dem Menschen gemeinsam Apps, die ihrer "
-"Meinung nach paketiert und im offiziellen App-Katalog von YunoHost "
-"verfügbar gemacht werden sollen, vorschlagen und für sie stimmen können. "
-"Trotzdem ist die Tatsache, dass Apps hier aufgeführt sind, keineswegs so "
-"zu interpretieren, dass das YunoHost-Projekt eine Integration plant, "
-"sondern lediglich eine Inspirationsquelle für ehrenamtliche "
-"Paketierer:innen."
+"Meinung nach paketiert und im offiziellen App-Katalog von YunoHost verfügbar "
+"gemacht werden sollen, vorschlagen und für sie stimmen können. Trotzdem ist "
+"die Tatsache, dass Apps hier aufgeführt sind, keineswegs so zu "
+"interpretieren, dass das YunoHost-Projekt eine Integration plant, sondern "
+"lediglich eine Inspirationsquelle für ehrenamtliche Paketierer:innen."
 
 #: templates/wishlist.html:77
 msgid "Description"
