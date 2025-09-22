@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
-"PO-Revision-Date: 2025-01-22 18:49+0000\n"
-"Last-Translator: Furkan Samed Acet <f16bursafurkan@outlook.com>\n"
+"PO-Revision-Date: 2025-09-22 05:53+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Turkish <https://translate.yunohost.org/projects/yunohost/"
+"store/tr/>\n"
 "Language: tr\n"
-"Language-Team: Turkish "
-"<https://translate.yunohost.org/projects/yunohost/store/tr/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:181
@@ -45,7 +46,8 @@ msgstr ""
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr "Bir uygulamayı istek listesine eklemek için giriş yapmış olmanız gerekir"
+msgstr ""
+"Bir uygulamayı istek listesine eklemek için giriş yapmış olmanız gerekir"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -730,4 +732,3 @@ msgstr ""
 #: templates/wishlist.html:132 templates/wishlist.html:133
 msgid "Star this app"
 msgstr ""
-
