@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
 "yunohost/store/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -100,7 +100,8 @@ msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, "
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
-msgstr "请将重点放在应用的功能上，不要使用营销性的模糊术语，也不要重复应用是 “免费 ”和 “可自行托管 ”的，最好使用英语。"
+msgstr "请将重点放在应用的功能上，不要使用营销性的模糊术语，也不要重复应用是 “免费 ”"
+"和 “可自行托管 ”的，最好使用英语。"
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -112,7 +113,8 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, "
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
-msgstr "愿望清单中已经存在名称为 %(slug)s 的条目，您可以<a href='%(url)s'>在应用中添加一颗星来表示您的兴趣</a>。"
+msgstr "愿望清单中已经存在名称为 %(slug)s 的条目，您可以<a "
+"href='%(url)s'>在应用中添加一颗星来表示您的兴趣</a>。"
 
 #: app.py:381
 #, python-format
@@ -126,7 +128,8 @@ msgstr "很抱歉，此应用已列入已被拒绝的应用之一。指定原因
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
-msgstr "目录中已经存在名称为 %(slug)s 的应用，<a href='%(url)s'>您可以在此处查看其页面</a>。"
+msgstr "目录中已经存在名称为 %(slug)s 的应用，<a "
+"href='%(url)s'>您可以在此处查看其页面</a>。"
 
 #: app.py:420
 #, python-format
@@ -145,8 +148,8 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
-"您提议的应用已成功提交。它现在必须由 YunoHost 团队进行验证。您可以在此处跟踪进度：<a "
-"href='%(url)s'>%(url)s</a>"
+"您提议的应用已成功提交。它现在必须由 YunoHost "
+"团队进行验证。您可以在此处跟踪进度：<a href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
