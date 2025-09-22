@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-10 19:05+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: rosbeef andino <ra@3cmr.fr>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "store/es/>\n"
 "Language: es\n"
@@ -38,11 +38,10 @@ msgid ""
 "minutes reading posts."
 msgstr ""
 "Tenga en cuenta que, debido a varios abusos, restringimos el inicio de "
-"sesión en la tienda de aplicaciones a usuarios de 'nivel de confianza "
-"1'.<br/><br/>El 'nivel de confianza 1' se obtiene después de interactuar "
-"un mínimo con el foro, y más específicamente: ingresar al menos 5 temas, "
-"leer al menos 30 publicaciones y dedicar al menos 10 minutos a leer "
-"publicaciones."
+"sesión en la tienda de aplicaciones a usuarios de 'nivel de confianza 1'.<br/"
+"><br/>El 'nivel de confianza 1' se obtiene después de interactuar un mínimo "
+"con el foro, y más específicamente: ingresar al menos 5 temas, leer al menos "
+"30 publicaciones y dedicar al menos 10 minutos a leer publicaciones."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -57,8 +56,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Agregard un deseo esta limitado a uno cada quince días por usuario. "
-"Intente mas tarde."
+"Agregard un deseo esta limitado a uno cada quince días por usuario. Intente "
+"mas tarde."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -71,8 +70,7 @@ msgstr "El nombre de la aplicación debe contener menos de treinta caracteres"
 #: app.py:290
 msgid "App description should be at least 5 characters"
 msgstr ""
-"La descripción de la aplicación deber contener por lo menos cinco "
-"caracteres"
+"La descripción de la aplicación deber contener por lo menos cinco caracteres"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
@@ -81,8 +79,7 @@ msgstr "La descripción de la aplicación de contener menos de 100 caracteres"
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
-"La URL del código fuente original deber contener por lo menos 10 "
-"caracteres"
+"La URL del código fuente original deber contener por lo menos 10 caracteres"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
@@ -121,8 +118,8 @@ msgstr ""
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"No es necesario repetir el nombre de la aplicación. Focalice en lo que "
-"hace la aplicación."
+"No es necesario repetir el nombre de la aplicación. Focalice en lo que hace "
+"la aplicación."
 
 #: app.py:362
 #, python-format
@@ -159,8 +156,8 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Hubo un error al agregar la aplicación a la lista de deseo... ¿puede ser "
-"que ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
+"Hubo un error al agregar la aplicación a la lista de deseo... ¿puede ser que "
+"ya se esta <a href='%(url)s'>procesando su inclusion </a>? O intenta "
 "contactar al equipo Yunohost."
 
 #: app.py:470
@@ -170,9 +167,9 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
-"Su proposición fue agregada de manera satisfactoria. Esta a la espera de "
-"su validación por parte del equipo YunoHost. Puede ver el avance aquí: <a"
-" href='%(url)s'>%(url)s</a>"
+"Su proposición fue agregada de manera satisfactoria. Esta a la espera de su "
+"validación por parte del equipo YunoHost. Puede ver el avance aquí: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -189,8 +186,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Esta aplicación esta actualmente marcada como rota debido a que fallaron "
-"la pruebas automáticas."
+"Esta aplicación esta actualmente marcada como rota debido a que fallaron la "
+"pruebas automáticas."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -198,8 +195,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
-"Esta situación es normalmente temporal hasta que un voluntario arregle el"
-" incidente."
+"Esta situación es normalmente temporal hasta que un voluntario arregle el "
+"incidente."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -246,8 +243,7 @@ msgstr "Esta aplicación esta compatible con estas arquitecturas : %(archs)s"
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Esta aplicación requiere una cantidad de RAM inusual para instalarse: "
-"%(ram)s"
+"Esta aplicación requiere una cantidad de RAM inusual para instalarse: %(ram)s"
 
 #: templates/app.html:118
 msgid "Important infos before installing"
@@ -439,8 +435,8 @@ msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
-"Esto significa que el desarrollador no las actualizara mas. Les "
-"aconsejamos no instalar las y encontrar alternativas."
+"Esto significa que el desarrollador no las actualizara mas. Les aconsejamos "
+"no instalar las y encontrar alternativas."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -537,13 +533,12 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
-"Aquí los integradores pueden revisar el avance de las pruebas automáticas"
-" y las solicitudes de modificaciones de todas las aplicaciones. Si quiere"
-" participar, empieza por <a class='text-blue-500' "
-"href='https://yunohost.org/packaging_apps'>la documentación de "
-"integración</a> y ¡ salúdanos en <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'> la sala de chat de integración de"
-" aplicación</a>!"
+"Aquí los integradores pueden revisar el avance de las pruebas automáticas y "
+"las solicitudes de modificaciones de todas las aplicaciones. Si quiere "
+"participar, empieza por <a class='text-blue-500' href='https://yunohost.org/"
+"packaging_apps'>la documentación de integración</a> y ¡ salúdanos en <a class"
+"='text-blue-500' href='https://yunohost.org/chat_rooms'> la sala de chat de "
+"integración de aplicación</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -774,10 +769,9 @@ msgid ""
 msgstr ""
 "La lista de deseo de aplicaciones existe para que todos pueda sugerir y "
 "votar para las aplicaciones que desearían ver integrada en el catalogo "
-"oficial YunoHost. Esto, no implica que la aplicación sea parte de un plan"
-" de integración por el parte del proyecto YunoHost. Es principalmente una"
-" fuente de inspiración para lo voluntarios que desearían integrar mas "
-"aplicaciones."
+"oficial YunoHost. Esto, no implica que la aplicación sea parte de un plan de "
+"integración por el parte del proyecto YunoHost. Es principalmente una fuente "
+"de inspiración para lo voluntarios que desearían integrar mas aplicaciones."
 
 #: templates/wishlist.html:77
 msgid "Description"
