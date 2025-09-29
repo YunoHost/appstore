@@ -8,25 +8,27 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
-"PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-09-29 11:53+0000\n"
+"Last-Translator: نادکارو <nadkaro@riseup.net>\n"
+"Language-Team: Persian <https://translate.yunohost.org/projects/yunohost/"
+"store/fa/>\n"
 "Language: fa\n"
-"Language-Team: Persian "
-"<https://translate.yunohost.org/projects/yunohost/store/fa/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "کارهٔ %(app_id)s پیدا نشد"
 
 #: app.py:184
+#, fuzzy
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "برای ستاره دار کردن یک کارهٔ، باید وارد شوید"
 
 #: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
@@ -735,4 +737,3 @@ msgstr ""
 
 #~ msgid "Regressions since Bullseye"
 #~ msgstr ""
-
