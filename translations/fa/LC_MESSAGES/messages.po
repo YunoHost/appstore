@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
-"PO-Revision-Date: 2025-09-29 11:53+0000\n"
+"PO-Revision-Date: 2025-10-06 05:39+0000\n"
 "Last-Translator: نادکارو <nadkaro@riseup.net>\n"
 "Language-Team: Persian <https://translate.yunohost.org/projects/yunohost/"
 "store/fa/>\n"
@@ -187,12 +187,13 @@ msgid "Try the demo"
 msgstr ""
 
 #: templates/app.html:84
+#, fuzzy
 msgid "Demo"
-msgstr ""
+msgstr "نسخهٔ آزمایشی"
 
 #: templates/app.html:87
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "نصب با یونو‌هاست"
 
 #: templates/app.html:95
 #, python-format
@@ -207,7 +208,7 @@ msgstr ""
 #: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "نماگرفت برای %(app)s"
 
 #: templates/app.html:108
 #, python-format
@@ -225,7 +226,7 @@ msgstr ""
 
 #: templates/app.html:126
 msgid "Antifeatures"
-msgstr ""
+msgstr "ضد ویژگی‌ها"
 
 #: templates/app.html:127
 msgid "(This app has features you may not like)"
@@ -233,16 +234,16 @@ msgstr ""
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "پیوند‌های مفید"
 
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "پروانهٔ کارهٔ: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
-msgstr ""
+msgstr " وبگاهٔ رسمی"
 
 #: templates/app.html:143
 msgid "Official admin documentation"
@@ -253,65 +254,70 @@ msgid "Official user documentation"
 msgstr ""
 
 #: templates/app.html:145
+#, fuzzy
 msgid "Official code repository"
-msgstr ""
+msgstr "مخزن رسمی کد"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "مخزن بستهٔ یونوهاست"
 
 #: templates/app.html:147
+#, fuzzy
 msgid "YunoHost package license"
-msgstr ""
+msgstr "پروانهٔ بستهٔ یونوهاست"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "کالانمای کارهٔ یونوهاست"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "خانه"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr ""
+msgstr "کاتالوگ"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "سیاههٔ دلخواه"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "پیش‌خوان بستهٔ‌بندی"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "نمودار & تاریخچهٔ"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "مستندات یونوهاست"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "تغییر حالت روشن/تیرهٔ"
 
 #: templates/base.html:88 templates/base.html:201
+#, fuzzy
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "ورود با استفادهٔ از انجمن یونو‌هاست"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
+#, fuzzy
 msgid "Packaging boards"
-msgstr ""
+msgstr "تابلو‌های بسته‌بندی"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "خارج شدن"
 
 #: templates/base.html:149
+#, fuzzy
 msgid "Toggle menu"
-msgstr ""
+msgstr "تغییر فهرست"
 
 #: templates/base.html:264
 msgid ""
@@ -324,44 +330,48 @@ msgstr ""
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "منبع"
 
 #: templates/base.html:266
+#, fuzzy
 msgid "Terms of Services"
-msgstr ""
+msgstr "شرایط خدمات"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "کالانمای کاره‌ها"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "جست‌و‌جو"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
-msgstr ""
+msgstr "جست‌و‌جو برای…"
 
 #: templates/catalog.html:111
 msgid "All apps"
-msgstr ""
+msgstr "همهٔ کاره‌ها"
 
 #: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
+#, fuzzy
 msgid "Sort by"
-msgstr ""
+msgstr "مرتب سازی بر اساس"
 
 #: templates/catalog.html:127 templates/wishlist.html:48
 #: templates/wishlist.html:81
+#, fuzzy
 msgid "Popularity"
-msgstr ""
+msgstr "محبوبیت"
 
 #: templates/catalog.html:128
+#, fuzzy
 msgid "Newest"
-msgstr ""
+msgstr "جدید‌ترین"
 
 #: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
-msgstr ""
+msgstr "الفبایی"
 
 #: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
@@ -369,20 +379,22 @@ msgstr ""
 
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
+#, fuzzy
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "فقط کارهٔ‌هایی ستاره‌گذاری شدهٔ را نشان بده"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
+#, fuzzy
 msgid "No results found."
-msgstr ""
+msgstr "هیچ نتیجه‌ای یافت نشد."
 
 #: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "چیزی که دنبالش هستید را پیدا نمی‌کنید؟"
 
 #: templates/catalog.html:163
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "سیاههٔ دلخواهٔ را بررسی کنید!"
 
 #: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
@@ -394,7 +406,7 @@ msgstr ""
 
 #: templates/catalog.html:188
 msgid "Deprecated applications"
-msgstr ""
+msgstr "کاره‌های منسوخ‌ شده"
 
 #: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
@@ -412,27 +424,27 @@ msgstr ""
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "تاریخچه سطح کیفیت کارهٔ‌ها"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "تاریخچه"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "اضافه شد"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "تعمیر شده"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "شکست"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "برداشتهٔ شده"
 
 #: templates/charts.html:93
 msgid "Unknown"
