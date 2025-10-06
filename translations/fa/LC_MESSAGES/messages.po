@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
-"PO-Revision-Date: 2025-10-06 05:39+0000\n"
+"PO-Revision-Date: 2025-10-06 09:45+0000\n"
 "Last-Translator: نادکارو <nadkaro@riseup.net>\n"
 "Language-Team: Persian <https://translate.yunohost.org/projects/yunohost/"
 "store/fa/>\n"
@@ -448,61 +448,61 @@ msgstr "برداشتهٔ شده"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "ناشناس"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "سطح 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "سطح ۱"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "سطح ۲"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "سطح ۳"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "سطح ۴"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "سطح ۵"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "سطح ۶"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "سظح ۷"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "سطح ۸"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "سطح %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "مجموع:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "سطح%(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "پیش‌خوان بسته‌بندی کارهٔ"
 
 #: templates/dash.html:11
 msgid ""
@@ -516,11 +516,11 @@ msgstr ""
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "صافی"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(هیچکدام)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
