@@ -10,14 +10,14 @@ msgstr ""
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://translate.yunohost.org/projects/yunohost/"
+"store/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian "
-"<https://translate.yunohost.org/projects/yunohost/store/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
@@ -31,21 +31,22 @@ msgstr "Вы обязаны войти в систему, чтобы поста�
 
 #: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to"
-" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 "
-"minutes reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 msgstr ""
 "Заметьте, что из-за неправомерного использования, мы ограничили вход в "
-"магазин приложений только для пользователей «1 уровня доверия».<br/><br/>"
-" «1 уровень доверия» получается после небольшого взаимодействия с "
-"форумом, то есть: участие как минимум в 5 темах, прочтение как минимум 30"
-" постов и трата как минимум 10 минут на чтение постов."
+"магазин приложений только для пользователей «1 уровня доверия».<br/><br/> «1 "
+"уровень доверия» получается после небольшого взаимодействия с форумом, то "
+"есть: участие как минимум в 5 темах, прочтение как минимум 30 постов и трата "
+"как минимум 10 минут на чтение постов."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr "Вы обязаны войти в систему, чтобы добавить приложение в список желаемого"
+msgstr ""
+"Вы обязаны войти в систему, чтобы добавить приложение в список желаемого"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -58,8 +59,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Добавки в список желаний ограничены раз в 15 дней на одного пользователя."
-" Пожалуйста, попробуйте еще раз через несколько дней."
+"Добавки в список желаний ограничены раз в 15 дней на одного пользователя. "
+"Пожалуйста, попробуйте еще раз через несколько дней."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -108,13 +109,13 @@ msgstr ""
 #: app.py:322
 #, fuzzy
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, "
-"or repeating that the app is 'free' and 'self-hostable'. English language"
-" is preferred."
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
-"Пожалуйста, сфокусируйтесь на том, что приложение делает, без "
-"использование маркетинговых, нечётких терминов или повторения того, что "
-"приложение «свободное» и «само-хостное»."
+"Пожалуйста, сфокусируйтесь на том, что приложение делает, без использование "
+"маркетинговых, нечётких терминов или повторения того, что приложение "
+"«свободное» и «само-хостное»."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
@@ -123,9 +124,8 @@ msgstr ""
 #: app.py:362
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, "
-"you can <a href='%(url)s'>add a star to the app to show your "
-"interest</a>."
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 
 #: app.py:381
@@ -153,9 +153,9 @@ msgstr ""
 #: app.py:470
 #, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: <a "
-"href='%(url)s'>%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
+"%(url)s</a>"
 msgstr ""
 
 #: app.py:657
@@ -227,7 +227,8 @@ msgstr ""
 
 #: templates/app.html:108
 #, python-format
-msgid "This app is only compatible with these specific architectures: %(archs)s"
+msgid ""
+"This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
 
 #: templates/app.html:114
@@ -331,11 +332,10 @@ msgstr ""
 
 #: templates/base.html:264
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"using <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
-"blue-800 dark:text-blue-400' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 
 #: templates/base.html:265
@@ -418,8 +418,8 @@ msgstr ""
 
 #: templates/catalog.html:192
 msgid ""
-"This means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
 
 #: templates/charts.html:5
@@ -510,10 +510,10 @@ msgstr ""
 
 #: templates/dash.html:11
 msgid ""
-"This is where packagers can monitor the status of automatic tests (CI) "
-"and ongoing major pull requests accross all apps. If you want to get "
-"started with app packaging in YunoHost, please check out the <a class"
-"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-"
+"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
@@ -673,8 +673,8 @@ msgstr ""
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-"
-"send every random nerdy stuff you find on the Internet."
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 msgstr ""
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
@@ -691,15 +691,15 @@ msgstr ""
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is …'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
-"Не надо повторять «[Приложение] — …». Не надо обозначать, что оно "
-"свободное или само-хостное (иначе оно не опакетировалось бы для "
-"YunoHost). Избегайте маркетинговые вещи вроде «самый» или расплывчатые "
-"свойства вроде «простой» и «легковесный»."
+"Не надо повторять «[Приложение] — …». Не надо обозначать, что оно свободное "
+"или само-хостное (иначе оно не опакетировалось бы для YunoHost). Избегайте "
+"маркетинговые вещи вроде «самый» или расплывчатые свойства вроде «простой» и "
+"«легковесный»."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -714,9 +714,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Проект YunoHost будет пакетировать только свободные программы (с "
-"возможными редкими исключениями для приложений, которые не полностью "
-"свободны)"
+"Проект YunoHost будет пакетировать только свободные программы (с возможными "
+"редкими исключениями для приложений, которые не полностью свободны)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -724,8 +723,8 @@ msgstr ""
 
 #: templates/wishlist_add.html:77
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project "
-"has no proper website, then leave the field empty."
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 msgstr ""
 
 #: templates/wishlist_add.html:84
@@ -738,12 +737,12 @@ msgstr ""
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote "
-"for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
-"listed here should by no mean be interpreted as a fact that the YunoHost "
-"project plans to integrate it, and is merely a source of inspiration for "
-"packaging volunteers."
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 msgstr ""
 
 #: templates/wishlist.html:77
@@ -757,7 +756,3 @@ msgstr ""
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
 msgstr ""
-
-#~ msgid "Regressions since Bullseye"
-#~ msgstr ""
-

@@ -10,13 +10,13 @@ msgstr ""
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/store/"
+"nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch "
-"<https://translate.yunohost.org/projects/yunohost/store/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
@@ -30,18 +30,17 @@ msgstr "Log in om een app aan favorieten toe te voegen"
 
 #: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to"
-" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 "
-"minutes reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 msgstr ""
-"Houd er rekening mee dat we vanwege diverse misbruiken het inloggen in de"
-" app store hebben beperkt tot gebruikers met 'trust "
-"level1'.<br/><br/>'Trust level 1' wordt verkregen na een minimale "
-"interactie met het forum, en meer specifiek: minimaal 5 onderwerpen "
-"invoeren, minimaal 30 berichten lezen en minimaal 10 minuten besteden aan"
-" het lezen van berichten."
+"Houd er rekening mee dat we vanwege diverse misbruiken het inloggen in de "
+"app store hebben beperkt tot gebruikers met 'trust level1'.<br/><br/>'Trust "
+"level 1' wordt verkregen na een minimale interactie met het forum, en meer "
+"specifiek: minimaal 5 onderwerpen invoeren, minimaal 30 berichten lezen en "
+"minimaal 10 minuten besteden aan het lezen van berichten."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -56,8 +55,8 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen "
-"per gebruiker. Probeer het over een paar dagen opnieuw."
+"Toevoegingen aan de verlanglijst zijn beperkt tot één keer per 15 dagen per "
+"gebruiker. Probeer het over een paar dagen opnieuw."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -77,13 +76,13 @@ msgstr "De app-beschrijving moet minder dan 100 tekens lang zijn"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr "De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
+msgstr ""
+"De upstream-URL voor de coderepository moet minimaal 10 tekens lang zijn"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
-"De upstream-URL voor de coderepository moet minder dan 150 tekens lang "
-"zijn"
+"De upstream-URL voor de coderepository moet minder dan 150 tekens lang zijn"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -107,29 +106,27 @@ msgstr "App-naam bevat speciale tekens"
 # | "or repeating that the app is 'free' and 'self-hostable'."
 #: app.py:322
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, "
-"or repeating that the app is 'free' and 'self-hostable'. English language"
-" is preferred."
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 msgstr ""
-"Richt op wat de app doet, zonder marketing of vage termen te gebruiken of"
-" te herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
+"Richt op wat de app doet, zonder marketing of vage termen te gebruiken of te "
+"herhalen dat de app 'gratis' en 'zelf-hostbaar' is."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
-"Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de "
-"app doet."
+"Geen noodzaak om de naam van de app te herhalen. Wees gericht op wat de app "
+"doet."
 
 #: app.py:362
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, "
-"you can <a href='%(url)s'>add a star to the app to show your "
-"interest</a>."
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
-"Er staat al een voorkomen met de naam %(slug)s op de verlanglijst. Je zou"
-" een ster kunnen zetten bij <a href='%(url)s'> om je interesse te "
-"tonen</a>."
+"Er staat al een voorkomen met de naam %(slug)s op de verlanglijst. Je zou "
+"een ster kunnen zetten bij <a href='%(url)s'> om je interesse te tonen</a>."
 
 #: app.py:381
 #, python-format
@@ -156,21 +153,21 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"Er kon geen pull-request gemaakt worden om de app aan de verlanglijst toe"
-" te voegen... Misschien staat er al <a href='%(url)s'>een PR in de wacht "
-"</a> voor deze app? Zoniet, dan is het fijn als je een melding maakt aan "
-"het YunoHost-team."
+"Er kon geen pull-request gemaakt worden om de app aan de verlanglijst toe te "
+"voegen... Misschien staat er al <a href='%(url)s'>een PR in de wacht </a> "
+"voor deze app? Zoniet, dan is het fijn als je een melding maakt aan het "
+"YunoHost-team."
 
 #: app.py:470
 #, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be "
-"validated by the YunoHost team. You can track progress here: <a "
-"href='%(url)s'>%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
+"%(url)s</a>"
 msgstr ""
-"Je voorgestelde app is met succes ingediend. Hij moet door het Yunohost-"
-"team gevalideerd worden. Je kan de voortgang volgen op <a "
-"href='%(url)s'>%(url)s</a>"
+"Je voorgestelde app is met succes ingediend. Hij moet door het Yunohost-team "
+"gevalideerd worden. Je kan de voortgang volgen op <a href='%(url)s'>%(url)s</"
+"a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -187,8 +184,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
-"Deze app is momenteel gemarkeerd als defect omdat deze niet is geslaagd "
-"voor onze automatische tests."
+"Deze app is momenteel gemarkeerd als defect omdat deze niet is geslaagd voor "
+"onze automatische tests."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -205,8 +202,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
-"Deze app is volgens onze automatische tests gedurende minimaal een jaar "
-"van goede kwaliteit."
+"Deze app is volgens onze automatische tests gedurende minimaal een jaar van "
+"goede kwaliteit."
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
@@ -248,8 +245,10 @@ msgstr "Schermafbeelding voor %(app)s"
 
 #: templates/app.html:108
 #, python-format
-msgid "This app is only compatible with these specific architectures: %(archs)s"
-msgstr "Deze app is enkel compatibel met deze specifieke architecturen: %(archs)s"
+msgid ""
+"This app is only compatible with these specific architectures: %(archs)s"
+msgstr ""
+"Deze app is enkel compatibel met deze specifieke architecturen: %(archs)s"
 
 #: templates/app.html:114
 #, python-format
@@ -354,17 +353,15 @@ msgstr "Menu in-/uitklappen"
 
 #: templates/base.html:264
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"using <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
-"blue-800 dark:text-blue-400' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"Gemaakt met <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"met ondersteuning van <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> en <a class='text-"
-"blue-800 dark:text-blue-400' "
-"href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Gemaakt met <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> met "
+"ondersteuning van <a class='text-blue-800 dark:text-blue-400' href='https://"
+"flask.palletsprojects.com'>Flask</a> en <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -446,12 +443,12 @@ msgstr "Dit zijn apps die niet meer worden onderhouden."
 
 #: templates/catalog.html:192
 msgid ""
-"This means that the developer will no longer update them. We strongly "
-"advise against their installation and advise users to find alternatives."
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 msgstr ""
-"Dit betekent dat de ontwikkelaar ze niet langer zal updaten. Wij raden de"
-" installatie ervan ten zeerste af en adviseren gebruikers om "
-"alternatieven te vinden."
+"Dit betekent dat de ontwikkelaar ze niet langer zal updaten. Wij raden de "
+"installatie ervan ten zeerste af en adviseren gebruikers om alternatieven te "
+"vinden."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -541,19 +538,19 @@ msgstr "App-packaging dashboard"
 
 #: templates/dash.html:11
 msgid ""
-"This is where packagers can monitor the status of automatic tests (CI) "
-"and ongoing major pull requests accross all apps. If you want to get "
-"started with app packaging in YunoHost, please check out the <a class"
-"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-"
+"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
-"Hier kunnen packagers de status van automatische tests (CI) en "
-"voortdurende hoofd-pull-requests over alle apps volgen. Als je aan de "
-"slag wil met app-packaging voor YunoHost, lees dan alsjeblieft <a class"
-"='text-blue-500' href='https://yunohost.org/packaging_apps'>de packaging "
-"documentatie</a> en zeg eens gedag in de <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'>app-packaging chatroom</a>!"
+"Hier kunnen packagers de status van automatische tests (CI) en voortdurende "
+"hoofd-pull-requests over alle apps volgen. Als je aan de slag wil met app-"
+"packaging voor YunoHost, lees dan alsjeblieft <a class='text-blue-500' "
+"href='https://yunohost.org/packaging_apps'>de packaging documentatie</a> en "
+"zeg eens gedag in de <a class='text-blue-500' href='https://yunohost.org/"
+"chat_rooms'>app-packaging chatroom</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -699,7 +696,8 @@ msgstr "Een app voorstellen"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr "Stel een appsicatie voor om toegevoegd te worden aan de YunoHost-catalogus"
+msgstr ""
+"Stel een appsicatie voor om toegevoegd te worden aan de YunoHost-catalogus"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
@@ -708,17 +706,17 @@ msgstr "Je moet ingelogd zijn voor je een app op de verlanglijst mag zetten"
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
-"Wegens misbruik, mag elke gebruiker slechts eens per 15 dagen een "
-"voorstel doen."
+"Wegens misbruik, mag elke gebruiker slechts eens per 15 dagen een voorstel "
+"doen."
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-"
-"send every random nerdy stuff you find on the Internet."
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 msgstr ""
 "De voorstellen worden handmatig door vrijwilligers beoordeeld. Doe "
-"alsjeblieft geen voorstel voor alle willekeurige nerdsels die je vindt op"
-" 't Net."
+"alsjeblieft geen voorstel voor alle willekeurige nerdsels die je vindt op 't "
+"Net."
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
@@ -734,16 +732,16 @@ msgstr "Wees alsjeblieft beknopt en concentreer op wat de app doet."
 
 #: templates/wishlist_add.html:66
 msgid ""
-"No need to repeat '[App] is …'. No need to state that it is free/open-"
-"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
-"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
-"'simple', 'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 msgstr ""
-"Het is niet nodig te herhalen '[App] is ...' Het is niet nodig aan te "
-"geven dat het Free/Libre Open Source is, of zelf gehost kan worden: "
-"anders zou hij zowiezo niet voor Yunohost verpakt worden. Schrijf geen "
-"marketingverhaal, \"de allerbeste\"/\"meest ...\" of vage eigenschappen "
-"zoals \"makkelijk\", \"eenvoudig\" of \"lichtgewicht\"."
+"Het is niet nodig te herhalen '[App] is ...' Het is niet nodig aan te geven "
+"dat het Free/Libre Open Source is, of zelf gehost kan worden: anders zou hij "
+"zowiezo niet voor Yunohost verpakt worden. Schrijf geen marketingverhaal, "
+"\"de allerbeste\"/\"meest ...\" of vage eigenschappen zoals \"makkelijk\", "
+"\"eenvoudig\" of \"lichtgewicht\"."
 
 #: templates/wishlist_add.html:68
 msgid "Project code repository"
@@ -758,9 +756,9 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Het YunoHost project accepteert enkel Free/Libre Open Source software ter"
-" packaging (met mogelijk uitzonderingen per geval voor apps die niet "
-"volledig FLOSS zijn)"
+"Het YunoHost project accepteert enkel Free/Libre Open Source software ter "
+"packaging (met mogelijk uitzonderingen per geval voor apps die niet volledig "
+"FLOSS zijn)"
 
 #: templates/wishlist_add.html:75
 msgid "Project website"
@@ -768,11 +766,11 @@ msgstr "Projectwebsite"
 
 #: templates/wishlist_add.html:77
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project "
-"has no proper website, then leave the field empty."
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 msgstr ""
-"Kopieer-en-plak hier alsjeblieft *niet* de link naar het code repository."
-" Als het project niet echt een website heeft, laat het veld dan leeg."
+"Kopieer-en-plak hier alsjeblieft *niet* de link naar het code repository. "
+"Als het project niet echt een website heeft, laat het veld dan leeg."
 
 #: templates/wishlist_add.html:84
 msgid "Submit"
@@ -784,19 +782,18 @@ msgstr "App-verlanglijst"
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote "
-"for apps that they would like to see packaged and made available in "
-"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
-"listed here should by no mean be interpreted as a fact that the YunoHost "
-"project plans to integrate it, and is merely a source of inspiration for "
-"packaging volunteers."
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 msgstr ""
 "De verlanglijst is de plaats waar mensen collectief suggesties kunnen "
 "indienen en kunnen stemmen voor apps die ze graag gepackaged zouden zien "
-"voor de officiele YunoHost app-catalogus. Desondanks, het feit dat een "
-"app op de lijst staat betekent niet dat er een voorgedefinieerd plan is "
-"de app op te nemen, en is vooral een inspiratiebron voor packaging "
-"vrijwilligers."
+"voor de officiele YunoHost app-catalogus. Desondanks, het feit dat een app "
+"op de lijst staat betekent niet dat er een voorgedefinieerd plan is de app "
+"op te nemen, en is vooral een inspiratiebron voor packaging vrijwilligers."
 
 #: templates/wishlist.html:77
 msgid "Description"
@@ -812,4 +809,3 @@ msgstr "Code repository"
 
 #~ msgid "Regressions since Bullseye"
 #~ msgstr "Regressie sinds Bullseye"
-
