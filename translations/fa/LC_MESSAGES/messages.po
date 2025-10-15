@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-09-20 01:56+0200\n"
-"PO-Revision-Date: 2025-10-06 09:45+0000\n"
+"PO-Revision-Date: 2025-10-15 16:04+0000\n"
 "Last-Translator: نادکارو <nadkaro@riseup.net>\n"
 "Language-Team: Persian <https://translate.yunohost.org/projects/yunohost/"
 "store/fa/>\n"
@@ -175,16 +175,16 @@ msgstr ""
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Unstar this app"
-msgstr ""
+msgstr "لغو ستارهٔ این کاره"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "ستاره دار کردن این کاره"
 
 #: templates/app.html:83
 msgid "Try the demo"
-msgstr ""
+msgstr "نسخه آزمایشی را امتحان کنید"
 
 #: templates/app.html:84
 #, fuzzy
@@ -198,12 +198,12 @@ msgstr "نصب با یونو‌هاست"
 #: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "نسخه فعلی: %(version)s"
 
 #: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "جایگزین بالقوه برای: %(alternatives)s"
 
 #: templates/app.html:103
 #, python-format
@@ -277,7 +277,7 @@ msgstr "خانه"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr "کاتالوگ"
+msgstr "کالانامه"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
@@ -584,7 +584,7 @@ msgstr ""
 
 #: templates/dash.html:83
 msgid "App"
-msgstr ""
+msgstr "کاره"
 
 #: templates/dash.html:85
 msgid "Main CI"
@@ -612,13 +612,14 @@ msgstr ""
 
 #: templates/dash.html:149 templates/dash.html:167 templates/dash.html:187
 #: templates/dash.html:210
+#, fuzzy
 msgid "Broken"
-msgstr ""
+msgstr "شکسته"
 
 #: templates/dash.html:151 templates/dash.html:169 templates/dash.html:189
 #: templates/dash.html:212
 msgid "Low quality"
-msgstr ""
+msgstr "کیفیت پایین"
 
 #: templates/dash.html:163 templates/dash.html:183 templates/dash.html:206
 #, python-format
@@ -632,11 +633,11 @@ msgstr ""
 
 #: templates/dash.html:263
 msgid "Deprecated"
-msgstr ""
+msgstr "منسوخ شده"
 
 #: templates/dash.html:266
 msgid "Not maintained"
-msgstr ""
+msgstr "نگهداری نشده"
 
 #: templates/dash.html:280
 #, python-format
@@ -645,19 +646,19 @@ msgstr ""
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr ""
+msgstr "فروشگاه کاره"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "مرور همه کاره‌ها"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "پیشنهاد یک برنامه"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr ""
+msgstr "پیشنهاد دهید یک کاره به کالا‌نامهٔ یونوهاست اضافه شود"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
