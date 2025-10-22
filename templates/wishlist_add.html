@@ -62,6 +62,7 @@
       <input name="name" type="text" spellcheck="false" autofocus class="w-full mt-1"  maxlength="30" required onkeyup="this.value = this.value.replace(/[^a-zA-Z0-9.-\\(\\)\\ ]/, '')" >
 
       <label for="description" class="mt-5 block font-bold text-gray-700">{{ _("App's description") }}</label>
+      <span class="text-xs text-gray-600"><span class="font-bold">{{ _("If possible, write it in English.") }}</span>
       <textarea name="description" type="text" class="w-full mt-1 rounded-md border-gray-200 text-gray-700 shadow-sm" required rows='3' maxlength='100'></textarea>
       <span class="text-xs text-gray-600"><span class="font-bold">{{ _("Please be concise and focus on what the app does.") }}</span> {{ _("No need to repeat '[App] is …'. No need to state that it is free/open-source or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid marketing stuff like 'the most', or vague properties like 'easy', 'simple', 'lightweight'.") }}</span>
 
