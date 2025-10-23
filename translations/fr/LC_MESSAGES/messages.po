@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-23 18:18+0200\n"
-"PO-Revision-Date: 2025-10-15 21:14+0000\n"
+"PO-Revision-Date: 2025-10-24 17:13+0000\n"
 "Last-Translator: OniriCorpe <oniricorpe@disroot.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
 "store/fr/>\n"
@@ -725,7 +725,7 @@ msgstr "Description de l'app"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Écrivez en anglais, si possible."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
