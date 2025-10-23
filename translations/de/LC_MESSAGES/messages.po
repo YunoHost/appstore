@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-20 01:56+0200\n"
+"POT-Creation-Date: 2025-10-23 18:18+0200\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Vinzenz Vietzke <vinz+2wiua4xn@vinzv.de>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
@@ -743,12 +743,16 @@ msgstr "Name"
 msgid "App's description"
 msgstr "App Beschreibung"
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:65
+msgid "If possible, write it in English."
+msgstr ""
+
+#: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
 msgstr ""
 "Seien Sie bitte prägnant und konzentrieren Sie sich auf die Funktion der App."
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:67
 msgid ""
 "No need to repeat '[App] is …'. No need to state that it is free/open-source "
 "or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
@@ -760,15 +764,15 @@ msgstr ""
 "wäre es nicht für YunoHost paketiert). Vermeiden Sie es, Dinge zu vermarkten "
 "mit 'am meisten' oder vage Eigenschaften wie 'einfach', 'simpel', 'leicht'."
 
-#: templates/wishlist_add.html:68
+#: templates/wishlist_add.html:69
 msgid "Project code repository"
 msgstr "Projekt-Code-Repository"
 
-#: templates/wishlist_add.html:71
+#: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
 msgstr "Link zur LIZENZ des Projekts"
 
-#: templates/wishlist_add.html:73
+#: templates/wishlist_add.html:74
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
@@ -776,11 +780,11 @@ msgstr ""
 "Das YunoHost-Projekt paketiert nur kostenlose/Open-Source-Software (mit "
 "möglichen Ausnahmen von Fall zu Fall für Apps, die nicht völlig frei sind)"
 
-#: templates/wishlist_add.html:75
+#: templates/wishlist_add.html:76
 msgid "Project website"
 msgstr "Projekt-Website"
 
-#: templates/wishlist_add.html:77
+#: templates/wishlist_add.html:78
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
@@ -788,7 +792,7 @@ msgstr ""
 "Bitte *nicht* einfach die Code-Repository-URL kopieren und einfügen. Wenn "
 "das Projekt keine richtige Website hat, lassen Sie das Feld leer."
 
-#: templates/wishlist_add.html:84
+#: templates/wishlist_add.html:85
 msgid "Submit"
 msgstr "Einreichen"
 

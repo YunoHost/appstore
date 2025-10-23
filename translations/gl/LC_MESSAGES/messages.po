@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-20 01:56+0200\n"
+"POT-Creation-Date: 2025-10-23 18:18+0200\n"
 "PO-Revision-Date: 2025-09-23 04:58+0000\n"
 "Last-Translator: \"José M.\" <correo@xmgz.eu>\n"
 "Language-Team: Galician <https://translate.yunohost.org/projects/yunohost/"
@@ -716,11 +716,15 @@ msgstr "Nome"
 msgid "App's description"
 msgstr "Descrición da app"
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:65
+msgid "If possible, write it in English."
+msgstr ""
+
+#: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
 msgstr "Por favor sé breve e céntrate no que fai a app."
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:67
 msgid ""
 "No need to repeat '[App] is …'. No need to state that it is free/open-source "
 "or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
@@ -732,15 +736,15 @@ msgstr ""
 "YunoHost). Evita usar xerga do eido do márquetin como 'a mellor', ou termos "
 "xenéricos como 'fácil', 'simple', 'lixeira'."
 
-#: templates/wishlist_add.html:68
+#: templates/wishlist_add.html:69
 msgid "Project code repository"
 msgstr "Repositorio do código do proxecto"
 
-#: templates/wishlist_add.html:71
+#: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
 msgstr "Ligazón á LICENZA do proxecto"
 
-#: templates/wishlist_add.html:73
+#: templates/wishlist_add.html:74
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
@@ -749,11 +753,11 @@ msgstr ""
 "excepcións examinadas de xeito particular caso a caso se non son totalmente-"
 "libres)"
 
-#: templates/wishlist_add.html:75
+#: templates/wishlist_add.html:76
 msgid "Project website"
 msgstr "Páxina web do proxecto"
 
-#: templates/wishlist_add.html:77
+#: templates/wishlist_add.html:78
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
@@ -761,7 +765,7 @@ msgstr ""
 "*Non* copies-pegues o URL do repositorio do código. Se o proxecto non ten "
 "unha web propia, deixa o campo baleiro."
 
-#: templates/wishlist_add.html:84
+#: templates/wishlist_add.html:85
 msgid "Submit"
 msgstr "Enviar"
 

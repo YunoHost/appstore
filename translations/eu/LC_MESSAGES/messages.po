@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-20 01:56+0200\n"
+"POT-Creation-Date: 2025-10-23 18:18+0200\n"
 "PO-Revision-Date: 2025-10-05 23:18+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
@@ -717,11 +717,15 @@ msgstr "Izena"
 msgid "App's description"
 msgstr "Aplikazioaren deskribapena"
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:65
+msgid "If possible, write it in English."
+msgstr ""
+
+#: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
 msgstr "Labur eta aplikazioak egiten duenean azpimarra jarriz."
 
-#: templates/wishlist_add.html:66
+#: templates/wishlist_add.html:67
 msgid ""
 "No need to repeat '[App] is …'. No need to state that it is free/open-source "
 "or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
@@ -733,15 +737,15 @@ msgstr ""
 "paketatuko). Ekidin marketin terminoak eta 'erraz', 'xume', 'arin', 'onena' "
 "bezalako orokortasunak."
 
-#: templates/wishlist_add.html:68
+#: templates/wishlist_add.html:69
 msgid "Project code repository"
 msgstr "Proiektuaren kode-gordailua"
 
-#: templates/wishlist_add.html:71
+#: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
 msgstr "Proiektuaren LIZENTZIAra esteka"
 
-#: templates/wishlist_add.html:73
+#: templates/wishlist_add.html:74
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
@@ -749,11 +753,11 @@ msgstr ""
 "YunoHost proiektuak aplikazio libre/kode-irekiko softwarea soilik paketatuko "
 "du (salbuespenak egon litezke erabat libre ez diren aplikazioekin)"
 
-#: templates/wishlist_add.html:75
+#: templates/wishlist_add.html:76
 msgid "Project website"
 msgstr "Proiektuaren webgunea"
 
-#: templates/wishlist_add.html:77
+#: templates/wishlist_add.html:78
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
@@ -761,7 +765,7 @@ msgstr ""
 "*Ez* kopiatu-itsatsi kode-gordailuaren URLa. Proiektuak benetako webgunerik "
 "ez badu, utzi eremua hutsik."
 
-#: templates/wishlist_add.html:84
+#: templates/wishlist_add.html:85
 msgid "Submit"
 msgstr "Bidali"
 
