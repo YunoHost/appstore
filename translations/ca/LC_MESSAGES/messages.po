@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-23 18:18+0200\n"
-"PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-10-28 23:13+0000\n"
+"Last-Translator: Francescc <francesc@mateu.cat>\n"
 "Language-Team: Catalan <https://translate.yunohost.org/projects/yunohost/"
 "store/ca/>\n"
 "Language: ca\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.3\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: app.py:181
@@ -207,14 +208,13 @@ msgstr ""
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
-#, fuzzy
 msgid "Unstar this app"
-msgstr "Destaca aquesta aplicació"
+msgstr "Des-destacar aquesta aplicació"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr "Destaca aquesta aplicació"
+msgstr "Destacar aquesta aplicació"
 
 #: templates/app.html:83
 msgid "Try the demo"
@@ -413,7 +413,7 @@ msgstr "Requereix estar connectat"
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
-msgstr "Mostra només les aplicacions que has destacat"
+msgstr "Mostrar només les aplicacions que heu destacat"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
@@ -593,13 +593,12 @@ msgid "Apps with issues"
 msgstr "Aplicacions amb problemes"
 
 #: templates/dash.html:32
-#, fuzzy
 msgid "Apps using v2 helpers"
-msgstr "Aplicacions amb PR de proves"
+msgstr "Aplicacions que utilitzen ajudants v2"
 
 #: templates/dash.html:33
 msgid "Apps using v2.1 helpers"
-msgstr ""
+msgstr "Aplicacions que utilitzen ajudants v2.1"
 
 #: templates/dash.html:44
 msgid "Quality level"
@@ -731,7 +730,7 @@ msgstr "Descripció de l'aplicació"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Si és possible, escriviu-ho en anglès."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
