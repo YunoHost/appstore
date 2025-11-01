@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-10-23 18:18+0200\n"
-"PO-Revision-Date: 2025-10-05 23:18+0000\n"
+"PO-Revision-Date: 2025-11-02 16:13+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
 "store/eu/>\n"
@@ -719,7 +719,7 @@ msgstr "Aplikazioaren deskribapena"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Ahal baduzu, idatzi ingelesez."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
