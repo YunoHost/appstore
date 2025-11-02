@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-23 18:18+0200\n"
+"POT-Creation-Date: 2025-11-03 00:14+0100\n"
 "PO-Revision-Date: 2025-09-22 05:53+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.yunohost.org/projects/"
-"yunohost/store/zh_Hans/>\n"
 "Language: zh_Hans\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.yunohost.org/projects/yunohost/store/zh_Hans/>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Generated-By: Babel 2.14.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
 #, python-format
@@ -28,17 +28,16 @@ msgstr "应用 %(app_id)s 未找到"
 msgid "You must be logged in to be able to star an app"
 msgstr "您必须登录后才能启动应用"
 
-#: app.py:186 app.py:231 app.py:659 templates/wishlist_add.html:33
+#: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
-"Note that, due to various abuses, we restricted login on the app store to "
-"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"Note that, due to various abuses, we restricted login on the app store to"
+" 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
 "interacting a minimum with the forum, and more specifically: entering at "
-"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
-"reading posts."
+"least 5 topics, reading at least 30 posts, and spending at least 10 "
+"minutes reading posts."
 msgstr ""
-"请注意，由于各种滥用行为，我们将应用商店的登录限制为“信任级别 1”用户。<br/"
-"><br/>“信任级别 1”是在与论坛进行最低限度的互动后获得的，具体来说：至少进入 5 "
-"个主题，阅读至少 30 篇帖子，并花费至少 10 分钟阅读帖子。"
+"请注意，由于各种滥用行为，我们将应用商店的登录限制为“信任级别 1”用户。<br/><br/>“信任级别 "
+"1”是在与论坛进行最低限度的互动后获得的，具体来说：至少进入 5 个主题，阅读至少 30 篇帖子，并花费至少 10 分钟阅读帖子。"
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
@@ -48,7 +47,7 @@ msgstr "您必须登录后才能向愿望清单提交应用"
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr "CSRF 令牌无效，请刷新页面重试"
 
-#: app.py:282
+#: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
@@ -94,64 +93,58 @@ msgstr "网站 URL 应少于 150 个字符"
 msgid "App name contains special characters"
 msgstr "应用名称包含特殊字符"
 
-#: app.py:322
+#: app.py:323
 msgid ""
-"Please focus on what the app does, without using marketing, fuzzy terms, or "
-"repeating that the app is 'free' and 'self-hostable'. English language is "
-"preferred."
-msgstr ""
-"请将重点放在应用的功能上，不要使用营销性的模糊术语，也不要重复应用是 “免费 "
-"”和 “可自行托管 ”的，最好使用英语。"
+"Please focus on what the app does, without using marketing, fuzzy terms, "
+"or repeating that the app is 'free' and 'self-hostable'. English language"
+" is preferred."
+msgstr "请将重点放在应用的功能上，不要使用营销性的模糊术语，也不要重复应用是 “免费 ”和 “可自行托管 ”的，最好使用英语。"
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr "无需重复应用的名称，重点介绍应用的功能。"
 
-#: app.py:362
+#: app.py:363
 #, python-format
 msgid ""
-"An entry with the name %(slug)s already exists in the wishlist, instead, you "
-"can <a href='%(url)s'>add a star to the app to show your interest</a>."
-msgstr ""
-"愿望清单中已经存在名称为 %(slug)s 的条目，您可以<a href='%(url)s'>在应用中添"
-"加一颗星来表示您的兴趣</a>。"
+"An entry with the name %(slug)s already exists in the wishlist, instead, "
+"you can <a href='%(url)s'>add a star to the app to show your "
+"interest</a>."
+msgstr "愿望清单中已经存在名称为 %(slug)s 的条目，您可以<a href='%(url)s'>在应用中添加一颗星来表示您的兴趣</a>。"
 
-#: app.py:381
+#: app.py:382
 #, python-format
 msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
-msgstr ""
-"很抱歉，此应用已列入已被拒绝的应用之一。指定原因为：<br /><q>%(reason)s</q>"
+msgstr "很抱歉，此应用已列入已被拒绝的应用之一。指定原因为：<br /><q>%(reason)s</q>"
 
-#: app.py:395
+#: app.py:396
 #, python-format
 msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
-msgstr ""
-"目录中已经存在名称为 %(slug)s 的应用，<a href='%(url)s'>您可以在此处查看其页"
-"面</a>。"
+msgstr "目录中已经存在名称为 %(slug)s 的应用，<a href='%(url)s'>您可以在此处查看其页面</a>。"
 
-#: app.py:420
+#: app.py:421
 #, python-format
 msgid ""
 "Failed to create the pull request to add the app to the wishlist… Maybe "
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
-"创建将应用添加到愿望列表的拉取请求失败......也许已经有<a href='%(url)s'>等待"
-"此应用的 PR</a> 了？否则，请将问题报告给 YunoHost 团队。"
+"创建将应用添加到愿望列表的拉取请求失败......也许已经有<a href='%(url)s'>等待此应用的 PR</a> "
+"了？否则，请将问题报告给 YunoHost 团队。"
 
-#: app.py:470
+#: app.py:471
 #, python-format
 msgid ""
-"Your proposed app has succesfully been submitted. It must now be validated "
-"by the YunoHost team. You can track progress here: <a href='%(url)s'>"
-"%(url)s</a>"
+"Your proposed app has succesfully been submitted. It must now be "
+"validated by the YunoHost team. You can track progress here: <a "
+"href='%(url)s'>%(url)s</a>"
 msgstr ""
-"您提议的应用已成功提交。它现在必须由 YunoHost 团队进行验证。您可以在此处跟踪"
-"进度：<a href='%(url)s'>%(url)s</a>"
+"您提议的应用已成功提交。它现在必须由 YunoHost 团队进行验证。您可以在此处跟踪进度：<a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -223,8 +216,7 @@ msgstr "%(app)s 的截图"
 
 #: templates/app.html:108
 #, python-format
-msgid ""
-"This app is only compatible with these specific architectures: %(archs)s"
+msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr "此应用仅与以下特定架构兼容：%(archs)s"
 
 #: templates/app.html:114
@@ -328,15 +320,17 @@ msgstr "切换菜单"
 
 #: templates/base.html:264
 msgid ""
-"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
-"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
-"palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
-"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
+"using <a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-"
+"blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"使用 <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> 制作，基于 "
-"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
-"palletsprojects.com'>Flask</a> 和 <a class='text-blue-800 dark:text-"
-"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"使用 <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> 制作，基于 <a "
+"class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> 和 <a class='text-"
+"blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -418,11 +412,9 @@ msgstr "这些是已不再维护的应用。"
 
 #: templates/catalog.html:192
 msgid ""
-"This means that the developer will no longer update them. We strongly advise "
-"against their installation and advise users to find alternatives."
-msgstr ""
-"这意味着开发者将不再更新它们。我们强烈建议不要安装这些应用，并建议用户寻找替"
-"代方案。"
+"This means that the developer will no longer update them. We strongly "
+"advise against their installation and advise users to find alternatives."
+msgstr "这意味着开发者将不再更新它们。我们强烈建议不要安装这些应用，并建议用户寻找替代方案。"
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
@@ -512,18 +504,17 @@ msgstr "应用打包仪表板"
 
 #: templates/dash.html:11
 msgid ""
-"This is where packagers can monitor the status of automatic tests (CI) and "
-"ongoing major pull requests accross all apps. If you want to get started "
-"with app packaging in YunoHost, please check out the <a class='text-"
-"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"This is where packagers can monitor the status of automatic tests (CI) "
+"and ongoing major pull requests accross all apps. If you want to get "
+"started with app packaging in YunoHost, please check out the <a class"
+"='text-blue-500' href='https://yunohost.org/packaging_apps'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
-"这是打包者可以监控所有应用的自动测试（CI）和正在进行的主要拉取请求的地方。如"
-"果您想开始在 YunoHost 中进行应用打包，请查看<a class='text-blue-500' "
+"这是打包者可以监控所有应用的自动测试（CI）和正在进行的主要拉取请求的地方。如果您想开始在 YunoHost 中进行应用打包，请查看<a "
+"class='text-blue-500' "
 "href='https://yunohost.org/packaging_apps'>打包文档</a>，并在<a class='text-"
-"blue-500' href='https://yunohost.org/chat_rooms'>应用打包聊天室</a>与我们打招"
-"呼！"
+"blue-500' href='https://yunohost.org/chat_rooms'>应用打包聊天室</a>与我们打招呼！"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -574,7 +565,7 @@ msgstr ""
 msgid "Quality level"
 msgstr "质量等级"
 
-#: templates/dash.html:45 templates/dash.html:259
+#: templates/dash.html:45 templates/dash.html:228
 msgid "Popularity stars"
 msgstr "受欢迎的星星"
 
@@ -603,54 +594,48 @@ msgid "Main CI"
 msgstr "主 CI"
 
 #: templates/dash.html:86
-msgid "Bullseye CI"
-msgstr "Bullseye CI"
-
-#: templates/dash.html:87
 msgid "Trixie CI"
 msgstr "Trixie CI"
 
-#: templates/dash.html:88
+#: templates/dash.html:87
 msgid "Testing PR"
 msgstr "测试 PR"
 
-#: templates/dash.html:89
+#: templates/dash.html:88
 msgid "Autoupdate PR"
 msgstr "自动更新 PR"
 
-#: templates/dash.html:90
+#: templates/dash.html:89
 msgid "Issues"
 msgstr "问题"
 
-#: templates/dash.html:149 templates/dash.html:167 templates/dash.html:187
-#: templates/dash.html:210
+#: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
 msgid "Broken"
 msgstr "损坏"
 
-#: templates/dash.html:151 templates/dash.html:169 templates/dash.html:189
-#: templates/dash.html:212
+#: templates/dash.html:144 templates/dash.html:162 templates/dash.html:181
 msgid "Low quality"
 msgstr "低质量"
 
-#: templates/dash.html:163 templates/dash.html:183 templates/dash.html:206
+#: templates/dash.html:156 templates/dash.html:175
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
 msgstr "过时的测试 (%(days)s 天前)"
 
-#: templates/dash.html:229 templates/dash.html:244
+#: templates/dash.html:198 templates/dash.html:213
 #, python-format
 msgid "Inactive (%(days)s days ago)"
 msgstr "不活跃 (%(days)s 天前)"
 
-#: templates/dash.html:263
+#: templates/dash.html:232
 msgid "Deprecated"
 msgstr "已弃用"
 
-#: templates/dash.html:266
+#: templates/dash.html:235
 msgid "Not maintained"
 msgstr "不再维护"
 
-#: templates/dash.html:280
+#: templates/dash.html:249
 #, python-format
 msgid "Last data update %(time)s ago"
 msgstr "最后数据更新 %(time)s 前"
@@ -681,11 +666,9 @@ msgstr "由于滥用，每个用户每 15 天仅允许提交一个提案。"
 
 #: templates/wishlist_add.html:43
 msgid ""
-"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
-"every random nerdy stuff you find on the Internet."
-msgstr ""
-"审查这些提案对志愿者来说很累，请不要随意发送您在互联网上找到的每个随机的极客"
-"内容。"
+"Reviewing those proposals is tiring for volunteers, please don't yolo-"
+"send every random nerdy stuff you find on the Internet."
+msgstr "审查这些提案对志愿者来说很累，请不要随意发送您在互联网上找到的每个随机的极客内容。"
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
@@ -705,13 +688,13 @@ msgstr "请简明扼要，专注于应用的功能。"
 
 #: templates/wishlist_add.html:67
 msgid ""
-"No need to repeat '[App] is …'. No need to state that it is free/open-source "
-"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
-"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
-"'lightweight'."
+"No need to repeat '[App] is …'. No need to state that it is free/open-"
+"source or self-hosted (otherwise it wouldn't be packaged for YunoHost). "
+"Avoid marketing stuff like 'the most', or vague properties like 'easy', "
+"'simple', 'lightweight'."
 msgstr ""
-"无需重复“[应用] 是……”。无需说明它是免费的/开源的或自托管的（否则它就不会被打"
-"包到 YunoHost 中）。避免使用“最”之类的营销词汇，或“简单”、“轻便”等模糊属性。"
+"无需重复“[应用] 是……”。无需说明它是免费的/开源的或自托管的（否则它就不会被打包到 YunoHost "
+"中）。避免使用“最”之类的营销词汇，或“简单”、“轻便”等模糊属性。"
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"
@@ -725,8 +708,7 @@ msgstr "项目许可证链接"
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
-msgstr ""
-"YunoHost 项目仅打包自由/开源软件（对于非完全自由的应用可能存在逐案例的例外）"
+msgstr "YunoHost 项目仅打包自由/开源软件（对于非完全自由的应用可能存在逐案例的例外）"
 
 #: templates/wishlist_add.html:76
 msgid "Project website"
@@ -734,10 +716,9 @@ msgstr "项目网站"
 
 #: templates/wishlist_add.html:78
 msgid ""
-"Please *do not* just copy-paste the code repository URL. If the project has "
-"no proper website, then leave the field empty."
-msgstr ""
-"请*不要*直接复制粘贴代码仓库的 URL。如果项目没有正式网站，则留空此字段。"
+"Please *do not* just copy-paste the code repository URL. If the project "
+"has no proper website, then leave the field empty."
+msgstr "请*不要*直接复制粘贴代码仓库的 URL。如果项目没有正式网站，则留空此字段。"
 
 #: templates/wishlist_add.html:85
 msgid "Submit"
@@ -749,16 +730,15 @@ msgstr "应用愿望清单"
 
 #: templates/wishlist.html:10
 msgid ""
-"The wishlist is the place where people can collectively suggest and vote for "
-"apps that they would like to see packaged and made available in YunoHost's "
-"official apps catalog. Nevertheless, the fact that apps are listed here "
-"should by no mean be interpreted as a fact that the YunoHost project plans "
-"to integrate it, and is merely a source of inspiration for packaging "
-"volunteers."
+"The wishlist is the place where people can collectively suggest and vote "
+"for apps that they would like to see packaged and made available in "
+"YunoHost's official apps catalog. Nevertheless, the fact that apps are "
+"listed here should by no mean be interpreted as a fact that the YunoHost "
+"project plans to integrate it, and is merely a source of inspiration for "
+"packaging volunteers."
 msgstr ""
-"愿望清单是人们可以集体建议和投票希望打包并在 YunoHost 官方应用目录中提供的应"
-"用的地方。尽管如此，这里列出的应用不应被解释为 YunoHost 项目计划集成它，而仅"
-"仅是对打包志愿者的灵感来源。"
+"愿望清单是人们可以集体建议和投票希望打包并在 YunoHost 官方应用目录中提供的应用的地方。尽管如此，这里列出的应用不应被解释为 "
+"YunoHost 项目计划集成它，而仅仅是对打包志愿者的灵感来源。"
 
 #: templates/wishlist.html:77
 msgid "Description"
@@ -772,5 +752,3 @@ msgstr "官方网站"
 msgid "Code repository"
 msgstr "代码仓库"
 
-#~ msgid "Regressions since Bullseye"
-#~ msgstr "自 Bullseye 的回归"
