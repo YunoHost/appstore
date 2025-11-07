@@ -454,6 +454,8 @@ Description: {description}
 - [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
 - [ ] Confirm app's license is opensource/free software (or not-totally-free-upstream, case by case TBD)
 - [ ] Description describes clearly and concisely what the app is/does
+
+Regular Contributors and Admins can comment with `!reject <reason>` to remove the proposed app from the wishlist and put it in the rejectedlist with the appropriate reason.
         """
 
         # Open the PR
