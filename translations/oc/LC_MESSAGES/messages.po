@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-11-08 21:27+0000\n"
+"Last-Translator: Quentí <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://translate.yunohost.org/projects/yunohost/"
 "store/oc/>\n"
 "Language: oc\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -26,7 +27,7 @@ msgstr "Aplicacion%(app_id)s non trobada"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Solament los utilizaires connectats pòdon estelar una aplicacion"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -36,14 +37,20 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Notatz que, en rason de divèrses abús, avèm restrench l'accès a la botiga "
+"d'aplicacions als utilizaires de « nivèl de fisança 1 ».<br/><br/> Lo « "
+"nivèl de fisança 1 » s'obten après aver un minimum d'interaccions sul forum, "
+"e mai precisament : consultar almens 5 subjèctes, legir almens 30 messatges, "
+"e passar almens 10 minutas a legir de messatges."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
 msgstr ""
+"Per apondre una aplicacion a la lista d’envejas, vos cal èsser connectat"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Geton CSRF invalid, refrescatz la pagina e tornatz ensajar"
 
 #: app.py:283
 msgid ""
