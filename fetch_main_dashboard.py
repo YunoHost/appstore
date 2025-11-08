@@ -141,7 +141,7 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
             infos["manifest"]["integration"].get("helpers_version", "2")
         ),
         "ci_results": {
-            "bullseye": get_app_ci_results(ci_apps_bullseye_results(), name),
+            # "bullseye": get_app_ci_results(ci_apps_bullseye_results(), name),
             "bookworm": get_app_ci_results(ci_apps_bookworm_results(), name),
             "trixie": get_app_ci_results(ci_apps_trixie_results(), name),
         },
