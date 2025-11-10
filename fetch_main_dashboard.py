@@ -79,7 +79,6 @@ def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
 
 
 def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
-
     repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
 
@@ -100,7 +99,6 @@ def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
     for p in ([testing] if testing else []) + (
         [ci_auto_update] if ci_auto_update else []
     ):
-
         if p.head.label != "YunoHost-Apps:testing" and not (
             p.user.login == "yunohost-bot" and p.head.ref.startswith("ci-auto-update-")
         ):

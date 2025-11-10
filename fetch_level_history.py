@@ -125,7 +125,6 @@ def make_count_summary() -> None:
         history.append(summary)
 
         for app in relevant_apps_to_track:
-
             infos = time_data.get(app, {})
 
             if not infos or infos.get("state") not in ["working", "official"]:

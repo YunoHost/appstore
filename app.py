@@ -445,7 +445,7 @@ def add_to_wishlist():
         body = f"""
 ### Add {name} to wishlist
 
-Proposed by **{session['user']['username']}**
+Proposed by **{session["user"]["username"]}**
 
 Website: {website}
 Upstream repo: {upstream}
@@ -495,7 +495,6 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
 
 @app.route("/dash")
 def dash():
-
     # Sort by popularity by default
     stars = get_stars()
     data = dict(
@@ -513,7 +512,6 @@ def dash():
 
 @app.route("/charts")
 def charts():
-
     dashboard_data = get_dashboard_data()
     level_summary = {}
     for i in range(0, 9):
@@ -542,7 +540,6 @@ def charts():
 
 @app.route("/news.rss")
 def news_rss():
-
     news_per_date = json.loads(open(".cache/news.json").read())
 
     # Keepy only the last N entries
@@ -565,7 +562,6 @@ def news_rss():
 @app.route("/badge/<type>/<app>")
 @app.route("/badge/<type>/<app>.svg")
 def badge(app, type="integration"):
-
     data = get_dashboard_data()
     catalog = get_catalog()["apps"]
 

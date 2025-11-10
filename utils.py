@@ -112,7 +112,6 @@ get_dashboard_data.mtime = None
 
 
 def check_wishlist_submit_ratelimit(user):
-
     dir_ = os.path.join(".wishlist_ratelimit")
     if not os.path.exists(dir_):
         os.mkdir(dir_)
@@ -125,7 +124,6 @@ def check_wishlist_submit_ratelimit(user):
 
 
 def save_wishlist_submit_for_ratelimit(user):
-
     dir_ = os.path.join(".wishlist_ratelimit")
     if not os.path.exists(dir_):
         os.mkdir(dir_)
