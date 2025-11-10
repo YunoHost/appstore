@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 import json
+import multiprocessing
 import sys
 from functools import cache
 from pathlib import Path
-from typing import Any, Tuple, Optional
-import multiprocessing
+from typing import Any, Optional, Tuple
 
 import requests
 import toml

@@ -1,42 +1,43 @@
-import os
-import sys
-import re
-import time
-import json
-import toml
-import tomlkit
 import base64
 import hashlib
 import hmac
-import string
+import json
+import os
 import random
+import re
+import string
+import sys
+import time
 import urllib
 from datetime import datetime
-from slugify import slugify
+
+import toml
+import tomlkit
 from flask import (
     Flask,
-    send_from_directory,
-    render_template,
-    session,
-    redirect,
-    request,
     make_response,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+    session,
 )
 from flask_babel import Babel
 from flask_babel import gettext as _
 from github import Github, InputGitAuthor
+from slugify import slugify
 
 sys.path = [os.path.dirname(__file__)] + sys.path
 
 from utils import (
-    get_locale,
-    get_catalog,
-    get_wishlist,
-    get_stars,
-    get_dashboard_data,
-    get_app_md_and_screenshots,
-    save_wishlist_submit_for_ratelimit,
     check_wishlist_submit_ratelimit,
+    get_app_md_and_screenshots,
+    get_catalog,
+    get_dashboard_data,
+    get_locale,
+    get_stars,
+    get_wishlist,
+    save_wishlist_submit_for_ratelimit,
 )
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")

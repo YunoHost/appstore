@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-import tqdm
+import io
+import json
 import shutil
+from datetime import datetime
 from functools import cache
 from pathlib import Path
-import json
-from git import Repo, IndexObject
-import io
-from datetime import datetime
 
 import toml
+import tqdm
+from git import IndexObject, Repo
 
 CACHE_DIR = Path(__file__).resolve().parent / ".cache"
 TMP_DIR = Path(__file__).resolve().parent / ".tmp"
