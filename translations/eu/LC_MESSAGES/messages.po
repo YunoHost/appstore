@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-02 16:13+0000\n"
+"PO-Revision-Date: 2025-11-13 04:45+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
 "store/eu/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -599,11 +600,11 @@ msgstr "Izar kopurua"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr "main/master adabakiko azken eguneraketa"
+msgstr "main/master adabakiko azken eguneratzea"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr "testing adabakiko azken eguneraketa"
+msgstr "testing adabakiko azken eguneratzea"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
@@ -666,7 +667,7 @@ msgstr "Utzitako aplikazioa"
 #: templates/dash.html:249
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr "Datuen azken eguneraketa duela %(time)s"
+msgstr "Datuen azken eguneratzea duela %(time)s"
 
 #: templates/index.html:10
 msgid "Application Store"
