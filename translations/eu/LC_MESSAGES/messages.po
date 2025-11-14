@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-13 04:45+0000\n"
+"PO-Revision-Date: 2025-11-14 19:53+0000\n"
 "Last-Translator: xabirequejo <xabi.rn@gmail.com>\n"
 "Language-Team: Basque <https://translate.yunohost.org/projects/yunohost/"
 "store/eu/>\n"
@@ -600,11 +600,11 @@ msgstr "Izar kopurua"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr "main/master adabakiko azken eguneratzea"
+msgstr "main/master adabakiko azken eguneraketa"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr "testing adabakiko azken eguneratzea"
+msgstr "testing adabakiko azken eguneraketa"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
