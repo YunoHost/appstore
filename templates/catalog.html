@@ -222,7 +222,7 @@
         // Loop through the entries
         for (var i = 0; i < entries.length; i++) {
             // If the text is within the card and the text matches the search query
-            if ((entries[i].textContent.toLowerCase().includes(search_query))
+            if ((entries[i].textContent.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(search_query))
                 && (! selectedCategory || (entries[i].dataset.category == selectedCategory))
                 && (! starsOnly || (entries[i].dataset.starred == "True")))
             {
