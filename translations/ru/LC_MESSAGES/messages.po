@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-18 22:24+0000\n"
+"PO-Revision-Date: 2025-11-19 00:03+0000\n"
 "Last-Translator: Alekseï <support@digiology.org>\n"
 "Language-Team: Russian <https://translate.yunohost.org/projects/yunohost/"
 "store/ru/>\n"
@@ -108,7 +108,6 @@ msgstr "Название приложения содержит специаль�
 # "
 # | "or repeating that the app is 'free' and 'self-hostable'."
 #: app.py:323
-#, fuzzy
 msgid ""
 "Please focus on what the app does, without using marketing, fuzzy terms, or "
 "repeating that the app is 'free' and 'self-hostable'. English language is "
@@ -116,7 +115,7 @@ msgid ""
 msgstr ""
 "Пожалуйста, сфокусируйтесь на том, что приложение делает, без использование "
 "маркетинговых, нечётких терминов или повторения того, что приложение "
-"«свободное» и «само-хостное»."
+"«свободное» и «без лишних зависимостей»."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
