@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-24 11:32+0000\n"
+"PO-Revision-Date: 2025-11-24 17:57+0000\n"
 "Last-Translator: Bayroqdor <muhsinbekofficial@gmail.com>\n"
 "Language-Team: Uzbek <https://translate.yunohost.org/projects/yunohost/store/"
 "uz/>\n"
@@ -110,10 +110,14 @@ msgid ""
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
+"Ilovaning vazifasiga e’tibor qarating, marketing iboralari, noaniq so‘zlar "
+"yoki ilovaning 'free' va 'self-hostable' ekanini takrorlashdan saqlaning. "
+"Ingliz tilidan foydalanish tavsiya qilinadi."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"Ilova nomini takrorlash shart emas. Ilovaning nima qilishi haqida yozing."
 
 #: app.py:363
 #, python-format
@@ -122,6 +126,9 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
+"'%(slug)s' nomli ilova istaklar ro‘yxatida allaqachon mavjud. Buning o‘"
+"rniga, <a href='%(url)s'>ilovaga yulduz qo‘yib qiziqishingizni "
+"bildirishingiz mumkin</a>."
 
 #: app.py:382
 #, python-format
@@ -129,6 +136,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"Kechirasiz, bu ilova rad etilgan ilovalar qatorida mavjud. Ko‘rsatilgan "
+"sabab:<br /><q>%(reason)s</q>"
 
 #: app.py:396
 #, python-format
@@ -136,6 +145,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"'%(slug)s' nomli ilova katalogda allaqachon mavjud, <a href='%(url)s'>uning "
+"sahifasini bu yerda ko‘rishingiz mumkin</a>."
 
 #: app.py:421
 #, python-format
@@ -144,6 +155,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"Ilovani istaklar ro‘yxatiga qo‘shish uchun pull request yaratib bo‘lmadi… "
+"Balki ushbu ilova uchun allaqachon <a href='%(url)s'>kutilayotgan PR "
+"mavjuddir</a>? Aks holda, muammo haqida YunoHost jamoasiga xabar bering."
 
 #: app.py:471
 #, python-format
@@ -152,15 +166,18 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
+"Taklif qilgan ilovangiz muvaffaqiyatli yuborildi. Endi u YunoHost jamoasi "
+"tomonidan tasdiqlanishi kerak. Jarayonni bu yerda kuzatishingiz mumkin: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "Afsuski, tizimga kirish rad etildi."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "%(app)s uchun logo"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -168,6 +185,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Bu ilova hozirda avtomatik testlardan muvaffaqiyatsiz o‘tgani sababli "
+"yaroqsiz deb belgilangan."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -175,6 +194,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"Bu odatda vaqtinchalik holat bo‘lib, dasturchilarning ilovadagi muammoni "
+"tuzatishini talab qiladi."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -182,147 +203,149 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Bu ilova kamida bir yil davomida avtomatik testlarimizga ko‘ra yaxshi "
+"sifatga ega bo‘lgan."
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Unstar this app"
-msgstr ""
+msgstr "Baholashni bekor qilish"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "Dasturni baholash"
 
 #: templates/app.html:83
 msgid "Try the demo"
-msgstr ""
+msgstr "Demoni sinab ko‘rish"
 
 #: templates/app.html:84
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #: templates/app.html:87
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Yunohost orqali o'rnatish"
 
 #: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Joriy versiya: %(version)s"
 
 #: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Quyidagiga mumkin bo‘lgan muqobil: %(alternatives)s"
 
 #: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "%(app)s uchun skrinshot"
 
 #: templates/app.html:108
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
-msgstr ""
+msgstr "Bu ilova faqat quyidagi aniq arxitekturalar bilan mos keladi: %(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
-msgstr ""
+msgstr "Bu ilovani o‘rnatish uchun %(ram)s RAM talab etiladi"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
-msgstr ""
+msgstr "O‘rnatishdan oldin muhim ma’lumotlar"
 
 #: templates/app.html:126
 msgid "Antifeatures"
-msgstr ""
+msgstr "Antifunksiyalar"
 
 #: templates/app.html:127
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Bu ilovada sizga yoqmasligi mumkin bo‘lgan xususiyatlar mavjud)"
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "Foydali havolalar"
 
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Dastur litsenziyasi: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
-msgstr ""
+msgstr " .Rasmiy websayt"
 
 #: templates/app.html:143
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Adminstratorlar uchun dokumentatsiya"
 
 #: templates/app.html:144
 msgid "Official user documentation"
-msgstr ""
+msgstr "Foydalanuvchilar uchun dokumentatsiya"
 
 #: templates/app.html:145
 msgid "Official code repository"
-msgstr ""
+msgstr "Rasmiy kod repozitoriyasi"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "YunoHost paket repozitoriyalari"
 
 #: templates/app.html:147
 msgid "YunoHost package license"
-msgstr ""
+msgstr "YunoHost paketi litsenziyasi"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "YunoHost ilovalar do‘koni"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Bosh sahifa"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr ""
+msgstr "Katalog"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Istaklar ro‘yxati"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Paketlar boshqaruv paneli"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Diagrammalar va tarix"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "YunoHost Dokumentatsiyasi"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Yorug‘/qorong‘i rejimni almashtirish"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "YunoHost forumi orqali tizimga kirish"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Paketlar doskasi"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Chiqish"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Menyuni almashtirish"
 
 #: templates/base.html:264
 msgid ""
@@ -332,22 +355,27 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i> bilan "
+"yaratilgan — <a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> va <a class='text-blue-"
+"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a> "
+"yordamida"
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Manba"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Xizmat ko‘rsatish shartlari"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Ilovalar katalogi"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Qidirish"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
