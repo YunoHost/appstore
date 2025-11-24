@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-24 11:26+0000\n"
+"PO-Revision-Date: 2025-11-24 11:32+0000\n"
 "Last-Translator: Bayroqdor <muhsinbekofficial@gmail.com>\n"
 "Language-Team: Uzbek <https://translate.yunohost.org/projects/yunohost/store/"
 "uz/>\n"
@@ -45,57 +45,64 @@ msgstr ""
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Ilovalar ro‘yxatiga qo‘shish uchun tizimga kirgan bo‘lishingiz kerak"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Yaroqsiz CSRF token, sahifani yangilab, qaytadan urinib ko‘ring"
 
 #: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Istaklar ro‘yxatiga yangi ilova taklif qilish har bir foydalanuvchi uchun 15 "
+"kunda bir martagacha cheklangan. Iltimos, bir necha kundan so‘ng qayta "
+"urinib ko‘ring."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "Ilova nomi kamida 3 ta belgidan iborat bo‘lishi kerak"
 
 #: app.py:287
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "Ilova nomi 30 ta belgidan kam bo‘lishi kerak"
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "Ilova tavsifi kamida 5 ta belgidan iborat bo‘lishi kerak"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "Ilova tavsifi 100 ta belgidan kam bo‘lishi kerak"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
+"Asosiy (upstream) kod repozitoriyasi URL manzili kamida 10 ta belgidan "
+"iborat bo‘lishi kerak"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
+"Asosiy (upstream) kod repozitoriyasi URL manzili 150 ta belgidan kam bo‘"
+"lishi kerak"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "Litsenziya URL manzili kamida 10 ta belgidan iborat bo‘lishi kerak"
 
 #: app.py:310
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "Litsenziya URL manzili 250 ta belgidan kam bo‘lishi kerak"
 
 #: app.py:312
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "Veb-sayt URL manzili 150 ta belgidan kam bo‘lishi kerak"
 
 #: app.py:315
 msgid "App name contains special characters"
-msgstr ""
+msgstr "Ilova nomida maxsus belgilar mavjud"
 
 #: app.py:323
 msgid ""
