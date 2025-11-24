@@ -8,24 +8,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-11-24 11:26+0000\n"
+"Last-Translator: Bayroqdor <muhsinbekofficial@gmail.com>\n"
+"Language-Team: Uzbek <https://translate.yunohost.org/projects/yunohost/store/"
+"uz/>\n"
 "Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "Ilova %(app_id)s topilmadi"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Ilovani baholash uchun tizimga kirishingiz shart"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -35,6 +37,11 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
+"Eslatma: turli suiiste’molliklar sababli, ilovalar do‘koniga kirish faqat “1-"
+"darajali ishonch”ga ega foydalanuvchilarga cheklangan.<br/><br/>“1-darajali "
+"ishonch” maqomi forumda minimal faoliyatdan so‘ng olinadi, xususan: kamida 5 "
+"ta mavzuga kirish, kamida 30 ta postni o‘qish hamda postlarni o‘qishga "
+"kamida 10 daqiqa sarflash zarur."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
