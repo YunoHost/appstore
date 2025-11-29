@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-29 16:10+0000\n"
+"PO-Revision-Date: 2025-11-29 21:14+0000\n"
 "Last-Translator: ButterflyOfFire "
 "<BoFFire@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
@@ -664,7 +664,7 @@ msgstr "Aglam n wesnas"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Ma yella wamek, aru-t s teglizit."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
