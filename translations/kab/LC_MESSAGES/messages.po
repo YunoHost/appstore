@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-09-22 05:53+0000\n"
-"Last-Translator: Aksel Azwaw <akselyan@users.noreply.translate.yunohost."
-"org>\n"
+"PO-Revision-Date: 2025-11-29 16:10+0000\n"
+"Last-Translator: ButterflyOfFire "
+"<BoFFire@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
 "store/kab/>\n"
 "Language: kab\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -237,7 +238,7 @@ msgstr ""
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Turagt n usnas: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
