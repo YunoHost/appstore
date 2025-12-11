@@ -37,7 +37,7 @@ def get_catalog():
             "productivity_and_management": "purple",
             "small_utilities": "black",
             "reading": "emerald",
-            "education":  "pink",
+            "education": "pink",
             "multimedia": "fuchsia",
             "social_media": "rose",
             "games": "violet",
