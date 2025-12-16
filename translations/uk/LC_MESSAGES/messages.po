@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-12-15 05:31+0000\n"
+"PO-Revision-Date: 2025-12-16 16:07+0000\n"
 "Last-Translator: Alekseï <support@digiology.org>\n"
 "Language-Team: Ukrainian <https://translate.yunohost.org/projects/yunohost/"
 "store/uk/>\n"
@@ -38,60 +38,69 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
+"Зверніть увагу, що через різні зловживання ми обмежили вхід у магазин "
+"додатків користувачами з «рівнем довіри 1».<br/><br/>«Рівень довіри 1» "
+"отримується після мінімальної взаємодії з форумом, а саме: участі у "
+"щонайменше 5 темах, прочитання щонайменше 30 публікацій та витрачання "
+"щонайменше 10 хвилин на читання публікацій."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Ви повинні увійти, щоб додати додаток до списку бажань"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Недійсний токен CSRF, будь ласка, оновіть сторінку та спробуйте ще раз"
 
 #: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Пропонувати доповнення до списку бажань можна лише раз на 15 днів на "
+"користувача. Будь ласка, спробуйте ще раз через кілька днів."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "Назва додатку має містити щонайменше 3 символи"
 
 #: app.py:287
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "Назва додатку має містити менше 30 символів"
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "Опис додатку має містити щонайменше 5 символів"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "Опис додатку має містити менше 100 символів"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
+"URL-адреса репозиторію коду вищого рівня повинна містити щонайменше 10 "
+"символів"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
+msgstr "URL-адреса репозиторію коду вищого рівня має містити менше 150 символів"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "URL-адреса ліцензії має містити щонайменше 10 символів"
 
 #: app.py:310
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "URL-адреса ліцензії має містити менше 250 символів"
 
 #: app.py:312
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "URL-адреса веб-сайту має містити менше 150 символів"
 
 #: app.py:315
 msgid "App name contains special characters"
-msgstr ""
+msgstr "Назва додатку містить спеціальні символи"
 
 #: app.py:323
 msgid ""
@@ -99,10 +108,14 @@ msgid ""
 "repeating that the app is 'free' and 'self-hostable'. English language is "
 "preferred."
 msgstr ""
+"Будь ласка, зосередьтеся на тому, що робить додаток, без використання "
+"маркетингу, нечітких термінів або повторення того, що додаток «вільний» та "
+"«саморозміщуваний». Бажано використовувати англійську мову."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"Не потрібно повторювати назву додатку. Зосередьтеся на тому, що він робить."
 
 #: app.py:363
 #, python-format
@@ -143,12 +156,12 @@ msgstr ""
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "На жаль, у вході було відмовлено."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Логотип для %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -156,6 +169,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Цей додаток наразі позначено як несправний, оскільки він не пройшов наші "
+"автоматичні тести."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -163,6 +178,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"Зазвичай це тимчасова ситуація, яка вимагає від пакувальників виправлення "
+"чогось у додатку."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -170,148 +187,151 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Згідно з нашими автоматичними тестами протягом щонайменше одного року, цей "
+"додаток має хорошу якість."
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Unstar this app"
-msgstr ""
+msgstr "Зняти зірочку з цього додатку"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "Позначити цей додаток зірочкою"
 
 #: templates/app.html:83
 msgid "Try the demo"
-msgstr ""
+msgstr "Спробувати демо"
 
 #: templates/app.html:84
 msgid "Demo"
-msgstr ""
+msgstr "Демонстрація"
 
 #: templates/app.html:87
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Встановлення за допомогою YunoHost"
 
 #: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Поточна версія: %(version)s"
 
 #: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Можлива альтернатива для: %(alternatives)s"
 
 #: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Знімок екрану для %(app)s"
 
 #: templates/app.html:108
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
-msgstr ""
+msgstr "Цей додаток сумісний лише з цими конкретними архітектурами: %(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
+"Цей додаток вимагає забагато оперативної пам'яті для встановлення: %(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Важливі відомості перед встановленням"
 
 #: templates/app.html:126
 msgid "Antifeatures"
-msgstr ""
+msgstr "Антиособливості"
 
 #: templates/app.html:127
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Цей додаток має функції, які вам можуть не сподобатися)"
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "Корисні посилання"
 
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Ліцензія додатку: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
-msgstr ""
+msgstr " Офіційний веб-сайт"
 
 #: templates/app.html:143
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Офіційна адміністративна документація"
 
 #: templates/app.html:144
 msgid "Official user documentation"
-msgstr ""
+msgstr "Офіційна документація користувача"
 
 #: templates/app.html:145
 msgid "Official code repository"
-msgstr ""
+msgstr "Офіційний репозиторій коду"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "Сховище пакунків YunoHost"
 
 #: templates/app.html:147
 msgid "YunoHost package license"
-msgstr ""
+msgstr "Ліцензія пакету YunoHost"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "Магазин додатків YunoHost"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Головна"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr ""
+msgstr "Каталог"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Список бажань"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Інформаційна панель пакування"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Діаграми та історія"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "Документація YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Перемикання світлого/темного режиму"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "Вхід через форум YunoHost"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Інфопанелі пакування"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Вийти"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Перемкнути меню"
 
 #: templates/base.html:264
 msgid ""
@@ -320,56 +340,60 @@ msgid ""
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Зроблено з <i class='text-red-500 fa fa-heart-o' aria-label='love'></i>, "
+"використовуючи <a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> і <a class='text-blue-800 "
+"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Джерело"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Умови надання послуг"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Каталог додатків"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
-msgstr ""
+msgstr "Шукати…"
 
 #: templates/catalog.html:111
 msgid "All apps"
-msgstr ""
+msgstr "Всі додатки"
 
 #: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
-msgstr ""
+msgstr "Сортувати за"
 
 #: templates/catalog.html:127 templates/wishlist.html:48
 #: templates/wishlist.html:81
 msgid "Popularity"
-msgstr ""
+msgstr "популярністю"
 
 #: templates/catalog.html:128
 msgid "Newest"
-msgstr ""
+msgstr "Найновіші"
 
 #: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
-msgstr ""
+msgstr "За алфавитом"
 
 #: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
-msgstr ""
+msgstr "Потребує авторизації"
 
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Показувати лише додатки, які ви позначили зірочкою"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
