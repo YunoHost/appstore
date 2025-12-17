@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-12-16 16:07+0000\n"
+"PO-Revision-Date: 2025-12-18 18:27+0000\n"
 "Last-Translator: Alekseï <support@digiology.org>\n"
 "Language-Team: Ukrainian <https://translate.yunohost.org/projects/yunohost/"
 "store/uk/>\n"
@@ -123,6 +123,9 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
+"Запис із назвою %(slug)s вже існує у списку бажань, натомість ви можете <a "
+"href='%(url)s'>додати зірочку до програми, щоб показати свою "
+"зацікавленість</a>."
 
 #: app.py:382
 #, python-format
@@ -130,6 +133,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"На жаль, цей додаток є серед уже відхилених додатків. Вказана причина:<br "
+"/><q>%(reason)s</q>"
 
 #: app.py:396
 #, python-format
@@ -137,6 +142,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"Додаток з назвою %(slug)s вже існує в каталозі, <a href='%(url)s'>ви можете "
+"переглянути його сторінку тут</a>."
 
 #: app.py:421
 #, python-format
@@ -145,6 +152,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"Не вдалося створити запит на додавання програми до списку бажань… Можливо, "
+"для цієї програми вже є <a href='%(url)s'>запит на оновлення</a>? В іншому "
+"випадку, будь ласка, повідомте про проблему команді YunoHost."
 
 #: app.py:471
 #, python-format
@@ -153,6 +163,9 @@ msgid ""
 "by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
+"Запропонований вами додаток успішно надіслано. Тепер його має перевірити "
+"команда YunoHost. Ви можете відстежувати його статус тут: <a href='%(url)s'>%"
+"(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -397,123 +410,125 @@ msgstr "Показувати лише додатки, які ви позначи
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
-msgstr ""
+msgstr "Результатів не знайдено."
 
 #: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "Не знайшли те, що ви шукали?"
 
 #: templates/catalog.html:163
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "Перевірте список бажань!"
 
 #: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
-msgstr ""
+msgstr "Додатки, що зараз позначені як несправні"
 
 #: templates/catalog.html:173
 msgid "These are apps which failed our automatic tests."
-msgstr ""
+msgstr "Це додатки, які не пройшли наші автоматичні тести."
 
 #: templates/catalog.html:188
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Застарілі додатки"
 
 #: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "Це додатки, які більше не підтримуються."
 
 #: templates/catalog.html:192
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
 msgstr ""
+"Це означає, що розробник більше не буде їх оновлювати. Ми настійно проти їх "
+"встановлення та радимо користувачам знайти альтернативи."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Рівень якості додатків з автоматичних тестів"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Історія рівнів якості додатків"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Історія"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Додано"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Відремонтовано"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Зламано"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Видалено"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Невідомо"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Рівень 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Рівень 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Рівень 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Рівень 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Рівень 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Рівень 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Рівень 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Рівень 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Рівень 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Рівень %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Загалом:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Рівень %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "Інформаційна панель упаковки додатків"
 
 #: templates/dash.html:11
 msgid ""
@@ -524,175 +539,189 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"Тут розробники пакетів можуть контролювати стан автоматичних тестів (CI) та "
+"поточних основних запитів на зняття (pull requests) для всіх додатків. Якщо "
+"ви хочете розпочати роботу з пакетуванням додатків у YunoHost, будь ласка, "
+"ознайомтеся з <a class='text-blue-500' href='https://yunohost.org/"
+"packaging_apps'>документацією щодо пакетування</a> та привітайтеся з нами у "
+"<a class='text-blue-500' href='https://yunohost.org/chat_rooms'>чаті, "
+"присвяченому пакетуванню додатків</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Фільтр"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(Немає)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Регресії на головному CI"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Зламані/низькоякісні додатки"
 
 #: templates/dash.html:27
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Застарілі тести на головному CI"
 
 #: templates/dash.html:28
 msgid "Regressions on Trixie"
-msgstr ""
+msgstr "Регресії на Trixie"
 
 #: templates/dash.html:29
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Додатки з тестуваннями PR"
 
 #: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Додатки з автоматичним оновленням PR"
 
 #: templates/dash.html:31
 msgid "Apps with issues"
-msgstr ""
+msgstr "Додатки з проблемами"
 
 #: templates/dash.html:32
 msgid "Apps using v2 helpers"
-msgstr ""
+msgstr "Додатки, що використовують помічники версії 2"
 
 #: templates/dash.html:33
 msgid "Apps using v2.1 helpers"
-msgstr ""
+msgstr "Додатки, що використовують помічники версії 2.1"
 
 #: templates/dash.html:44
 msgid "Quality level"
-msgstr ""
+msgstr "Рівень якості"
 
 #: templates/dash.html:45 templates/dash.html:228
 msgid "Popularity stars"
-msgstr ""
+msgstr "Зірки популярності"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Останнє оновлення в основній/головній гілці"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Останнє оновлення тестової гілки"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Кількість відкритих питань"
 
 #: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Приховати застарілі/непідтримувані додатки"
 
 #: templates/dash.html:83
 msgid "App"
-msgstr ""
+msgstr "Додаток"
 
 #: templates/dash.html:85
 msgid "Main CI"
-msgstr ""
+msgstr "Головний Cl"
 
 #: templates/dash.html:86
 msgid "Trixie CI"
-msgstr ""
+msgstr "Trixie CI"
 
 #: templates/dash.html:87
 msgid "Testing PR"
-msgstr ""
+msgstr "Тестування PR"
 
 #: templates/dash.html:88
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Автооновлення PR"
 
 #: templates/dash.html:89
 msgid "Issues"
-msgstr ""
+msgstr "Проблеми"
 
 #: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
 msgid "Broken"
-msgstr ""
+msgstr "Зламано"
 
 #: templates/dash.html:144 templates/dash.html:162 templates/dash.html:181
 msgid "Low quality"
-msgstr ""
+msgstr "Низька якість"
 
 #: templates/dash.html:156 templates/dash.html:175
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Застарілий тест (%(days)s днів тому)"
 
 #: templates/dash.html:198 templates/dash.html:213
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Неактивний (%(days)s днів тому)"
 
 #: templates/dash.html:232
 msgid "Deprecated"
-msgstr ""
+msgstr "Застаріло"
 
 #: templates/dash.html:235
 msgid "Not maintained"
-msgstr ""
+msgstr "Не обслуговується"
 
 #: templates/dash.html:249
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Останнє оновлення даних %(time)s тому"
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr ""
+msgstr "Магазин додатків"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Переглянути всі додатки"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Запропонуйте додаток"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr ""
+msgstr "Запропонуйте додаток для додавання до каталогу YunoHost"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
 msgstr ""
+"Ви повинні спочатку увійти, щоб мати можливість додати додаток до списку "
+"бажань"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
 msgstr ""
+"Через зловживання, дозволяється лише одна пропозиція кожні 15 днів на "
+"користувача."
 
 #: templates/wishlist_add.html:43
 msgid ""
 "Reviewing those proposals is tiring for volunteers, please don't yolo-send "
 "every random nerdy stuff you find on the Internet."
 msgstr ""
+"Перегляд цих пропозицій виснажує волонтерів, будь ласка, не надсилайте "
+"всілякі занудні штуки, які знайдете в Інтернеті."
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
-msgstr ""
+msgstr "Назва"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
-msgstr ""
+msgstr "Опис додатку"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Якщо можливо, напишіть це англійською мовою."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
 msgstr ""
+"Будь ласка, будьте лаконічними та зосередьтеся на тому, що робить додаток."
 
 #: templates/wishlist_add.html:67
 msgid ""
@@ -701,38 +730,48 @@ msgid ""
 "marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
 "'lightweight'."
 msgstr ""
+"Не потрібно повторювати «[Додаток] – це …». Не потрібно вказувати, що він "
+"безкоштовний/з відкритим вихідним кодом або може бути розміщений на власному "
+"хостингу (інакше він не був би упакований для YunoHost). Уникайте "
+"маркетингових фраз на кшталт «найбільш» або розпливчастих характеристик, "
+"таких як «легкий», «простий», «не займає багато місця»."
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"
-msgstr ""
+msgstr "Репозиторій коду проекту"
 
 #: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
-msgstr ""
+msgstr "Посилання на ЛІЦЕНЗІЮ проекту"
 
 #: templates/wishlist_add.html:74
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"Проект YunoHost пакуватиме лише безкоштовне/відкрите програмне забезпечення ("
+"з можливими винятками в окремих випадках для додатків, які не є повністю "
+"відкритими)"
 
 #: templates/wishlist_add.html:76
 msgid "Project website"
-msgstr ""
+msgstr "Веб-сайт проекту"
 
 #: templates/wishlist_add.html:78
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project has "
 "no proper website, then leave the field empty."
 msgstr ""
+"Будь ласка, *не* копіюйте та вставляйте URL-адресу репозиторію коду. Якщо "
+"проект не має належного веб-сайту, залиште це поле порожнім."
 
 #: templates/wishlist_add.html:85
 msgid "Submit"
-msgstr ""
+msgstr "Надіслати"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
-msgstr ""
+msgstr "Список бажань додатку"
 
 #: templates/wishlist.html:10
 msgid ""
@@ -743,15 +782,21 @@ msgid ""
 "to integrate it, and is merely a source of inspiration for packaging "
 "volunteers."
 msgstr ""
+"Список бажань – це місце, де люди можуть колективно пропонувати та "
+"голосувати за додатки, які вони хотіли б бачити упакованими та доступними в "
+"офіційному каталозі додатків YunoHost. Тим не менш, той факт, що додатки "
+"перелічені тут, жодним чином не слід інтерпретувати як факт, що проект "
+"YunoHost планує інтегрувати їх, а лише як джерело натхнення для волонтерів, "
+"які займаються упаковкою."
 
 #: templates/wishlist.html:77
 msgid "Description"
-msgstr ""
+msgstr "Опис"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
-msgstr ""
+msgstr "Офіційний сайт"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
-msgstr ""
+msgstr "Репозиторій коду"
