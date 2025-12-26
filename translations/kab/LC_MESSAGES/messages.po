@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-29 21:14+0000\n"
+"PO-Revision-Date: 2025-12-27 14:15+0000\n"
 "Last-Translator: ButterflyOfFire "
 "<BoFFire@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
@@ -179,7 +179,7 @@ msgstr ""
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "Rnu-yas itri i usnas-a"
 
 #: templates/app.html:83
 msgid "Try the demo"
@@ -480,7 +480,7 @@ msgstr "Aswir wis %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Aɣrud:"
 
 #: templates/charts.html:123
 #, python-format
