@@ -469,7 +469,7 @@ msgstr "Réparée"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr "Casser"
+msgstr "Cassée"
 
 #: templates/charts.html:45
 msgid "Removed"
