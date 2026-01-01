@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-12-27 14:15+0000\n"
+"PO-Revision-Date: 2026-01-01 15:15+0000\n"
 "Last-Translator: ButterflyOfFire "
 "<BoFFire@users.noreply.translate.yunohost.org>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
@@ -327,7 +327,7 @@ msgstr "Aɣbalu"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Tiwtilin n useqdec"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
@@ -373,7 +373,7 @@ msgstr ""
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
-msgstr ""
+msgstr "Ulac igmaḍ yettwafen."
 
 #: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
@@ -680,7 +680,7 @@ msgstr ""
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"
-msgstr ""
+msgstr "Akufi n ungal unṣib"
 
 #: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
@@ -730,4 +730,4 @@ msgstr "Asmel Web unṣib"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
-msgstr ""
+msgstr "Akufi unṣib n ungal"
