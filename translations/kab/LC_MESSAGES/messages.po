@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-01-01 15:15+0000\n"
-"Last-Translator: ButterflyOfFire "
-"<BoFFire@users.noreply.translate.yunohost.org>\n"
+"PO-Revision-Date: 2026-01-09 04:10+0000\n"
+"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
 "store/kab/>\n"
 "Language: kab\n"
@@ -233,7 +232,7 @@ msgstr ""
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "Iseɣwan yelhan"
 
 #: templates/app.html:141
 #, python-format
@@ -369,7 +368,7 @@ msgstr ""
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Sken-d ala isnasen i wumi txedmeḍ itri"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
