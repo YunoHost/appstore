@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-19 00:03+0000\n"
+"PO-Revision-Date: 2026-01-13 08:09+0000\n"
 "Last-Translator: Alekseï <support@digiology.org>\n"
 "Language-Team: Russian <https://translate.yunohost.org/projects/yunohost/"
 "store/ru/>\n"
@@ -73,7 +73,7 @@ msgstr "Имя приложения должно быть длиной хотя 
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr "Описание приложения должно содержать не менее 5 символов"
+msgstr "Описание приложения должно содержать как минимум 5 символов"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
