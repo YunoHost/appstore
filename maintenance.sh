@@ -39,7 +39,7 @@ fetch_catalog_and_level_history() {
     if [ -d ".cache/tools" ]; then
         git -C .cache/tools pull --quiet 
     else
-        git clone https://github.com/YunoHost/apps-tools.git .cache/tools
+        git clone https://github.com/YunoHost/apps-tools.git .cache/tools --quiet
     fi
 
     if [ ! -d ".cache/tools/venv" ]; then
