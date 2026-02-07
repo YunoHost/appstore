@@ -4,7 +4,7 @@ set -Eeuo pipefail
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 _git() {
-    sudo -u appstore git --quiet "$@"
+    sudo -u appstore git "$@"  --quiet
 }
 
 update_venv() {
@@ -31,15 +31,15 @@ fetch_catalog_and_level_history() {
     curl -s -L https://app.yunohost.org/default/v3/apps.json > .cache/apps.json
 
     if [ -d ".cache/apps" ]; then
-        git --quiet -C .cache/apps pull
+        git -C .cache/apps pull  --quiet 
     else
-        git --quiet clone https://github.com/YunoHost/apps.git .cache/apps
+        git clone https://github.com/YunoHost/apps.git .cache/apps  --quiet 
     fi
 
     if [ -d ".cache/tools" ]; then
-        git --quiet -C .cache/tools pull
+        git -C .cache/tools pull --quiet 
     else
-        git --quiet clone https://github.com/YunoHost/apps-tools.git .cache/tools
+        git clone https://github.com/YunoHost/apps-tools.git .cache/tools
     fi
 
     if [ ! -d ".cache/tools/venv" ]; then
