@@ -3,6 +3,7 @@
 import io
 import json
 import shutil
+import sys
 from datetime import datetime
 from functools import cache
 from pathlib import Path
@@ -14,6 +15,7 @@ from git import IndexObject, Repo
 CACHE_DIR = Path(__file__).resolve().parent / ".cache"
 TMP_DIR = Path(__file__).resolve().parent / ".tmp"
 
+is_interactive = sys.stdout.isatty()
 
 @cache
 def time_points_until_today() -> list[datetime]:
@@ -48,11 +50,12 @@ def read_git_file(file: IndexObject) -> str:
 
 
 def get_lists_history():
-    print("Fetching the apps repository...")
+    if is_interactive:
+        print("Fetching the apps repository...")
     apps = Repo.clone_from("https://github.com/YunoHost/apps", TMP_DIR / "apps")
 
     print("Constructing level history...")
-    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#", disable=not is_interactive)
     for t in progressbar:
         time_str = t.strftime("%Y-%m-%d")
         d_label = t.strftime("%d %b %Y")
@@ -99,8 +102,9 @@ def make_count_summary() -> None:
         if infos.get("state") in ["working", "official"]
     ]
 
-    print("Constructing count summary...")
-    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    if is_interactive:
+        print("Constructing count summary...")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#", disable=not is_interactive)
     for t in progressbar:
         time_str = t.strftime("%Y-%m-%d")
         d_label = t.strftime("%d %b %Y")
@@ -150,8 +154,9 @@ def make_news() -> None:
         else:
             return int(lev)
 
-    print("Constructing news...")
-    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
+    if is_interactive:
+        print("Constructing news...")
+    progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#", disable=not is_interactive)
     for t in progressbar:
         time_str = t.strftime("%Y-%m-%d")
         d_label = t.strftime("%d %b %Y")
