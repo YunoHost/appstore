@@ -10,8 +10,8 @@ import sys
 import time
 import urllib
 from datetime import datetime
+from pathlib import Path
 
-import toml
 import tomlkit
 from flask import (
     Flask,
@@ -27,6 +27,7 @@ from flask_babel import gettext as _
 from github import Github, InputGitAuthor
 from slugify import slugify
 
+from .config import Config
 from .utils import (
     check_wishlist_submit_ratelimit,
     get_app_md_and_screenshots,
@@ -42,35 +43,23 @@ app = Flask(__name__, static_url_path="/assets", static_folder="assets")
 
 MAIN_CI = "bookworm"
 
+config_file = Path("config.toml")
 try:
-    config = toml.loads(open("config.toml").read())
-except Exception as e:
+    config = Config(config_file)
+except RuntimeError as err:
     print(
-        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
+        f"Error while reading configuration file {config_file}:\n"
+        f"{err}\n"
+        "Please read config.toml.example for reference."
     )
     sys.exit(1)
 
-mandatory_config_keys = [
-    "DISCOURSE_SSO_SECRET",
-    "DISCOURSE_SSO_ENDPOINT",
-    "COOKIE_SECRET",
-    "CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE",
-    "GITHUB_LOGIN",
-    "GITHUB_TOKEN",
-    "GITHUB_EMAIL",
-    "APPS_CACHE",
-]
-
-for key in mandatory_config_keys:
-    if key not in config:
-        print(f"Missing key in config.toml: {key}")
-        sys.exit(1)
 
 if app.config.get("DEBUG"):
     app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # This is the secret key used for session signing
-app.secret_key = config["COOKIE_SECRET"]
+app.secret_key = config.cookie_secret
 
 babel = Babel(app, locale_selector=get_locale)
 
@@ -158,7 +147,7 @@ def popularity_json():
 @app.route("/app/<app_id>")
 def app_info(app_id):
     infos = get_catalog()["apps"].get(app_id)
-    app_folder = os.path.join(config["APPS_CACHE"], app_id)
+    app_folder = os.path.join(config.apps_cache, app_id)
     if not infos or not os.path.exists(app_folder):
         return f"App {app_id} not found", 404
 
@@ -342,8 +331,8 @@ def add_to_wishlist():
                 )
 
         slug = slugify(name)
-        github = Github(config["GITHUB_TOKEN"])
-        author = InputGitAuthor(config["GITHUB_LOGIN"], config["GITHUB_EMAIL"])
+        github = Github(config.github_token)
+        author = InputGitAuthor(config.github_login, config.github_email)
         repo = github.get_repo("Yunohost/apps")
         current_wishlist_rawtoml = repo.get_contents(
             "wishlist.toml", ref=repo.default_branch
@@ -633,7 +622,7 @@ def login_using_discourse():
 @app.route("/sso_login_callback")
 def sso_login_callback():
     computed_sig = hmac.new(
-        config["DISCOURSE_SSO_SECRET"].encode(),
+        config.discourse_sso_secret.encode(),
         msg=request.args["sso"].encode(),
         digestmod=hashlib.sha256,
     ).hexdigest()
@@ -741,16 +730,16 @@ def create_nonce_and_build_url_to_login_on_discourse_sso():
 
     url_data = {
         "nonce": nonce,
-        "return_sso_url": config["CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE"],
+        "return_sso_url": config.callback_url_after_login_on_discourse,
     }
     url_encoded = urllib.parse.urlencode(url_data)
     payload = base64.b64encode(url_encoded.encode()).decode()
     sig = hmac.new(
-        config["DISCOURSE_SSO_SECRET"].encode(),
+        config.discourse_sso_secret.encode(),
         msg=payload.encode(),
         digestmod=hashlib.sha256,
     ).hexdigest()
     data = {"sig": sig, "sso": payload}
-    url = f"{config['DISCOURSE_SSO_ENDPOINT']}?{urllib.parse.urlencode(data)}"
+    url = f"{config.discourse_sso_endpoint}?{urllib.parse.urlencode(data)}"
 
     return nonce, url, uri_to_redirect_to_after_login

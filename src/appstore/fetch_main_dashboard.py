@@ -8,35 +8,24 @@ from pathlib import Path
 from typing import Any, Optional, Tuple
 
 import requests
-import toml
 import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
 
+from .config import Config
 from .utils import get_catalog
 
 APPSTORE_PATH = Path(__file__).resolve().parent
 
 
 @cache
-def config() -> dict[str, Any]:
-    try:
-        config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
-        return config
-    except Exception:
-        raise RuntimeError(
-            "You should create a config.toml with the appropriate key/values, cf config.toml.example"
-        )
+def config() -> Config:
+    return Config(APPSTORE_PATH / "config.toml")
 
 
 @cache
 def github_api() -> Github:
-    github_token = config().get("GITHUB_TOKEN")
-
-    if github_token is None:
-        raise RuntimeError("You should add a GITHUB_TOKEN to config.toml")
-
-    return Github(github_token)
+    return Github(config().github_token)
 
 
 @cache
