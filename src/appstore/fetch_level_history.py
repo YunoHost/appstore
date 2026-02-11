@@ -43,8 +43,8 @@ def time_points_until_today() -> list[datetime]:
 
 
 def read_git_file(file: IndexObject) -> str:
-    with io.BytesIO(file.data_stream.read()) as file:
-        return file.read().decode("utf-8")
+    with io.BytesIO(file.data_stream.read()) as file_io:
+        return file_io.read().decode("utf-8")
 
 
 def get_lists_history():
