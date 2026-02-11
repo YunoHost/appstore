@@ -11,8 +11,7 @@ import toml
 import tqdm
 from git import IndexObject, Repo
 
-CACHE_DIR = Path(__file__).resolve().parent / ".cache"
-TMP_DIR = Path(__file__).resolve().parent / ".tmp"
+from .config import Config
 
 
 @cache
@@ -47,9 +46,9 @@ def read_git_file(file: IndexObject) -> str:
         return file_io.read().decode("utf-8")
 
 
-def get_lists_history():
+def get_lists_history(temp_dir: Path) -> None:
     print("Fetching the apps repository...")
-    apps = Repo.clone_from("https://github.com/YunoHost/apps", TMP_DIR / "apps")
+    apps = Repo.clone_from("https://github.com/YunoHost/apps", temp_dir / "apps")
 
     print("Constructing level history...")
     progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
@@ -73,24 +72,23 @@ def get_lists_history():
                 merged.update(community)
                 merged.update(official)
 
+            elif "apps.toml" in commit.tree:
+                merged = toml.loads(read_git_file(commit.tree / "apps.toml"))
             else:
-                if "apps.toml" in commit.tree:
-                    merged = toml.loads(read_git_file(commit.tree / "apps.toml"))
-                else:
-                    merged = json.loads(read_git_file(commit.tree / "apps.json"))
+                merged = json.loads(read_git_file(commit.tree / "apps.json"))
         except (toml.TomlDecodeError, json.JSONDecodeError):
             merged = {}
 
         # Save it
-        merged_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        merged_file = temp_dir / f"merged_lists.json.{time_str}"
         merged_file.write_text(json.dumps(merged))
 
 
-def make_count_summary() -> None:
+def make_count_summary(temp_dir: Path, output: Path) -> None:
     history = []
 
     last_time_point_str = time_points_until_today()[-1].strftime("%Y-%m-%d")
-    last_time_point_file = TMP_DIR / f"merged_lists.json.{last_time_point_str}"
+    last_time_point_file = temp_dir / f"merged_lists.json.{last_time_point_str}"
     json_at_last_time_point = json.loads(last_time_point_file.read_text())
 
     relevant_apps_to_track = [
@@ -107,7 +105,7 @@ def make_count_summary() -> None:
         progressbar.set_description_str(d_label)
 
         # Load corresponding json
-        time_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        time_file = temp_dir / f"merged_lists.json.{time_str}"
         time_data = json.loads(time_file.read_text())
 
         summary = {}
@@ -133,22 +131,21 @@ def make_count_summary() -> None:
                 level = infos.get("level", -1)
                 try:
                     level = int(level)
-                except Exception:
+                except ValueError:
                     level = -1
 
-    (CACHE_DIR / "history.json").write_text(json.dumps(history))
+    output.write_text(json.dumps(history))
 
 
-def make_news() -> None:
+def make_news(temp_dir: Path, output: Path) -> None:
     news_per_date = {}
     previous_time_data = {}
 
-    def level(infos):
+    def level(infos: dict[str, int | str]) -> int:
         lev = infos.get("level")
         if lev is None or (isinstance(lev, str) and not lev.isdigit()):
             return -1
-        else:
-            return int(lev)
+        return int(lev)
 
     print("Constructing news...")
     progressbar = tqdm.tqdm(time_points_until_today(), ascii=" ·#")
@@ -158,40 +155,40 @@ def make_news() -> None:
         progressbar.set_description_str(d_label)
 
         # Load corresponding json
-        time_file = TMP_DIR / f"merged_lists.json.{time_str}"
+        time_file = temp_dir / f"merged_lists.json.{time_str}"
         time_data = json.loads(time_file.read_text())
 
-        apps_current = set(
+        apps_current = {
             k
             for k, infos in time_data.items()
             if infos.get("state") in ["working", "official"] and level(infos) != -1
-        )
-        apps_current_good = set(
+        }
+        apps_current_good = {
             k
             for k, infos in time_data.items()
             if k in apps_current and level(infos) > 4
-        )
-        apps_current_broken = set(
+        }
+        apps_current_broken = {
             k
             for k, infos in time_data.items()
             if k in apps_current and level(infos) <= 4
-        )
+        }
 
-        apps_previous = set(
+        apps_previous = {
             k
             for k, infos in previous_time_data.items()
             if infos.get("state") in ["working", "official"] and level(infos) != -1
-        )
-        apps_previous_good = set(
+        }
+        apps_previous_good = {
             k
             for k, infos in previous_time_data.items()
             if k in apps_previous and level(infos) > 4
-        )
-        apps_previous_broken = set(
+        }
+        apps_previous_broken = {
             k
             for k, infos in previous_time_data.items()
             if k in apps_previous and level(infos) <= 4
-        )
+        }
 
         news_per_date[d_label] = {
             "broke": [
@@ -214,17 +211,20 @@ def make_news() -> None:
 
         previous_time_data = time_data
 
-    (CACHE_DIR / "news.json").write_text(json.dumps(news_per_date))
+    output.write_text(json.dumps(news_per_date))
 
 
 def main() -> None:
-    if TMP_DIR.exists():
-        shutil.rmtree(TMP_DIR)
+    config = Config(Path.cwd() / "config.toml")
 
-    get_lists_history()
+    temp_dir = config.data_dir / "fetch_level_history_temp"
+    if temp_dir.exists():
+        shutil.rmtree(temp_dir)
 
-    make_count_summary()
-    make_news()
+    get_lists_history(temp_dir)
+
+    make_count_summary(temp_dir, config.data_dir / "history.json")
+    make_news(temp_dir, config.data_dir / "news.json")
 
 
 if __name__ == "__main__":
