@@ -2,10 +2,9 @@
 
 import json
 import multiprocessing
-import sys
 from functools import cache
 from pathlib import Path
-from typing import Any, Optional, Tuple
+from typing import Any
 
 import requests
 import tqdm
@@ -15,22 +14,15 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 from .config import Config
 from .utils import get_catalog
 
-APPSTORE_PATH = Path(__file__).resolve().parent
-
 
 @cache
 def config() -> Config:
-    return Config(APPSTORE_PATH / "config.toml")
+    return Config(Path.cwd() / "config.toml")
 
 
 @cache
 def github_api() -> Github:
     return Github(config().github_token)
-
-
-@cache
-def catalog() -> dict:
-    return get_catalog()
 
 
 @cache
@@ -54,22 +46,21 @@ def ci_apps_trixie_results() -> dict:
     ).json()
 
 
-def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
+def get_app_ci_results(results: dict[str, dict], name: str) -> dict:
     app_results = results.get(name)
     if app_results:
         return {
             "level": app_results["level"],
             "timestamp": app_results["timestamp"],
         }
-    else:
-        return {}
+    return {}
 
 
-def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
+def get_github_infos(github_orga_and_repo: str) -> tuple[str, dict]:
     repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
 
-    pulls = [p for p in repo.get_pulls()]
+    pulls = list(repo.get_pulls())
 
     infos["nb_prs"] = len(pulls)
     infos["nb_issues"] = repo.open_issues_count - infos["nb_prs"]
@@ -110,7 +101,9 @@ def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
     return repo.name, infos
 
 
-def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]:
+def get_consolidated_infos(
+    name_and_infos: tuple[str, dict],
+) -> tuple[str, dict[str, Any]] | None:
     name, infos = name_and_infos
     if infos["state"] != "working":
         return None
@@ -143,21 +136,20 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
 def main() -> None:
     consolidated_infos = {}
 
-    with multiprocessing.Pool(processes=10) as pool:
-        with logging_redirect_tqdm():
-            tasks = pool.imap(get_consolidated_infos, catalog()["apps"].items())
+    with multiprocessing.Pool(processes=10) as pool, logging_redirect_tqdm():
+        tasks = pool.imap(get_consolidated_infos, get_catalog(config())["apps"].items())
 
-            for result in tqdm.tqdm(
-                tasks, total=len(catalog()["apps"].keys()), ascii=" ·#"
-            ):
-                if result is None:
-                    continue
-                name, infos = result
-                if infos is None:
-                    continue
-                consolidated_infos[name] = infos
+        for result in tqdm.tqdm(
+            tasks, total=len(get_catalog(config())["apps"].keys()), ascii=" ·#"
+        ):
+            if result is None:
+                continue
+            name, infos = result
+            if infos is None:
+                continue
+            consolidated_infos[name] = infos
 
-    dashboard_file = APPSTORE_PATH / ".cache" / "dashboard.json"
+    dashboard_file = config().data_dir / "dashboard.json"
     dashboard_file.write_text(json.dumps(consolidated_infos))
 
 
