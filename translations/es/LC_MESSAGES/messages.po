@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-09-22 05:53+0000\n"
+"PO-Revision-Date: 2026-02-16 20:09+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://translate.yunohost.org/projects/yunohost/"
 "store/es/>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -82,8 +83,7 @@ msgstr ""
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
-"La URL del codigo fuente original debe contener menos de 150 caracteres"
+msgstr "La URL del codigo fuente original debe contener menos de 150 caracteres"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -546,9 +546,9 @@ msgstr ""
 "Aquí los integradores pueden revisar el avance de las pruebas automáticas y "
 "las solicitudes de modificaciones de todas las aplicaciones. Si quiere "
 "participar, empieza por <a class='text-blue-500' href='https://yunohost.org/"
-"packaging_apps'>la documentación de integración</a> y ¡ salúdanos en <a "
-"class='text-blue-500' href='https://yunohost.org/chat_rooms'> la sala de "
-"chat de integración de aplicación</a>!"
+"packaging_apps'>la documentación de integración</a> y ¡ salúdanos en <a class"
+"='text-blue-500' href='https://yunohost.org/chat_rooms'> la sala de chat de "
+"integración de aplicación</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
