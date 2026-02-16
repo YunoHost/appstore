@@ -3,28 +3,31 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-02-16 20:08+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: English <https://translate.yunohost.org/projects/yunohost/"
+"store/en/>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.2\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "App %(app_id)s not found"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "You must be logged in to be able to star an app"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -34,60 +37,67 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 "
 "minutes reading posts."
 msgstr ""
+"Note that, due to various abuses, we restricted login on the app store to "
+"'trust level 1' users.<br/><br/>'Trust level 1' is obtained after "
+"interacting a minimum with the forum, and more specifically: entering at "
+"least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
+"reading posts."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "You must be logged in to submit an app to the wishlist"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Invalid CSRF token, please refresh the page and try again"
 
 #: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Proposing wishlist additions is limited to once every 15 days per user. "
+"Please try again in a few days."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "App name should be at least 3 characters"
 
 #: app.py:287
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "App name should be less than 30 characters"
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "App description should be at least 5 characters"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "App description should be less than 100 characters"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr ""
+msgstr "Upstream code repo URL should be at least 10 characters"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
+msgstr "Upstream code repo URL should be less than 150 characters"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "License URL should be at least 10 characters"
 
 #: app.py:310
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "License URL should be less than 250 characters"
 
 #: app.py:312
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "Website URL should be less than 150 characters"
 
 #: app.py:315
 msgid "App name contains special characters"
-msgstr ""
+msgstr "App name contains special characters"
 
 #: app.py:323
 msgid ""
@@ -95,10 +105,13 @@ msgid ""
 "or repeating that the app is 'free' and 'self-hostable'. English language"
 " is preferred."
 msgstr ""
+"Please focus on what the app does, without using marketing, fuzzy terms, or "
+"repeating that the app is 'free' and 'self-hostable'. English language is "
+"preferred."
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
-msgstr ""
+msgstr "No need to repeat the name of the app. Focus on what the app does."
 
 #: app.py:363
 #, python-format
@@ -107,6 +120,8 @@ msgid ""
 "you can <a href='%(url)s'>add a star to the app to show your "
 "interest</a>."
 msgstr ""
+"An entry with the name %(slug)s already exists in the wishlist, instead, you "
+"can <a href='%(url)s'>add a star to the app to show your interest</a>."
 
 #: app.py:382
 #, python-format
@@ -114,6 +129,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
+"We're sorry, but this app is listed among the already declined apps. The "
+"specified reason is:<br /><q>%(reason)s</q>"
 
 #: app.py:396
 #, python-format
@@ -121,6 +138,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
+"An app with the name %(slug)s already exists in the catalog, <a href='%(url)"
+"s'>you can see its page here</a>."
 
 #: app.py:421
 #, python-format
@@ -129,6 +148,9 @@ msgid ""
 "there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
 "please report the issue to the YunoHost team."
 msgstr ""
+"Failed to create the pull request to add the app to the wishlist… Maybe "
+"there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, "
+"please report the issue to the YunoHost team."
 
 #: app.py:471
 #, python-format
@@ -137,15 +159,18 @@ msgid ""
 "validated by the YunoHost team. You can track progress here: <a "
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
+"Your proposed app has succesfully been submitted. It must now be validated "
+"by the YunoHost team. You can track progress here: <a href='%(url)s'>%(url)"
+"s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
-msgstr ""
+msgstr "Unfortunately, login was denied."
 
 #: templates/app.html:10 templates/catalog.html:23
 #, python-format
 msgid "Logo for %(app)s"
-msgstr ""
+msgstr "Logo for %(app)s"
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42
@@ -153,6 +178,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"This app is currently flagged as broken because it failed our automatic "
+"tests."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -160,6 +187,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"This is usually a temporary situation which requires packagers to fix "
+"something in the app."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -167,147 +196,150 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"This app has been good quality according to our automatic tests over at "
+"least one year."
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Unstar this app"
-msgstr ""
+msgstr "Unstar this app"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "Star this app"
 
 #: templates/app.html:83
 msgid "Try the demo"
-msgstr ""
+msgstr "Try the demo"
 
 #: templates/app.html:84
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #: templates/app.html:87
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Install with YunoHost"
 
 #: templates/app.html:95
 #, python-format
 msgid "Current version: %(version)s"
-msgstr ""
+msgstr "Current version: %(version)s"
 
 #: templates/app.html:97
 #, python-format
 msgid "Potential alternative to: %(alternatives)s"
-msgstr ""
+msgstr "Potential alternative to: %(alternatives)s"
 
 #: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Screenshot for %(app)s"
 
 #: templates/app.html:108
 #, python-format
 msgid "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
+"This app is only compatible with these specific architectures: %(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
-msgstr ""
+msgstr "This app requires an unusual amount of RAM to install: %(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Important infos before installing"
 
 #: templates/app.html:126
 msgid "Antifeatures"
-msgstr ""
+msgstr "Antifeatures"
 
 #: templates/app.html:127
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(This app has features you may not like)"
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "Useful links"
 
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "App license: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
-msgstr ""
+msgstr " Official website"
 
 #: templates/app.html:143
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Official admin documentation"
 
 #: templates/app.html:144
 msgid "Official user documentation"
-msgstr ""
+msgstr "Official user documentation"
 
 #: templates/app.html:145
 msgid "Official code repository"
-msgstr ""
+msgstr "Official code repository"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "YunoHost package repository"
 
 #: templates/app.html:147
 msgid "YunoHost package license"
-msgstr ""
+msgstr "YunoHost package license"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "YunoHost app store"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr ""
+msgstr "Catalog"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Wishlist"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Packaging dashboard"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Charts & history"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "YunoHost documentation"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Toggle light/dark mode"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
-msgstr ""
+msgstr "Login using YunoHost's forum"
 
 #: templates/base.html:120 templates/base.html:129 templates/base.html:229
 #: templates/base.html:238
 msgid "Packaging boards"
-msgstr ""
+msgstr "Packaging boards"
 
 #: templates/base.html:136 templates/base.html:246
 msgid "Logout"
-msgstr ""
+msgstr "Logout"
 
 #: templates/base.html:149
 msgid "Toggle menu"
-msgstr ""
+msgstr "Toggle menu"
 
 #: templates/base.html:264
 msgid ""
@@ -317,176 +349,182 @@ msgid ""
 "blue-800 dark:text-blue-400' "
 "href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
+"Made with <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> using "
+"<a class='text-blue-800 dark:text-blue-400' "
+"href='https://flask.palletsprojects.com'>Flask</a> and <a class='text-blue-"
+"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Terms of Services"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Application Catalog"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
-msgstr ""
+msgstr "Search for…"
 
 #: templates/catalog.html:111
 msgid "All apps"
-msgstr ""
+msgstr "All apps"
 
 #: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
-msgstr ""
+msgstr "Sort by"
 
 #: templates/catalog.html:127 templates/wishlist.html:48
 #: templates/wishlist.html:81
 msgid "Popularity"
-msgstr ""
+msgstr "Popularity"
 
 #: templates/catalog.html:128
 msgid "Newest"
-msgstr ""
+msgstr "Newest"
 
 #: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
-msgstr ""
+msgstr "Alphabetical"
 
 #: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
-msgstr ""
+msgstr "Requires to be logged-in"
 
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Show only apps you starred"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
-msgstr ""
+msgstr "No results found."
 
 #: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "Not finding what you are looking for?"
 
 #: templates/catalog.html:163
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "Checkout the wishlist!"
 
 #: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
-msgstr ""
+msgstr "Applications currently flagged as broken"
 
 #: templates/catalog.html:173
 msgid "These are apps which failed our automatic tests."
-msgstr ""
+msgstr "These are apps which failed our automatic tests."
 
 #: templates/catalog.html:188
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Deprecated applications"
 
 #: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "These are apps who are not maintained anymore."
 
 #: templates/catalog.html:192
 msgid ""
 "This means that the developer will no longer update them. We strongly "
 "advise against their installation and advise users to find alternatives."
 msgstr ""
+"This means that the developer will no longer update them. We strongly advise "
+"against their installation and advise users to find alternatives."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Apps quality level from automatic tests"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Apps quality level history"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "History"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Added"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Repaired"
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Broke"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Removed"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Level 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Level 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Level 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Level 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Level 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Level 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Level 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Level 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Level 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Level %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Total:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Level %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "App packaging dashboard"
 
 #: templates/dash.html:11
 msgid ""
@@ -497,175 +535,183 @@ msgid ""
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
 "href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 msgstr ""
+"This is where packagers can monitor the status of automatic tests (CI) and "
+"ongoing major pull requests accross all apps. If you want to get started "
+"with app packaging in YunoHost, please check out the <a class='text-blue-"
+"500' href='https://yunohost.org/packaging_apps'>packaging documentation</a> "
+"and come say hi to us on the <a class='text-blue-500' href='https://"
+"yunohost.org/chat_rooms'>app packaging chatroom</a>!"
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(None)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Regressions on main CI"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
-msgstr ""
+msgstr "Broken / low quality apps"
 
 #: templates/dash.html:27
 msgid "Outdated tests on main CI"
-msgstr ""
+msgstr "Outdated tests on main CI"
 
 #: templates/dash.html:28
 msgid "Regressions on Trixie"
-msgstr ""
+msgstr "Regressions on Trixie"
 
 #: templates/dash.html:29
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Apps with testings PRs"
 
 #: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Apps with autoupdate PRs"
 
 #: templates/dash.html:31
 msgid "Apps with issues"
-msgstr ""
+msgstr "Apps with issues"
 
 #: templates/dash.html:32
 msgid "Apps using v2 helpers"
-msgstr ""
+msgstr "Apps using v2 helpers"
 
 #: templates/dash.html:33
 msgid "Apps using v2.1 helpers"
-msgstr ""
+msgstr "Apps using v2.1 helpers"
 
 #: templates/dash.html:44
 msgid "Quality level"
-msgstr ""
+msgstr "Quality level"
 
 #: templates/dash.html:45 templates/dash.html:228
 msgid "Popularity stars"
-msgstr ""
+msgstr "Popularity stars"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Last update on main/master branch"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Last update on testing branch"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Number of opened issues"
 
 #: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Hide deprecated/unmaintained apps"
 
 #: templates/dash.html:83
 msgid "App"
-msgstr ""
+msgstr "App"
 
 #: templates/dash.html:85
 msgid "Main CI"
-msgstr ""
+msgstr "Main CI"
 
 #: templates/dash.html:86
 msgid "Trixie CI"
-msgstr ""
+msgstr "Trixie CI"
 
 #: templates/dash.html:87
 msgid "Testing PR"
-msgstr ""
+msgstr "Testing PR"
 
 #: templates/dash.html:88
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Autoupdate PR"
 
 #: templates/dash.html:89
 msgid "Issues"
-msgstr ""
+msgstr "Issues"
 
 #: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
 msgid "Broken"
-msgstr ""
+msgstr "Broken"
 
 #: templates/dash.html:144 templates/dash.html:162 templates/dash.html:181
 msgid "Low quality"
-msgstr ""
+msgstr "Low quality"
 
 #: templates/dash.html:156 templates/dash.html:175
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Outdated test (%(days)s days ago)"
 
 #: templates/dash.html:198 templates/dash.html:213
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "Inactive (%(days)s days ago)"
 
 #: templates/dash.html:232
 msgid "Deprecated"
-msgstr ""
+msgstr "Deprecated"
 
 #: templates/dash.html:235
 msgid "Not maintained"
-msgstr ""
+msgstr "Not maintained"
 
 #: templates/dash.html:249
 #, python-format
 msgid "Last data update %(time)s ago"
-msgstr ""
+msgstr "Last data update %(time)s ago"
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr ""
+msgstr "Application Store"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Browse all applications"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Suggest an app"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr ""
+msgstr "Suggest an application to be added to YunoHost's catalog"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
-msgstr ""
+msgstr "You must first login to be allowed to submit an app to the wishlist"
 
 #: templates/wishlist_add.html:40
 msgid "Due to abuses, only one proposal every 15 days per user is allowed."
-msgstr ""
+msgstr "Due to abuses, only one proposal every 15 days per user is allowed."
 
 #: templates/wishlist_add.html:43
 msgid ""
 "Reviewing those proposals is tiring for volunteers, please don't yolo-"
 "send every random nerdy stuff you find on the Internet."
 msgstr ""
+"Reviewing those proposals is tiring for volunteers, please don't yolo-send "
+"every random nerdy stuff you find on the Internet."
 
 #: templates/wishlist.html:74 templates/wishlist_add.html:61
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: templates/wishlist_add.html:64
 msgid "App's description"
-msgstr ""
+msgstr "App's description"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "If possible, write it in English."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
-msgstr ""
+msgstr "Please be concise and focus on what the app does."
 
 #: templates/wishlist_add.html:67
 msgid ""
@@ -674,38 +720,46 @@ msgid ""
 "Avoid marketing stuff like 'the most', or vague properties like 'easy', "
 "'simple', 'lightweight'."
 msgstr ""
+"No need to repeat '[App] is …'. No need to state that it is free/open-source "
+"or self-hosted (otherwise it wouldn't be packaged for YunoHost). Avoid "
+"marketing stuff like 'the most', or vague properties like 'easy', 'simple', "
+"'lightweight'."
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"
-msgstr ""
+msgstr "Project code repository"
 
 #: templates/wishlist_add.html:72
 msgid "Link to the project's LICENSE"
-msgstr ""
+msgstr "Link to the project's LICENSE"
 
 #: templates/wishlist_add.html:74
 msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
+"The YunoHost project will only package free/open-source software "
+"(with possible case-by-case exceptions for apps which are not-totally-free)"
 
 #: templates/wishlist_add.html:76
 msgid "Project website"
-msgstr ""
+msgstr "Project website"
 
 #: templates/wishlist_add.html:78
 msgid ""
 "Please *do not* just copy-paste the code repository URL. If the project "
 "has no proper website, then leave the field empty."
 msgstr ""
+"Please *do not* just copy-paste the code repository URL. If the project has "
+"no proper website, then leave the field empty."
 
 #: templates/wishlist_add.html:85
 msgid "Submit"
-msgstr ""
+msgstr "Submit"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
-msgstr ""
+msgstr "Application Wishlist"
 
 #: templates/wishlist.html:10
 msgid ""
@@ -716,16 +770,21 @@ msgid ""
 "project plans to integrate it, and is merely a source of inspiration for "
 "packaging volunteers."
 msgstr ""
+"The wishlist is the place where people can collectively suggest and vote for "
+"apps that they would like to see packaged and made available in YunoHost's "
+"official apps catalog. Nevertheless, the fact that apps are listed here "
+"should by no mean be interpreted as a fact that the YunoHost project plans "
+"to integrate it, and is merely a source of inspiration for packaging "
+"volunteers."
 
 #: templates/wishlist.html:77
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
-msgstr ""
+msgstr "Official website"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
-msgstr ""
-
+msgstr "Code repository"
