@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2025-11-08 21:27+0000\n"
-"Last-Translator: ppr <pouetpouetratatouille@gmail.com>\n"
+"PO-Revision-Date: 2026-02-16 20:09+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://translate.yunohost.org/projects/yunohost/"
 "store/fr/>\n"
 "Language: fr\n"
@@ -45,8 +45,7 @@ msgstr ""
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
-"Veuillez vous connecter pour proposer une app pour la liste de souhaits"
+msgstr "Veuillez vous connecter pour proposer une app pour la liste de souhaits"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
@@ -141,8 +140,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Une app nommée %(slug)s existe déjà dans le catalogue, <a "
-"href='%(url)s'>vous pouvez voir sa page ici</a>."
+"Une app nommée %(slug)s existe déjà dans le catalogue, <a href='%(url)"
+"s'>vous pouvez voir sa page ici</a>."
 
 #: app.py:421
 #, python-format
@@ -244,15 +243,15 @@ msgstr "Capture d'écran pour %(app)s"
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
-"Cette app est uniquement compatible avec les architectures suivantes : "
-"%(archs)s"
+"Cette app est uniquement compatible avec les architectures suivantes : %"
+"(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Cette app requiert une quantité inhabituelle de RAM pour être installée : "
-"%(ram)s"
+"Cette app requiert une quantité inhabituelle de RAM pour être installée : %"
+"(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -356,9 +355,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Fait avec <i class='text-red-500 fa fa-heart-o' aria-label='amour'></i> à "
-"l'aide de <a class='text-blue-800' href='https://flask.palletsprojects."
-"com'>Flask</a> et <a class='text-blue-800' href='https://tailwindcss."
-"com/'>TailwindCSS</a>"
+"l'aide de <a class='text-blue-800' "
+"href='https://flask.palletsprojects.com'>Flask</a> et <a class='text-blue-"
+"800' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -750,8 +749,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Le projet YunoHost intègrera uniquement des logiciels libre/open-source "
-"(avec quelques possibles exceptions au cas-par-cas pour des apps qui ne sont "
+"Le projet YunoHost intègrera uniquement des logiciels libre/open-source ("
+"avec quelques possibles exceptions au cas-par-cas pour des apps qui ne sont "
 "pas entièrement libres)"
 
 #: templates/wishlist_add.html:76
