@@ -148,8 +148,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Приложение с названием %(slug)s уже существует в каталоге, <a href='%(url)"
-"s'>вы можете ознакомиться с его страницей здесь</a>."
+"Приложение с названием %(slug)s уже существует в каталоге, <a "
+"href='%(url)s'>вы можете ознакомиться с его страницей здесь</a>."
 
 #: app.py:421
 #, python-format
@@ -362,9 +362,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Сделано с <i class='text-red-500 fa fa-heart-o' aria-label='love'></i>, "
-"используя <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> и <a class='text-blue-800 "
-"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"используя <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> и <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -552,8 +552,8 @@ msgstr ""
 "хотите начать упаковку приложений в YunoHost, ознакомьтесь с <a class='text-"
 "blue-500' href='https://yunohost.org/packaging_apps'>документацией по "
 "созданию пакетов</a> и поприветствуйте нас в <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'>чате создателей пакетов "
-"приложений</a>!"
+"href='https://yunohost.org/chat_rooms'>чате создателей пакетов приложений</"
+"a>!"
 
 #: templates/dash.html:18
 msgid "Filter"

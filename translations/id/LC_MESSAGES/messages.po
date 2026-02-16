@@ -140,8 +140,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Aplikasi dengan nama %(slug)s sudah ada di dalam katalog, <a href='%(url)"
-"s'>Anda dapat melihat halamannya di sini</a>."
+"Aplikasi dengan nama %(slug)s sudah ada di dalam katalog, <a "
+"href='%(url)s'>Anda dapat melihat halamannya di sini</a>."
 
 #: app.py:421
 #, python-format
@@ -250,8 +250,8 @@ msgstr ""
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Aplikasi ini membutuhkan jumlah RAM yang tidak biasa agar bisa dipasang: %"
-"(ram)s"
+"Aplikasi ini membutuhkan jumlah RAM yang tidak biasa agar bisa dipasang: "
+"%(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -355,9 +355,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Dibuat dengan <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"menggunakan <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> dan <a class='text-blue-"
-"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"menggunakan <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> dan <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -751,8 +751,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Proyek YunoHost hanya akan mengemas perangkat lunak gratis/sumber-terbuka ("
-"dengan kemungkinan pengecualian kasus per kasus pada aplikasi yang tidak "
+"Proyek YunoHost hanya akan mengemas perangkat lunak gratis/sumber-terbuka "
+"(dengan kemungkinan pengecualian kasus per kasus pada aplikasi yang tidak "
 "sepenuhnya gratis)"
 
 #: templates/wishlist_add.html:76

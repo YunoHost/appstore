@@ -155,9 +155,9 @@ msgid ""
 "please report the issue to the YunoHost team."
 msgstr ""
 "La creazione della pull request per richiedere l’aggiunta dell’app alla "
-"lista dei desideri è fallita… Forse perché per quest’app c’è già <a href='%"
-"(url)s'>una PR in attesa</a>? Se non è così, segnala questo problema alla "
-"squadra di YunoHost."
+"lista dei desideri è fallita… Forse perché per quest’app c’è già <a "
+"href='%(url)s'>una PR in attesa</a>? Se non è così, segnala questo problema "
+"alla squadra di YunoHost."
 
 #: app.py:471
 #, python-format
@@ -248,15 +248,15 @@ msgstr "Schermata di %(app)s"
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
-"Quest’app è compatibile solamente con queste specifiche architetture: %"
-"(archs)s"
+"Quest’app è compatibile solamente con queste specifiche architetture: "
+"%(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Per essere installata, quest’app richiede una quantità di RAM inusuale: %"
-"(ram)s"
+"Per essere installata, quest’app richiede una quantità di RAM inusuale: "
+"%(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -360,9 +360,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Creato con <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> "
-"usando <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> e <a class='text-blue-800 "
-"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"

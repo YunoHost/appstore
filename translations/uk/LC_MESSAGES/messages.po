@@ -84,7 +84,8 @@ msgstr ""
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr "URL-адреса репозиторію коду вищого рівня має містити менше 150 символів"
+msgstr ""
+"URL-адреса репозиторію коду вищого рівня має містити менше 150 символів"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -124,8 +125,8 @@ msgid ""
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
 "Запис із назвою %(slug)s вже існує у списку бажань, натомість ви можете <a "
-"href='%(url)s'>додати зірочку до програми, щоб показати свою "
-"зацікавленість</a>."
+"href='%(url)s'>додати зірочку до програми, щоб показати свою зацікавленість</"
+"a>."
 
 #: app.py:382
 #, python-format
@@ -133,8 +134,8 @@ msgid ""
 "We're sorry, but this app is listed among the already declined apps. The "
 "specified reason is:<br /><q>%(reason)s</q>"
 msgstr ""
-"На жаль, цей додаток є серед уже відхилених додатків. Вказана причина:<br "
-"/><q>%(reason)s</q>"
+"На жаль, цей додаток є серед уже відхилених додатків. Вказана причина:<br /"
+"><q>%(reason)s</q>"
 
 #: app.py:396
 #, python-format
@@ -164,8 +165,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Запропонований вами додаток успішно надіслано. Тепер його має перевірити "
-"команда YunoHost. Ви можете відстежувати його статус тут: <a href='%(url)s'>%"
-"(url)s</a>"
+"команда YunoHost. Ви можете відстежувати його статус тут: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -354,9 +355,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Зроблено з <i class='text-red-500 fa fa-heart-o' aria-label='love'></i>, "
-"використовуючи <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> і <a class='text-blue-800 "
-"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"використовуючи <a class='text-blue-800 dark:text-blue-400' href='https://"
+"flask.palletsprojects.com'>Flask</a> і <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -749,8 +750,8 @@ msgid ""
 "The YunoHost project will only package free/open-source software (with "
 "possible case-by-case exceptions for apps which are not-totally-free)"
 msgstr ""
-"Проект YunoHost пакуватиме лише безкоштовне/відкрите програмне забезпечення ("
-"з можливими винятками в окремих випадках для додатків, які не є повністю "
+"Проект YunoHost пакуватиме лише безкоштовне/відкрите програмне забезпечення "
+"(з можливими винятками в окремих випадках для додатків, які не є повністю "
 "відкритими)"
 
 #: templates/wishlist_add.html:76

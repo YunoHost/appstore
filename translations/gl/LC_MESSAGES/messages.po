@@ -121,8 +121,8 @@ msgid ""
 "An entry with the name %(slug)s already exists in the wishlist, instead, you "
 "can <a href='%(url)s'>add a star to the app to show your interest</a>."
 msgstr ""
-"Xa existe unha entrada co nome %(slug)s, así que podes <a href='%(url)"
-"s'>engadirlle unha estrela para mostrar interese</a>."
+"Xa existe unha entrada co nome %(slug)s, así que podes <a "
+"href='%(url)s'>engadirlle unha estrela para mostrar interese</a>."
 
 #: app.py:382
 #, python-format
@@ -161,8 +161,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Foi enviada correctamente a solicitude para a app. Agora vai ser validada "
-"polo equipo de YunoHost. Podes ver aquí o proceso: <a href='%(url)s'>%(url)"
-"s</a>"
+"polo equipo de YunoHost. Podes ver aquí o proceso: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -241,14 +241,15 @@ msgstr "Captura de pantalla de %(app)s"
 #, python-format
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
-msgstr "Esta app só é compatible con estas arquitecturas específicas: %(archs)s"
+msgstr ""
+"Esta app só é compatible con estas arquitecturas específicas: %(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Esta app require unha cantidade de RAM superior á habitual para instalala: %"
-"(ram)s"
+"Esta app require unha cantidade de RAM superior á habitual para instalala: "
+"%(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -352,9 +353,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Creada <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> usando "
-"<a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> e <a class='text-blue-800 "
-"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"<a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -725,10 +726,9 @@ msgid ""
 "'lightweight'."
 msgstr ""
 "Non precisas repetir '[App] é …'. Tampouco hai que insistir en que é libre/"
-"código-aberto ou auto-hospedable "
-"(se non fose así tampouco a incluiríamos en YunoHost). Evita usar xerga do "
-"eido do márquetin como 'a mellor', ou termos xenéricos como 'fácil', "
-"'simple', 'lixeira'."
+"código-aberto ou auto-hospedable (se non fose así tampouco a incluiríamos en "
+"YunoHost). Evita usar xerga do eido do márquetin como 'a mellor', ou termos "
+"xenéricos como 'fácil', 'simple', 'lixeira'."
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"

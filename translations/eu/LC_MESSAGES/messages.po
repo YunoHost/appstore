@@ -83,7 +83,8 @@ msgstr ""
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr "Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
+msgstr ""
+"Jatorrizko kode-gordailuaren URLak 150 karaktere izan ditzazke gehienez"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -142,8 +143,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a href='%(url)"
-"s'>hemen ikus dezakezu</a>."
+"Lehendik ere dago %(slug)s izena duen aplikazioa katalogoan, <a "
+"href='%(url)s'>hemen ikus dezakezu</a>."
 
 #: app.py:421
 #, python-format
@@ -164,8 +165,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Proposatutako aplikazioa behar bezala bidali da. YunoHosten taldeak "
-"baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a href='%(url)s'>%"
-"(url)s</a>"
+"baliozkotu behar du orain. Egoera hemen ikusi dezakezu: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -352,11 +353,10 @@ msgid ""
 "palletsprojects.com'>Flask</a> and <a class='text-blue-800 dark:text-"
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
-"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i>ez egina <a class"
-"='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> eta <a class='text-blue-"
-"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a> "
-"erabiliz"
+"<i class='text-red-500 fa fa-heart-o' aria-label='love'></i>ez egina <a "
+"class='text-blue-800 dark:text-blue-400' href='https://flask.palletsprojects."
+"com'>Flask</a> eta <a class='text-blue-800 dark:text-blue-400' href='https://"
+"tailwindcss.com/'>TailwindCSS</a> erabiliz"
 
 #: templates/base.html:265
 msgid "Source"
@@ -727,9 +727,9 @@ msgid ""
 "'lightweight'."
 msgstr ""
 "Ez dago zertan '[Aplikazioa]… da'- Ez dago zertan aipatu librea/kode "
-"irekikoa edo norberak ostatzekoa dela "
-"(bestela ez litzateke YunoHostentzat paketatuko). Ekidin marketin terminoak "
-"eta 'erraz', 'xume', 'arin', 'onena' bezalako orokortasunak."
+"irekikoa edo norberak ostatzekoa dela (bestela ez litzateke YunoHostentzat "
+"paketatuko). Ekidin marketin terminoak eta 'erraz', 'xume', 'arin', 'onena' "
+"bezalako orokortasunak."
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"

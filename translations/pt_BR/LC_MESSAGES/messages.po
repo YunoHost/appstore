@@ -27,7 +27,8 @@ msgstr "Aplicativo %(app_id)s não encontrado"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr "Você deve estar autenticado para poder marcar um aplicativo com estrela"
+msgstr ""
+"Você deve estar autenticado para poder marcar um aplicativo com estrela"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -145,8 +146,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Um aplicativo com o nome %(slug)s já existe no catálogo, <a href='%(url)"
-"s'>você pode ver sua página aqui</a>."
+"Um aplicativo com o nome %(slug)s já existe no catálogo, <a "
+"href='%(url)s'>você pode ver sua página aqui</a>."
 
 #: app.py:421
 #, python-format
@@ -167,8 +168,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Seu aplicativo proposto foi enviado com sucesso. Agora ele deve ser validado "
-"pela equipe do YunoHost. Você pode acompanhar o progresso aqui: <a href='%"
-"(url)s'>%(url)s</a>"
+"pela equipe do YunoHost. Você pode acompanhar o progresso aqui: <a "
+"href='%(url)s'>%(url)s</a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -248,8 +249,8 @@ msgstr "Captura de tela para %(app)s"
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
-"Este aplicativo é compatível apenas com estas arquiteturas específicas: %"
-"(archs)s"
+"Este aplicativo é compatível apenas com estas arquiteturas específicas: "
+"%(archs)s"
 
 #: templates/app.html:114
 #, python-format
@@ -359,9 +360,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Feito com <i class='text-red-500 fa fa-heart-o' aria-label='amor'></i> "
-"usando <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> e <a class='text-blue-800 "
-"dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"usando <a class='text-blue-800 dark:text-blue-400' href='https://flask."
+"palletsprojects.com'>Flask</a> e <a class='text-blue-800 dark:text-blue-400' "
+"href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
@@ -735,10 +736,9 @@ msgid ""
 "'lightweight'."
 msgstr ""
 "Não é necessário repetir 'O [Aplicativo] é...'. Não é necessário afirmar que "
-"é gratuito/de código aberto ou auto-hospedado "
-"(caso contrário, não seria empacotado para o YunoHost). Evite termos de "
-"marketing como 'o melhor' ou características vagas como 'fácil', 'simples' "
-"ou 'leve'."
+"é gratuito/de código aberto ou auto-hospedado (caso contrário, não seria "
+"empacotado para o YunoHost). Evite termos de marketing como 'o melhor' ou "
+"características vagas como 'fácil', 'simples' ou 'leve'."
 
 #: templates/wishlist_add.html:69
 msgid "Project code repository"

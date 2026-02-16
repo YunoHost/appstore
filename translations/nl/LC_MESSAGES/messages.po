@@ -144,8 +144,8 @@ msgid ""
 "An app with the name %(slug)s already exists in the catalog, <a "
 "href='%(url)s'>you can see its page here</a>."
 msgstr ""
-"Er staat al een app met de naam %(slug)s in de catalogus, <a href='%(url)"
-"s'>bekijk de app-pagina</a>."
+"Er staat al een app met de naam %(slug)s in de catalogus, <a "
+"href='%(url)s'>bekijk de app-pagina</a>."
 
 #: app.py:421
 #, python-format
@@ -167,8 +167,8 @@ msgid ""
 "href='%(url)s'>%(url)s</a>"
 msgstr ""
 "Je voorgestelde app is met succes ingediend. Hij moet door het Yunohost-team "
-"gevalideerd worden. Je kan de voortgang volgen op <a href='%(url)s'>%(url)"
-"s</a>"
+"gevalideerd worden. Je kan de voortgang volgen op <a href='%(url)s'>%(url)s</"
+"a>"
 
 #: app.py:657
 msgid "Unfortunately, login was denied."
@@ -255,8 +255,8 @@ msgstr ""
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Deze app vereist een ongebruikelijke hoeveelheid RAM om te installeren: %"
-"(ram)s"
+"Deze app vereist een ongebruikelijke hoeveelheid RAM om te installeren: "
+"%(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -360,9 +360,9 @@ msgid ""
 "blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 msgstr ""
 "Gemaakt met <i class='text-red-500 fa fa-heart-o' aria-label='love'></i> met "
-"ondersteuning van <a class='text-blue-800 dark:text-blue-400' "
-"href='https://flask.palletsprojects.com'>Flask</a> en <a class='text-blue-"
-"800 dark:text-blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
+"ondersteuning van <a class='text-blue-800 dark:text-blue-400' href='https://"
+"flask.palletsprojects.com'>Flask</a> en <a class='text-blue-800 dark:text-"
+"blue-400' href='https://tailwindcss.com/'>TailwindCSS</a>"
 
 #: templates/base.html:265
 msgid "Source"
