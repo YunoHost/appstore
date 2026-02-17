@@ -32,6 +32,12 @@ lint = [
     "mypy",
 ]
 
+[project.scripts]
+fetch_main_dashboard = "appstore:fetch_main_dashboard.main"
+
+[tool.uv]
+package = true
+
 [tool.ruff]
 line-length = 88
 
