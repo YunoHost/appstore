@@ -496,9 +496,9 @@ msgid ""
 "This is where packagers can monitor the status of automatic tests (CI) and "
 "ongoing major pull requests accross all apps. If you want to get started "
 "with app packaging in YunoHost, please check out the <a class='text-"
-"blue-500' href='https://yunohost.org/packaging_apps'>packaging "
+"blue-500' href='https://doc.yunohost.org/dev/packaging/'>packaging "
 "documentation</a> and come say hi to us on the <a class='text-blue-500' "
-"href='https://yunohost.org/chat_rooms'>app packaging chatroom</a>!"
+"href='https://doc.yunohost.org/community/chat_rooms/'>app packaging chatroom</a>!"
 msgstr ""
 
 #: templates/dash.html:18
