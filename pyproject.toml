@@ -39,6 +39,10 @@ lint = [
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[project.scripts]
+fetch_level_history = "appstore.fetch_level_history:main"
+fetch_main_dashboard = "appstore.fetch_main_dashboard:main"
+
 [tool.ruff]
 line-length = 88
 

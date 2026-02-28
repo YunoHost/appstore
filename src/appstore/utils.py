@@ -4,11 +4,14 @@ import os
 import subprocess
 import time
 from hashlib import md5
+from pathlib import Path
 
 import pycmarkgfm
 import toml
 from emoji import emojize
 from flask import request
+
+from .config import Config
 
 AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
 
@@ -27,8 +30,8 @@ def get_locale():
     return request.accept_languages.best_match(AVAILABLE_LANGUAGES) or "en"
 
 
-def get_catalog():
-    path = os.path.join(DATA_DIR, "cache/apps.json")
+def get_catalog(config: Config):
+    path = config.data_dir / "apps.json"
     mtime = os.path.getmtime(path)
     if get_catalog.mtime_catalog != mtime:
         get_catalog.mtime_catalog = mtime
@@ -64,10 +67,11 @@ def get_catalog():
 
 
 get_catalog.mtime_catalog = None
+# get_catalog()
 
 
-def get_wishlist():
-    path = os.path.join(DATA_DIR, "cache/apps/wishlist.toml")
+def get_wishlist(config: Config):
+    path = config.data_dir / "apps" / "wishlist.toml"
     mtime = os.path.getmtime(path)
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime
@@ -77,10 +81,10 @@ def get_wishlist():
 
 
 get_wishlist.mtime_wishlist = None
+# get_wishlist()
 
 
-def get_stars():
-    stars_dir = os.path.join(DATA_DIR, "stars")
+def get_stars(config: Config):
     checksum = (
         subprocess.check_output(
             f"find {stars_dir} -type f -printf '%T@,' | md5sum", shell=True
@@ -90,7 +94,7 @@ def get_stars():
     )
     if get_stars.cache_checksum != checksum:
         stars = {}
-        for folder, _, files in os.walk(stars_dir):
+        for folder, _, files in os.walk(config.data_dir / "stars"):
             app_id = folder.split("/")[-1]
             if not app_id:
                 continue
@@ -102,10 +106,11 @@ def get_stars():
 
 
 get_stars.cache_checksum = None
+# get_stars()
 
 
-def get_dashboard_data():
-    path = os.path.join(DATA_DIR, "cache", "dashboard.json")
+def get_dashboard_data(config: Config):
+    path = config.data_dir / "dashboard.json"
     mtime = os.path.getmtime(path)
     if get_dashboard_data.mtime != mtime:
         get_dashboard_data.mtime = mtime
@@ -120,8 +125,8 @@ get_dashboard_data.mtime = None
 # get_dashboard_data()
 
 
-def check_wishlist_submit_ratelimit(user):
-    dir_ = os.path.join(DATA_DIR, "wishlist_ratelimit")
+def check_wishlist_submit_ratelimit(user, config: Config):
+    dir_ = os.path.join(".wishlist_ratelimit")
     if not os.path.exists(dir_):
         os.mkdir(dir_)
 
