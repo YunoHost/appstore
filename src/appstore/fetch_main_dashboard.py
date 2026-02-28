@@ -13,9 +13,7 @@ import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
 
-sys.path.append(Path(__file__).resolve().parent)
-
-from utils import get_catalog, set_data_dir
+from .utils import get_catalog, set_data_dir
 
 APPSTORE_PATH = Path(__file__).resolve().parent
 

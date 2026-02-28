@@ -27,9 +27,7 @@ from flask_babel import gettext as _
 from github import Github, InputGitAuthor
 from slugify import slugify
 
-sys.path = [os.path.dirname(__file__)] + sys.path
-
-from utils import (
+from .utils import (
     check_wishlist_submit_ratelimit,
     get_app_md_and_screenshots,
     get_catalog,
