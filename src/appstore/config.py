@@ -8,7 +8,7 @@ from pydantic import BaseModel, ValidationError
 
 class Config(BaseModel):
     class Config:
-        validate_all = True
+        validate_default = True
         extra = "forbid"
 
     github_login: str
@@ -21,8 +21,7 @@ class Config(BaseModel):
 
     cookie_secret: str
 
-    apps_cache: Path
-    # data_dir: Path
+    data_dir: Path
 
     def __init__(self, path: Path) -> None:
         try:

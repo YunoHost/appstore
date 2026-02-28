@@ -13,6 +13,7 @@ from datetime import datetime
 from pathlib import Path
 
 import tomlkit
+from babel.localedata import exists
 from flask import (
     Flask,
     make_response,
@@ -147,11 +148,11 @@ def popularity_json():
 @app.route("/app/<app_id>")
 def app_info(app_id):
     infos = get_catalog()["apps"].get(app_id)
-    app_folder = os.path.join(config.apps_cache, app_id)
-    if not infos or not os.path.exists(app_folder):
+    app_folder = config.data_dir / "apps_cache" / app_id
+    if not infos or not app_folder.exists():
         return f"App {app_id} not found", 404
 
-    get_app_md_and_screenshots(app_folder, infos)
+    get_app_md_and_screenshots(str(app_folder), infos)
 
     return render_template(
         "app.html",
@@ -177,13 +178,9 @@ def star_app(app_id, action):
             401,
         )
 
-    app_star_folder = os.path.join(".stars", app_id)
-    app_star_for_this_user = os.path.join(
-        ".stars", app_id, session.get("user", {})["id"]
-    )
-
-    if not os.path.exists(app_star_folder):
-        os.mkdir(app_star_folder)
+    app_star_folder: Path = config.data_dir / "stars" / app_id
+    app_star_folder.mkdir(exist_ok=True)
+    app_star_for_this_user = app_star_folder / session.get("user", {})["id"]
 
     if action == "star":
         open(app_star_for_this_user, "w").write("")
@@ -527,7 +524,8 @@ def charts():
 
 @app.route("/news.rss")
 def news_rss():
-    news_per_date = json.loads(open(".cache/news.json").read())
+    news_file = config.data_dir / "news.json"
+    news_per_date = json.loads(news_file.read_text())
 
     # Keepy only the last N entries
     news_per_date = {
