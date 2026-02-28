@@ -8,24 +8,25 @@ It is supposed to be installed with [its YunoHost app](https://github.com/YunoHo
 ## Developement
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-cp config.toml.example config.toml
-mkdir -p data/cache
+# Install project and its dependencies
+python3 -m venv .venv
+.venv/bin/pip install -e .
 
-# Tweak config.toml with appropriate values... (not everyting is needed for the base features to work)
-nano config.toml
-
-# You'll need to have a built version of the catalog
-curl https://apps.yunohost.org/default/v3/apps.json > data/cache/apps.json
-
-# you need to manually download the assets to have access to the css and the javascript files
+# Manually download the web assets
 ./tools/fetch_assets
 ./tools/fetch_badges
 
-# You will also want to run list_builder.py to initialize the .apps_cache (at least for a few apps, you can Ctrl+C after a while)
-pip3 install tqdm GitPython
+# Create and tweak the configuration file with appropriate values...
+# (not everyting is needed for the base features to work)
+cp config.toml.example config.toml
+nano config.toml
+
+# You'll need to have a built version of the catalog
+mkdir -p data/{cache,stars}
+curl https://apps.yunohost.org/default/v3/apps.json > data/cache/apps.json
+
+# You will also want to run list_builder.py to initialize the .apps_cache
+# (at least for a few apps, you can Ctrl+C after a while)
 pushd ..
     ./apps_tools/list_builder.py
 popd
@@ -34,8 +35,7 @@ popd
 And then start the dev server:
 
 ```bash
-source venv/bin/activate
-FLASK_APP=app.py FLASK_ENV=development flask --debug run
+FLASK_ENV=development .venv/bin/flask --debug --app "appstore.app" run
 
 # In another term, launch the tailwindcss process to autorebuild css:
 cd assets; ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.css --watch
@@ -46,7 +46,7 @@ cd assets; ./tailwindcss-linux-x64 --input tailwind-local.css --output tailwind.
 It's based on Flask-Babel : <https://python-babel.github.io/flask-babel/>
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 
 # Extract the english sentences from the code, needed if you modified it
 pybabel extract -F babel.cfg -o translations/messages.pot *.py templates/*.html
