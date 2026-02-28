@@ -15,7 +15,7 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 
 sys.path.append(Path(__file__).resolve().parent)
 
-from utils import get_catalog
+from utils import get_catalog, set_data_dir
 
 APPSTORE_PATH = Path(__file__).resolve().parent
 
@@ -154,6 +154,9 @@ def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]
 
 
 def main() -> None:
+    data_dir = config()["DATA_DIR"]
+    set_data_dir(data_dir)
+
     consolidated_infos = {}
 
     with multiprocessing.Pool(processes=10) as pool:
@@ -170,7 +173,7 @@ def main() -> None:
                     continue
                 consolidated_infos[name] = infos
 
-    dashboard_file = APPSTORE_PATH / ".cache" / "dashboard.json"
+    dashboard_file = Path(data_dir) / "cache" / "dashboard.json"
     dashboard_file.write_text(json.dumps(consolidated_infos))
 
 

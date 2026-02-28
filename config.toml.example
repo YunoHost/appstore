@@ -8,4 +8,4 @@ CALLBACK_URL_AFTER_LOGIN_ON_DISCOURSE = "http://localhost:5000/sso_login_callbac
 GITHUB_LOGIN = "yunohost-bot"
 GITHUB_EMAIL = "yunohost [at] yunohost.org" # Replace the [at] by actual @
 GITHUB_TOKEN = "superSecretToken"
-APPS_CACHE = "../.apps_cache/"
+DATA_DIR = "../data"

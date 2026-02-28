@@ -37,6 +37,7 @@ from utils import (
     get_locale,
     get_stars,
     get_wishlist,
+    set_data_dir,
     save_wishlist_submit_for_ratelimit,
 )
 
@@ -60,7 +61,7 @@ mandatory_config_keys = [
     "GITHUB_LOGIN",
     "GITHUB_TOKEN",
     "GITHUB_EMAIL",
-    "APPS_CACHE",
+    "DATA_DIR",
 ]
 
 for key in mandatory_config_keys:
@@ -75,6 +76,10 @@ if app.config.get("DEBUG"):
 app.secret_key = config["COOKIE_SECRET"]
 
 babel = Babel(app, locale_selector=get_locale)
+
+
+DATA_DIR = config["DATA_DIR"]
+set_data_dir(DATA_DIR)
 
 
 @app.template_filter("localize")
@@ -160,7 +165,7 @@ def popularity_json():
 @app.route("/app/<app_id>")
 def app_info(app_id):
     infos = get_catalog()["apps"].get(app_id)
-    app_folder = os.path.join(config["APPS_CACHE"], app_id)
+    app_folder = os.path.join(DATA_DIR, "apps_cache", app_id)
     if not infos or not os.path.exists(app_folder):
         return f"App {app_id} not found", 404
 
@@ -190,9 +195,9 @@ def star_app(app_id, action):
             401,
         )
 
-    app_star_folder = os.path.join(".stars", app_id)
+    app_star_folder = os.path.join(DATA_DIR, "stars", app_id)
     app_star_for_this_user = os.path.join(
-        ".stars", app_id, session.get("user", {})["id"]
+        app_star_folder, session.get("user", {})["id"]
     )
 
     if not os.path.exists(app_star_folder):
@@ -533,14 +538,14 @@ def charts():
     return render_template(
         "charts.html",
         level_summary=level_summary,
-        history=json.loads(open(".cache/history.json").read()),
-        news_per_date=json.loads(open(".cache/news.json").read()),
+        history=json.loads(open(os.path.join(DATA_DIR, "cache/history.json")).read()),
+        news_per_date=json.loads(open(os.path.join(DATA_DIR, "cache/news.json")).read()),
     )
 
 
 @app.route("/news.rss")
 def news_rss():
-    news_per_date = json.loads(open(".cache/news.json").read())
+    news_per_date = json.loads(open(os.path.join(DATA_DIR, "cache/news.json")).read())
 
     # Keepy only the last N entries
     news_per_date = {

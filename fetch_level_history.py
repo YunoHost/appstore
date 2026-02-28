@@ -11,8 +11,18 @@ import toml
 import tqdm
 from git import IndexObject, Repo
 
-CACHE_DIR = Path(__file__).resolve().parent / ".cache"
-TMP_DIR = Path(__file__).resolve().parent / ".tmp"
+APPSTORE_PATH = Path(__file__).resolve().parent
+
+try:
+    config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+except Exception:
+    raise RuntimeError(
+        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
+    )
+
+DATA_DIR = Path(config["DATA_DIR"])
+CACHE_DIR = DATA_DIR / "cache"
+TMP_DIR = DATA_DIR / "tmp"
 
 
 @cache

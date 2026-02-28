@@ -13,6 +13,14 @@ from flask import request
 AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
 
 
+DATA_DIR: str | None = None
+
+
+def set_data_dir(data_dir: str) -> None:
+    global DATA_DIR
+    DATA_DIR = data_dir
+
+
 def get_locale():
     # try to guess the language from the user accept
     # The best match wins.
@@ -20,7 +28,7 @@ def get_locale():
 
 
 def get_catalog():
-    path = ".cache/apps.json"
+    path = os.path.join(DATA_DIR, "cache/apps.json")
     mtime = os.path.getmtime(path)
     if get_catalog.mtime_catalog != mtime:
         get_catalog.mtime_catalog = mtime
@@ -56,11 +64,10 @@ def get_catalog():
 
 
 get_catalog.mtime_catalog = None
-get_catalog()
 
 
 def get_wishlist():
-    path = ".cache/apps/wishlist.toml"
+    path = os.path.join(DATA_DIR, "cache/apps/wishlist.toml")
     mtime = os.path.getmtime(path)
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime
@@ -70,18 +77,18 @@ def get_wishlist():
 
 
 get_wishlist.mtime_wishlist = None
-get_wishlist()
 
 
 def get_stars():
+    stars_dir = os.path.join(DATA_DIR, "stars")
     checksum = (
-        subprocess.check_output("find . -type f -printf '%T@,' | md5sum", shell=True)
+        subprocess.check_output(f"find {stars_dir} -type f -printf '%T@,' | md5sum", shell=True)
         .decode()
         .split()[0]
     )
     if get_stars.cache_checksum != checksum:
         stars = {}
-        for folder, _, files in os.walk(".stars/"):
+        for folder, _, files in os.walk(stars_dir):
             app_id = folder.split("/")[-1]
             if not app_id:
                 continue
@@ -93,11 +100,10 @@ def get_stars():
 
 
 get_stars.cache_checksum = None
-get_stars()
 
 
 def get_dashboard_data():
-    path = ".cache/dashboard.json"
+    path = os.path.join(DATA_DIR, "cache", "dashboard.json")
     mtime = os.path.getmtime(path)
     if get_dashboard_data.mtime != mtime:
         get_dashboard_data.mtime = mtime
@@ -113,7 +119,7 @@ get_dashboard_data.mtime = None
 
 
 def check_wishlist_submit_ratelimit(user):
-    dir_ = os.path.join(".wishlist_ratelimit")
+    dir_ = os.path.join(DATA_DIR, "wishlist_ratelimit")
     if not os.path.exists(dir_):
         os.mkdir(dir_)
 
@@ -125,7 +131,7 @@ def check_wishlist_submit_ratelimit(user):
 
 
 def save_wishlist_submit_for_ratelimit(user):
-    dir_ = os.path.join(".wishlist_ratelimit")
+    dir_ = os.path.join(DATA_DIR, "wishlist_ratelimit")
     if not os.path.exists(dir_):
         os.mkdir(dir_)
 

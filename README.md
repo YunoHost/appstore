@@ -12,12 +12,13 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 cp config.toml.example config.toml
+mkdir -p data/cache
 
 # Tweak config.toml with appropriate values... (not everyting is needed for the base features to work)
 nano config.toml
 
 # You'll need to have a built version of the catalog
-curl https://apps.yunohost.org/default/v3/apps.json > .cache/apps.json
+curl https://apps.yunohost.org/default/v3/apps.json > data/cache/apps.json
 
 # you need to manually download the assets to have access to the css and the javascript files
 (cd assets && bash fetch_assets)
