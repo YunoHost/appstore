@@ -537,7 +537,9 @@ def charts():
         "charts.html",
         level_summary=level_summary,
         history=json.loads(open(os.path.join(DATA_DIR, "cache/history.json")).read()),
-        news_per_date=json.loads(open(os.path.join(DATA_DIR, "cache/news.json")).read()),
+        news_per_date=json.loads(
+            open(os.path.join(DATA_DIR, "cache/news.json")).read()
+        ),
     )
 
 
