@@ -1,9 +1,8 @@
 config.toml
-.stars
-.wishlist_ratelimit
-.cache
-.tmp
 assets/*
+data/
 
 __pycache__
 venv
+.venv
+.*cache
