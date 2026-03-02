@@ -82,7 +82,9 @@ get_wishlist.mtime_wishlist = None
 def get_stars():
     stars_dir = os.path.join(DATA_DIR, "stars")
     checksum = (
-        subprocess.check_output(f"find {stars_dir} -type f -printf '%T@,' | md5sum", shell=True)
+        subprocess.check_output(
+            f"find {stars_dir} -type f -printf '%T@,' | md5sum", shell=True
+        )
         .decode()
         .split()[0]
     )
