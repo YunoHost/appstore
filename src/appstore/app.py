@@ -35,8 +35,8 @@ from .utils import (
     get_locale,
     get_stars,
     get_wishlist,
-    set_data_dir,
     save_wishlist_submit_for_ratelimit,
+    set_data_dir,
 )
 
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
