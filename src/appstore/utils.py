@@ -79,31 +79,6 @@ def get_wishlist():
 get_wishlist.mtime_wishlist = None
 
 
-def get_stars():
-    stars_dir = os.path.join(DATA_DIR, "stars")
-    checksum = (
-        subprocess.check_output(
-            f"find {stars_dir} -type f -printf '%T@,' | md5sum", shell=True
-        )
-        .decode()
-        .split()[0]
-    )
-    if get_stars.cache_checksum != checksum:
-        stars = {}
-        for folder, _, files in os.walk(stars_dir):
-            app_id = folder.split("/")[-1]
-            if not app_id:
-                continue
-            stars[app_id] = set(files)
-        get_stars.cache_stars = stars
-        get_stars.cache_checksum = checksum
-
-    return get_stars.cache_stars
-
-
-get_stars.cache_checksum = None
-
-
 def get_dashboard_data():
     path = os.path.join(DATA_DIR, "cache", "dashboard.json")
     mtime = os.path.getmtime(path)
