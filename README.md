@@ -23,7 +23,7 @@ nano config.toml
 
 # You'll need to have a built version of the catalog
 mkdir -p data/{cache,stars}
-curl https://apps.yunohost.org/default/v3/apps.json > data/cache/apps.json
+curl https://apps.yunohost.org/default/v3/apps.json > data/apps.json
 
 # You will also want to run list_builder.py to initialize the .apps_cache
 # (at least for a few apps, you can Ctrl+C after a while)

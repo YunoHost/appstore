@@ -28,7 +28,7 @@ def get_locale():
 
 
 def get_catalog():
-    path = os.path.join(DATA_DIR, "cache/apps.json")
+    path = os.path.join(DATA_DIR, "apps.json")
     mtime = os.path.getmtime(path)
     if get_catalog.mtime_catalog != mtime:
         get_catalog.mtime_catalog = mtime
