@@ -3,10 +3,10 @@ import json
 import os
 import subprocess
 import time
+import tomllib
 from hashlib import md5
 
 import pycmarkgfm
-import toml
 from emoji import emojize
 from flask import request
 
@@ -71,7 +71,7 @@ def get_wishlist():
     mtime = os.path.getmtime(path)
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime
-        get_wishlist.cache_wishlist = toml.load(open(path))
+        get_wishlist.cache_wishlist = tomllib.load(path.open("rb"))
 
     return get_wishlist.cache_wishlist
 

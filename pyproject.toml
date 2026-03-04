@@ -24,7 +24,6 @@ dependencies = [
     "pygithub==2.*",
     "python-slugify==8.*",
     "requests==2.*",
-    "toml>=0.10",
     "tomlkit>=0.13",
     "tqdm>=4.67.1",
 ]

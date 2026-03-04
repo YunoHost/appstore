@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Optional, Tuple
 
 import requests
-import toml
+import tomllib
 import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
@@ -21,7 +21,7 @@ APPSTORE_PATH = Path(__file__).resolve().parent
 @cache
 def config() -> dict[str, Any]:
     try:
-        config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+        config = tomllib.load((APPSTORE_PATH / "config.toml").open("rb"))
         return config
     except Exception:
         raise RuntimeError(

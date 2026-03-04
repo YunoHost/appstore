@@ -7,14 +7,14 @@ from datetime import datetime
 from functools import cache
 from pathlib import Path
 
-import toml
+import tomllib
 import tqdm
 from git import IndexObject, Repo
 
 APPSTORE_PATH = Path(__file__).resolve().parent
 
 try:
-    config = toml.loads((APPSTORE_PATH / "config.toml").read_text())
+    config = tomllib.load((APPSTORE_PATH / "config.toml").open("rb"))
 except Exception:
     raise RuntimeError(
         "You should create a config.toml with the appropriate key/values, cf config.toml.example"
@@ -85,10 +85,10 @@ def get_lists_history():
 
             else:
                 if "apps.toml" in commit.tree:
-                    merged = toml.loads(read_git_file(commit.tree / "apps.toml"))
+                    merged = tomllib.loads(read_git_file(commit.tree / "apps.toml"))
                 else:
                     merged = json.loads(read_git_file(commit.tree / "apps.json"))
-        except (toml.TomlDecodeError, json.JSONDecodeError):
+        except (tomllib.TOMLDecodeError, json.JSONDecodeError):
             merged = {}
 
         # Save it

@@ -8,11 +8,11 @@ import re
 import string
 import sys
 import time
+import tomllib
 import urllib
 from datetime import datetime
 from pathlib import Path
 
-import toml
 import tomlkit
 from flask import (
     Flask,
@@ -45,7 +45,8 @@ app = Flask(__name__, static_url_path="/assets", static_folder="assets")
 MAIN_CI = "bookworm"
 
 try:
-    config = toml.loads(open("config.toml").read())
+    config_file = Path("config.toml")
+    config = tomllib.load(config_file.open("rb"))
 except Exception as e:
     print(
         "You should create a config.toml with the appropriate key/values, cf config.toml.example"
