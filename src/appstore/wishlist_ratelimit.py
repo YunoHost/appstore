@@ -9,7 +9,9 @@ class WishlistRateLimit:
     def __init__(self, path: Path) -> None:
         self.path: Path = path
         self.data: dict[str, int] = {}
-        self.path.mkdir(exist_ok=True)
+        if not self.path.exists():
+            self.path.write_text("{}")
+        self.read()
 
         # 15 days ago
         self.limit = 3600 * 24 * 15
@@ -22,14 +24,35 @@ class WishlistRateLimit:
         return self.path / self._digest(user)
 
     def add(self, user: str) -> None:
-        self._file(user).touch()
-        self.prune()
+        self.data[self._digest(user)] = int(time.time())
+        self.save()
 
     def check(self, user: str) -> bool:
-        file = self._file(user)
-        return not (file.exists() and (file.stat().st_mtime > time.time() - self.limit))
+        return self.data.get(self._digest(user), 0) > time.time() - self.limit
+
+    def save(self) -> None:
+        self.prune()
+        json.dump(self.data, self.path.open("w"))
+
+    def read(self) -> None:
+        self.read_legacy()
+        self.data = json.load(self.path.open("r"))
+        self.prune()
 
     def prune(self) -> None:
-        for file in self.path.iterdir():
-            if file.stat().st_mtime > time.time() - self.limit:
-                file.unlink()
+        for key, value in self.data.items():
+            if value > time.time() - self.limit:
+                del self.data[key]
+
+    def read_legacy(self) -> None:
+        legacy_dir = self.path.parent / "wishlist_ratelimit"
+        if not legacy_dir.exists():
+            return
+        data = {}
+        for file in legacy_dir.iterdir():
+            if file.is_file():
+                data[file.name] = file.stat().st_mtime
+
+        self.data = data
+        self.save()
+        shutil.rmtree(legacy_dir)
