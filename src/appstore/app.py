@@ -42,7 +42,6 @@ from .wishlist_ratelimit import WishlistRateLimit
 app = Flask(__name__, static_url_path="/assets", static_folder="assets")
 
 MAIN_CI = "bookworm"
-WISHLIST_RATELIMIT = WishlistRateLimit(Path(DATA_DIR) / "wishlist_ratelimit")
 
 try:
     config_file = Path("config.toml")
@@ -83,6 +82,7 @@ set_data_dir(DATA_DIR)
 
 STARS = AppstoreStars(Path(DATA_DIR) / "stars.json")
 STARS.read()
+WISHLIST_RATELIMIT = WishlistRateLimit(Path(DATA_DIR) / "wishlist_ratelimit")
 
 
 @app.template_filter("localize")
