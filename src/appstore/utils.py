@@ -63,7 +63,7 @@ def get_catalog():
     return get_catalog.cache_catalog
 
 
-get_catalog.mtime_catalog = None
+get_catalog.mtime_catalog: float | None = None
 
 
 def get_wishlist() -> dict[str, dict[str, str | int]]:
@@ -115,7 +115,7 @@ def human_to_binary(size: str) -> int:
     return int(size_ * factor[suffix])
 
 
-def get_app_md_and_screenshots(app_folder, infos):
+def get_app_md_and_screenshots(app_folder: Path, infos: dict[str, Any]) -> None:
     locale = get_locale()
 
     if locale != "en" and os.path.exists(
