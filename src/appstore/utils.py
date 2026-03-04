@@ -2,20 +2,23 @@ import base64
 import json
 import os
 import tomllib
+from pathlib import Path
 
 import pycmarkgfm
 from emoji import emojize
 from flask import request
 
-AVAILABLE_LANGUAGES = ["en"] + os.listdir("translations")
+AVAILABLE_LANGUAGES = [
+    "en",
+    *[path.name for path in Path("translations").iterdir() if path.is_dir()],
+]
 
-
-DATA_DIR: str | None = None
+DATA_DIR: Path | None = None
 
 
 def set_data_dir(data_dir: str) -> None:
     global DATA_DIR
-    DATA_DIR = data_dir
+    DATA_DIR = Path(data_dir)
 
 
 def get_locale():
@@ -25,12 +28,12 @@ def get_locale():
 
 
 def get_catalog():
-    path = os.path.join(DATA_DIR, "apps.json")
-    mtime = os.path.getmtime(path)
+    path = DATA_DIR / "apps.json"
+    mtime = path.stat().st_mtime
     if get_catalog.mtime_catalog != mtime:
         get_catalog.mtime_catalog = mtime
 
-        catalog = json.load(open(path))
+        catalog = json.load(path.open())
         catalog["categories"] = {c["id"]: c for c in catalog["categories"]}
         catalog["antifeatures"] = {c["id"]: c for c in catalog["antifeatures"]}
 
@@ -64,11 +67,11 @@ get_catalog.mtime_catalog = None
 
 
 def get_wishlist():
-    path = os.path.join(DATA_DIR, "apps/wishlist.toml")
-    mtime = os.path.getmtime(path)
+    path = DATA_DIR / "apps" / "wishlist.toml"
+    mtime = path.stat().st_mtime
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime
-        get_wishlist.cache_wishlist = tomllib.load(open(path, "rb"))
+        get_wishlist.cache_wishlist = tomllib.load(path.open("rb"))
 
     return get_wishlist.cache_wishlist
 
@@ -77,11 +80,11 @@ get_wishlist.mtime_wishlist = None
 
 
 def get_dashboard_data():
-    path = os.path.join(DATA_DIR, "dashboard.json")
-    mtime = os.path.getmtime(path)
+    path = DATA_DIR / "dashboard.json"
+    mtime = path.stat().st_mtime
     if get_dashboard_data.mtime != mtime:
         get_dashboard_data.mtime = mtime
-        dashboard_data = json.load(open(path))
+        dashboard_data = json.load(path.open())
         get_dashboard_data.cache = dashboard_data
 
     return get_dashboard_data.cache
