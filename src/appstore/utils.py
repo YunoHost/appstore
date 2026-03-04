@@ -1,10 +1,7 @@
 import base64
 import json
 import os
-import subprocess
-import time
 import tomllib
-from hashlib import md5
 
 import pycmarkgfm
 from emoji import emojize

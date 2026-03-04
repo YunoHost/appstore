@@ -3,11 +3,11 @@
 import io
 import json
 import shutil
+import tomllib
 from datetime import datetime
 from functools import cache
 from pathlib import Path
 
-import tomllib
 import tqdm
 from git import IndexObject, Repo
 

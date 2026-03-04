@@ -1,5 +1,3 @@
-import json
-import shutil
 import time
 from hashlib import md5
 from pathlib import Path

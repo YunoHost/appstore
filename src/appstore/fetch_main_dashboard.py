@@ -2,13 +2,12 @@
 
 import json
 import multiprocessing
-import sys
+import tomllib
 from functools import cache
 from pathlib import Path
-from typing import Any, Optional, Tuple
+from typing import Any, Optional
 
 import requests
-import tomllib
 import tqdm
 from github import Github
 from tqdm.contrib.logging import logging_redirect_tqdm
@@ -76,7 +75,7 @@ def get_app_ci_results(results: dict[str, dict], name: str) -> Optional[dict]:
         return {}
 
 
-def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
+def get_github_infos(github_orga_and_repo: str) -> tuple[str, dict]:
     repo = github_api().get_repo(github_orga_and_repo)
     infos = {}
 
@@ -121,7 +120,7 @@ def get_github_infos(github_orga_and_repo: str) -> Tuple[str, dict]:
     return repo.name, infos
 
 
-def get_consolidated_infos(name_and_infos: Tuple[str, dict]) -> Tuple[str, dict]:
+def get_consolidated_infos(name_and_infos: tuple[str, dict]) -> tuple[str, dict]:
     name, infos = name_and_infos
     if infos["state"] != "working":
         return None
