@@ -95,28 +95,6 @@ get_dashboard_data.mtime = None
 # get_dashboard_data()
 
 
-def check_wishlist_submit_ratelimit(user):
-    dir_ = os.path.join(DATA_DIR, "wishlist_ratelimit")
-    if not os.path.exists(dir_):
-        os.mkdir(dir_)
-
-    f = os.path.join(dir_, md5(user.encode()).hexdigest())
-
-    return not os.path.exists(f) or (time.time() - os.path.getmtime(f)) > (
-        15 * 24 * 3600
-    )  # 15 days
-
-
-def save_wishlist_submit_for_ratelimit(user):
-    dir_ = os.path.join(DATA_DIR, "wishlist_ratelimit")
-    if not os.path.exists(dir_):
-        os.mkdir(dir_)
-
-    f = os.path.join(dir_, md5(user.encode()).hexdigest())
-
-    open(f, "w").write("")
-
-
 def human_to_binary(size: str) -> int:
     symbols = ("K", "M", "G", "T", "P", "E", "Z", "Y")
     factor = {}
