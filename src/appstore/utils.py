@@ -21,7 +21,7 @@ def set_data_dir(data_dir: str) -> None:
     DATA_DIR = Path(data_dir)
 
 
-def get_locale():
+def get_locale() -> str:
     # try to guess the language from the user accept
     # The best match wins.
     return request.accept_languages.best_match(AVAILABLE_LANGUAGES) or "en"
@@ -66,7 +66,7 @@ def get_catalog():
 get_catalog.mtime_catalog = None
 
 
-def get_wishlist():
+def get_wishlist() -> dict[str, dict[str, str | int]]:
     path = DATA_DIR / "apps" / "wishlist.toml"
     mtime = path.stat().st_mtime
     if get_wishlist.mtime_wishlist != mtime:
