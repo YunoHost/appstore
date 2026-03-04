@@ -533,16 +533,16 @@ def charts():
     return render_template(
         "charts.html",
         level_summary=level_summary,
-        history=json.loads(open(os.path.join(DATA_DIR, "cache/history.json")).read()),
+        history=json.loads(open(os.path.join(DATA_DIR, "history.json")).read()),
         news_per_date=json.loads(
-            open(os.path.join(DATA_DIR, "cache/news.json")).read()
+            open(os.path.join(DATA_DIR, "news.json")).read()
         ),
     )
 
 
 @app.route("/news.rss")
 def news_rss():
-    news_per_date = json.loads(open(os.path.join(DATA_DIR, "cache/news.json")).read())
+    news_per_date = json.loads(open(os.path.join(DATA_DIR, "news.json")).read())
 
     # Keepy only the last N entries
     news_per_date = {

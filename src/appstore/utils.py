@@ -80,7 +80,7 @@ get_wishlist.mtime_wishlist = None
 
 
 def get_dashboard_data():
-    path = os.path.join(DATA_DIR, "cache", "dashboard.json")
+    path = os.path.join(DATA_DIR, "dashboard.json")
     mtime = os.path.getmtime(path)
     if get_dashboard_data.mtime != mtime:
         get_dashboard_data.mtime = mtime

@@ -146,7 +146,7 @@ def make_count_summary() -> None:
                 except Exception:
                     level = -1
 
-    (CACHE_DIR / "history.json").write_text(json.dumps(history))
+    (DATA_DIR / "history.json").write_text(json.dumps(history))
 
 
 def make_news() -> None:
@@ -224,7 +224,7 @@ def make_news() -> None:
 
         previous_time_data = time_data
 
-    (CACHE_DIR / "news.json").write_text(json.dumps(news_per_date))
+    (DATA_DIR / "news.json").write_text(json.dumps(news_per_date))
 
 
 def main() -> None:

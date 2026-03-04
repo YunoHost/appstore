@@ -171,7 +171,7 @@ def main() -> None:
                     continue
                 consolidated_infos[name] = infos
 
-    dashboard_file = Path(data_dir) / "cache" / "dashboard.json"
+    dashboard_file = Path(data_dir) / "dashboard.json"
     dashboard_file.write_text(json.dumps(consolidated_infos))
 
 
