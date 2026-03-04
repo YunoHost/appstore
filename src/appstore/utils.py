@@ -71,7 +71,7 @@ def get_wishlist():
     mtime = os.path.getmtime(path)
     if get_wishlist.mtime_wishlist != mtime:
         get_wishlist.mtime_wishlist = mtime
-        get_wishlist.cache_wishlist = tomllib.load(path.open("rb"))
+        get_wishlist.cache_wishlist = tomllib.load(open(path, "rb"))
 
     return get_wishlist.cache_wishlist
 

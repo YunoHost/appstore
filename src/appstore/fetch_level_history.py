@@ -21,7 +21,6 @@ except Exception:
     )
 
 DATA_DIR = Path(config["DATA_DIR"])
-CACHE_DIR = DATA_DIR / "cache"
 TMP_DIR = DATA_DIR / "tmp"
 
 
