@@ -28,6 +28,7 @@ def get_locale() -> str:
 
 
 def get_catalog():
+    assert DATA_DIR is not None, "Please call utils.set_data_dir!"
     path = DATA_DIR / "apps.json"
     mtime = path.stat().st_mtime
     if get_catalog.mtime_catalog != mtime:
@@ -67,6 +68,7 @@ get_catalog.mtime_catalog: float | None = None
 
 
 def get_wishlist() -> dict[str, dict[str, str | int]]:
+    assert DATA_DIR is not None, "Please call utils.set_data_dir!"
     path = DATA_DIR / "apps" / "wishlist.toml"
     mtime = path.stat().st_mtime
     if get_wishlist.mtime_wishlist != mtime:
@@ -80,6 +82,7 @@ get_wishlist.mtime_wishlist = None
 
 
 def get_dashboard_data():
+    assert DATA_DIR is not None, "Please call utils.set_data_dir!"
     path = DATA_DIR / "dashboard.json"
     mtime = path.stat().st_mtime
     if get_dashboard_data.mtime != mtime:

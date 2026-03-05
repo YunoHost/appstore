@@ -151,7 +151,7 @@ def get_consolidated_infos(name_and_infos: tuple[str, dict]) -> tuple[str, dict]
 
 
 def main() -> None:
-    data_dir = config()["DATA_DIR"]
+    data_dir = Path(config()["DATA_DIR"])
     set_data_dir(data_dir)
 
     consolidated_infos = {}
