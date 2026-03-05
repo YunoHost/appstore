@@ -153,7 +153,7 @@ def get_app_md_and_screenshots(app_folder: Path | str, infos: dict[str, Any]) ->
     screenshots_folder = app_folder / "doc" / "screenshots"
     if screenshots_folder.exists():
         for file in screenshots_folder.iterdir():
-            ext = file.suffix.lower()
+            ext = file.suffix.lower().removeprefix(".")
             if file.is_file() and ext in ("png", "jpg", "jpeg", "webp", "gif"):
                 data = base64.b64encode(file.read_bytes()).decode("utf-8")
                 infos["screenshot"] = f"data:image/{ext};charset=utf-8;base64,{data}"
