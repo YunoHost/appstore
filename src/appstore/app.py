@@ -15,8 +15,8 @@ from pathlib import Path
 
 import tomlkit
 from flask import (
-    Response,
     Flask,
+    Response,
     make_response,
     redirect,
     render_template,
@@ -257,7 +257,7 @@ def add_to_wishlist() -> Response:
         description = request.form["description"].strip().replace("\n", "")
         upstream = request.form["upstream"].strip().replace("\n", "")
         website = request.form["website"].strip().replace("\n", "")
-        license = request.form["license"].strip().replace("\n", "")
+        license_ = request.form["license"].strip().replace("\n", "")
 
         boring_keywords_to_check_for_people_not_reading_the_instructions = [
             "free",
@@ -307,11 +307,11 @@ def add_to_wishlist() -> Response:
                 _("Upstream code repo URL should be less than 150 characters"),
             ),
             (
-                len(license) >= 10,
+                len(license_) >= 10,
                 _("License URL should be at least 10 characters"),
             ),
             (
-                len(license) <= 250,
+                len(license_) <= 250,
                 _("License URL should be less than 250 characters"),
             ),
             (len(website) <= 150, _("Website URL should be less than 150 characters")),
@@ -462,7 +462,7 @@ def add_to_wishlist() -> Response:
 
             Website: {website}
             Upstream repo: {upstream}
-            License: {license}
+            License: {license_}
             Description: {description}
 
             - [ ] Confirm app is self-hostable and generally makes sense to
