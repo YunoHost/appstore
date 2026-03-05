@@ -2,19 +2,20 @@ import base64
 import hashlib
 import hmac
 import json
-import os
 import random
 import re
 import string
 import sys
+import textwrap
 import time
 import tomllib
-import urllib
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 
 import tomlkit
 from flask import (
+    BaseResponse,
     Flask,
     make_response,
     redirect,
@@ -134,12 +135,12 @@ def utils():
 
 
 @app.route("/favicon.ico")
-def favicon():
+def favicon() -> BaseResponse:
     return send_from_directory("assets", "favicon.png")
 
 
 @app.route("/")
-def index():
+def index() -> BaseResponse:
     return render_template(
         "index.html",
         catalog=get_catalog(),
@@ -147,7 +148,7 @@ def index():
 
 
 @app.route("/catalog")
-def browse_catalog():
+def browse_catalog() -> BaseResponse:
     return render_template(
         "catalog.html",
         init_sort=request.args.get("sort"),
@@ -161,12 +162,12 @@ def browse_catalog():
 
 
 @app.route("/popularity.json")
-def popularity_json():
+def popularity_json() -> BaseResponse:
     return {app: len(stars) for app, stars in STARS.stars.items()}
 
 
-@app.route("/app/<app_id>")
-def app_info(app_id):
+@app.route("/app/<string:app_id>")
+def app_info(app_id: string) -> BaseResponse:
     infos = get_catalog()["apps"].get(app_id)
     app_folder = DATA_DIR / "apps_cache" / app_id
     if not infos or not app_folder.exists():
@@ -183,20 +184,23 @@ def app_info(app_id):
     )
 
 
-@app.route("/app/<app_id>/<action>")
-def star_app(app_id, action):
+@app.route("/app/<string:app_id>/<string:action>")
+def star_app(app_id: str, action: str) -> BaseResponse:
     assert action in ["star", "unstar"]
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
         return _("App %(app_id)s not found", app_id=app_id), 404
     if not session.get("user", {}):
-        return (
-            _("You must be logged in to be able to star an app")
-            + "<br/><br/>"
-            + _(
-                "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
+        title = _("You must be logged in to be able to star an app")
+        paragraph = (
+            _(
+                "Note that, due to various abuses, we restricted login on the app "
+                "store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained "
+                "after interacting a minimum with the forum, and more specifically: "
+                "entering at least 5 topics, reading at least 30 posts, and spending "
+                "at least 10 minutes reading posts."
             ),
-            401,
         )
+        return f"{title}<br/><br/>{paragraph}", 401
 
     user = session.get("user", {})["id"]
 
@@ -206,14 +210,12 @@ def star_app(app_id, action):
     elif action == "unstar":
         STARS.remove(app_id, user)
 
-    if app_id in get_catalog()["apps"]:
-        return redirect(f"/app/{app_id}")
-    else:
-        return redirect("/wishlist")
+    location = f"/app/{app_id}" if app_id in get_catalog()["apps"] else "/wishlist"
+    return redirect(location)
 
 
 @app.route("/wishlist")
-def browse_wishlist():
+def browse_wishlist() -> BaseResponse:
     return render_template(
         "wishlist.html",
         wishlist=get_wishlist(),
@@ -222,22 +224,23 @@ def browse_wishlist():
 
 
 @app.route("/wishlist/add", methods=["GET", "POST"])
-def add_to_wishlist():
+def add_to_wishlist() -> BaseResponse:
     if request.method == "POST":
         user = session.get("user", {})
         if not user:
-            errormsg = (
-                _("You must be logged in to submit an app to the wishlist")
-                + "<br/><br/>"
-                + _(
-                    "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
-                )
+            title = _("You must be logged in to submit an app to the wishlist")
+            paragraph = _(
+                "Note that, due to various abuses, we restricted login on the app "
+                "store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained "
+                "after interacting a minimum with the forum, and more specifically: "
+                "entering at least 5 topics, reading at least 30 posts, and spending "
+                "at least 10 minutes reading posts."
             )
             return render_template(
                 "wishlist_add.html",
                 csrf_token=None,
                 successmsg=None,
-                errormsg=errormsg,
+                errormsg=f"{title}<br/><br/>{paragraph}",
             )
         csrf_token = request.form["csrf_token"]
 
@@ -281,7 +284,8 @@ def add_to_wishlist():
                 WISHLIST_RATELIMIT.check(session["user"]["username"])
                 or session["user"]["bypass_ratelimit"],
                 _(
-                    "Proposing wishlist additions is limited to once every 15 days per user. Please try again in a few days."
+                    "Proposing wishlist additions is limited to once every 15 days "
+                    "per user. Please try again in a few days."
                 ),
             ),
             (len(name) >= 3, _("App name should be at least 3 characters")),
@@ -321,7 +325,9 @@ def add_to_wishlist():
                     for keyword in boring_keywords_to_check_for_people_not_reading_the_instructions
                 ),
                 _(
-                    "Please focus on what the app does, without using marketing, fuzzy terms, or repeating that the app is 'free' and 'self-hostable'. English language is preferred."
+                    "Please focus on what the app does, without using marketing, "
+                    "fuzzy terms, or repeating that the app is 'free' and "
+                    "'self-hostable'. English language is preferred."
                 ),
             ),
             (
@@ -361,7 +367,9 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An entry with the name %(slug)s already exists in the wishlist, instead, you can <a href='%(url)s'>add a star to the app to show your interest</a>.",
+                    "An entry with the name %(slug)s already exists in the wishlist, "
+                    "instead, you can <a href='%(url)s'>add a star to the app to "
+                    "show your interest</a>.",
                     slug=slug,
                     url=url,
                 ),
@@ -380,7 +388,9 @@ def add_to_wishlist():
                     csrf_token=csrf_token,
                     successmsg=None,
                     errormsg=_(
-                        "We're sorry, but this app is listed among the already declined apps. The specified reason is:<br /><q>%(reason)s</q>",
+                        "We're sorry, but this app is listed among the already "
+                        "declined apps. The specified reason is:"
+                        "<br /><q>%(reason)s</q>",
                         reason=rejectedinfo["reason"],
                     ),
                 )
@@ -394,7 +404,8 @@ def add_to_wishlist():
                 csrf_token=csrf_token,
                 successmsg=None,
                 errormsg=_(
-                    "An app with the name %(slug)s already exists in the catalog, <a href='%(url)s'>you can see its page here</a>.",
+                    "An app with the name %(slug)s already exists in the catalog, "
+                    "<a href='%(url)s'>you can see its page here</a>.",
                     slug=slug,
                     url=url,
                 ),
@@ -419,7 +430,9 @@ def add_to_wishlist():
             print(e)
             url = "https://github.com/YunoHost/apps/pulls?q=is%3Apr+is%3Aopen+label%3AWishlist"
             errormsg = _(
-                "Failed to create the pull request to add the app to the wishlist… Maybe there's already <a href='%(url)s'>a waiting PR for this app</a>? Else, please report the issue to the YunoHost team.",
+                "Failed to create the pull request to add the app to the wishlist… "
+                "Maybe there's already <a href='%(url)s'>a waiting PR for this "
+                "app</a>? Else, please report the issue to the YunoHost team.",
                 url=url,
             )
             return render_template(
@@ -442,22 +455,26 @@ def add_to_wishlist():
         # Wait a bit to preserve the API rate limit
         time.sleep(1.5)
 
-        body = f"""
-### Add {name} to wishlist
+        body = textwrap.dedent(f"""
+            ### Add {name} to wishlist
 
-Proposed by **{session["user"]["username"]}**
+            Proposed by **{session["user"]["username"]}**
 
-Website: {website}
-Upstream repo: {upstream}
-License: {license}
-Description: {description}
+            Website: {website}
+            Upstream repo: {upstream}
+            License: {license}
+            Description: {description}
 
-- [ ] Confirm app is self-hostable and generally makes sense to possibly integrate in YunoHost
-- [ ] Confirm app's license is opensource/free software (or not-totally-free-upstream, case by case TBD)
-- [ ] Description describes clearly and concisely what the app is/does
+            - [ ] Confirm app is self-hostable and generally makes sense to
+                  possibly integrate in YunoHost
+            - [ ] Confirm app's license is opensource/free software
+                  (or not-totally-free-upstream, case by case TBD)
+            - [ ] Description describes clearly and concisely what the app is/does
 
-Regular Contributors and Admins can comment with `!reject <reason>` to remove the proposed app from the wishlist and put it in the rejectedlist with the appropriate reason.
-        """
+            Regular Contributors and Admins can comment with `!reject <reason>` to
+            remove the proposed app from the wishlist and put it in the rejectedlist
+            with the appropriate reason.
+        """)
 
         # Open the PR
         pr = repo.create_pull(
@@ -471,7 +488,9 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
         url = f"https://github.com/YunoHost/apps/pull/{pr.number}"
 
         successmsg = _(
-            "Your proposed app has succesfully been submitted. It must now be validated by the YunoHost team. You can track progress here: <a href='%(url)s'>%(url)s</a>",
+            "Your proposed app has succesfully been submitted. It must now be "
+            "validated by the YunoHost team. You can track progress here: "
+            "<a href='%(url)s'>%(url)s</a>",
             url=url,
         )
 
@@ -494,7 +513,7 @@ Regular Contributors and Admins can comment with `!reject <reason>` to remove th
 
 
 @app.route("/dash")
-def dash():
+def dash() -> BaseResponse:
     # Sort by popularity by default
     stars = STARS.stars
     data = dict(
@@ -511,7 +530,7 @@ def dash():
 
 
 @app.route("/charts")
-def charts():
+def charts() -> BaseResponse:
     dashboard_data = get_dashboard_data()
     level_summary = {}
     for i in range(0, 9):
@@ -539,7 +558,7 @@ def charts():
 
 
 @app.route("/news.rss")
-def news_rss():
+def news_rss() -> BaseResponse:
     news_per_date = json.load((DATA_DIR / "news.json").open())
 
     # Keepy only the last N entries
@@ -561,7 +580,7 @@ def news_rss():
 @app.route("/integration/<app>.svg")
 @app.route("/badge/<type>/<app>")
 @app.route("/badge/<type>/<app>.svg")
-def badge(app, type="integration"):
+def badge(app, type="integration") -> BaseResponse:
     data = get_dashboard_data()
     catalog = get_catalog()["apps"]
 
@@ -613,7 +632,7 @@ def badge(app, type="integration"):
 
 
 @app.route("/login_using_discourse")
-def login_using_discourse():
+def login_using_discourse() -> BaseResponse:
     """
     Send auth request to Discourse:
     """
@@ -633,7 +652,7 @@ def login_using_discourse():
 
 
 @app.route("/sso_login_callback")
-def sso_login_callback():
+def sso_login_callback() -> BaseResponse:
     computed_sig = hmac.new(
         config["DISCOURSE_SSO_SECRET"].encode(),
         msg=request.args["sso"].encode(),
@@ -652,19 +671,19 @@ def sso_login_callback():
     uri_to_redirect_to_after_login = session.get("uri_to_redirect_to_after_login")
 
     if "trust_level_1" not in user_data["groups"][0].split(","):
-        return (
-            _("Unfortunately, login was denied.")
-            + "<br/><br/>"
-            + _(
-                "Note that, due to various abuses, we restricted login on the app store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained after interacting a minimum with the forum, and more specifically: entering at least 5 topics, reading at least 30 posts, and spending at least 10 minutes reading posts."
+        title = _("Unfortunately, login was denied.")
+        paragraph = (
+            _(
+                "Note that, due to various abuses, we restricted login on the app "
+                "store to 'trust level 1' users.<br/><br/>'Trust level 1' is obtained "
+                "after interacting a minimum with the forum, and more specifically: "
+                "entering at least 5 topics, reading at least 30 posts, and spending "
+                "at least 10 minutes reading posts."
             ),
-            403,
         )
+        return (f"{title}<br/><br/>{paragraph}", 403)
 
-    if "staff" in user_data["groups"][0].split(","):
-        bypass_ratelimit = True
-    else:
-        bypass_ratelimit = False
+    bypass_ratelimit = "staff" in user_data["groups"][0].split(",")
 
     session.clear()
     session["user"] = {
@@ -675,18 +694,20 @@ def sso_login_callback():
     }
 
     if uri_to_redirect_to_after_login:
-        return redirect("/" + uri_to_redirect_to_after_login)
+        response = f"/{uri_to_redirect_to_after_login}"
     else:
-        return redirect("/")
+        response = "/"
+    return redirect(response)
 
 
 @app.route("/toggle_packaging")
-def toggle_packaging():
+def toggle_packaging() -> BaseResponse:
     if session and "user" in session:
         user = session["user"]
         if not session["user"].get("packaging_enabled"):
             # Use this trick to force the change to be registered
-            # because this session["user"]["foobar"] = value doesn't actually change the state ? idk
+            # because this session["user"]["foobar"] = value doesn't
+            # actually change the state ? idk
             user["packaging_enabled"] = True
             session["user"] = user
             return redirect("/dash")
@@ -697,17 +718,14 @@ def toggle_packaging():
 
 
 @app.route("/logout")
-def logout():
+def logout() -> BaseResponse:
     session.clear()
 
     # Only use the current referer URI if it's on the same domain as the current route
     # to avoid XSS or whatever...
     referer = request.environ.get("HTTP_REFERER")
     if referer:
-        if referer.startswith("http://"):
-            referer = referer[len("http://") :]
-        if referer.startswith("https://"):
-            referer = referer[len("https://") :]
+        referer = referer.removeprefix("http://").removeprefix("https://")
         if "/" not in referer:
             referer = referer + "/"
 
@@ -718,7 +736,9 @@ def logout():
     return redirect("/")
 
 
-def create_nonce_and_build_url_to_login_on_discourse_sso():
+def create_nonce_and_build_url_to_login_on_discourse_sso() -> tuple[
+    str, str, str | None
+]:
     """
     Redirect the user to DISCOURSE_ROOT_URL/session/sso_provider?sso=URL_ENCODED_PAYLOAD&sig=HEX_SIGNATURE
     """
@@ -730,10 +750,7 @@ def create_nonce_and_build_url_to_login_on_discourse_sso():
     referer = request.environ.get("HTTP_REFERER")
     uri_to_redirect_to_after_login = None
     if referer:
-        if referer.startswith("http://"):
-            referer = referer[len("http://") :]
-        if referer.startswith("https://"):
-            referer = referer[len("https://") :]
+        referer = referer.removeprefix("http://").removeprefix("https://")
         if "/" not in referer:
             referer = referer + "/"
 
