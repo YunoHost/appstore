@@ -15,7 +15,7 @@ from pathlib import Path
 
 import tomlkit
 from flask import (
-    BaseResponse,
+    Response,
     Flask,
     make_response,
     redirect,
@@ -135,12 +135,12 @@ def utils():
 
 
 @app.route("/favicon.ico")
-def favicon() -> BaseResponse:
+def favicon() -> Response:
     return send_from_directory("assets", "favicon.png")
 
 
 @app.route("/")
-def index() -> BaseResponse:
+def index() -> Response:
     return render_template(
         "index.html",
         catalog=get_catalog(),
@@ -148,7 +148,7 @@ def index() -> BaseResponse:
 
 
 @app.route("/catalog")
-def browse_catalog() -> BaseResponse:
+def browse_catalog() -> Response:
     return render_template(
         "catalog.html",
         init_sort=request.args.get("sort"),
@@ -162,12 +162,12 @@ def browse_catalog() -> BaseResponse:
 
 
 @app.route("/popularity.json")
-def popularity_json() -> BaseResponse:
+def popularity_json() -> Response:
     return {app: len(stars) for app, stars in STARS.stars.items()}
 
 
 @app.route("/app/<string:app_id>")
-def app_info(app_id: string) -> BaseResponse:
+def app_info(app_id: string) -> Response:
     infos = get_catalog()["apps"].get(app_id)
     app_folder = DATA_DIR / "apps_cache" / app_id
     if not infos or not app_folder.exists():
@@ -185,7 +185,7 @@ def app_info(app_id: string) -> BaseResponse:
 
 
 @app.route("/app/<string:app_id>/<string:action>")
-def star_app(app_id: str, action: str) -> BaseResponse:
+def star_app(app_id: str, action: str) -> Response:
     assert action in ["star", "unstar"]
     if app_id not in get_catalog()["apps"] and app_id not in get_wishlist():
         return _("App %(app_id)s not found", app_id=app_id), 404
@@ -215,7 +215,7 @@ def star_app(app_id: str, action: str) -> BaseResponse:
 
 
 @app.route("/wishlist")
-def browse_wishlist() -> BaseResponse:
+def browse_wishlist() -> Response:
     return render_template(
         "wishlist.html",
         wishlist=get_wishlist(),
@@ -224,7 +224,7 @@ def browse_wishlist() -> BaseResponse:
 
 
 @app.route("/wishlist/add", methods=["GET", "POST"])
-def add_to_wishlist() -> BaseResponse:
+def add_to_wishlist() -> Response:
     if request.method == "POST":
         user = session.get("user", {})
         if not user:
@@ -513,7 +513,7 @@ def add_to_wishlist() -> BaseResponse:
 
 
 @app.route("/dash")
-def dash() -> BaseResponse:
+def dash() -> Response:
     # Sort by popularity by default
     stars = STARS.stars
     data = dict(
@@ -530,7 +530,7 @@ def dash() -> BaseResponse:
 
 
 @app.route("/charts")
-def charts() -> BaseResponse:
+def charts() -> Response:
     dashboard_data = get_dashboard_data()
     level_summary = {}
     for i in range(0, 9):
@@ -558,7 +558,7 @@ def charts() -> BaseResponse:
 
 
 @app.route("/news.rss")
-def news_rss() -> BaseResponse:
+def news_rss() -> Response:
     news_per_date = json.load((DATA_DIR / "news.json").open())
 
     # Keepy only the last N entries
@@ -580,7 +580,7 @@ def news_rss() -> BaseResponse:
 @app.route("/integration/<app>.svg")
 @app.route("/badge/<type>/<app>")
 @app.route("/badge/<type>/<app>.svg")
-def badge(app, type="integration") -> BaseResponse:
+def badge(app, type="integration") -> Response:
     data = get_dashboard_data()
     catalog = get_catalog()["apps"]
 
@@ -632,7 +632,7 @@ def badge(app, type="integration") -> BaseResponse:
 
 
 @app.route("/login_using_discourse")
-def login_using_discourse() -> BaseResponse:
+def login_using_discourse() -> Response:
     """
     Send auth request to Discourse:
     """
@@ -652,7 +652,7 @@ def login_using_discourse() -> BaseResponse:
 
 
 @app.route("/sso_login_callback")
-def sso_login_callback() -> BaseResponse:
+def sso_login_callback() -> Response:
     computed_sig = hmac.new(
         config["DISCOURSE_SSO_SECRET"].encode(),
         msg=request.args["sso"].encode(),
@@ -701,7 +701,7 @@ def sso_login_callback() -> BaseResponse:
 
 
 @app.route("/toggle_packaging")
-def toggle_packaging() -> BaseResponse:
+def toggle_packaging() -> Response:
     if session and "user" in session:
         user = session["user"]
         if not session["user"].get("packaging_enabled"):
@@ -718,7 +718,7 @@ def toggle_packaging() -> BaseResponse:
 
 
 @app.route("/logout")
-def logout() -> BaseResponse:
+def logout() -> Response:
     session.clear()
 
     # Only use the current referer URI if it's on the same domain as the current route
