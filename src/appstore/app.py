@@ -77,12 +77,12 @@ app.secret_key = config["COOKIE_SECRET"]
 babel = Babel(app, locale_selector=get_locale)
 
 
-DATA_DIR = config["DATA_DIR"]
+DATA_DIR = Path(config["DATA_DIR"])
 set_data_dir(DATA_DIR)
 
-STARS = AppstoreStars(Path(DATA_DIR) / "stars.json")
+STARS = AppstoreStars(DATA_DIR / "stars.json")
 STARS.read()
-WISHLIST_RATELIMIT = WishlistRateLimit(Path(DATA_DIR) / "wishlist_ratelimit")
+WISHLIST_RATELIMIT = WishlistRateLimit(DATA_DIR / "wishlist_ratelimit")
 
 
 @app.template_filter("localize")
@@ -168,8 +168,8 @@ def popularity_json():
 @app.route("/app/<app_id>")
 def app_info(app_id):
     infos = get_catalog()["apps"].get(app_id)
-    app_folder = os.path.join(DATA_DIR, "apps_cache", app_id)
-    if not infos or not os.path.exists(app_folder):
+    app_folder = DATA_DIR / "apps_cache" / app_id
+    if not infos or not app_folder.exists():
         return f"App {app_id} not found", 404
 
     get_app_md_and_screenshots(app_folder, infos)
@@ -533,16 +533,14 @@ def charts():
     return render_template(
         "charts.html",
         level_summary=level_summary,
-        history=json.loads(open(os.path.join(DATA_DIR, "history.json")).read()),
-        news_per_date=json.loads(
-            open(os.path.join(DATA_DIR, "news.json")).read()
-        ),
+        history=json.load((DATA_DIR / "history.json").open()),
+        news_per_date=json.load((DATA_DIR / "news.json").open()),
     )
 
 
 @app.route("/news.rss")
 def news_rss():
-    news_per_date = json.loads(open(os.path.join(DATA_DIR, "news.json")).read())
+    news_per_date = json.load((DATA_DIR / "news.json").open())
 
     # Keepy only the last N entries
     news_per_date = {
@@ -600,7 +598,7 @@ def badge(app, type="integration"):
     else:
         badge = "empty"
 
-    svg = open(f"assets/badges/{badge}.svg").read()
+    svg = Path(f"assets/badges/{badge}.svg").read_text()
     response = make_response(svg)
     response.content_type = "image/svg+xml"
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"

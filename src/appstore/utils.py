@@ -17,7 +17,7 @@ AVAILABLE_LANGUAGES = [
 DATA_DIR: Path | None = None
 
 
-def set_data_dir(data_dir: str) -> None:
+def set_data_dir(data_dir: Path) -> None:
     global DATA_DIR
     DATA_DIR = Path(data_dir)
 
@@ -119,8 +119,9 @@ def human_to_binary(size: str) -> int:
     return int(size_ * factor[suffix])
 
 
-def get_app_md_and_screenshots(app_folder: Path, infos: dict[str, Any]) -> None:
+def get_app_md_and_screenshots(app_folder: Path | str, infos: dict[str, Any]) -> None:
     locale = get_locale()
+    app_folder = Path(app_folder)
 
     def get_value(files: list[Path], default: str) -> str:
         for file in files:
