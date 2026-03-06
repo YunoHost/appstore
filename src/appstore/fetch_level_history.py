@@ -11,7 +11,7 @@ from pathlib import Path
 import tqdm
 from git import IndexObject, Repo
 
-APPSTORE_PATH = Path(__file__).resolve().parent
+APPSTORE_PATH = Path(__file__).resolve().parent.parent.parent
 
 try:
     config = tomllib.load((APPSTORE_PATH / "config.toml").open("rb"))
