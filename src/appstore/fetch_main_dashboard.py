@@ -14,7 +14,7 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 
 from .utils import get_catalog, set_data_dir
 
-APPSTORE_PATH = Path(__file__).resolve().parent
+APPSTORE_PATH = Path(__file__).resolve().parent.parent.parent
 
 
 @cache
