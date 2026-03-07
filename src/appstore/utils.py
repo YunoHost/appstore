@@ -136,7 +136,8 @@ def get_app_md_and_screenshots(app_folder: Path | str, infos: dict[str, Any]) ->
             app_folder / "doc" / f"DESCRIPTION_{locale}.md",
             app_folder / "doc" / "DESCRIPTION.md",
         ],
-        infos["manifest"]["description"][locale],
+        infos["manifest"]["description"].get(locale)
+        or infos["manifest"]["description"].get("en"),
     )
 
     pre_install = get_value(

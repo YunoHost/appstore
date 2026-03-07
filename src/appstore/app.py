@@ -47,9 +47,10 @@ MAIN_CI = "bookworm"
 try:
     config_file = Path("config.toml")
     config = tomllib.load(config_file.open("rb"))
-except Exception as e:
+except (OSError, tomllib.TOMLDecodeError):
     print(
-        "You should create a config.toml with the appropriate key/values, cf config.toml.example"
+        "You should create a config.toml with the appropriate key/values, "
+        "cf config.toml.example"
     )
     sys.exit(1)
 
@@ -87,35 +88,36 @@ WISHLIST_RATELIMIT = WishlistRateLimit(DATA_DIR / "wishlist_ratelimit")
 
 
 @app.template_filter("localize")
-def localize(d):
+def localize(d: str) -> str:
     if not isinstance(d, dict):
         return d
-    else:
-        locale = get_locale()
-        if locale in d:
-            return d[locale]
-        else:
-            return d["en"]
+    locale = get_locale()
+    if locale in d:
+        return d[locale]
+    return d["en"]
 
 
 @app.template_filter("days_ago")
-def days_ago(timestamp):
-    return int((time.time() - timestamp) / (60 * 60 * 24))
+def days_ago(timestamp: int | float) -> int:
+    now = datetime.now(tz=datetime.UTC)
+    then = datetime.fromtimestamp(timestamp, tz=datetime.UTC)
+    return (now - then).days()
 
 
 @app.template_filter("hours_ago")
-def hours_ago(timestamp):
-    d = datetime.now() - datetime.fromtimestamp(timestamp)
-    minutes, _ = divmod(d.total_seconds(), 60)
+def hours_ago(timestamp: int | float) -> str:
+    now = datetime.now(tz=datetime.UTC)
+    then = datetime.fromtimestamp(timestamp, tz=datetime.UTC)
+    minutes, _ = divmod((now - then).total_seconds(), 60)
     hours, minutes = divmod(minutes, 60)
     return f"{int(hours)}:{int(minutes):02d}h"
 
 
 @app.template_filter("format_datetime")
-def format_datetime(value, format="%d %b %Y %I:%M %p"):
+def format_datetime(value: str, format_: str = "%d %b %Y %I:%M %p") -> str:
     if value is None:
         return ""
-    return datetime.strptime(value, "%d %b %Y").strftime(format)
+    return datetime.strptime(value, "%d %b %Y", tz=datetime.UTC).strftime(format_)
 
 
 @app.context_processor
@@ -381,7 +383,7 @@ def add_to_wishlist() -> Response:
         rejectedlist_rawtoml = rejectedlist_rawtoml.decoded_content.decode()
         rejectedlist = tomlkit.loads(rejectedlist_rawtoml)
 
-        for rejectedslug, rejectedinfo in rejectedlist.items():
+        for rejectedinfo in rejectedlist.values():
             if upstream.strip("/ ") in rejectedinfo["upstream"]:
                 return render_template(
                     "wishlist_add.html",
@@ -500,16 +502,15 @@ def add_to_wishlist() -> Response:
             "wishlist_add.html",
             successmsg=successmsg,
         )
-    else:
-        letters = string.ascii_lowercase + string.digits
-        csrf_token = "".join(random.choice(letters) for i in range(16))
-        session["csrf_token"] = csrf_token
-        return render_template(
-            "wishlist_add.html",
-            csrf_token=csrf_token,
-            successmsg=None,
-            errormsg=None,
-        )
+    letters = string.ascii_lowercase + string.digits
+    csrf_token = "".join(random.choice(letters) for i in range(16))
+    session["csrf_token"] = csrf_token
+    return render_template(
+        "wishlist_add.html",
+        csrf_token=csrf_token,
+        successmsg=None,
+        errormsg=None,
+    )
 
 
 @app.route("/dash")
@@ -533,7 +534,7 @@ def dash() -> Response:
 def charts() -> Response:
     dashboard_data = get_dashboard_data()
     level_summary = {}
-    for i in range(0, 9):
+    for i in range(9):
         level_summary[i] = len(
             [
                 infos
@@ -562,9 +563,7 @@ def news_rss() -> Response:
     news_per_date = json.load((DATA_DIR / "news.json").open())
 
     # Keepy only the last N entries
-    news_per_date = {
-        d: infos for d, infos in reversed(list(news_per_date.items())[-2:])
-    }
+    news_per_date = dict(reversed(list(news_per_date.items())[-2:]))
 
     rss_xml = render_template(
         "news_rss.xml", news_per_date=news_per_date, catalog=get_catalog()
@@ -576,11 +575,11 @@ def news_rss() -> Response:
 
 
 # Badges
-@app.route("/integration/<app>")
-@app.route("/integration/<app>.svg")
-@app.route("/badge/<type>/<app>")
-@app.route("/badge/<type>/<app>.svg")
-def badge(app, type="integration") -> Response:
+@app.route("/integration/<string:app>")
+@app.route("/integration/<string:app>.svg")
+@app.route("/badge/<string:type>/<string:app>")
+@app.route("/badge/<string:type>/<string:app>.svg")
+def badge(app: str, type: str = "integration") -> Response:
     data = get_dashboard_data()
     catalog = get_catalog()["apps"]
 
@@ -597,13 +596,12 @@ def badge(app, type="integration") -> Response:
     elif type == "state":
         if app not in catalog:
             badge = "state-unknown"
+        elif catalog_level in [None, "?"]:
+            badge = "state-just-got-added-to-catalog"
+        elif catalog_level in [0, -1]:
+            badge = "state-broken"
         else:
-            if catalog_level in [None, "?"]:
-                badge = "state-just-got-added-to-catalog"
-            elif catalog_level in [0, -1]:
-                badge = "state-broken"
-            else:
-                badge = "state-working"
+            badge = "state-working"
     elif type == "maintained":
         if app in catalog and catalog.get(app, {}).get("maintained") is False:
             badge = "unmaintained"
@@ -711,9 +709,8 @@ def toggle_packaging() -> Response:
             user["packaging_enabled"] = True
             session["user"] = user
             return redirect("/dash")
-        else:
-            user["packaging_enabled"] = False
-            session["user"] = user
+        user["packaging_enabled"] = False
+        session["user"] = user
     return redirect("/")
 
 
@@ -740,7 +737,8 @@ def create_nonce_and_build_url_to_login_on_discourse_sso() -> tuple[
     str, str, str | None
 ]:
     """
-    Redirect the user to DISCOURSE_ROOT_URL/session/sso_provider?sso=URL_ENCODED_PAYLOAD&sig=HEX_SIGNATURE
+    Redirect the user to
+    DISCOURSE_ROOT_URL/session/sso_provider?sso=URL_ENCODED_PAYLOAD&sig=HEX_SIGNATURE
     """
 
     nonce = "".join([str(random.randint(0, 9)) for i in range(99)])
