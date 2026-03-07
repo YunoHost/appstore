@@ -1,4 +1,5 @@
 import base64
+import datetime
 import hashlib
 import hmac
 import json
@@ -10,7 +11,6 @@ import textwrap
 import time
 import tomllib
 import urllib.parse
-from datetime import datetime
 from pathlib import Path
 
 import tomlkit
@@ -99,15 +99,15 @@ def localize(d: str) -> str:
 
 @app.template_filter("days_ago")
 def days_ago(timestamp: int | float) -> int:
-    now = datetime.now(tz=datetime.UTC)
-    then = datetime.fromtimestamp(timestamp, tz=datetime.UTC)
-    return (now - then).days()
+    now = datetime.datetime.now(tz=datetime.UTC)
+    then = datetime.datetime.fromtimestamp(timestamp, tz=datetime.UTC)
+    return (now - then).days
 
 
 @app.template_filter("hours_ago")
 def hours_ago(timestamp: int | float) -> str:
-    now = datetime.now(tz=datetime.UTC)
-    then = datetime.fromtimestamp(timestamp, tz=datetime.UTC)
+    now = datetime.datetime.now(tz=datetime.UTC)
+    then = datetime.datetime.fromtimestamp(timestamp, tz=datetime.UTC)
     minutes, _ = divmod((now - then).total_seconds(), 60)
     hours, minutes = divmod(minutes, 60)
     return f"{int(hours)}:{int(minutes):02d}h"
@@ -117,7 +117,8 @@ def hours_ago(timestamp: int | float) -> str:
 def format_datetime(value: str, format_: str = "%d %b %Y %I:%M %p") -> str:
     if value is None:
         return ""
-    return datetime.strptime(value, "%d %b %Y", tz=datetime.UTC).strftime(format_)
+    then = datetime.datetime.strptime(value, "%d %b %Y").replace(tzinfo=datetime.UTC)
+    return then.strftime(format_)
 
 
 @app.context_processor
