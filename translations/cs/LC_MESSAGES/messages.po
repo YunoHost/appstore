@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:08+0000\n"
-"Last-Translator: demodé <walter.klosse@protonmail.com>\n"
+"PO-Revision-Date: 2026-04-27 00:42+0000\n"
+"Last-Translator: Jaroslav Nezbeda <jarda-oscloud@protonmail.com>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/store/"
 "cs/>\n"
 "Language: cs\n"
@@ -40,17 +40,19 @@ msgstr ""
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Musíte být přihlášeni k odeslání aplikace do seznamu přání"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "Neplatný token CSRF, prosím, obnovte stránku a zkuste to znova"
 
 #: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"Navržení příspěvku na seznam přání je možné pouze jedenkrát za 15 dní na "
+"každého uživatele. Zkuste to za pár dní."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -78,15 +80,15 @@ msgstr ""
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "URL adresa licence musí mít nejméně 10 znaků"
 
 #: app.py:310
 msgid "License URL should be less than 250 characters"
-msgstr ""
+msgstr "URL adresa licence by měla mít méně než 250 znaků"
 
 #: app.py:312
 msgid "Website URL should be less than 150 characters"
-msgstr ""
+msgstr "URL adresa webové stránky by měla mít méně než 150 znaků"
 
 #: app.py:315
 msgid "App name contains special characters"
@@ -173,24 +175,24 @@ msgstr ""
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Unstar this app"
-msgstr ""
+msgstr "Odebrat hvězdičku této aplikaci"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
 msgid "Star this app"
-msgstr ""
+msgstr "Dát hvězdičku této aplikaci"
 
 #: templates/app.html:83
 msgid "Try the demo"
-msgstr ""
+msgstr "Vyzkoušet demo ukázku"
 
 #: templates/app.html:84
 msgid "Demo"
-msgstr ""
+msgstr "Demo ukázka"
 
 #: templates/app.html:87
 msgid "Install with YunoHost"
-msgstr ""
+msgstr "Instalovat s YunoHost"
 
 #: templates/app.html:95
 #, python-format
@@ -224,76 +226,76 @@ msgstr ""
 
 #: templates/app.html:126
 msgid "Antifeatures"
-msgstr ""
+msgstr "Anti-vlastnosti"
 
 #: templates/app.html:127
 msgid "(This app has features you may not like)"
-msgstr ""
+msgstr "(Tato aplikace má vlastnosti, které nemusíte mít rádi)"
 
 #: templates/app.html:138
 msgid "Useful links"
-msgstr ""
+msgstr "Užitečné odkazy"
 
 #: templates/app.html:141
 #, python-format
 msgid "App license: %(license)s"
-msgstr ""
+msgstr "Licence aplikace: %(license)s"
 
 #: templates/app.html:142
 msgid " Official website"
-msgstr ""
+msgstr " Oficiální webová stránka"
 
 #: templates/app.html:143
 msgid "Official admin documentation"
-msgstr ""
+msgstr "Oficiální dokumentace pro administrátor/ku"
 
 #: templates/app.html:144
 msgid "Official user documentation"
-msgstr ""
+msgstr "Oficiální dokumentace pro uživatele/ku"
 
 #: templates/app.html:145
 msgid "Official code repository"
-msgstr ""
+msgstr "Oficiální repozitář zdrojových kódů"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr ""
+msgstr "Repozitář balíčků YunoHost"
 
 #: templates/app.html:147
 msgid "YunoHost package license"
-msgstr ""
+msgstr "Licence balíčků YunoHost"
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "Obchod aplikací YunoHost"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr ""
+msgstr "Katalog"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
-msgstr ""
+msgstr "Seznam přání"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr ""
+msgstr "Nástěnka balíčků"
 
 #: templates/base.html:57
 msgid "Charts & history"
-msgstr ""
+msgstr "Grafy a historie"
 
 #: templates/base.html:71 templates/base.html:191
 msgid "YunoHost documentation"
-msgstr ""
+msgstr "Dokumentace pro YunoHost"
 
 #: templates/base.html:79 templates/base.html:80
 msgid "Toggle light/dark mode"
-msgstr ""
+msgstr "Přepnout světlý/tmavý režim"
 
 #: templates/base.html:88 templates/base.html:201
 msgid "Login using YunoHost's forum"
