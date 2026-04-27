@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:10+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-04-28 07:53+0000\n"
+"Last-Translator: bruno van den bosch <brunovandenbosch@proton.me>\n"
 "Language-Team: Dutch <https://translate.yunohost.org/projects/yunohost/store/"
 "nl/>\n"
 "Language: nl\n"
@@ -208,9 +208,8 @@ msgstr ""
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
-#, fuzzy
 msgid "Unstar this app"
-msgstr "Geef de app een ster"
+msgstr "Ster voor app wegnemen"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
@@ -591,13 +590,12 @@ msgid "Apps with issues"
 msgstr "Apps met problemen"
 
 #: templates/dash.html:32
-#, fuzzy
 msgid "Apps using v2 helpers"
-msgstr "Apps met PR's voor testing"
+msgstr "Apps die v2 helpers gebruiken"
 
 #: templates/dash.html:33
 msgid "Apps using v2.1 helpers"
-msgstr ""
+msgstr "Apps die v2.1 helpers gebruiken"
 
 #: templates/dash.html:44
 msgid "Quality level"
@@ -724,7 +722,7 @@ msgstr "App-beschrijving"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "Indien mogelijk, schrijf in het Engels."
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
