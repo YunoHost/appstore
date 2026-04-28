@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-04-27 00:42+0000\n"
+"PO-Revision-Date: 2026-04-28 07:53+0000\n"
 "Last-Translator: Jaroslav Nezbeda <jarda-oscloud@protonmail.com>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/store/"
 "cs/>\n"
@@ -72,11 +72,11 @@ msgstr "Popis aplikace by měl mít méně než 100 znaků"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
-msgstr ""
+msgstr "URL repozitáře zdrojových kódů upstreamu musí mít nejméně 10 znaků"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
-msgstr ""
+msgstr "URL repozitáře zdrojových kódů upstreamu musí mít méně než 150 znaků"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
@@ -157,6 +157,8 @@ msgid ""
 "This app is currently flagged as broken because it failed our automatic "
 "tests."
 msgstr ""
+"Tato aplikace je nyní označená jako poškozená, protože selhávají naše "
+"automatické testy."
 
 #: templates/app.html:30 templates/app.html:31 templates/catalog.html:41
 #: templates/catalog.html:42 templates/catalog.html:174
@@ -164,6 +166,8 @@ msgid ""
 "This is usually a temporary situation which requires packagers to fix "
 "something in the app."
 msgstr ""
+"To je obvykle dočasná situace, ale vyžaduje to zásah správce balíčků, aby "
+"opravil některé věci v aplikaci."
 
 #: templates/app.html:37 templates/app.html:38 templates/catalog.html:46
 #: templates/catalog.html:47
@@ -171,6 +175,8 @@ msgid ""
 "This app has been good quality according to our automatic tests over at "
 "least one year."
 msgstr ""
+"Tato aplikace je kvalitní podle našich automatických testů po dobu nejméně "
+"jednoho roku."
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
@@ -207,7 +213,7 @@ msgstr "Možná alternativa k: %(alternatives)s"
 #: templates/app.html:103
 #, python-format
 msgid "Screenshot for %(app)s"
-msgstr ""
+msgstr "Snímek obrazovky pro %(app)s"
 
 #: templates/app.html:108
 #, python-format
@@ -428,69 +434,69 @@ msgstr ""
 
 #: templates/charts.html:39
 msgid "Broke"
-msgstr ""
+msgstr "Poškozeno"
 
 #: templates/charts.html:45
 msgid "Removed"
-msgstr ""
+msgstr "Odstraněno"
 
 #: templates/charts.html:93
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámé"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr ""
+msgstr "Level 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr ""
+msgstr "Level 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr ""
+msgstr "Level 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr ""
+msgstr "Level 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr ""
+msgstr "Level 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr ""
+msgstr "Level 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr ""
+msgstr "Level 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr ""
+msgstr "Level 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr ""
+msgstr "Level 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr ""
+msgstr "Level %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
-msgstr ""
+msgstr "Celkem:"
 
 #: templates/charts.html:123
 #, python-format
 msgid "Level %(level)s"
-msgstr ""
+msgstr "Level %(level)s"
 
 #: templates/dash.html:3 templates/dash.html:9
 msgid "App packaging dashboard"
-msgstr ""
+msgstr "Nástěnka balení aplikací"
 
 #: templates/dash.html:11
 msgid ""
@@ -505,11 +511,11 @@ msgstr ""
 
 #: templates/dash.html:18
 msgid "Filter"
-msgstr ""
+msgstr "Filtr"
 
 #: templates/dash.html:24
 msgid "(None)"
-msgstr ""
+msgstr "(žádný)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
@@ -565,19 +571,19 @@ msgstr ""
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
-msgstr ""
+msgstr "Počet otevřených hlášení"
 
 #: templates/dash.html:54 templates/dash.html:63
 msgid "Hide deprecated/unmaintained apps"
-msgstr ""
+msgstr "Skrýt zastaralé/neudržované aplikace"
 
 #: templates/dash.html:83
 msgid "App"
-msgstr ""
+msgstr "Aplikace"
 
 #: templates/dash.html:85
 msgid "Main CI"
-msgstr ""
+msgstr "Hlavní CI"
 
 #: templates/dash.html:86
 msgid "Trixie CI"
