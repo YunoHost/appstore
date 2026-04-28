@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-04-28 07:53+0000\n"
+"PO-Revision-Date: 2026-04-28 13:07+0000\n"
 "Last-Translator: Jaroslav Nezbeda <jarda-oscloud@protonmail.com>\n"
 "Language-Team: Czech <https://translate.yunohost.org/projects/yunohost/store/"
 "cs/>\n"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
-msgstr ""
+msgstr "Není nutné opakovat jméno aplikace. Zaměřte se na to, co aplikace dělá."
 
 #: app.py:363
 #, python-format
@@ -220,15 +220,19 @@ msgstr "Snímek obrazovky pro %(app)s"
 msgid ""
 "This app is only compatible with these specific architectures: %(archs)s"
 msgstr ""
+"Tato aplikace je pouze kompatibilní s těmito specifickými architekturami: %"
+"(archs)s"
 
 #: templates/app.html:114
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
+"Tato aplikace vyžaduje neobvyklé množství paměti RAM pro nainstalování: %"
+"(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
-msgstr ""
+msgstr "Důležité informace před instalací"
 
 #: templates/app.html:126
 msgid "Antifeatures"
@@ -334,103 +338,105 @@ msgstr ""
 
 #: templates/base.html:266
 msgid "Terms of Services"
-msgstr ""
+msgstr "Podmínky služeb"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Katalog aplikací"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: templates/catalog.html:94 templates/wishlist.html:24
 msgid "Search for…"
-msgstr ""
+msgstr "Hledat…"
 
 #: templates/catalog.html:111
 msgid "All apps"
-msgstr ""
+msgstr "Všechny aplikace"
 
 #: templates/catalog.html:121 templates/dash.html:37 templates/wishlist.html:42
 msgid "Sort by"
-msgstr ""
+msgstr "Třídit podle"
 
 #: templates/catalog.html:127 templates/wishlist.html:48
 #: templates/wishlist.html:81
 msgid "Popularity"
-msgstr ""
+msgstr "Popularita"
 
 #: templates/catalog.html:128
 msgid "Newest"
-msgstr ""
+msgstr "Nejnovější"
 
 #: templates/catalog.html:129 templates/dash.html:43 templates/wishlist.html:49
 msgid "Alphabetical"
-msgstr ""
+msgstr "Abecedně"
 
 #: templates/catalog.html:132 templates/dash.html:65 templates/wishlist.html:52
 msgid "Requires to be logged-in"
-msgstr ""
+msgstr "Vyžaduje přihlášení"
 
 #: templates/catalog.html:134 templates/catalog.html:143 templates/dash.html:67
 #: templates/dash.html:76 templates/wishlist.html:54 templates/wishlist.html:63
 msgid "Show only apps you starred"
-msgstr ""
+msgstr "Zobrazit pouze aplikace, kterým jsem dal/a hvězdičku"
 
 #: templates/catalog.html:159 templates/wishlist.html:157
 msgid "No results found."
-msgstr ""
+msgstr "Žádné výsledky."
 
 #: templates/catalog.html:162
 msgid "Not finding what you are looking for?"
-msgstr ""
+msgstr "Nelze nalézt, co jste hledali?"
 
 #: templates/catalog.html:163
 msgid "Checkout the wishlist!"
-msgstr ""
+msgstr "Prohlédněte si seznam přání!"
 
 #: templates/catalog.html:170
 msgid "Applications currently flagged as broken"
-msgstr ""
+msgstr "Aplikace aktuálně označené jako rozbité"
 
 #: templates/catalog.html:173
 msgid "These are apps which failed our automatic tests."
-msgstr ""
+msgstr "Toto jsou aplikace, kterým selhaly automatické testy."
 
 #: templates/catalog.html:188
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Zastaralé aplikace"
 
 #: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
-msgstr ""
+msgstr "Toto jsou aplikace, které již nejsou udržované."
 
 #: templates/catalog.html:192
 msgid ""
 "This means that the developer will no longer update them. We strongly advise "
 "against their installation and advise users to find alternatives."
 msgstr ""
+"To znamená, že vývojář je již nebude aktualizovat. Důrazně nedoporučujeme "
+"jejich instalaci a radíme uživatelům najít alternativy."
 
 #: templates/charts.html:5
 msgid "Apps quality level from automatic tests"
-msgstr ""
+msgstr "Úroveň kvality aplikací z automatických testů"
 
 #: templates/charts.html:9
 msgid "Apps quality level history"
-msgstr ""
+msgstr "Historie úrovně kvality aplikací"
 
 #: templates/charts.html:15
 msgid "History"
-msgstr ""
+msgstr "Historie"
 
 #: templates/charts.html:27
 msgid "Added"
-msgstr ""
+msgstr "Přidáno"
 
 #: templates/charts.html:33
 msgid "Repaired"
-msgstr ""
+msgstr "Opraveno"
 
 #: templates/charts.html:39
 msgid "Broke"
@@ -446,44 +452,44 @@ msgstr "Neznámé"
 
 #: templates/charts.html:94
 msgid "Level 0"
-msgstr "Level 0"
+msgstr "Úroveň 0"
 
 #: templates/charts.html:95
 msgid "Level 1"
-msgstr "Level 1"
+msgstr "Úroveň 1"
 
 #: templates/charts.html:96
 msgid "Level 2"
-msgstr "Level 2"
+msgstr "Úroveň 2"
 
 #: templates/charts.html:97
 msgid "Level 3"
-msgstr "Level 3"
+msgstr "Úroveň 3"
 
 #: templates/charts.html:98
 msgid "Level 4"
-msgstr "Level 4"
+msgstr "Úroveň 4"
 
 #: templates/charts.html:99
 msgid "Level 5"
-msgstr "Level 5"
+msgstr "Úroveň 5"
 
 #: templates/charts.html:100
 msgid "Level 6"
-msgstr "Level 6"
+msgstr "Úroveň 6"
 
 #: templates/charts.html:101
 msgid "Level 7"
-msgstr "Level 7"
+msgstr "Úroveň 7"
 
 #: templates/charts.html:102
 msgid "Level 8"
-msgstr "Level 8"
+msgstr "Úroveň 8"
 
 #: templates/charts.html:122
 #, python-format
 msgid "Level %(level)s:"
-msgstr "Level %(level)s:"
+msgstr "Úroveň %(level)s:"
 
 #: templates/charts.html:122
 msgid "Total:"
@@ -555,19 +561,19 @@ msgstr ""
 
 #: templates/dash.html:44
 msgid "Quality level"
-msgstr ""
+msgstr "Úroveň kvality"
 
 #: templates/dash.html:45 templates/dash.html:228
 msgid "Popularity stars"
-msgstr ""
+msgstr "Hvězdičky popularity"
 
 #: templates/dash.html:46
 msgid "Last update on main/master branch"
-msgstr ""
+msgstr "Poslední aktualizace na main/master větvi"
 
 #: templates/dash.html:47
 msgid "Last update on testing branch"
-msgstr ""
+msgstr "Poslední aktualizace ne testovací větvi"
 
 #: templates/dash.html:48
 msgid "Number of opened issues"
@@ -599,15 +605,15 @@ msgstr ""
 
 #: templates/dash.html:89
 msgid "Issues"
-msgstr ""
+msgstr "Hlášení"
 
 #: templates/dash.html:142 templates/dash.html:160 templates/dash.html:179
 msgid "Broken"
-msgstr ""
+msgstr "Rozbité"
 
 #: templates/dash.html:144 templates/dash.html:162 templates/dash.html:181
 msgid "Low quality"
-msgstr ""
+msgstr "Nízká kvalita"
 
 #: templates/dash.html:156 templates/dash.html:175
 #, python-format
@@ -634,19 +640,19 @@ msgstr ""
 
 #: templates/index.html:10
 msgid "Application Store"
-msgstr ""
+msgstr "Obchod aplikací"
 
 #: templates/index.html:21
 msgid "Browse all applications"
-msgstr ""
+msgstr "Procházet všechny aplikace"
 
 #: templates/wishlist.html:36 templates/wishlist_add.html:3
 msgid "Suggest an app"
-msgstr ""
+msgstr "Navrhnout aplikaci"
 
 #: templates/wishlist_add.html:8
 msgid "Suggest an application to be added to YunoHost's catalog"
-msgstr ""
+msgstr "Navrhnout aplikaci k přidání do katalogu YunoHost"
 
 #: templates/wishlist_add.html:29
 msgid "You must first login to be allowed to submit an app to the wishlist"
@@ -712,11 +718,11 @@ msgstr ""
 
 #: templates/wishlist_add.html:85
 msgid "Submit"
-msgstr ""
+msgstr "Odeslat"
 
 #: templates/wishlist.html:3 templates/wishlist.html:8
 msgid "Application Wishlist"
-msgstr ""
+msgstr "Seznam přání aplikací"
 
 #: templates/wishlist.html:10
 msgid ""
@@ -730,12 +736,12 @@ msgstr ""
 
 #: templates/wishlist.html:77
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: templates/wishlist.html:105 templates/wishlist.html:106
 msgid "Official website"
-msgstr ""
+msgstr "Oficiální webové stránky"
 
 #: templates/wishlist.html:118 templates/wishlist.html:119
 msgid "Code repository"
-msgstr ""
+msgstr "Repozitář zdrojových kódů"
