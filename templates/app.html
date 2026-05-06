@@ -138,7 +138,7 @@
     <h2 class="text-xl mb-2 font-semibold">{{ _("Useful links") }}</h2>
     <div>
         {% set upstream = infos["manifest"]["upstream"] %}
-        <a class="block btn btn-link my-1" href="{% if upstream.license.url %}{{upstream.license.url}}{% else %}https://spdx.org/licenses/{{upstream.license}}"{% endif %} target="_blank"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("App license: %(license)s", license=upstream.license) }}</a>
+        <a class="block btn btn-link my-1" href="{% if upstream.license_url %}{{upstream.license_url}}{% else %}https://spdx.org/licenses/{{upstream.license}}"{% endif %} target="_blank"><i class="fa fa-institution fa-fw" aria-hidden="true"></i> {{ _("App license: %(license)s", license=upstream.license) }}</a>
         {% if upstream.website %}<a class="block btn btn-link my-1" href="{{ upstream.website }}" target="_blank"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> {{ _(" Official website") }}</a>{% endif %}
         {% if upstream.admindoc %}<a class="block btn btn-link my-1" href="{{ upstream.admindoc }}" target="_blank"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official admin documentation") }}</a>{% endif %}
         {% if upstream.userdoc %}<a class="block btn btn-link my-1" href="{{ upstream.userdoc }}" target="_blank"><i class="fa fa-book fa-fw" aria-hidden="true"></i> {{ _("Official user documentation") }}</a>{% endif %}
