@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:11+0000\n"
+"PO-Revision-Date: 2026-05-24 02:32+0000\n"
 "Last-Translator: Poesty Li <poesty7450@gmail.com>\n"
-"Language-Team: Chinese (Simplified Han script) <https://translate.yunohost."
-"org/projects/yunohost/store/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://"
+"translate.yunohost.org/projects/yunohost/store/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -186,9 +186,8 @@ msgstr "根据我们的自动测试，此应用在至少一年内保持良好质
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
-#, fuzzy
 msgid "Unstar this app"
-msgstr "收藏此应用"
+msgstr "取消标星此应用"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
@@ -564,13 +563,12 @@ msgid "Apps with issues"
 msgstr "有问题的应用"
 
 #: templates/dash.html:32
-#, fuzzy
 msgid "Apps using v2 helpers"
-msgstr "有测试 PR 的应用"
+msgstr "使用 v2 辅助程序的应用"
 
 #: templates/dash.html:33
 msgid "Apps using v2.1 helpers"
-msgstr ""
+msgstr "使用 v2.1 辅助程序的应用"
 
 #: templates/dash.html:44
 msgid "Quality level"
@@ -693,7 +691,7 @@ msgstr "应用描述"
 
 #: templates/wishlist_add.html:65
 msgid "If possible, write it in English."
-msgstr ""
+msgstr "如果可能，请用英文书写。"
 
 #: templates/wishlist_add.html:67
 msgid "Please be concise and focus on what the app does."
