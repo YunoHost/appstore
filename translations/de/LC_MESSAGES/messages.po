@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-06-28 14:36+0000\n"
+"PO-Revision-Date: 2026-07-01 12:36+0000\n"
 "Last-Translator: g-rppl <tech.g_r@mailbox.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "store/de/>\n"
@@ -591,7 +591,7 @@ msgstr "Veraltete Tests der Haupt-CI"
 
 #: templates/dash.html:28
 msgid "Regressions on Trixie"
-msgstr ""
+msgstr "Regressionen in Trixie"
 
 #: templates/dash.html:29
 msgid "Apps with testings PRs"
