@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-07-01 12:36+0000\n"
-"Last-Translator: g-rppl <tech.g_r@mailbox.org>\n"
+"PO-Revision-Date: 2026-08-03 21:36+0000\n"
+"Last-Translator: leinaduhcs <daniel.d.schumacher@proton.me>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "store/de/>\n"
 "Language: de\n"
@@ -219,9 +219,8 @@ msgstr ""
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
-#, fuzzy
 msgid "Unstar this app"
-msgstr "Dieser App einen Stern geben"
+msgstr "Den Stern für diese App entfernen"
 
 #: templates/app.html:60 templates/app.html:61 templates/wishlist.html:132
 #: templates/wishlist.html:133
@@ -672,7 +671,7 @@ msgstr "Geringe Qualität"
 #: templates/dash.html:156 templates/dash.html:175
 #, python-format
 msgid "Outdated test (%(days)s days ago)"
-msgstr ""
+msgstr "Veralteter Test (vor %(days)s Tagen)"
 
 #: templates/dash.html:198 templates/dash.html:213
 #, python-format
