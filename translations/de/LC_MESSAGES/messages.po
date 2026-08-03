@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
 "PO-Revision-Date: 2026-08-03 21:36+0000\n"
-"Last-Translator: leinaduhcs <daniel.d.schumacher@proton.me>\n"
+"Last-Translator: g-rppl <tech.g_r@mailbox.org>\n"
 "Language-Team: German <https://translate.yunohost.org/projects/yunohost/"
 "store/de/>\n"
 "Language: de\n"
@@ -27,7 +27,7 @@ msgstr "App %(app_id)s nicht gefunden"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr "Sie müssen angemeldet sein, um eine App markieren zu können"
+msgstr "Du musst angemeldet sein, um eine App zu favorisieren"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -37,31 +37,28 @@ msgid ""
 "least 5 topics, reading at least 30 posts, and spending at least 10 minutes "
 "reading posts."
 msgstr ""
-"Beachten Sie, dass wir aufgrund verschiedener Missbräuche die Anmeldung im "
-"App-Store auf Benutzer der „Vertrauensstufe 1“ beschränkt haben.<br/><br/"
-">„Vertrauensstufe 1“ wird erreicht, wenn man mindestens mit dem Forum "
-"interagiert hat, spezifisch: Mindestens 5 Themen geöffnet, mindestens 30 "
-"Beiträge gelesen und mindestens 10 Minuten damit verbracht haben, Beiträge "
-"zu lesen."
+"Beachte, dass wir aufgrund verschiedener Missbräuche die Anmeldung im App-"
+"Katalog auf Benutzer der \"Vertrauensstufe 1\" beschränkt haben.<br/><br/"
+">Vertrauensstufe 1 wird durch ein Mindestmaß an Interaktionen im Forum "
+"erreicht, konkret: Mindestens 5 angezeigte Themen, mindestens 30 gelesene "
+"Beiträge und mindestens 10 Minuten mit dem Lesen von Beiträgen verbracht."
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr "Sie müssen angemeldet sein, um eine App auf die Wunschliste zu setzen"
+msgstr "Du musst angemeldet sein, um eine App auf die Wunschliste zu setzen"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
 msgstr ""
-"Ungültiges CSRF-Token. Bitte aktualisieren Sie die Seite und versuchen Sie "
-"es erneut"
+"Ungültiges CSRF-Token. Bitte aktualisiere die Seite und versuche es erneut"
 
 #: app.py:283
 msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
-"Das Vorschlagen von Einträgen zur Wunschliste ist auf einmal alle 15 Tage "
-"pro Benutzer beschränkt. Bitte versuchen Sie es in ein paar Tagen noch "
-"einmal."
+"Pro Benutzer können nur einmal alle 15 Tage Ergänzungen zur Wunschliste "
+"vorgeschlagen werden. Bitte versuche es in ein paar Tagen erneut."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
@@ -334,7 +331,7 @@ msgstr "Wunschliste"
 
 #: templates/base.html:52
 msgid "Packaging dashboard"
-msgstr "Paketierungsoberfläche"
+msgstr "Packaging Dashboard"
 
 #: templates/base.html:57
 msgid "Charts & history"
@@ -551,7 +548,6 @@ msgid "App packaging dashboard"
 msgstr "App Paketierungsübersicht"
 
 #: templates/dash.html:11
-#, fuzzy
 msgid ""
 "This is where packagers can monitor the status of automatic tests (CI) and "
 "ongoing major pull requests accross all apps. If you want to get started "
@@ -561,12 +557,13 @@ msgid ""
 "href='https://doc.yunohost.org/community/chat_rooms/'>app packaging "
 "chatroom</a>!"
 msgstr ""
-"Hier können Packer den Status der automatisierten Tests (CI) und die "
-"aktuellen großen Pull-Requests über alle Applikationen einsehen. Wenn du mit "
-"dem Packen einer Applikation in YunoHost starten möchtest, sehe dir die <a "
-"class='text-blue-500' href='https://doc.yunohost.org/dev/packaging/'>Pack-"
-"Dokumentation</a> an und sage im <a class='text-blue-500' href='https://"
-"yunohost.org/chat_rooms'>App-Verpacken Chatraum</a>Hallo zu uns!"
+"Hier können Paketbetreuer den Status der automatisierten Tests (CI) und die "
+"aktuellen großen Pull-Requests für alle Apps einsehen. Wenn du mit dem App-"
+"Packaging bei YunoHost beginnen möchtest, schaue dir bitte die <a class"
+"='text-blue-500' href='https://doc.yunohost.org/dev/packaging/"
+"'>Dokumentation zum Packaging</a> an und sage uns im <a class='text-blue-"
+"500' href='https://doc.yunohost.org/community/chat_rooms/'>Chatroom zum "
+"Thema App-Packaging</a> Hallo!"
 
 #: templates/dash.html:18
 msgid "Filter"
@@ -578,7 +575,7 @@ msgstr "(Nichts)"
 
 #: templates/dash.html:25
 msgid "Regressions on main CI"
-msgstr ""
+msgstr "Regressionen auf der Haupt-CI"
 
 #: templates/dash.html:26
 msgid "Broken / low quality apps"
@@ -594,11 +591,11 @@ msgstr "Regressionen in Trixie"
 
 #: templates/dash.html:29
 msgid "Apps with testings PRs"
-msgstr ""
+msgstr "Apps mit PR-Tests"
 
 #: templates/dash.html:30
 msgid "Apps with autoupdate PRs"
-msgstr ""
+msgstr "Apps mit PRs für automatische Updates"
 
 #: templates/dash.html:31
 msgid "Apps with issues"
@@ -650,11 +647,11 @@ msgstr "Trixie-CI"
 
 #: templates/dash.html:87
 msgid "Testing PR"
-msgstr ""
+msgstr "Test-PR"
 
 #: templates/dash.html:88
 msgid "Autoupdate PR"
-msgstr ""
+msgstr "Autoupdate-PR"
 
 #: templates/dash.html:89
 msgid "Issues"
