@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:10+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-09-06 12:29+0000\n"
+"Last-Translator: Éric Gaspar <junk.eg@free.fr>\n"
 "Language-Team: Portuguese <https://translate.yunohost.org/projects/yunohost/"
 "store/pt/>\n"
 "Language: pt\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.14.3\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "A aplicação %(app_id)s não foi encontrada"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
@@ -57,34 +57,39 @@ msgid ""
 "Proposing wishlist additions is limited to once every 15 days per user. "
 "Please try again in a few days."
 msgstr ""
+"A possibilidade de propor adições à lista de desejos está limitada a uma vez "
+"a cada 15 dias por utilizador. Por favor, tente novamente daqui a alguns "
+"dias."
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "O nome da aplicação deve ter, pelo menos, 3 caracteres"
 
 #: app.py:287
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "O nome da aplicação deve ter menos de 30 caracteres"
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "A descrição da aplicação deve ter, pelo menos, 5 caracteres"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "A descrição da aplicação deve ter menos de 100 caracteres"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
 msgstr ""
+"O URL do repositório de código upstream deve ter, pelo menos, 10 caracteres"
 
 #: app.py:302
 msgid "Upstream code repo URL should be less than 150 characters"
 msgstr ""
+"O URL do repositório de código upstream deve ter menos de 150 caracteres"
 
 #: app.py:306
 msgid "License URL should be at least 10 characters"
-msgstr ""
+msgstr "O URL da licença deve ter, pelo menos, 10 caracteres"
 
 #: app.py:310
 msgid "License URL should be less than 250 characters"
