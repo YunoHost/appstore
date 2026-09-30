@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:09+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-09-30 08:57+0000\n"
+"Last-Translator: Simon F <dauphindart@sans-nuage.fr>\n"
 "Language-Team: Hungarian <https://translate.yunohost.org/projects/yunohost/"
 "store/hu/>\n"
 "Language: hu\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.14.3\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
 #, python-format
 msgid "App %(app_id)s not found"
-msgstr ""
+msgstr "A(z) %(app_id)s azonosítval rendelkező appot nem találtuk"
 
 #: app.py:184
 msgid "You must be logged in to be able to star an app"
-msgstr ""
+msgstr "Az app elindításához be kell jelentkezni"
 
 #: app.py:187 app.py:232 app.py:660 templates/wishlist_add.html:33
 msgid ""
@@ -40,11 +40,11 @@ msgstr ""
 
 #: app.py:229
 msgid "You must be logged in to submit an app to the wishlist"
-msgstr ""
+msgstr "Appot csak bejelentkezett felhasználó adhat hozzá a kívánságlistához"
 
 #: app.py:244
 msgid "Invalid CSRF token, please refresh the page and try again"
-msgstr ""
+msgstr "A CSRF token hibás. Frissítse az oldalt és próbálja újra"
 
 #: app.py:283
 msgid ""
