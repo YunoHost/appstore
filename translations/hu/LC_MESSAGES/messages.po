@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-09-30 08:57+0000\n"
+"PO-Revision-Date: 2026-09-30 13:23+0000\n"
 "Last-Translator: Simon F <dauphindart@sans-nuage.fr>\n"
 "Language-Team: Hungarian <https://translate.yunohost.org/projects/yunohost/"
 "store/hu/>\n"
@@ -54,19 +54,19 @@ msgstr ""
 
 #: app.py:286
 msgid "App name should be at least 3 characters"
-msgstr ""
+msgstr "Az app nevének legalább 3 karakterből kell állnia"
 
 #: app.py:287
 msgid "App name should be less than 30 characters"
-msgstr ""
+msgstr "Az alkalmazás nevének legalább 30 karakterből kell állnia"
 
 #: app.py:290
 msgid "App description should be at least 5 characters"
-msgstr ""
+msgstr "Az app leírásának legalább 5 karakterből kell állnia"
 
 #: app.py:294
 msgid "App description should be less than 100 characters"
-msgstr ""
+msgstr "Az app leírásának legalább 100 karakterből kell állnia"
 
 #: app.py:298
 msgid "Upstream code repo URL should be at least 10 characters"
@@ -90,7 +90,7 @@ msgstr ""
 
 #: app.py:315
 msgid "App name contains special characters"
-msgstr ""
+msgstr "Az app neve speciális karaktert tartalmaz"
 
 #: app.py:323
 msgid ""
@@ -102,6 +102,7 @@ msgstr ""
 #: app.py:332
 msgid "No need to repeat the name of the app. Focus on what the app does."
 msgstr ""
+"Ne ismételd az app nevét. Inkább arra tedd a hangsúlyt, hogy mit csinál."
 
 #: app.py:363
 #, python-format
