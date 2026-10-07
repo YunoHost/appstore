@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:10+0000\n"
-"Last-Translator: Aksel Azwaw <akselyan@users.noreply.translate.yunohost."
-"org>\n"
+"PO-Revision-Date: 2026-10-08 04:13+0000\n"
+"Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
 "Language-Team: Kabyle <https://translate.yunohost.org/projects/yunohost/"
 "store/kab/>\n"
 "Language: kab\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.14.3\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -266,7 +265,7 @@ msgstr ""
 
 #: templates/base.html:11
 msgid "YunoHost app store"
-msgstr ""
+msgstr "Taḥanut n yesnasen n YunoHost"
 
 #: templates/base.html:31 templates/base.html:163 templates/index.html:3
 msgid "Home"
@@ -331,7 +330,7 @@ msgstr "Tiwtilin n useqdec"
 
 #: templates/catalog.html:77 templates/catalog.html:82
 msgid "Application Catalog"
-msgstr ""
+msgstr "Akaram n yesnasen"
 
 #: templates/catalog.html:88 templates/wishlist.html:16
 msgid "Search"
@@ -393,7 +392,7 @@ msgstr ""
 
 #: templates/catalog.html:188
 msgid "Deprecated applications"
-msgstr ""
+msgstr "Isnasen iqburen"
 
 #: templates/catalog.html:191
 msgid "These are apps who are not maintained anymore."
@@ -610,7 +609,7 @@ msgstr ""
 #: templates/dash.html:198 templates/dash.html:213
 #, python-format
 msgid "Inactive (%(days)s days ago)"
-msgstr ""
+msgstr "D arurmid (%(days)s n wussan aya)"
 
 #: templates/dash.html:232
 msgid "Deprecated"
