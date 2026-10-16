@@ -24,7 +24,21 @@
             </span>
             {% endif %}
 
-            {% if infos['level'] == "?" or infos["level"]|int <= 4 %}
+            {% if "notworking" in infos['state'] %}
+            <span class="ml-2 mb-1.5">
+                <i class="fa fa-meh-o text-red-500 py-0.5"
+                   aria-label="{{ _('This app is currently flagged as not working.') }} {{ _('This is generally a long term situation, help to fix the application is always welcome.') }}"
+                   title="{{ _('This app is currently flagged as not working.') }} {{ _('This is generally a long term situation, help to fix the application is always welcome.') }}"
+                ></i>
+            </span>
+            {% elif "inprogress" in infos['state'] %}
+            <span class="ml-2 mb-1.5">
+                <i class="fa fa-hourglass-start text-red-500 py-0.5"
+                   aria-label="{{ _('The package of this app is still in progress.') }} {{ _('This generally means the package is actively being developed and has not been deemed stable enough yet.') }}"
+                   title="{{ _('The package of this app is still in progress.') }} {{ _('This generally means the package is actively being developed and has not been deemed stable enough yet.') }}"
+                ></i>
+            </span>
+            {% elif infos['level'] == "?" or infos["level"]|int <= 4 %}
             <span class="ml-2 mb-1.5">
                 <i class="fa fa-exclamation-circle text-red-500 py-0.5"
                    title="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"

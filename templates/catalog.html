@@ -36,7 +36,17 @@
                         {{ infos['manifest']['name'] }}
                     </h3>
                     <span class="text-xs">
-                        {% if infos['level'] == "?" or infos["level"]|int <= 4 %}
+                        {% if "notworking" in infos['state'] %}
+                        <i class="fa fa-meh-o text-red-500 py-0.5"
+                           aria-label="{{ _('This app is currently flagged as not working.') }} {{ _('This is generally a long term situation, help to fix the application is always welcome.') }}"
+                           title="{{ _('This app is currently flagged as not working.') }} {{ _('This is generally a long term situation, help to fix the application is always welcome.') }}"
+                        ></i>
+                        {% elif "inprogress" in infos['state'] %}
+                        <i class="fa fa-hourglass-start text-red-500 py-0.5"
+                           aria-label="{{ _('The package of this app is still in progress.') }} {{ _('This generally means the package is actively being developed and has not been deemed stable enough yet.') }}"
+                           title="{{ _('The package of this app is still in progress.') }} {{ _('This generally means the package is actively being developed and has not been deemed stable enough yet.') }}"
+                        ></i>
+                        {% elif infos['level'] == "?" or infos["level"]|int <= 4 %}
                         <i class="fa fa-exclamation-circle text-red-500 py-0.5"
                            aria-label="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
                            title="{{ _('This app is currently flagged as broken because it failed our automatic tests.') }} {{ _('This is usually a temporary situation which requires packagers to fix something in the app.') }}"
@@ -182,6 +192,26 @@
         {% endif %}
     {% endfor %}
 </div>
+
+
+<div id="notWorkingAppTitle" class="text-center pt-10 mx-4 md:mx-0">
+    <h2 class="text-lg font-bold">
+        {{ _("Not working applications") }} 
+    </h2>
+    <p class="text-sm">
+        {{ _("These apps are either not fully packaged yet, or marked as not working.") }}<br/>
+        {{ _("We strongly advise against their installation. If you want to help out, you can check their package repository and the packaging documentation.") }} 
+    </p>
+</div>
+
+<div id="catalogNotWorking" class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-screen-lg mx-auto pt-10">
+    {% for app, infos in catalog['apps'].items() %}
+        {% if "notworking" in infos['state'] or "inprogress" in infos['state'] %}
+            {{ appCard(app, infos, timestamp_now, catalog) }}
+        {% endif %}
+    {% endfor %}
+</div>
+
 
 <div id="deprecatedAppTitle" class="text-center pt-10 mx-4 md:mx-0">
     <h2 class="text-lg font-bold">
