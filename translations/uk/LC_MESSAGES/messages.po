@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:11+0000\n"
+"PO-Revision-Date: 2026-10-16 17:26+0000\n"
 "Last-Translator: Alekseï <support@digiology.org>\n"
 "Language-Team: Ukrainian <https://translate.yunohost.org/projects/yunohost/"
 "store/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.14.3\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -251,7 +251,7 @@ msgstr "Цей додаток сумісний лише з цими конкре
 #, python-format
 msgid "This app requires an unusual amount of RAM to install: %(ram)s"
 msgstr ""
-"Цей додаток вимагає забагато оперативної пам'яті для встановлення: %(ram)s"
+"Цей додаток вимагає чимало оперативної пам'яті для встановлення: %(ram)s"
 
 #: templates/app.html:120
 msgid "Important infos before installing"
@@ -292,7 +292,7 @@ msgstr "Офіційний репозиторій коду"
 
 #: templates/app.html:146
 msgid "YunoHost package repository"
-msgstr "Сховище пакунків YunoHost"
+msgstr "Репозиторій пакунка YunoHost"
 
 #: templates/app.html:147
 msgid "YunoHost package license"
