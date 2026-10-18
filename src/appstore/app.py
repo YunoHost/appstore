@@ -734,9 +734,9 @@ def logout() -> Response:
     return redirect("/")
 
 
-def create_nonce_and_build_url_to_login_on_discourse_sso() -> tuple[
-    str, str, str | None
-]:
+def create_nonce_and_build_url_to_login_on_discourse_sso() -> (
+    tuple[str, str, str | None]
+):
     """
     Redirect the user to
     DISCOURSE_ROOT_URL/session/sso_provider?sso=URL_ENCODED_PAYLOAD&sig=HEX_SIGNATURE
