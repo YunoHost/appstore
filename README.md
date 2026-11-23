@@ -3,7 +3,7 @@
 This is a Flask app interfacing with YunoHost's app catalog for a cool browsing of
 YunoHost's apps catalog, wishlist and being able to vote/star for apps.
 
-It is supposed to be installed with [its YunoHost app](https://github.com/YunoHost/appstore_ynh).
+It is supposed to be installed with [its YunoHost app](https://github.com/YunoHost-Apps/yunohost_appstore_ynh).
 
 ## Developement
 
