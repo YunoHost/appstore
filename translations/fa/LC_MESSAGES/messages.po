@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-03 00:14+0100\n"
-"PO-Revision-Date: 2026-02-16 20:09+0000\n"
+"PO-Revision-Date: 2026-11-25 09:45+0000\n"
 "Last-Translator: نادکارو <nadkaro@riseup.net>\n"
 "Language-Team: Persian <https://translate.yunohost.org/projects/yunohost/"
 "store/fa/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.2\n"
+"X-Generator: Weblate 5.14.3\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: app.py:181
@@ -277,7 +277,7 @@ msgstr "خانه"
 
 #: templates/base.html:40 templates/base.html:172 templates/dash.html:84
 msgid "Catalog"
-msgstr "کالانامه"
+msgstr "کالانما"
 
 #: templates/base.html:46 templates/base.html:181
 msgid "Wishlist"
