@@ -13,6 +13,7 @@
      data-starred="{{ user_starred_this_app }}"
      data-addedincatalog="{{ ((timestamp_now - infos['added_in_catalog']) / 3600 / 24) | int }}"
      data-category="{%- if infos['category'] -%}{{ infos['category'] }}{%- endif -%}"
+     data-arch="{{ 'all' if infos['manifest']['integration']['architectures'] == 'all' else infos['manifest']['integration']['architectures']|join(' ') }}"
 >
     <a
         href="{{ url_for('app_info', app_id=app) }}"
@@ -82,66 +83,87 @@
         {{ _("Application Catalog") }} 
     </h1>
 </div>
-<div class="max-w-screen-md mx-auto mt-3 mb-3">
-    <div class="flex flex-col md:flex-row items-center">
-        <div class="px-2 inline-block relative basis-2/3 text-gray-700">
-            <label for="search" class="sr-only"> {{ _("Search") }} </label>
-
-            <input
-                type="text"
-                id="search"
-                autofocus
-                placeholder="{{ _('Search for…') }}"
-                spellcheck="false"
-                {% if request.args.get("search") %}value="{{ request.args.get("search") }}"{% endif %}
-                class="w-full sm:text-sm py-2 pe-10"
-            >
-
-            <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-4">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </span>
+<div class="max-w-screen-lg mx-auto mt-3 mb-3 px-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+        <div>
+            <label for="search" class="block text-xs font-bold opacity-75 mb-1"> {{ _("Search") }} </label>
+            <div class="relative text-gray-700">
+                <input
+                    type="text"
+                    id="search"
+                    autofocus
+                    placeholder="{{ _('Search for…') }}"
+                    spellcheck="false"
+                    {% if request.args.get("search") %}value="{{ request.args.get("search") }}"{% endif %}
+                    class="w-full sm:text-sm py-2 pe-10"
+                >
+                <span class="absolute inset-y-0 end-0 grid w-10 place-content-center pr-2">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
         </div>
-        <div class="basis-1/3 px-2 pt-2 md:pt-0 md:px-0">
-
+        <div>
+            <label for="selectcategory" class="block text-xs font-bold opacity-75 mb-1"> {{ _("Category") }} </label>
             <select
               name="selectcategory"
               id="selectcategory"
-              class="w-full sm:text-sm px-2 py-1.5"
+              class="w-full sm:text-sm px-2 py-2"
             >
-            <option value="">{{ _("All apps") }}</option>
+            <option value="">{{ _("All categories") }}</option>
               {% for id, category in catalog['categories'].items() %}
                     <option {% if id == request.args.get("category") %}selected{% endif %} value="{{ id }}">{{ category['title']|localize }}</option>
               {% endfor %}
             </select>
         </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-center items-center pt-2 text-center text-sm">
-        <div class="inline-block px-2">
-            {{ _("Sort by") }} 
+        <div>
+            <label for="selectarch" class="block text-xs font-bold opacity-75 mb-1"> {{ _("CPU Architecture") }} </label>
+            <select
+              name="selectarch"
+              id="selectarch"
+              class="w-full sm:text-sm px-2 py-2"
+              title="{{ _('Filter apps that run on your server hardware: amd64 = PC / laptop, arm64 = Raspberry Pi 3+, armhf = older Raspberry Pi') }}"
+            >
+            {% set init_arch = request.args.get("arch", "") %}
+            <option value="" {% if init_arch == "" %}selected{% endif %}>{{ _("All") }}</option>
+              {% set arch_labels = {"amd64": _("amd64 (PC / laptop)"), "arm64": _("arm64 (Raspberry Pi 3+)"), "armhf": _("armhf (older Raspberry Pi)"), "i386": _("i386 (32-bit x86 - before 2004 PC)")} %}
+              {% set ns = namespace(archs=[]) %}
+              {% for infos in catalog['apps'].values() %}
+                {% set archs = infos['manifest']['integration']['architectures'] %}
+                {% if archs is not string %}
+                  {% for a in archs %}{% if a not in ns.archs %}{% set ns.archs = ns.archs + [a] %}{% endif %}{% endfor %}
+                {% endif %}
+              {% endfor %}
+              {% for arch in ns.archs | sort %}
+                    <option {% if arch == init_arch %}selected{% endif %} value="{{ arch }}">{{ arch_labels.get(arch, arch) }}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="selectsort" class="block text-xs font-bold opacity-75 mb-1"> {{ _("Sort by") }} </label>
             <select
               name="selectsort"
               id="selectsort"
-              class="inline-block text-sm ml-1 pl-1 pr-7 h-8 py-0"
+              class="w-full sm:text-sm px-2 py-2"
             >
             <option {% if request.args.get("sort") in [None, "popularity"] %}selected{% endif %} value="popularity">{{ _("Popularity") }}</option>
             <option {% if request.args.get("sort") == "newest" %}selected{% endif %} value="newest">{{ _("Newest") }}</option>
             <option {% if request.args.get("sort") == "alpha" %}selected{% endif %} value="alpha">{{ _("Alphabetical") }}</option>
             </select>
         </div>
-        <div class="inline-block flex items-center px-2 pt-2 md:pt-0 {% if not user %}opacity-75{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
-            <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
-              <span class="sr-only">{{ _("Show only apps you starred") }}</span>
-              <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
+    </div>
 
-              <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
-              </span>
+    <div class="flex items-center justify-end pt-2 text-sm {% if not user %}opacity-75{% endif %}" {% if not user %}title="{{ _('Requires to be logged-in') }}" aria-label="{{ _('Requires to be logged-in') }}"{% endif %}>
+        <label for="starsonly" class="inline-block relative mr-2 h-4 w-7 cursor-pointer">
+          <span class="sr-only">{{ _("Show only apps you starred") }}</span>
+          <input type="checkbox" id="starsonly" class="peer sr-only" {% if user and request.args.get("starsonly") %}checked{% endif %} {% if not user%}disabled{% endif %} >
 
-              <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
-              </span>
-            </label>
-            {{ _("Show only apps you starred") }} 
-        </div>
+          <span class="absolute inset-0 rounded-full bg-gray-300 transition peer-checked:bg-green-500">
+          </span>
+
+          <span class="absolute inset-y-0 start-0 m-1 h-2 w-2 rounded-full bg-white transition-all peer-checked:start-3">
+          </span>
+        </label>
+        {{ _("Show only apps you starred") }} 
     </div>
 </div>
 
@@ -208,6 +230,7 @@
     let typeInterval = 500; // Half a second
     let searchInput = document.getElementById('search');
     let selectCategory = document.getElementById('selectcategory');
+    let selectArch = document.getElementById('selectarch');
     let selectSort = document.getElementById('selectsort');
     let toggleStarsonly = document.getElementById('starsonly');
 
@@ -217,6 +240,7 @@
         // Locate the search input
         let search_query = searchInput.value.trim().toLowerCase();
         let selectedCategory = selectCategory.value.trim();
+        let selectedArch = selectArch.value.trim();
         let starsOnly = toggleStarsonly.checked;
         let at_least_one_match = false;
         // Loop through the entries
@@ -225,6 +249,7 @@
             // cf https://stackoverflow.com/a/51874002/7034621 for an explanation of the weird normalize/replace stuff
             if ((entries[i].textContent.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().includes(search_query))
                 && (! selectedCategory || (entries[i].dataset.category == selectedCategory))
+                && (! selectedArch || (entries[i].dataset.arch == 'all' || entries[i].dataset.arch.split(' ').includes(selectedArch)))
                 && (! starsOnly || (entries[i].dataset.starred == "True")))
             {
                 // ...remove the `.is-hidden` class.
@@ -284,6 +309,7 @@
     function updateQueryArgsInURL() {
         let search_query = searchInput.value.trim();
         let category = selectCategory.value.trim();
+        let arch = selectArch.value.trim();
         let sortBy = selectSort.value.trim();
         let starsOnly = toggleStarsonly.checked;
 
@@ -291,6 +317,7 @@
             var queryArgs = new URLSearchParams(window.location.search)
             if (search_query) { queryArgs.set("search", search_query) } else { queryArgs.delete("search"); };
             if (category) { queryArgs.set("category", category) } else { queryArgs.delete("category"); };
+            if (arch) { queryArgs.set("arch", arch) } else { queryArgs.delete("arch"); };
             if (sortBy != "popularity") { queryArgs.set("sort", sortBy) } else { queryArgs.delete("sort"); };
             if (starsOnly) { queryArgs.set("starsonly", true) } else { queryArgs.delete("starsonly"); };
 
@@ -317,6 +344,11 @@
     });
 
     selectCategory.addEventListener('change', () => {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(liveSearch, typeInterval);
+    });
+
+    selectArch.addEventListener('change', () => {
       clearTimeout(typingTimer);
       typingTimer = setTimeout(liveSearch, typeInterval);
     });
